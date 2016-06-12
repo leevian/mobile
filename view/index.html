@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport">
+    <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="target"/>
+    <link href="js/idangerous.swiper.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.2.1.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="arrow.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="s1.css">
+    <link rel="stylesheet" href="s2.css">
+    <script type="text/javascript" src="common.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="swiper-main happySwipe">
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide s1 move-before">
+                    <article>
+                        <div class="bg img-load" data-src="images/s1.jpg"></div>
+                        <div class="pan item sp-move img-load" data-src="images/index-pan.png"></div>
+                        <div id="s1line"></div>
+                        <div class="native-size">
+                            <div class="car item sp-move img-load" data-src="images/index-car.png"></div>
+                        </div>
+                        <div class="slogan sp-move img-load" data-src="images/index-slogan.png"></div>
+                        <div class="logo sp-move img-load" data-src="images/index-logo.png"></div>
+                    </article>
+                </div>
+                <div class="swiper-slide s2 move-before">
+                    <article>
+                        <div class="bg img-load" data-src="images/s2.png"></div>
+                        <div class="slogan up-move img-load" data-src="images/index-slogan.png"></div>
+                        <div class="logo up-move img-load" data-src="images/index-logo.png"></div>
+                        <div class="active-list">
+                            <a href="#" class="up-move active-1">
+                                <div class="active-bg img-load" data-src="images/s2-a-1.jpg"></div>
+                                <div class="title">踏青试驾 》</div>
+                            </a>
+                            <a href="#" class="up-move active-2">
+                                <div class="active-bg img-load" data-src="images/s2-a-2.jpg"></div>
+                                <div class="title">路演 》</div>
+                            </a>
+                            <a href="#" class="up-move active-3">
+                                <div class="active-bg img-load" data-src="images/s2-a-3.jpg"></div>
+                                <div class="title">活动细则 》</div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="loading">
+        <div class="car">
+            <div class="tyre-front"></div>
+            <div class="tyre-behind"></div>
+            <div class="tyre-behind-mask"></div>
+        </div>
+        <div class="progress"></div>
+        <div class="progress-txt">0%</div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("#loading").addClass("ready");
+    })
+</script>
+
+</body>
+</html>

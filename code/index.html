@@ -1,0 +1,1573 @@
+﻿<!doctype html>
+    <meta charset="UTF-8">
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="js/easeljs.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="js/prefixfree.min.js"></script>
+  	<script type="text/javascript" src="js/jquery.keyframes.min.js"></script>
+    <title>太平洋保险&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在你身边</title>
+
+
+</head>
+<style>
+html, body {
+	position: relative;
+	width:100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+img{
+	display:block;
+	padding:0;
+	margin:0;
+	border:0 none;
+}
+@media screen and (orientation:portrait) {
+
+/**竖向定义样式**/
+	.tips{
+		position:absolute;
+		width: 100%;
+		top:0%;
+		left:0%;
+		z-index: 8888;
+	}
+
+}
+@media screen and (orientation:landscape) {
+
+/**[横向定义样式**/
+	.screen{
+		display: none;
+	}
+}
+	.load_font{
+		position:absolute;	
+		width:20%;
+		height: 8;
+		top: 58%;
+		left: 45%;
+		z-index:8890;
+		color: #fff;
+	}
+	.loading-img-0{
+		position:absolute;	
+		width:100%;
+		top:0;
+		left:0;
+		z-index:8889;
+	}
+	.loading-img-1{
+		position:absolute;	
+		height:6%;
+		top:45.5%;
+		left:48.2%; 
+		z-index:8890;
+	}
+	.loading-img-2{
+		position:absolute;	
+		height:8%;
+		top:45.7%;
+		left:48.7%; 
+		z-index:8890;
+	}
+	.loading-img-3{
+		position:absolute;	
+		height:7%;
+		top:45.9%;
+		left:48.2%; 
+		z-index:8890;
+	}
+/*******************           index_1            ***********************/
+	.pic_index_1{
+		position:absolute;
+		width: 100%;
+		top: 0;
+		left:0;
+		opacity: 0;
+		overflow: hidden;
+		animation:pic_index_1 1s linear 0s 1 normal forwards;
+	}
+	@keyframes pic_index_1
+	{
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	.clock{
+		position:absolute;
+		width: 35%;
+		top: 15%;
+		left: 5%;
+		opacity: 0;
+		overflow: hidden;
+		animation:pic_index_1 1s linear 0s 1 normal forwards;
+	}
+	.pointer_1{
+		position:absolute;
+		width: 4%;
+		top: 47%;
+		left: 20.4%;
+		opacity: 1;
+		overflow: hidden;
+		animation:pointer_1 2s linear 0s infinite normal forwards;
+	}
+	@keyframes pointer_1
+	{
+		0%{opacity: 1;}
+		50%{opacity: 1;}
+		100%{opacity: 1;}
+	}
+	.pointer_2{
+		position:absolute;
+		width: 11%;
+		top: 31%;
+		left: 13.5%;
+		opacity: 1;
+		overflow: hidden;
+		animation:pointer_2 3s linear 0s infinite normal forwards;
+	}
+	@keyframes pointer_2
+	{
+		0%{opacity: 1;transform:rotate(0deg);transform-origin:80% 80%;}
+		50%{opacity: 1;transform:rotate(180deg);transform-origin:80% 80%;}
+		100%{opacity: 1;transform:rotate(360deg);transform-origin:80% 80%;}
+	}
+	.pointer_3{
+		position:absolute;
+		width: 1.2%;
+		top: 47%;
+		left: 22.1%;
+		opacity: 1;
+		overflow: hidden;
+		animation:pointer_3 7s linear 0s infinite normal forwards;
+	}
+	
+	
+	@keyframes pointer_3
+	{
+		0%{opacity: 1;transform:rotate(0deg);transform-origin:20% 20%;}
+		50%{opacity: 1;transform:rotate(180deg);transform-origin:20% 20%;}
+		100%{opacity: 1;transform:rotate(360deg);transform-origin:20% 20%;}
+	}
+	.play{
+		position:absolute;
+		top:4%;
+		right:2%;
+		width:4%;
+		height:8.5%;
+		z-index:9999;
+		background:url(img/musicon.png) no-repeat;
+		/*border: 1px solid red;*/
+	}
+	
+	.flipbook-viewport{
+		display: none;
+	}
+	
+.flipbook-viewport img{
+	height:100%;
+}
+
+.page01-1,.page01-2,.page01-3,.page01-4,.page01-5,.page01-6
+/*,.page2-1,.page2-2,.page2-3,.page2-4,.page2-5,.page2-6
+,.page3-1,.page3-2,.page3-3,.page3-4,.page3-5,.page3-6*/
+,.page5-1,.page5-2,.page5-3,.page5-4,.page5-5
+,.page6-1,.page6-2,.page6-3,.page6-4,.page6-5,.page6-6
+,.page7-1,.page7-2,.page7-3
+,.page9-1,.page9-2,.page9-3,.page9-4,.page9-5,.page9-6
+,.page10-1,.page10-2,.page10-3,.page10-4,.page10-5,.page10-6
+,.page13-1,.page13-2,.page13-3,.page13-4,.page13-5,.page13-6
+,.page14-1,.page14-2,.page14-3,.page14-4,.page14-5,.page14-6
+,.page17-1,.page17-2,.page17-3,.page17-4,.page17-5,.page17-6
+,.page18-1,.page18-2,.page18-3,.page18-4,.page18-5,.page18-6
+,.page20-1,.page20-2,.page20-3,.page20-4,.page20-5,.page20-6
+,.page23-1,.page23-2,.page23-3,.page23-4,.page23-5,.page23-6{
+		position:absolute;
+		left:0%;
+		top:0%;
+		display:none;
+}
+
+.pic_page0,.pic_page1,.pic_page4,.pic_page8,.pic_page11,.pic_page12,.pic_page15,.pic_page16,.pic_page19,.pic_page21,.pic_page22,.pic_page24{
+		display:none;
+}
+	
+
+#bt0,#bt1,#bt2,#bt6,#bt8,#bt10,#bt12,#bt14,#bt16,#bt18,#bt20,#bt24{
+	display:none;
+}
+#p1,#p2,#p6,#p8,#p10,#p12,#p14,#p16,#p18,#p20,#p24,#p25{
+	position:absolute;
+	left:6%;
+	top:4%;
+	overflow:auto;
+	z-index:500;
+	display:none;
+}
+#borrow,#borrow2{
+	display:none;
+}
+#borrow{
+	position:absolute;
+	left:7%;
+	top:86%;
+/* border:1px solid blue; */
+z-index:8888;
+}
+#borrow2{
+	position:absolute;
+	left:90%;
+	top:86%;
+/* border:1px solid red; */
+z-index:8888;
+}
+
+#p0,#page25,#page26{
+	position:absolute;
+	left:0%;
+	top:0%;
+	width: 100%;
+	height: 100%;
+	overflow:auto;
+	z-index:500;
+	display:none;
+}
+
+#_bt{
+    position:absolute;
+    left:80%;
+    top:75%;
+    height:16%;
+    width:19%;
+    z-index:200;
+}
+
+#bt0{
+	position:absolute;
+	left:29%;
+	top:50%;
+	height:16%;
+    width:19%;
+	z-index:200;
+	 
+}
+#bt1{
+	position:absolute;
+	left:29%;
+	top:40%;
+	height:16%;
+    width:19%;
+	z-index:200;
+	 
+}
+#bt2{
+	position:absolute;
+	left:29%;
+	top:61%;
+	height:16%;
+    width:19%;
+	z-index:200;
+	 
+}
+#bt6{
+	position:absolute;
+	left:22%;
+	top:41%;
+	height:16%;
+    width:19%;
+	z-index:100;
+	 
+}
+
+#bt8{
+	position:absolute;
+	left:22%;
+	top:45%;
+	height:16%;
+    width:19%;
+	z-index:100;
+ 
+}
+
+#bt10{
+	position:absolute;
+	left:68%;
+	top:43%;
+	height:16%;
+    width:19%;
+	z-index:100;
+ 
+}
+
+#bt12{
+	position:absolute;
+	left:74%;
+	top:53%;
+	height:16%;
+    width:15%;
+	z-index:100;
+ 
+}
+
+#bt14{
+	position:absolute;
+	left:66%;
+	top:44%;
+	height:16%;
+    width:19%;
+	z-index:100;
+ 
+}
+
+#bt16{
+	position:absolute;
+	left:67%;
+	top:53%;
+	height:16%;
+    width:19%;
+	z-index:100;
+	 
+}
+
+#bt18{
+	position:absolute;
+	left:68%;
+	top:46%;
+	height:16%;
+    width:19%;
+	z-index:100;
+	 
+}
+
+#bt20{
+	position:absolute;
+	left:68%;
+	top:46%;
+	height:16%;
+    width:19%;
+	z-index:100;
+	 
+
+}
+
+#bt24{
+	position:absolute;
+	left:68%;
+	top:46%;
+	height:16%;
+    width:19%;
+	z-index:100;
+	 
+
+}
+.circle6{
+		opacity: 0;
+		animation:turn1 1s linear 0s infinite normal forwards;
+}
+
+@keyframes turn1
+{
+	0%{opacity: 1;transform:scale(1);transform-origin:20% 20%;}
+	100%{opacity: 0;transform:scale(1.5);transform-origin:20% 20%;}
+}
+
+.icpcborrow2{position:absolute;left: 90%; top: 86%;display: none;z-index: 999;}
+</style>
+
+
+<body>
+
+<div style='margin:0 auto;display:none;'>
+<img src='img/icpclogo.jpg' />
+</div>
+
+
+
+<div class="hhh" style="display:none;width:100%;height:100%;"></div>
+<div class="play"></div>
+	<div class="screen"></div>
+    <div class="loading">
+    	<div class="load_font"></div>
+    </div>
+    <div class="index_1" id="index_1" >
+    	<div id="bt0">
+            <canvas id="myCanvas0" width="100" height="100" class="circle6"></canvas>
+        </div>
+        <div class="icpcborrow2"> <img src="img/borrow2.png"></div>
+    </div>
+	<div id="p0"><img src="img/pic0.jpg" height="100%"></div>
+<div id="page25"><img src="img/page25.png" height="100%"></div>
+<div id="page26"><img src="img/over.png" height="100%"></div>
+<div class="flipbook-viewport">
+	<div class="container" id="bgg">  
+		<div class="flipbook bb">
+			<div class="page_1">
+                <div id="_bt"><canvas id="_myCanvas" width="100" height="100" class="circle6"></canvas></div>
+                <img src="img/page1.png" class="pic_page1">
+            </div>
+			<div class="page_0">
+                <img src="img/page0.png" class="pic_page0">
+            </div>
+			<div class="page_01">
+			<img src="img/page01-1.png" class="page01-1">
+			<img src="img/page01-2.png" class="page01-2">
+			<img src="img/page01-3.png" class="page01-3">
+			<img src="img/page01-4.png" class="page01-4">
+			<img src="img/page01-5.png" class="page01-5">
+			<img src="img/page01-6.png" class="page01-6">
+			</div>
+			<div class="page_18">
+                <img src="img/page18-1.png" class="page18-1">
+                <img src="img/page18-2.png" class="page18-2">
+                <img src="img/page18-3.png" class="page18-3">
+                <img src="img/page18-4.png" class="page18-4">
+                <img src="img/page18-5.png" class="page18-5">
+                <img src="img/page18-6.png" class="page18-6">
+			</div>
+			<div class="page_19">
+                <img src="img/page19.jpg" class="pic_page19">
+            </div>
+			<div class="page_23">
+                <img src="img/page23-1.png" class="page23-1">
+                <img src="img/page23-2.png" class="page23-2">
+                <img src="img/page23-3.png" class="page23-3">
+                <img src="img/page23-4.png" class="page23-4">
+                <img src="img/page23-5.png" class="page23-5">
+                <img src="img/page23-6.png" class="page23-6">
+			</div>
+			<div class="page_24">
+                <img src="img/page24.jpg" class="pic_page24">
+            </div>
+			<div class="page_4">
+                <img src="img/page4.jpg" class="pic_page4">
+            </div>
+			<div class="page_5">
+			<img src="img/page5-1.png" class="page5-1">
+			<img src="img/page5-2.png" class="page5-2">
+			<img src="img/page5-3.png" class="page5-3">
+			<img src="img/page5-4.png" class="page5-4">
+			<img src="img/page5-5.png" class="page5-5">
+			</div>
+
+			<div class="page_8">
+                <img src="img/page8.jpg" class="pic_page8">
+            </div>
+			<div class="page_9">
+				<img src="img/page9-1.png" class="page9-1">
+				<img src="img/page9-2.png" class="page9-2">
+				<img src="img/page9-3.png" class="page9-3">
+				<img src="img/page9-4.png" class="page9-4">
+				<img src="img/page9-5.png" class="page9-5">
+				<img src="img/page9-6.png" class="page9-6">			
+			</div>
+			
+			<div class="page_10">
+				<img src="img/page10-1.png" class="page10-1">
+				<img src="img/page10-2.png" class="page10-2">
+				<img src="img/page10-3.png" class="page10-3">
+				<img src="img/page10-4.png" class="page10-4">
+				<img src="img/page10-5.png" class="page10-5">
+				<img src="img/page10-6.png" class="page10-6">			
+			</div>
+			<div class="page_11">
+                <img src="img/page11.jpg" class="pic_page11">
+            </div>
+			
+			<div class="page_12">
+                <img src="img/page12.png" class="pic_page12">
+            </div>
+			<div class="page_13">
+				<img src="img/page13-1.png" class="page13-1">
+				<img src="img/page13-2.png" class="page13-2">
+				<img src="img/page13-3.png" class="page13-3">
+				<img src="img/page13-4.png" class="page13-4">
+				<img src="img/page13-5.png" class="page13-5">
+				<img src="img/page13-6.png" class="page13-6">			
+			</div>
+			
+			<div class="page_16">
+                <img src="img/page16.jpg" class="pic_page16">
+            </div>
+			<div class="page_17">
+				<img src="img/page17-1.png" class="page17-1">
+				<img src="img/page17-2.png" class="page17-2">
+				<img src="img/page17-3.png" class="page17-3">
+				<img src="img/page17-4.png" class="page17-4">
+				<img src="img/page17-5.png" class="page17-5">
+				<img src="img/page17-6.png" class="page17-6">
+			</div>
+			<div class="page_14">
+				<img src="img/page14-1.png" class="page14-1">
+				<img src="img/page14-2.png" class="page14-2">
+				<img src="img/page14-3.png" class="page14-3">
+				<img src="img/page14-4.png" class="page14-4">
+				<img src="img/page14-5.png" class="page14-5">
+				<img src="img/page14-6.png" class="page14-6">			
+			</div>
+			<div class="page_15">
+                <img src="img/page15.jpg" class="pic_page15">
+            </div>
+			
+			<div class="page_20">
+				<img src="img/page20-1.png" class="page20-1">
+				<img src="img/page20-2.png" class="page20-2">
+				<img src="img/page20-3.png" class="page20-3">
+				<img src="img/page20-4.png" class="page20-4">
+				<img src="img/page20-5.png" class="page20-5">
+				<img src="img/page20-6.png" class="page20-6">			
+			</div>
+			<div class="page_21">
+                <img src="img/page21.jpg" class="pic_page21">
+            </div>
+			
+			<div class="page_22">
+                <img src="img/page22.jpg" class="pic_page22">
+            </div>
+		</div>
+		
+		<div id="p1" class="flipbook pp"><img src="img/pic1.jpg" height="60%"></div>
+		<div id="p2" class="flipbook pp"><img src="img/pic2.jpg" height="60%"></div>
+		<div id="p6" class="flipbook pp"><img src="img/pic6.jpg" height="60%"></div>
+		<div id="p8" class="flipbook pp"><img src="img/pic8.jpg" height="60%"></div>
+		<div id="p10" class="flipbook pp"><img src="img/pic10.jpg" height="80%"></div>
+		<div id="p12" class="flipbook pp"><img src="img/pic12.jpg" height="80%"></div>
+		<div id="p14" class="flipbook pp"><img src="img/pic14.jpg" height="80%"></div>
+		<div id="p16" class="flipbook pp"><img src="img/pic16.jpg" height="80%"></div>
+		<div id="p18" class="flipbook pp"><img src="img/pic18.jpg" height="80%"></div>
+		<div id="p20" class="flipbook pp"><img src="img/pic20.jpg" height="80%"></div>
+		<div id="p24" class="flipbook pp"><img src="img/pic24.jpg" height="80%"></div>
+		
+		<div id="bt1"><canvas id="myCanvas1" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt2"><canvas id="myCanvas2" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt6"><canvas id="myCanvas6" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt8"><canvas id="myCanvas8" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt10"><canvas id="myCanvas10" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt12"><canvas id="myCanvas12" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt14"><canvas id="myCanvas14" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt16"><canvas id="myCanvas16" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt18"><canvas id="myCanvas18" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt20"><canvas id="myCanvas20" width="100" height="100" class="circle6"></canvas></div>
+		<div id="bt24"><canvas id="myCanvas24" width="100" height="100" class="circle6"></canvas></div>
+		
+		<div id="borrow"><img src="img/borrow.png"></div>
+		<div id="borrow2"><img src="img/borrow2.png"></div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+var isLoop=true; //背景音乐是否播放
+	//关闭/开启音乐
+	   $('body').append('<audio id="bg" src="img/1.mp3" autoplay loop preload>您的设备不支持该类型文件播放!</audio>');
+	   $(".play").click(function(){
+	       if(!isLoop){
+	           $(".play").css({"background":"url(img/musicon.png) no-repeat"});
+	           $('#bg')[0].play();
+	           isLoop=true;
+	       }else{
+	           $(".play").css({"background":"url(img/musicoff.png) no-repeat"});
+	           $("#bg")[0].pause();
+	           isLoop=false;
+	       }
+	   });
+	$(function(){
+
+
+
+    	loadImage();
+
+    	document.getElementById("index_1").addEventListener("touchmove", function () {
+			$('.index_1').hide();
+			$('.flipbook-viewport').fadeIn();
+//			location.href="http://wechat-test.aquadigital.cn/Ctwx/Tpl/test2/index2.html";
+	    });
+    });
+function loadImage(){
+    	var images=[
+    	'1.mp3',
+    	'tips.png',
+    	'loading/load0.png','loading/loading1.png','loading/loading2.png','loading/loading3.png',
+    	'index/index_1.png','index/clock.png','index/pointer_1.png','index/pointer_2.png','index/pointer_3.png',
+    	'page1.png', 
+    	'page0.png',
+    	'page01-1.png','page01-2.png','page01-3.png','page01-4.png','page01-5.png',
+    	/*'page2-1.png','page2-2.png','page2-3.png','page2-4.png','page2-5.png','page2-6.png',*/
+    	/*'page3-1.png','page3-2.png','page3-3.png','page3-4.png','page3-5.png','page3-6.png',*/
+    	'page4.jpg',
+    	'page5-1.png','page5-2.png','page5-3.png','page5-4.png','page5-5.png',
+    	'page6-1.png','page6-2.png','page6-3.png',
+    	'page7-1.png','page7-2.png','page7-3.png',
+    	'page8.jpg',
+    	'page9-1.png','page9-2.png','page9-3.png','page9-4.png','page9-5.png','page9-6.png',
+    	'page10-1.png','page10-2.png','page10-3.png','page10-4.png','page10-5.png','page10-6.png',
+    	'page11.jpg',
+    	'page12.jpg',
+    	'page13-1.png','page13-2.png','page13-3.png','page13-4.png','page13-5.png','page13-6.png',
+    	'page14-1.png','page14-2.png','page14-3.png','page14-4.png','page14-5.png','page14-6.png',
+    	'page15.jpg',
+    	'page16.jpg',
+    	'page17-1.png','page17-2.png','page17-3.png','page17-4.png','page17-5.png','page17-6.png',
+    	'page18-1.png','page18-2.png','page18-3.png','page18-4.png','page18-5.png','page18-6.png',
+    	'page19.jpg',
+    	'page20-1.png','page20-2.png','page20-3.png','page20-4.png','page20-5.png','page20-6.png',
+    	'page21.jpg',
+    	'pic2.jpg','pic6.jpg','pic8.jpg','pic10.jpg','pic12.jpg','pic14.jpg','pic16.jpg','pic18.jpg','pic20.jpg'
+    	
+		];
+
+
+
+    	loadImage.index=0;
+    	loadImage.total=images.length;
+    	loadImage.errors={};
+    	loadImage.images={};
+		var prefix="img/";
+    	$.each(images,function(i,url){
+    		var img=new Image();
+    		img.src=prefix+url;
+    		img.onload=function(){
+    			loadImage.index++;
+    			loadImage.images[url]=img;
+    		}
+    		img.onerror=function(){
+    			loadImage.index++;
+    			loadImage.errors[url]=url;
+    		}
+    	});
+    	var a=run(function(){
+    		var p=loadImage.index/loadImage.total;
+    		$('.load_font').html('Loading ' + (p*100|0) +'%' );
+			$('.loading').append('<img class="loading-img-0" src="'+prefix+'loading/load0.png'+'"/>');
+			if(p>=0){
+				$('.loading').append('<img class="loading-img-1" src="'+prefix+'loading/loading1.png'+'"/>');
+			}
+			if(p>=0.33){
+				$('.loading-img-1').attr('style','display:none');
+				$('.loading').append('<img class="loading-img-2" src="'+prefix+'loading/loading2.png'+'"/>');
+			}
+			if(p>=0.66){
+				$('.loading-img-2').attr('style','display:none');
+				$('.loading').append('<img class="loading-img-3" src="'+prefix+'loading/loading3.png'+'"/>');
+			}
+    		if(loadImage.total==loadImage.index){
+    			
+    			$('.loading').hide(100,function(){
+    				$('.loading').remove();
+    			});
+    			renderImage(loadImage.images,loadImage.errors);
+    			a.stop();
+    			
+    			$("#bt0").show();
+				var canvas0 = document.getElementById("myCanvas0");	
+				stage0 = new createjs.Stage(canvas0);
+				var img1 = new Image();
+				img1.src = "img/note.png";
+				var tempBitMap = new createjs.Bitmap(img1);
+				stage0.addChild(tempBitMap);
+				setTimeout('stage0.update();',1000);
+				$("#bt0").click(function(){
+					$("#p0").show(); //第16页按钮点击出现的图片
+					$(this).hide();
+				})	
+				$("#p0").click(function(){
+					$(this).hide();
+					$("#bt0").show();
+				})
+
+
+    		}
+    	});
+    }
+    function renderImage(images,errors){
+
+        $('.icpcborrow2').css('display','block');
+
+    	addImage('tips.png',$('.screen'),'tips',images,errors);
+    	addImage('index/index_1.png',$('.index_1'),'pic_index_1',images,errors);
+    	addImage('index/clock.png',$('.index_1'),'clock',images,errors);
+    	addImage('index/pointer_1.png',$('.index_1'),'pointer_1',images,errors);
+    	addImage('index/pointer_2.png',$('.index_1'),'pointer_2',images,errors);
+    	addImage('index/pointer_3.png',$('.index_1'),'pointer_3',images,errors);
+//  	addImage('page1.png',$('.page_1'),'pic_page1',images,errors);
+//  	addImage('page0.jpg',$('.page_0'),'pic_page2',images,errors);
+//  	addImage('page01-1.png',$('.page_01'),'page01-1',images,errors);
+//  	addImage('page01-2.png',$('.page_01'),'page01-2',images,errors);
+//  	addImage('page01-3.png',$('.page_01'),'page01-3',images,errors);
+//  	addImage('page01-4.png',$('.page_01'),'page01-4',images,errors);
+//  	addImage('page01-5.png',$('.page_01'),'page01-5',images,errors);
+//  	addImage('page2-1.png',$('.page_2'),'page2-1',images,errors);
+//  	addImage('page2-2.png',$('.page_2'),'page2-2',images,errors);
+//  	addImage('page2-3.png',$('.page_2'),'page2-3',images,errors);
+//  	addImage('page2-4.png',$('.page_2'),'page2-4',images,errors);
+//  	addImage('page2-5.png',$('.page_2'),'page2-5',images,errors);
+//  	addImage('page2-6.png',$('.page_2'),'page2-6',images,errors);
+//  	addImage('page3-1.png',$('.page_3'),'page3-1',images,errors);
+//  	addImage('page3-2.png',$('.page_3'),'page3-2',images,errors);
+//  	addImage('page3-3.png',$('.page_3'),'page3-3',images,errors);
+//  	addImage('page3-4.png',$('.page_3'),'page3-4',images,errors);
+//  	addImage('page3-5.png',$('.page_3'),'page3-5',images,errors);
+//  	addImage('page3-6.png',$('.page_3'),'page3-6',images,errors);
+//  	addImage('page4.jpg',$('.page_4'),'pic_page4',images,errors);
+//  	addImage('page5-1.png',$('.page_5'),'page5-1',images,errors);
+//  	addImage('page5-2.png',$('.page_5'),'page5-2',images,errors);
+//  	addImage('page5-3.png',$('.page_5'),'page5-3',images,errors);
+//  	addImage('page5-4.png',$('.page_5'),'page5-4',images,errors);
+//  	addImage('page5-5.png',$('.page_5'),'page5-5',images,errors);
+//  	addImage('page6-1.png',$('.page_6'),'page6-1',images,errors);
+//  	addImage('page6-2.png',$('.page_6'),'page6-2',images,errors);
+//  	addImage('page6-3.png',$('.page_6'),'page6-3',images,errors);
+//  	addImage('page7-1.png',$('.page_7'),'page7-1',images,errors);
+//  	addImage('page7-2.png',$('.page_7'),'page7-2',images,errors);
+//  	addImage('page7-3.png',$('.page_7'),'page7-3',images,errors);
+//  	addImage('page8.jpg',$('.page_8'),'pic_page8',images,errors);
+//  	addImage('page9-1.png',$('.page_9'),'page9-1',images,errors);
+//  	addImage('page9-2.png',$('.page_9'),'page9-2',images,errors);
+//  	addImage('page9-3.png',$('.page_9'),'page9-3',images,errors);
+//  	addImage('page9-4.png',$('.page_9'),'page9-4',images,errors);
+//  	addImage('page9-5.png',$('.page_9'),'page9-5',images,errors);
+//  	addImage('page9-6.png',$('.page_9'),'page9-6',images,errors);
+//  	addImage('page10-1.png',$('.page_10'),'page10-1',images,errors);
+//  	addImage('page10-2.png',$('.page_10'),'page10-2',images,errors);
+//  	addImage('page10-3.png',$('.page_10'),'page10-3',images,errors);
+//  	addImage('page10-4.png',$('.page_10'),'page10-4',images,errors);
+//  	addImage('page10-5.png',$('.page_10'),'page10-5',images,errors);
+//  	addImage('page10-6.png',$('.page_10'),'page10-6',images,errors);
+//  	addImage('page11.jpg',$('.page_11'),'pic_page11',images,errors);
+//  	addImage('page12.jpg',$('.page_12'),'pic_page12',images,errors);
+//  	addImage('page13-1.png',$('.page_13'),'page13-1',images,errors);
+//  	addImage('page13-2.png',$('.page_13'),'page13-2',images,errors);
+//  	addImage('page13-3.png',$('.page_13'),'page13-3',images,errors);
+//  	addImage('page13-4.png',$('.page_13'),'page13-4',images,errors);
+//  	addImage('page13-5.png',$('.page_13'),'page13-5',images,errors);
+//  	addImage('page13-6.png',$('.page_13'),'page13-6',images,errors);
+//  	addImage('page14-1.png',$('.page_14'),'page14-1',images,errors);
+//  	addImage('page14-2.png',$('.page_14'),'page14-2',images,errors);
+//  	addImage('page14-3.png',$('.page_14'),'page14-3',images,errors);
+//  	addImage('page14-4.png',$('.page_14'),'page14-4',images,errors);
+//  	addImage('page14-5.png',$('.page_14'),'page14-5',images,errors);
+//  	addImage('page14-6.png',$('.page_14'),'page14-6',images,errors);
+//  	addImage('page15.jpg',$('.page_15'),'pic_page15',images,errors);
+//  	addImage('page16.jpg',$('.page_16'),'pic_page16',images,errors);
+//  	addImage('page17-1.png',$('.page_17'),'page17-1',images,errors);
+//  	addImage('page17-2.png',$('.page_17'),'page17-2',images,errors);
+//  	addImage('page17-3.png',$('.page_17'),'page17-3',images,errors);
+//  	addImage('page17-4.png',$('.page_17'),'page17-4',images,errors);
+//  	addImage('page17-5.png',$('.page_17'),'page17-5',images,errors);
+//  	addImage('page17-6.png',$('.page_17'),'page17-6',images,errors);
+//  	addImage('page18-1.png',$('.page_18'),'page18-1',images,errors);
+//  	addImage('page18-2.png',$('.page_18'),'page18-2',images,errors);
+//  	addImage('page18-3.png',$('.page_18'),'page18-3',images,errors);
+//  	addImage('page18-4.png',$('.page_18'),'page18-4',images,errors);
+//  	addImage('page18-5.png',$('.page_18'),'page18-5',images,errors);
+//  	addImage('page18-6.png',$('.page_18'),'page18-6',images,errors);
+//  	addImage('page19.jpg',$('.page_19'),'pic_page19',images,errors);
+//  	addImage('page20-1.png',$('.page_20'),'page20-1',images,errors);
+//  	addImage('page20-2.png',$('.page_20'),'page20-2',images,errors);
+//  	addImage('page20-3.png',$('.page_20'),'page20-3',images,errors);
+//  	addImage('page20-4.png',$('.page_20'),'page20-4',images,errors);
+//  	addImage('page20-5.png',$('.page_20'),'page20-5',images,errors);
+//  	addImage('page20-6.png',$('.page_20'),'page20-6',images,errors);
+//  	addImage('page21.jpg',$('.page_21'),'pic_page21',images,errors);
+//  	addImage('pic2.jpg',$('#p2'),'pic2',images,errors);
+//  	addImage('pic6.jpg',$('#p6'),'pic6',images,errors);
+//  	addImage('pic8.jpg',$('#p8'),'pic8',images,errors);
+//  	addImage('pic10.jpg',$('#p10'),'pic10',images,errors);
+//  	addImage('pic12.jpg',$('#p12'),'pic12',images,errors);
+//  	addImage('pic14.jpg',$('#p14'),'pic14',images,errors);
+//  	addImage('pic16.jpg',$('#p16'),'pic16',images,errors);
+//  	addImage('pic18.jpg',$('#p18'),'pic18',images,errors);
+//  	addImage('pic20.jpg',$('#p20'),'pic20',images,errors);
+    	
+    }
+    function addImage(name,to,cls,images,errors){
+    	if(images[name]){
+    		var img=images[name];
+    	}else if(errors[name]){
+    		var img=new Image();
+    		img.src=errors[name];
+    	}else{
+     		var img=new Image();
+    		img.src=name;   		
+    	}
+    	$(img).addClass(cls).appendTo($(to));
+    }
+    function run(func){
+    	var animation=new AnimationFrame(func);
+    	animation.run();
+    	return animation;
+    }
+    function AnimationFrame(func){
+        this.func=func;
+        this.runIndex=0;
+    }
+    AnimationFrame.prototype={
+        contructor:AnimationFrame,
+        run:function(){
+        	var t=this;
+            if(t.tid){
+                window.cancelAnimationFrame(t.tid);
+            }
+			t.func();
+			t.runIndex++;
+            t.tid=window.requestAnimationFrame(function(){
+            	if(t.stopFlag){
+		            if(t.tid){
+		                window.cancelAnimationFrame(t.tid);
+		            }            		
+            	}else{
+            		t.run();
+            	}                
+            });                
+        },
+        stop:function(){
+            this.stopFlag=true;       	
+        },
+        stopFlag:false,
+        tid:null
+    };
+//
+//var wid; var hei;
+//if( $(".hhh").width() > $(".hhh").height() ){
+//	alert($(".hhh").width()+"   "+$(".hhh").height());
+//	wid = $(".hhh").width();
+//	hei = $(".hhh").height();
+//}else{
+//	alert($(".hhh").width()+"   "+$(".hhh").height());
+//	wid = $(".hhh").height();
+//	hei = $(".hhh").width();
+//}
+function loadApp() {
+	// Create the flipbook
+	$('.flipbook').turn({
+			// Width
+			//width:1170,			
+			// Height
+			//height:570,
+			width: $(".hhh").width()*0.88,			
+			// Height
+			height: $(".hhh").width()*0.487*0.88,
+			// Elevation
+			elevation: 50,			
+			// Enable gradients
+			gradients: true,	
+			// Auto center this flipbook 
+			autoCenter: true,
+			duration:1500,
+			when:{ 
+				turned:function(e,page,pageObj){
+					//alert('the current page is'+page);
+					if(page==1){
+
+                        var canvas1 = document.getElementById("_myCanvas");
+                        stage1 = new createjs.Stage(canvas1);
+                        var img1 = new Image();
+                        img1.src = "img/note.png";
+                        var tempBitMap = new createjs.Bitmap(img1);
+                        stage1.addChild(tempBitMap);
+                        setTimeout('stage1.update();',1000);
+
+
+                        $(".page01-1").hide();
+						$(".page01-2").hide();
+						$(".page01-3").hide();
+						$(".page01-4").hide();
+						$(".page01-5").hide();
+						$(".page01-6").hide();
+						$(".pic_page0").hide();
+						$(".pic_page1").show();
+						var oDiv = document.getElementById('bgg'); //获取这个div元素
+						oDiv.style.background = ''; 
+					}else if(page==24){
+						var oDiv = document.getElementById('bgg'); //获取这个div元素
+						oDiv.style.background = ''; 
+					}else{
+						$("#bgg").css("background-image","url(img/bj.jpg)");
+						$("#bgg").css("background-repeat","no-repeat");
+	 					$("#bgg").css("background-size","100% 100%");
+ 					} 
+					
+			},
+				turning:function(e,page,pageObj){
+					if(page==1){
+						$("#borrow").hide();
+						$("#borrow2").hide();
+						$("#bt1").hide();
+						$(".page01-1").hide();
+						$(".page01-2").hide();
+						$(".page01-3").hide();
+						$(".page01-4").hide();
+						$(".page01-5").hide();
+						$(".page01-6").hide();
+						$(".pic_page0").hide();
+					}
+					if(page==2 || page==3){
+						$("#borrow").show();
+						$("#borrow2").show();
+						$(".page18-1").hide();
+						$(".page18-2").hide();
+						$(".page18-3").hide();
+						$(".page18-4").hide();
+						$(".page18-5").hide();
+						$(".page18-6").hide();
+						$(".pic_page19").hide();
+						setTimeout('$(".page01-1").fadeIn();',500); 
+						setTimeout('$(".page01-2").fadeIn();',800); 
+						setTimeout('$(".page01-3").fadeIn();',1300); 
+						setTimeout('$(".page01-4").fadeIn();',1500); 
+						setTimeout('$(".page01-5").fadeIn();',1800);
+						setTimeout('$(".page01-6").fadeIn();',2000);
+						$(".pic_page0").fadeIn(2000);
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();
+						$("#bt1").show();
+						var canvas1 = document.getElementById("myCanvas1");	
+						stage1 = new createjs.Stage(canvas1);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage1.addChild(tempBitMap);
+						setTimeout('stage1.update();',1000);
+						$("#bt1").click(function(){
+							$("#p1").show(); //第16页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p10").hide();
+							$("#p12").hide();
+							$("#p14").hide();
+							$("#p16").hide();
+							$("#p20").hide();
+							$(this).hide();
+						})	
+						$("#p1").click(function(){
+							$(".pp").hide(); //第16页按钮点击出现的图片
+							$(".bb").show();
+							$("#bt1").show();
+						})
+						
+					}else if(page==4||page==5){ //荣誉
+						$(".page01-1").hide();
+						$(".page01-2").hide();
+						$(".page01-3").hide();
+						$(".page01-4").hide();
+						$(".page01-5").hide();
+						$(".page01-6").hide();
+						$(".pic_page0").hide();
+						$(".page23-1").hide();
+						$(".page23-2").hide();
+						$(".page23-3").hide();
+						$(".page23-4").hide();
+						$(".page23-5").hide();
+						$(".page23-6").hide();
+						$(".pic_page24").hide();
+						$("#bt1").hide();
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();
+						$("#bt24").hide();
+						setTimeout('$(".page18-1").fadeIn();',500); 
+						setTimeout('$(".page18-2").fadeIn();',1000); 
+						setTimeout('$(".page18-3").fadeIn();',1300); 
+						setTimeout('$(".page18-4").fadeIn();',1500); 
+						setTimeout('$(".page18-5").fadeIn();',1800); 
+						setTimeout('$(".page18-6").fadeIn();',2000); 
+						$(".pic_page19").fadeIn(2000);
+						$("#bt18").show();
+						var canvas18 = document.getElementById("myCanvas18");	
+						stage18 = new createjs.Stage(canvas18);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage18.addChild(tempBitMap);
+						setTimeout('stage18.update();',1000);
+						$("#bt18").click(function(){
+							$("#p18").show(); //第16页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p10").hide();
+							$("#p12").hide();
+							$("#p14").hide();
+							$("#p16").hide();
+							$("#p20").hide();
+							$(this).hide();
+						})	
+						$("#p18").click(function(){
+							$(".pp").hide(); //第16页按钮点击出现的图片
+							$(".bb").show();
+							$("#bt18").show();
+						})
+						
+					}else if(page==6 || page==7){//群英
+						$(".page18-1").hide();
+						$(".page18-2").hide();
+						$(".page18-3").hide();
+						$(".page18-4").hide();
+						$(".page18-5").hide();
+						$(".page18-6").hide();
+						$(".pic_page19").hide();
+						$(".pic_page4").hide();
+						$(".page5-1").hide();
+						$(".page5-2").hide();
+						$(".page5-3").hide();
+						$(".page5-4").hide();
+						$(".page5-5").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();
+						setTimeout('$(".page23-1").fadeIn();',500);
+						setTimeout('$(".page23-2").fadeIn();',800);
+						setTimeout('$(".page23-3").fadeIn();',1000);
+						setTimeout('$(".page23-4").fadeIn();',1300);
+						setTimeout('$(".page23-5").fadeIn();',1500);
+						setTimeout('$(".page23-6").fadeIn();',2000);
+						$(".pic_page24").fadeIn(2000);
+						$("#bt24").show(); //第二页按钮
+						var canvas24 = document.getElementById("myCanvas24");
+						stage24 = new createjs.Stage(canvas24);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage24.addChild(tempBitMap);
+						setTimeout('stage24.update();',1000);
+						$("#bt24").click(function(){
+							$("#p24").show(); //第二页按钮点击出现的图片
+							$(".bb").hide();
+						});
+						$("#p24").click(function(){
+							$(".pp").hide(); //第二页按钮点击出现的图片
+							$(".bb").show();
+						})
+					}else if(page==8 || page==9){//九州
+						$(".page23-1").hide();
+						$(".page23-2").hide();
+						$(".page23-3").hide();
+						$(".page23-4").hide();
+						$(".page23-5").hide();
+						$(".page23-6").hide();
+						$(".pic_page24").hide();
+						$(".page6-1").hide();
+						$(".page6-2").hide();
+						$(".page6-3").hide();
+						/*$(".page6-4").fadeIn();
+						$(".page6-5").fadeIn();
+						$(".page6-6").fadeIn();*/
+						$(".page7-1").hide();
+						$(".page7-2").hide();
+						$(".page7-3").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();
+						$("#bt24").hide();
+						
+						$(".pic_page4").fadeIn(2000);
+						setTimeout('$(".page5-1").fadeIn();',500); 
+						setTimeout('$(".page5-2").fadeIn();',800); 
+						setTimeout('$(".page5-3").fadeIn();',1000); 
+						setTimeout('$(".page5-4").fadeIn();',1500); 
+						setTimeout('$(".page5-5").fadeIn();',2000);
+
+
+
+                        $("#bt6").show();
+                        var canvas6 = document.getElementById("myCanvas6");
+                        stage6 = new createjs.Stage(canvas6);
+                        var img1 = new Image();
+                        img1.src = "img/note.png";
+                        var tempBitMap = new createjs.Bitmap(img1);
+                        stage6.addChild(tempBitMap);
+                        setTimeout('stage6.update();',1000);
+
+                        $("#bt6").click(function(){
+                            $("#p6").show(); //第6页按钮点击出现的图片
+                            $(this).hide();
+                            $(".bb").hide();
+                            $("#p20").hide();
+                            $("#p8").hide();
+                            $("#p10").hide();
+                            $("#p12").hide();
+                            $("#p14").hide();
+                            $("#p16").hide();
+                            $("#p18").hide();
+                        })
+                        $("#p6").click(function(){
+                            $(".pp").hide();
+                            $(".bb").show();
+                            $("#bt6").show();
+                        })
+					}
+					 else if(page==10 || page==11){// 成立  --  四季
+
+                        $(".page6-1").hide();
+                        $(".page6-2").hide();
+                        $(".page6-3").hide();
+                        /*$(".page6-4").fadeIn();
+                        $(".page6-5").fadeIn();
+                        $(".page6-6").fadeIn();*/
+                        $(".page7-1").hide();
+                        $(".page7-2").hide();
+                        $(".page7-3").hide();
+                        $(".page10-1").hide();
+                        $(".page10-2").hide();
+                        $(".page10-3").hide();
+                        $(".page10-4").hide();
+                        $(".page10-5").hide();
+                        $(".page10-6").hide();
+                        $(".pic_page11").hide();
+                        $("#bt2").hide();
+                        $("#bt6").hide();
+                        $("#bt10").hide();
+                        $("#bt12").hide();
+                        $("#bt14").hide();
+                        $("#bt16").hide();
+                        $("#bt18").hide();
+                        $("#bt20").hide();
+                        $(".pic_page8").fadeIn(2000);
+                        setTimeout('$(".page9-1").fadeIn();',500);
+                        setTimeout('$(".page9-2").fadeIn();',800);
+                        setTimeout('$(".page9-3").fadeIn();',1000);
+                        setTimeout('$(".page9-4").fadeIn();',1300);
+                        setTimeout('$(".page9-5").fadeIn();',1500);
+                        setTimeout('$(".page9-6").fadeIn();',2000);
+                        $("#bt8").show(); //第8也按钮
+                        var canvas8 = document.getElementById("myCanvas8");
+                        stage8 = new createjs.Stage(canvas8);
+                        var img1 = new Image();
+                        img1.src = "img/note.png";
+                        var tempBitMap = new createjs.Bitmap(img1);
+                        stage8.addChild(tempBitMap);
+                        setTimeout('stage8.update();',1000);
+                        $("#bt8").click(function(){
+                            $("#p8").show(); //第8页按钮点击出现的图片
+                            $(".bb").hide();
+                            $("#p6").hide();
+                            $("#p20").hide();
+                            $("#p10").hide();
+                            $("#p12").hide();
+                            $("#p14").hide();
+                            $("#p16").hide();
+                            $("#p18").hide();
+                            $(this).hide();
+                        })
+                        $("#p8").click(function(){
+                            $(".pp").hide(); //第8页按钮点击出现的图片
+                            $(".bb").show();
+                            $("#bt8").show();
+                        })
+
+						/*$("#bt2").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();
+						$(".pic_page4").hide();
+						$(".pic_page8").hide();
+						$(".page9-1").hide();
+						$(".page9-2").hide();
+						$(".page9-3").hide();
+						$(".page9-4").hide();
+						$(".page9-5").hide();
+						$(".page9-6").hide();
+						$(".page5-1").hide();
+						$(".page5-2").hide();
+						$(".page5-3").hide();
+						$(".page5-4").hide();
+						$(".page5-5").hide();
+						setTimeout('$(".page6-1").fadeIn();$(".page7-1").fadeIn();',500);
+						setTimeout('$(".page6-2").fadeIn();$(".page7-2").fadeIn();',800);
+						setTimeout('$(".page6-3").fadeIn();$(".page7-3").fadeIn();',1000);
+						setTimeout('$(".page6-4").fadeIn();',1300);
+						setTimeout('$(".page6-5").fadeIn();',1600);
+						setTimeout('$(".page6-6").fadeIn();',2000);*/
+
+						/////////
+
+
+					}
+                    else if(page==12 || page==13){ //女人四季
+					   // else if(page==14 ||page==15){ //民生
+						$(".pic_page8").hide();
+						$(".page9-1").hide();
+						$(".page9-2").hide();
+						$(".page9-3").hide();
+						$(".page9-4").hide();
+						$(".page9-5").hide();
+						$(".page9-6").hide();
+						$(".page13-1").hide();
+						$(".page13-2").hide();
+						$(".page13-3").hide();
+						$(".page13-4").hide();
+						$(".page13-5").hide();
+						$(".page13-6").hide();
+						$(".pic_page12").hide();
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();
+						setTimeout('$(".page10-1").fadeIn();',500); 
+						setTimeout('$(".page10-2").fadeIn();',800); 
+						setTimeout('$(".page10-3").fadeIn();',1000); 
+						setTimeout('$(".page10-4").fadeIn();',1300); 
+						setTimeout('$(".page10-5").fadeIn();',1500); 
+						setTimeout('$(".page10-6").fadeIn();',200); 
+						$(".pic_page11").fadeIn(2000);
+						$("#bt10").show(); //第10也按钮
+						var canvas10 = document.getElementById("myCanvas10");							
+						stage10 = new createjs.Stage(canvas10);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage10.addChild(tempBitMap);
+						setTimeout('stage10.update();',1000);
+						$("#bt10").click(function(){
+							$("#p10").show(); //第10页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p20").hide();
+							$("#p12").hide();
+							$("#p14").hide();
+							$("#p16").hide();
+							$("#p18").hide();
+							$(this).hide();
+						})	
+						$("#p10").click(function(){
+							$(".pp").hide(); //第10页按钮点击出现的图片
+							$(".bb").show();
+							$("#bt10").show();
+						})
+					}
+                    else if(page==14 ||page==15){ //民生
+					   // else if(page==16 || page==17){
+						$(".page10-1").hide();
+						$(".page10-2").hide();
+						$(".page10-3").hide();
+						$(".page10-4").hide();
+						$(".page10-5").hide();
+						$(".page10-6").hide();
+						$(".pic_page11").hide();
+						$(".pic_page16").hide();
+						$(".page17-1").hide();
+						$(".page17-2").hide();
+						$(".page17-3").hide();
+						$(".page17-4").hide();
+						$(".page17-5").hide();
+						$(".page17-6").hide();
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();						
+						setTimeout('$(".page13-1").fadeIn();',500); 
+						setTimeout('$(".page13-2").fadeIn();',800); 
+						setTimeout('$(".page13-3").fadeIn();',1000); 
+						setTimeout('$(".page13-4").fadeIn();',1200); 
+						setTimeout('$(".page13-5").fadeIn();',1500); 
+						setTimeout('$(".page13-6").fadeIn();',2000); 
+						$(".pic_page12").fadeIn(2000);
+						$("#bt12").show(); //第12也按钮
+						 var canvas12 = document.getElementById("myCanvas12");
+						stage12 = new createjs.Stage(canvas12);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage12.addChild(tempBitMap);
+						setTimeout('stage12.update();',1000);
+						$("#bt12").click(function(){
+							$("#p12").show(); //第12页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p10").hide();
+							$("#p20").hide();
+							$("#p14").hide();
+							$("#p16").hide();
+							$("#p18").hide();
+							$(this).hide();
+						})	
+						$("#p12").click(function(){
+							$(".pp").hide();
+							$(".bb").show();
+							$("#bt12").show();
+						})
+					}
+                    //else if(page==18||page==19){ //成长历程
+                    else if(page==16 || page==17){
+						$(".page13-1").hide();
+						$(".page13-2").hide();
+						$(".page13-3").hide();
+						$(".page13-4").hide();
+						$(".page13-5").hide();
+						$(".page13-6").hide();
+						$(".pic_page12").hide();
+						$(".page14-1").hide();
+						$(".page14-2").hide();
+						$(".page14-3").hide();
+						$(".page14-4").hide();
+						$(".page14-5").hide();
+						$(".page14-6").hide();
+						$(".pic_page15").hide();
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();	
+						setTimeout('$(".page17-1").fadeIn();',500); 
+						setTimeout('$(".page17-2").fadeIn();',1000); 
+						setTimeout('$(".page17-3").fadeIn();',1300); 
+						setTimeout('$(".page17-4").fadeIn();',1500); 
+						setTimeout('$(".page17-5").fadeIn();',1800); 
+						setTimeout('$(".page17-6").fadeIn();',2000); 
+						$(".pic_page16").fadeIn(2000);
+						$("#bt16").show();
+						var canvas16 = document.getElementById("myCanvas16");	
+						stage16 = new createjs.Stage(canvas16);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage16.addChild(tempBitMap);
+						setTimeout('stage16.update();',1000);
+						$("#bt16").click(function(){
+							$("#p16").show(); //第16页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p10").hide();
+							$("#p12").hide();
+							$("#p14").hide();
+							$("#p20").hide();
+							$("#p18").hide();
+							$(this).hide();
+						})	
+						$("#p16").click(function(){
+							$(".pp").hide(); //第16页按钮点击出现的图片
+							$(".bb").show();
+							$("#bt16").show();
+						})
+						
+						
+					}
+                    //else if(page==20||page==21){ //转型
+                    else if(page==18||page==19){ //成长历程
+						$(".pic_page16").hide();
+						$(".page17-1").hide();
+						$(".page17-2").hide();
+						$(".page17-3").hide();
+						$(".page17-4").hide();
+						$(".page17-5").hide();
+						$(".page17-6").hide();
+						$(".pic_page21").hide();
+						$(".page20-1").hide();
+						$(".page20-2").hide();
+						$(".page20-3").hide();
+						$(".page20-4").hide();
+						$(".page20-5").hide();
+						$(".page20-6").hide();
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt18").hide();
+						$("#bt20").hide();	
+						setTimeout('$(".page14-1").fadeIn();',500); 
+						setTimeout('$(".page14-2").fadeIn();',1000); 
+						setTimeout('$(".page14-3").fadeIn();',1300); 
+						setTimeout('$(".page14-4").fadeIn();',1500); 
+						setTimeout('$(".page14-5").fadeIn();',1800); 
+						setTimeout('$(".page14-6").fadeIn();',2000); 
+						$(".pic_page15").fadeIn(2000);
+						$("#bt14").show(); //第14也按钮
+						 var canvas14 = document.getElementById("myCanvas14");	
+						stage14 = new createjs.Stage(canvas14);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage14.addChild(tempBitMap);
+						setTimeout('stage14.update();',1000);
+						$("#bt14").click(function(){
+							$("#p14").show(); //第14页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p10").hide();
+							$("#p12").hide();
+							$("#p20").hide();
+							$("#p16").hide();
+							$("#p18").hide();
+							$(this).hide();
+						})	
+						$("#p14").click(function(){
+							$("#p14").hide(); //第14页按钮点击出现的图片
+							$(".bb").show();
+							$("#bt14").show();
+						})
+						
+					}
+                    //else if(page==22||page==23){ //责任
+                    else if(page==20||page==21){ //转型
+						$("#borrow").show();
+						$("#borrow2").show();
+						$(".page14-1").hide();
+						$(".page14-2").hide();
+						$(".page14-3").hide();
+						$(".page14-4").hide();
+						$(".page14-5").hide();
+						$(".page14-6").hide();
+						$(".pic_page15").hide();
+						$("#bt2").hide();
+						$("#bt6").hide();
+						$("#bt8").hide();
+						$("#bt10").hide();
+						$("#bt12").hide();
+						$("#bt14").hide();
+						$("#bt16").hide();
+						$("#bt20").hide();
+						setTimeout('$(".page20-1").fadeIn();',500); 
+						setTimeout('$(".page20-2").fadeIn();',1000); 
+						setTimeout('$(".page20-3").fadeIn();',1300); 
+						setTimeout('$(".page20-4").fadeIn();',1500); 
+						setTimeout('$(".page20-5").fadeIn();',1800); 
+						setTimeout('$(".page20-6").fadeIn();',2000); 
+						$(".pic_page21").fadeIn(2000);
+						$("#bt20").show(); //第8也按钮
+						var canvas20 = document.getElementById("myCanvas20");	
+						stage20 = new createjs.Stage(canvas20);
+						var img1 = new Image();
+						img1.src = "img/note.png";
+						var tempBitMap = new createjs.Bitmap(img1);
+						stage20.addChild(tempBitMap);
+						setTimeout('stage20.update();',1000);
+						$("#bt20").click(function(){
+							$("#p20").show(); //第16页按钮点击出现的图片
+							$(".bb").hide();
+							$("#p6").hide();
+							$("#p8").hide();
+							$("#p10").hide();
+							$("#p12").hide();
+							$("#p14").hide();
+							$("#p16").hide();
+							$("#p18").hide();
+							$(this).hide();
+						})	
+						$("#p20").click(function(){
+							$(".pp").hide(); //第16页按钮点击出现的图片
+							$(".bb").show();
+							$("#bt20").show();
+						})
+					
+
+				}
+                    else if(page==22){
+                    //else if(page==24){
+					$("#borrow").hide();
+					$("#borrow2").hide();
+					var oDiv = document.getElementById('bgg'); //获取这个div元素
+					oDiv.style.background = ''; 
+					$(".pic_page21").hide();
+					$(".page20-1").hide();
+					$(".page20-2").hide();
+					$(".page20-3").hide();
+					$(".page20-4").hide();
+					$(".page20-5").hide();
+					$(".page20-6").hide();
+					 $(".pic_page22").fadeIn(); 
+					$("#p2").hide();
+					$("#p6").hide();
+					$("#p8").hide();
+					$("#p10").hide();
+					$("#p12").hide();
+					$("#p20").hide();
+					$("#p16").hide();
+					$("#p18").hide();
+					$("#bt2").hide();
+					$("#bt6").hide();
+					$("#bt8").hide();
+					$("#bt10").hide();
+					$("#bt12").hide();
+					$("#bt14").hide();
+					$("#bt16").hide();
+					$("#bt18").hide();
+					$("#bt20").hide();
+					setTimeout('$("#page25").fadeIn();$(".bb").hide();',1000);
+				
+				} 
+				}
+			}
+	});
+	
+	
+}
+/*$("#page25").click(function(){
+	$("#page26").fadeIn();
+	$(this).hide();
+})*/
+
+$("#page25").click(function(){
+    $("#page26").fadeIn();
+    $(this).hide();
+})
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['js/turn.js'],
+	nope: ['js/turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+.s1>article{ background-position: right bottom;}
+.s1 .bg{
+    opacity: 1;
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: right bottom no-repeat; background-size: cover;
+    -webkit-transition: all .5s;
+}
+.s1.move-before .bg{
+    opacity: 0;
+    background-position: center center;
+    -webkit-transform: scale(1.8);
+}
+.s1 .item{
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: right bottom no-repeat; background-size: cover;
+}
+.line-part{
+    /*display: none;*/
+    position: absolute; left: 0; top: 0;
+}
+.s1 .line{
+    -webkit-transform-origin: 0 0;
+    top: 0;
+    -webkit-transform: rotate(20deg);
+}
+.s1 .line-set{
+    position: absolute; right: 0;
+    width: 100%;
+    background: url(images/index-line.png) right bottom no-repeat; background-size: 100%;
+}
+.s1 .line-mask{
+    -webkit-transform-origin: 0 0;
+    position: absolute;
+    -webkit-transform: rotate(-20deg);
+    width: 100%; height: 0;
+    overflow: hidden;
+}
+
+.s1:not(.move-before) .line-mask{
+    -webkit-animation: line-ani 1.5s 1 linear;
+    -webkit-animation-fill-mode:forwards;
+}
+
+.s1:not(.move-before) .line-part:nth-of-type(4) .line-mask{ display: none; -webkit-animation-delay: .5s;}
+.s1:not(.move-before) .line-part:nth-of-type(3) .line-mask{ -webkit-animation-delay: .5s; -webkit-animation-duration: 1s}
+.s1:not(.move-before) .line-part:nth-of-type(2) .line-mask{ -webkit-animation-delay: 1s; -webkit-animation-duration: 1.5s;}
+.s1:not(.move-before) .line-part:nth-of-type(1) .line-mask{ -webkit-animation-delay: 1.3s; -webkit-animation-duration: 1.5s; -webkit-animation-timing-function: cubic-bezier(0.4,1,1,0);}
+/*.s1 .line-mask.p,.s1 .line-mask.p .line{*/
+    /*-webkit-transform-origin: 100% 100%;*/
+/*}*/
+/*[34.43,12.6,11.03,5.8,2.98,33.16]*/
+@-webkit-keyframes line-ani {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.s1 .pan{
+    /*display: none;*/
+}
+
+.s1.move-before .sp-move, .s1 .sp-move.move-before{
+    /*left: -1.6%; bottom: 35.25%;*/
+    -webkit-transform:translate3d(1.6%,-35.25%,0) scale(.05);
+}
+.s1 .sp-move{
+    /*display: none;*/
+    opacity: 0;
+    -webkit-transform-origin: 0 100%;
+    /*-webkit-transition: all .2s ease-in 3.6s ;*/
+}
+.s1:not(.move-before) .sp-move{
+    /*display: none;*/
+    -webkit-animation: sp-move .2s ease-in 2.5s;
+    -webkit-animation-fill-mode:forwards;
+}
+.s1:not(.move-before) .car.sp-move{
+    -webkit-animation-delay: 3s;
+}
+.s1:not(.move-before) .logo.sp-move{
+    -webkit-animation-delay: 3.5s;
+}
+.s1:not(.move-before) .slogan.sp-move{
+    -webkit-animation-delay: 0s;
+}
+@-webkit-keyframes sp-move {
+    0%{
+        opacity: 0;
+        -webkit-transform:translate3d(-1.6%,-35.25%,0) scale(.05);
+    }
+    20%{
+        opacity: 1;
+        /*left: 1.6%; bottom: 32.25%;*/
+        -webkit-transform:translate3d(1.6%,-32.25%,0) scale(.05);
+    }
+    100%{
+        opacity: 1;
+        /*left: 0; bottom: 0;*/
+        -webkit-transform:translate3d(0,0,0) scale(1);
+    }
+}
+.s1 .car{
+    position: absolute; left: 0; bottom: 0; top: auto;
+}
+
+
+.s1 .line .p1{ }

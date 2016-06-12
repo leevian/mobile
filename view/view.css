@@ -1,0 +1,10 @@
+.native-size{
+    top: 0; left: 50%;
+    -webkit-transform: translate3d(-50%,0,0);
+}
+.taqing .arrow-go{
+    left: 49.66%; top: 8.91%;
+}
+.luyan .arrow-go{
+    left: 65.34%; top: 9.51%;
+}

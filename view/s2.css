@@ -1,0 +1,40 @@
+.s2 .bg{
+    opacity: 1;
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: right bottom no-repeat; background-size: cover;
+    -webkit-transition: all .5s 1s;
+}
+.s2 .slogan{ top: 6.2%;}
+.s2.move-before .bg{
+    opacity: 0;
+    background-position: center center;
+    -webkit-transform: scale(1.8);
+}
+.move-before .up-move{
+    -webkit-transform: translate3d(0,50px,0);
+    opacity: 0;
+}
+.up-move{
+    -webkit-transition: all .5s ease-out 0s;
+}
+.s2 .active-list{ width: 80%; height: 78%; position: absolute; top: 23.33%; left: 10%;}
+.s2 .active-list .up-move{ width: 100%; height: 30%; position: relative; display: block;}
+.s2 .active-list .active-bg{ width: 100%; height: 90%; position: absolute; left: 0; top: 0; background: center center no-repeat; background-size: cover;}
+.s2 .active-list .title{
+    position: absolute; right: 0; bottom: 10%;
+    width: 99px; height: 26px;
+    text-align: center; line-height: 26px; color: #ffffff; font-size: 15px; background: #ad172b;
+    -webkit-transform: translate3d(5px,5px,0);
+}
+.s2 .active-list .active-1{ -webkit-transition-delay: .3s }
+.s2 .active-list .active-2{ -webkit-transition-delay: .6s }
+.s2 .active-list .active-3{ -webkit-transition-delay: .9s }
+.s2 .active-list .title:before{
+    content:"";
+    position: absolute; bottom: 0; left: -20px;
+    border-right:10px #ad172b solid;
+    border-bottom:13px #ad172b solid;
+    border-left:10px transparent solid;
+    border-top:13px transparent solid;
+}

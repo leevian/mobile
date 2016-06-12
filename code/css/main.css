@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	position: relative;
+	width:100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+img{
+	display:block;
+	padding:0;
+	margin:0;
+	border:0 none;
+}
+@media screen and (orientation:portrait) {
+
+/**竖向定义样式**/
+	.tips{
+		position:absolute;
+		width: 100%;
+		top:0%;
+		left:0%;
+		z-index: 8888;
+	}
+
+}
+@media screen and (orientation:landscape) {
+
+/**[横向定义样式**/
+	.screen{
+		display: none;
+	}
+}
+	.load_font{
+		position:absolute;	
+		width:20%;
+		height: 8;
+		top: 58%;
+		left: 45%;
+		z-index:8890;
+		color: #fff;
+	}
+	.loading-img-0{
+		position:absolute;	
+		width:100%;
+		top:0;
+		left:0;
+		z-index:8889;
+	}
+	.loading-img-1{
+		position:absolute;	
+		height:6%;
+		top:45.5%;
+		left:48.2%; 
+		z-index:8890;
+	}
+	.loading-img-2{
+		position:absolute;	
+		height:8%;
+		top:45.7%;
+		left:48.7%; 
+		z-index:8890;
+	}
+	.loading-img-3{
+		position:absolute;	
+		height:7%;
+		top:45.9%;
+		left:48.2%; 
+		z-index:8890;
+	}
+/*******************           index_1            ***********************/
+	.pic_index_1{
+		position:absolute;
+		width: 100%;
+		top: 0;
+		left:0;
+		opacity: 0;
+		overflow: hidden;
+		animation:pic_index_1 1s linear 0s 1 normal forwards;
+	}
+	@keyframes pic_index_1
+	{
+		0%{opacity: 0;}
+		50%{opacity: 1;}
+		100%{opacity: 1;}
+	}
+	.clock{
+		position:absolute;
+		width: 35%;
+		top: 15%;
+		left: 5%;
+		opacity: 0;
+		overflow: hidden;
+		animation:pic_index_1 1s linear 0s 1 normal forwards;
+	}
+	.pointer_1{
+		position:absolute;
+		width: 4%;
+		top: 47%;
+		left: 20.4%;
+		opacity: 1;
+		overflow: hidden;
+		animation:pointer_1 2s linear 0s infinite normal forwards;
+	}
+	@keyframes pointer_1
+	{
+		0%{opacity: 1;}
+		50%{opacity: 1;}
+		100%{opacity: 1;}
+	}
+	.pointer_2{
+		position:absolute;
+		width: 11%;
+		top: 31%;
+		left: 13.5%;
+		opacity: 1;
+		overflow: hidden;
+		animation:pointer_2 3s linear 0s infinite normal forwards;
+	}
+	@keyframes pointer_2
+	{
+		0%{opacity: 1;transform:rotate(0deg);transform-origin:80% 80%;}
+		50%{opacity: 1;transform:rotate(180deg);transform-origin:80% 80%;}
+		100%{opacity: 1;transform:rotate(360deg);transform-origin:80% 80%;}
+	}
+	.pointer_3{
+		position:absolute;
+		width: 1.2%;
+		top: 47%;
+		left: 22.1%;
+		opacity: 1;
+		overflow: hidden;
+		animation:pointer_3 7s linear 0s infinite normal forwards;
+	}
+	
+	
+	@keyframes pointer_3
+	{
+		0%{opacity: 1;transform:rotate(0deg);transform-origin:20% 20%;}
+		50%{opacity: 1;transform:rotate(180deg);transform-origin:20% 20%;}
+		100%{opacity: 1;transform:rotate(360deg);transform-origin:20% 20%;}
+	}
+	.flipbook-viewport{
+		display: none;
+	}
+/*******************           page            ***********************/
+	img{
+		display:block;
+	}
+	
+	
+		
+	
+	
+	
+
