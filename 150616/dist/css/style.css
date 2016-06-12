@@ -1,0 +1,327 @@
+body{ overflow: hidden;}
+.u-audio { position: absolute; top: 50px; right: 40px; width: 132px; height: 73px; z-index: 999; margin:-70px -66px 0 0; }
+.u-audio .res_audio { position: absolute; top: 0; left: 0; opacity: 0; height: 0; width: 0; }
+.u-audio .btn_audio { position: relative; width: 100%; padding-top: 29px; height: 44px; }
+.u-audio .btn_audio strong,
+.u-audio .btn_audio .audio_open { display: inline-block; height: 44px; line-height: 44px; vertical-align: middle; }
+.u-audio .btn_audio strong { width: 57px; font-size: 24px; color: #fff; opacity: 1; }
+.u-audio .btn_audio .audio_open { position: absolute; bottom: 0; left: 56px; width: 44px; }
+.u-audio .btn_audio strong.z-hide { opacity: 0; }
+.u-audio .btn_audio strong.z-move {
+    -webkit-transition:opacity 0.5s;
+    -moz-transition:opacity 0.5s;
+    -ms-transition:opacity 0.5s;
+    -o-transition:opacity 0.5s;
+    transition:opacity 0.5s;
+}
+.u-audio.z-low { z-index: 1; }
+.css_sprite01 { background-image:url(../../img/css_sprite01.png)!important;  background-repeat: no-repeat!important; background-size: cover; }
+/*声音*/
+/*.coffee-steam-box { display: none; }*/
+/**
+ * loading
+ * -u-pageLoading
+ */
+.u-pageLoading { display:none; position:fixed; top:0; left:0; z-index:99999; height:100%; width:100%; background:rgba(0,0,0,0.6); }
+.u-pageLoading img { position:absolute; top:40%; left:50%; height:100px; width:100px; margin:-50px 0 0 -50px; }
+
+
+
+#logo{
+    position: absolute; right: 5%; bottom: 2%; z-index: 111;
+    width: 59px;
+}
+img{ width: 100%; display: block;}
+
+.heart img{
+    animation: heart 1s ease-out infinite;
+    -webkit-animation: heart 1s ease-out infinite;
+}
+.heart .h2{ animation-delay: .3s; -webkit-animation-delay: .3s; }
+.heart .h3{ animation-delay: .7s; -webkit-animation-delay: .7s;}
+.heart .h4{ animation-delay: 1.1s;-webkit-animation-delay: 1.1s;}
+
+
+.cloud{
+    position: absolute; top: 5%; left: 0;
+    width: 100%;
+    animation: cloud 10s linear infinite;
+    -webkit-animation: cloud 10s linear infinite;
+}
+
+.cloud .c1,
+.cloud .c2{
+    position: absolute; left: 0; top: 0;
+    width: 100%;
+}
+.cloud .c1{
+    transform: translate3d(-100%,0,0);
+    -webkit-transform: translate3d(-100%,0,0);
+}
+.txt{
+    position: absolute; top: 5%; left: 50%; margin-left: -129px;
+    width: 258px;
+}
+.txt .t1{
+    position: absolute; top: 0; left: 0;
+    width: 258px; height: 110px;
+    background: url(../../img/0/t1.png) no-repeat; background-size: 100%;
+}
+.txt .t2{
+    position: absolute; top: 120px; left: 0;
+    width: 258px; height: 40px;
+    background: url(../../img/0/t2.png) no-repeat; background-size: 100%;
+}
+/* s1 */
+.s1{ background-image: url(../../img/0/bg.png);}
+.s1 .m{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+.s1 .m .t{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+/* s2 */
+.s2{ background-image: url(../../img/1/bg.png);}
+.s2 .txt .t1{ background-image: url(../../img/1/t1.png);}
+.s2 .txt .t2{ background-image: url(../../img/1/t2.png);}
+.s2 .m{
+    position: absolute; bottom: 5%; left: 0;
+    width: 100%;
+}
+.s2 .pack{
+    animation: shake 4s infinite;
+    -webkit-animation: shake 4s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: rotate(0deg);
+    }
+    49%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    55%{
+        transform: rotate(-10deg);
+    }
+    60%{
+        transform: rotate(10deg);
+    }
+    65%{
+        transform: rotate(-10deg);
+    }
+    70%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    80%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes shake{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    49%{
+        -webkit-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(10deg);
+    }
+    55%{
+        -webkit-transform: rotate(-10deg);
+    }
+    60%{
+        -webkit-transform: rotate(10deg);
+    }
+    65%{
+        -webkit-transform: rotate(-10deg);
+    }
+    70%{
+        -webkit-transform: rotate(10deg);
+    }
+    75%{
+        -webkit-transform: rotate(-10deg);
+    }
+    80%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+    }
+}
+.s2 .m .t{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+/* S3 */
+.s3{ background-image: url(../../img/2/bg.png);}
+.s3 .txt .t1{ background-image: url(../../img/2/t1.png);}
+.s3 .txt .t2{ background-image: url(../../img/2/t2.png);}
+
+.s3 .m{
+    position: absolute; bottom: 5%; left: 0;
+    width: 100%;
+}
+.s3 .m .t{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+@keyframes cloud{
+    from{
+        transform: translate3d(0,0,0);
+    }
+    to{
+        transform: translate3d(100%,0,0);
+    }
+}
+@-webkit-keyframes cloud{
+    from{
+        -webkit-transform: translate3d(0,0,0);
+    }
+    to{
+        -webkit-transform: translate3d(100%,0,0);
+
+    }
+}
+.s3 .bird{
+    position: absolute; left: 15%; top: 10%;
+    width: 74px;
+}
+@keyframes heart{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    50%{
+        transform: translate3d(0,2%,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
+    }
+}
+@-webkit-keyframes heart{
+    0%{
+        -webkit-transform: translate3d(0,0,0);
+    }
+    50%{
+        -webkit-transform: translate3d(0,2%,0);
+    }
+    100%{
+        -webkit-transform: translate3d(0,0,0);
+    }
+}
+
+
+/* S4 */
+.s4{ background-image: url(../../img/3/bg.png);}
+.s4 .txt .t1{ width: 162px; left: 50%; margin-left: -81px; background-image: url(../../img/3/t1.png);}
+.s4 .txt .t2{ background-image: url(../../img/3/t2.png);}
+.s4 .m{
+    position: absolute; bottom: 5%; left: 0;
+    width: 100%;
+}
+.s4 .m .t{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+/* S5 */
+.s5{ background-image: url(../../img/4/bg.png);}
+.s5 .txt .t1{ background-image: url(../../img/4/t1.png);}
+.s5 .txt .t2{ background-image: url(../../img/4/t2.png);}
+.s5 .m{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+.s5 .m .t{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+
+/* S6 */
+.s6{ background-image: url(../../img/5/bg.png);}
+.s6 .txt .t1{ background-image: url(../../img/5/t1.png);}
+.s6 .txt .t2{ height: 57px; background-image: url(../../img/5/t2.png);}
+.s6 .txt .t3{
+    position: absolute; top: 185px; left: 50%; margin-left: -128px;
+    width: 255px; height: 20px;
+    background: url(../../img/5/t3.png) no-repeat; background-size: 100%;
+}
+
+.s6 .m{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+.s6 .m .t{
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+}
+.s6 .cloud .c1,
+.s6 .cloud .c2{
+    position: absolute; left: 0; top: 0;
+    width: 100%;
+}
+.s6 .cloud .c1{
+    transform: translate3d(-100%,0,0);
+    -webkit-transform: translate3d(-100%,0,0);
+}
+.s6 .bird{
+    position: absolute; right: 5%; top: 10%;
+    width: 74px;
+}
+.s6 .globe{
+    position: absolute; top: 0; left: 50%; margin-left: -140%;
+    width: 280%;
+    animation: globe 10s linear infinite;
+    -webkit-animation: globe 10s linear infinite;
+}
+.s6 .car{ position: relative; width: 100%;}
+.s6 .car .ball{
+    position: absolute; width: 10.27%;
+    animation: ball 1s linear infinite;
+    -webkit-animation: ball 1s linear infinite;
+}
+.s6 .car .ball:nth-of-type(1){ bottom: 24.5%; left: 24%;}
+.s6 .car .ball:nth-of-type(2){ bottom: 24.5%; right: 25.5%;}
+
+@keyframes globe{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes globe{
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes ball{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes ball{
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.page{ background-position: bottom center; background-size: cover; }
