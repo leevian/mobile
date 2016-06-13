@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ISPO H5</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
+	</head>
+	<style>
+		html, body{
+			position: relative;
+			width:100%;
+			height: 100%;
+			padding:0;
+			margin:0;
+		}
+		img {
+			display:block;
+		}
+		
+		.swiper-container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.hidden{
+			display: none;
+		}
+		.swiper_1{
+			background: url(img/page4/background.jpg);
+			background-size: cover;
+		}
+		.kuangjia{
+			position: absolute;
+			top: 30%;
+			left: 10%;
+			width: 80%;
+			z-index: 5;
+		}
+		.product_1{
+			position: absolute;
+			top: 5%;
+			left: 10%;
+			width: 25%;
+			z-index: 5;
+			animation:product_1 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_1 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_1
+		{
+			0%   {top: 5%;}
+			50%  {top: 7%;}
+			100% {top: 5%;}
+		}
+		@-webkit-keyframes product_1 /* Safari and Chrome */
+		{
+			0%   {top: 5%;}
+			50%  {top: 10%;}
+			100% {top: 5%;}
+		}
+		.product_2{
+			position: absolute;
+			top: 10%;
+			left: 70%;
+			width: 17%;
+			z-index: 5;
+			animation:product_2 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_2 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_2
+		{
+			0%   {top: 10%;}
+			50%  {top: 12%;}
+			100% {top: 10%;}
+		}
+		@-webkit-keyframes product_2 /* Safari and Chrome */
+		{
+			0%   {top: 10%;}
+			50%  {top: 12%;}
+			100% {top: 10%;}
+		}
+		.product_3{
+			position: absolute;
+			top: 30%;
+			left: 7%;
+			width: 16%;
+			z-index: 5;
+			animation:product_3 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_3 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_3
+		{
+			0%   {top: 30%;}
+			50%  {top: 32%;}
+			100% {top: 30%;}
+		}
+		@-webkit-keyframes product_3 /* Safari and Chrome */
+		{
+			0%   {top: 30%;}
+			50%  {top: 32%;}
+			100% {top: 30%;}
+		}
+		.product_4{
+			position: absolute;
+			top: 60%;
+			left: 7%;
+			width: 16%;
+			z-index: 5;
+			animation:product_4 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_4 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_4
+		{
+			0%   {top: 60%;}
+			50%  {top: 62%;}
+			100% {top: 60%;}
+		}
+		@-webkit-keyframes product_4 /* Safari and Chrome */
+		{
+			0%   {top: 60%;}
+			50%  {top: 62%;}
+			100% {top: 60%;}
+		}
+		.product_5{
+			position: absolute;
+			top: 60%;
+			left: 73%;
+			width: 17%;
+			z-index: 5;
+			animation:product_5 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_5 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_5
+		{
+			0%   {top: 60%;}
+			50%  {top: 62%;}
+			100% {top: 60%;}
+		}
+		@-webkit-keyframes product_5 /* Safari and Chrome */
+		{
+			0%   {top: 60%;}
+			50%  {top: 62%;}
+			100% {top: 60%;}
+		}
+		.product_6{
+			position: absolute;
+			top: 80%;
+			left: 45%;
+			width: 17%;
+			z-index: 5;
+			animation:product_6 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_6 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_6
+		{
+			0%   {top: 80%;}
+			50%  {top: 82%;}
+			100% {top: 80%;}
+		}
+		@-webkit-keyframes product_6 /* Safari and Chrome */
+		{
+			0%   {top: 80%;}
+			50%  {top: 82%;}
+			100% {top: 80%;}
+		}
+		.product_7{
+			position: absolute;
+			top: 80%;
+			left: 75%;
+			width: 20%;
+			z-index: 5; 
+			animation:product_7 2s linear 0s infinite normal forwards;
+			-webkit-animation:product_7 2s linear 0s infinite normal forwards;
+		}
+		@keyframes product_7
+		{
+			0%   {top: 80%;}
+			50%  {top: 82%;}
+			100% {top: 80%;}
+		}
+		@-webkit-keyframes product_7 /* Safari and Chrome */
+		{
+			0%   {top: 80%;}
+			50%  {top: 82%;}
+			100% {top: 80%;}
+		}
+		.click{
+			position: absolute;
+			top: -20%;
+			left: -25%;
+			width: 100%;
+			z-index: 2;
+		}
+		.big_pic{
+			position: absolute;
+			top: 40%;
+			left: 13%;
+			width: 70%;
+			z-index: 11;
+		}
+		.cover{
+			position: absolute;
+			background: url(img/page4/cover.png);
+			background-size: cover;
+			width: 100%;
+			height: 25%;
+			left: 0px;
+			bottom: -200px;
+			z-index: 11;
+		}
+				
+	</style>
+	<body>
+		<!-- Swiper -->
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide swiper_1">
+	            	<div class="content">
+	            		<img class="kuangjia" src="img/page4/kuangjia.png" />
+		            	<img class="click" src="img/page4/click.gif" />
+		            	<img class="big_pic" src="img/page4/product_4_big.png">
+	            	</div>
+	            	<img class="product_1" src="img/page4/product_1.png" />
+	            	<img class="product_2" src="img/page4/product_2.png" />
+	            	<img class="product_3" src="img/page4/product_3.png" />
+	            	<img class="product_4" src="img/page4/product_4.png" />
+	            	<img class="product_5" src="img/page4/product_5.png" />
+	            	<img class="product_6" src="img/page4/product_6.png" />
+	            	<img class="product_7" src="img/page4/product_7.png" />
+	            	<div class="cover"></div>
+	           	</div>
+	        </div>
+	    </div>
+	</body>
+	<script>
+		var mySwiper;
+		mySwiper = new Swiper('.swiper-container', {
+			direction : 'horizontal',
+			onSlideChangeStart: function(swiper){
+				if( mySwiper.activeIndex == 0 ){
+					
+				}else if( mySwiper.activeIndex == 1 ){
+					
+				}else if( mySwiper.activeIndex == 2 ){
+					
+				}else if( mySwiper.activeIndex == 3 ){
+					
+				}
+		    }
+		});
+		$(function(){
+			var current_page = 0;
+			var positionX = 0, positionY = 0;
+			$(".click").bind("touchstart", function (e) {
+				positionX = e.originalEvent.changedTouches[0].clientX;
+				positionY = e.originalEvent.changedTouches[0].clientY;
+				return false;
+			}).bind("touchmove", function (e) {
+				return false;
+			}).bind("touchend", function (e) {
+				//console.log("touchend")
+				var endX = e.originalEvent.changedTouches[0].clientX;
+				var endY = e.originalEvent.changedTouches[0].clientY;
+				var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+				if (spanX > 300) {
+					return false;
+				}
+				if (spanX > spanY) { //划的X轴大于Y轴不做处理
+					return false;
+				}
+				if ( spanY > 50) {
+					if( $(".cover").css("bottom") != "0" ){
+						$(".cover").animate({ "bottom": "0px" }, 100);
+					}
+				}
+				return false;
+			});
+		});
+		
+		$('.product_1').click(function(){
+			$('.big_pic').attr('src','img/page4/product_1_big.png');
+			$('.big_pic').attr('style','top: 30%;left: 23%;width: 50%;');
+		})
+		$('.product_2').click(function(){
+			$('.big_pic').attr('src','img/page4/product_2_big.png');
+			$('.big_pic').attr('style','top: 35%;left: 23%;width: 50%;');
+		})
+		$('.product_3').click(function(){
+			$('.big_pic').attr('src','img/page4/product_3_big.png');
+			$('.big_pic').attr('style','top: 40%;left: 23%;width: 50%;');
+		})
+		$('.product_4').click(function(){
+			$('.big_pic').attr('src','img/page4/product_4_big.png');
+			$('.big_pic').attr('style','top: 40%;left: 13%;width: 70%;');
+		})
+		$('.product_5').click(function(){
+			$('.big_pic').attr('src','img/page4/product_5_big.png');
+			$('.big_pic').attr('style','top: 35%;left: 16%;width: 60%;');
+		})
+		$('.product_6').click(function(){
+			$('.big_pic').attr('src','img/page4/product_6_big.png');
+			$('.big_pic').attr('style','top: 35%;left: 25%;width: 45%;');
+		})
+		$('.product_7').click(function(){
+			$('.big_pic').attr('src','img/page4/product_7_big.png');
+			$('.big_pic').attr('style','top: 30%;left: 30%;width: 35%;');
+		})
+		
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

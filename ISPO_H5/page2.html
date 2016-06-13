@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ISPO H5</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
+	</head>
+	<style>
+		html, body{
+			position: relative;
+			width:100%;
+			height: 100%;
+			padding:0;
+			margin:0;
+		}
+		img {
+			display:block;
+		}
+		
+		.swiper-container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.hidden{
+			display: none;
+		}
+		.swiper_1{
+			background: url(img/page2/background_1.jpg);
+			background-size: cover;
+		}
+		.huaban{
+			position: absolute;
+			top: 17%;
+			left: 37%;
+			width: 25%;
+			z-index: 5;
+		}
+		.huaban_dong{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			z-index: 6;
+		}
+		.slider{
+			position: absolute;
+			top: 0%;
+			left: -10%;
+			width: 100%;
+			z-index: 7;
+		}
+		.cover{
+			position: absolute;
+			background: url(img/page2/cover.png);
+			background-size: cover;
+			width: 100%;
+			height: 25%;
+			left: 0px;
+			bottom: -200px;
+			z-index: 11;
+		}
+		.shandian1{
+			position: absolute;
+			top: 5%;
+			left: 10%;
+			width: 10%;
+			animation:shandian1 2s linear 0s infinite normal forwards;
+			-webkit-animation:shandian1 2s linear 0s infinite normal forwards;
+		}
+		@keyframes shandian1
+		{
+			0%   {top: 5%;}
+			50% {top: 8%;}
+			100% {top: 5%;}
+		}
+		@-webkit-keyframes shandian1 /* Safari and Chrome */
+		{
+			0%   {top: 5%;}
+			50% {top: 8%;}
+			100% {top: 5%;}
+		}
+		.shandian2{
+			position: absolute;
+			top: 10%;
+			left: 80%;
+			width: 10%;
+			animation:shandian2 2s linear 0s infinite normal forwards;
+			-webkit-animation:shandian2 2s linear 0s infinite normal forwards;
+		}
+		@keyframes shandian2
+		{
+			0%   {left: 80%;}
+			50% {left: 83%;}
+			100% {left: 80%;}
+		}
+		@-webkit-keyframes shandian2 /* Safari and Chrome */
+		{
+			0%   {left: 80%;}
+			50% {left: 83%;}
+			100% {left: 80%;}
+		}
+		.yanjing{
+			position: absolute;
+			top: 20%;
+			left: 86%;
+			width: 10%;
+		}		
+	</style>
+	<body>
+		<!-- Swiper -->
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide swiper_1">
+	            	<div class="content">
+	            		<img class="shandian1" src="img/page2/shandian.png" />
+	            		<img class="shandian2" src="img/page2/shandian.png" />
+	            		<img class="yanjing" src="img/page2/yanjing.png" />
+	            		<img class="huaban" src="img/page2/huaban.png" />
+		            	<img class="huaban_dong" src="img/page2/cut.gif" />
+	            	</div>
+	            	<img class="slider" src="img/page2/slider.gif" />
+	            	<div class="cover"></div>
+	           	</div>
+	        </div>
+	    </div>
+	</body>
+	<script>
+		var mySwiper;
+		mySwiper = new Swiper('.swiper-container', {
+			direction : 'horizontal',
+			onSlideChangeStart: function(swiper){
+				if( mySwiper.activeIndex == 0 ){
+					
+				}else if( mySwiper.activeIndex == 1 ){
+					
+				}else if( mySwiper.activeIndex == 2 ){
+					
+				}else if( mySwiper.activeIndex == 3 ){
+					
+				}
+		    }
+		});
+		$(".slider").bind("touchstart", function (e) {
+			positionX = e.originalEvent.changedTouches[0].clientX;
+			positionY = e.originalEvent.changedTouches[0].clientY;
+			return false;
+		}).bind("touchmove", function (e) {
+			return false;
+		}).bind("touchend", function (e) {
+			//console.log("touchend")
+			var endX = e.originalEvent.changedTouches[0].clientX;
+			var endY = e.originalEvent.changedTouches[0].clientY;
+			var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+			if (spanX > 50) {
+				$('.huaban').hide();
+				$('.slider').hide();
+				$('.huaban_dong').show();
+			}
+			return false;
+		});
+		
+		$(function(){
+			var current_page = 0;
+			var positionX = 0, positionY = 0;
+			$(".content").bind("touchstart", function (e) {
+				positionX = e.originalEvent.changedTouches[0].clientX;
+				positionY = e.originalEvent.changedTouches[0].clientY;
+				return false;
+			}).bind("touchmove", function (e) {
+				return false;
+			}).bind("touchend", function (e) {
+				//console.log("touchend")
+				var endX = e.originalEvent.changedTouches[0].clientX;
+				var endY = e.originalEvent.changedTouches[0].clientY;
+				var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+				if (spanX > 300) {
+					return false;
+				}
+				if (spanX > spanY) { //划的X轴大于Y轴不做处理
+					return false;
+				}
+				if ( spanY > 50) {
+					if( $(".cover").css("bottom") != "0" ){
+						$(".cover").animate({ "bottom": "0px" }, 100);
+					}
+				}
+				return false;
+			});
+		});
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
