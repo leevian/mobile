@@ -1,0 +1,99 @@
+html, body{
+	position: relative;
+	width:100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+}
+img {display:block;}
+
+.swiper-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hidden{
+	display: none;
+}
+.down{
+	position: absolute;
+	top: 93%;
+	left: 47%;
+	width: 7%;
+	height: 5%;
+}
+.cube-icon1{
+	animation:cube1 2s ease 0s  infinite normal forwards;
+	perspective:100px;
+	transform-style:preserve-3d;
+	-webkit-animation:cube1 2s ease 0s infinite normal forwards;
+
+}
+.cube-icon2{
+	animation:cube2 2s ease 0s  infinite normal forwards;
+	-webkit-animation:cube2 2s ease 0s infinite normal forwards;
+
+}
+.cube-icon3{
+	animation:cube3 2s ease 0s  infinite normal forwards;
+	-webkit-animation:cube3 2s ease 0s infinite normal forwards;
+
+}
+
+.cube-icon4{
+	animation:cube4 2.5s ease 0s  infinite normal forwards;
+	-webkit-animation:cube4 2.5s ease 0s infinite normal forwards;
+
+}
+@keyframes cube1
+{
+	0%   {transform:rotateZ(0deg);}
+	50%  {transform:rotateZ(30deg);}
+	100% {transform:rotateZ(0deg);}
+}
+@-webkit-keyframes cube1
+{
+
+	0%   {-webkit-transform:rotateZ(0deg);}
+	50%  {-webkit-transform:rotateZ(30deg);}
+	100% {-webkit-transform:rotateZ(0deg);}
+}
+
+@keyframes cube2
+{
+	0%   {transform:rotateZ(0deg);}
+	50%  {transform:rotateZ(-25deg);}
+	100% {transform:rotateZ(0deg);}
+}
+@-webkit-keyframes cube2
+{
+	0%   {-webkit-transform:rotateZ(0deg);}
+	50%  {-webkit-transform:rotateZ(-25deg);}
+	100% {-webkit-transform:rotateZ(0deg);}
+}
+@keyframes cube3
+{
+	0%   {transform:rotateZ(0deg);}
+	50%  {transform:rotateZ(-25deg);}
+	100% {transform:rotateZ(0deg);}
+}
+@-webkit-keyframes cube3
+{
+	0%   {-webkit-transform:rotateZ(0deg);}
+	50%  {-webkit-transform:rotateZ(-25deg);}
+	100% {-webkit-transform:rotateZ(0deg);}
+}
+@keyframes cube4
+{
+	0%   {transform:rotateZ(0deg);}
+	50%  {transform:rotateZ(55deg);}
+	100% {transform:rotateZ(0deg);}
+}
+@-webkit-keyframes cube4
+{
+	0%   {-webkit-transform:rotateZ(0deg);}
+	50%  {-webkit-transform:rotateZ(55deg);}
+	100% {-webkit-transform:rotateZ(0deg);}
+}
