@@ -18,140 +18,129 @@
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
 		<script type="text/javascript" src="js/swiper.min.js"></script>
 		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/page1.css">
 	</head>
-	<style>
-		html, body{
-			position: relative;
-			width:100%;
-			height: 100%;
-			padding:0;
-			margin:0;
-		}
-		img {
-			display:block;
-		}
-		
-		.swiper-container {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-		.hidden{
-			display: none;
-		}
-		/*.swiper_1{
-			background: url(img/page1/swiper_1.jpg) no-repeat top center;
-    		background-size: cover;
-		}*/
-		.bg_1{
-			position: absolute;
-			background: url(img/page1/swiper_1_1.jpg);
-			background-size: cover;
-			width: 100%;
-			height: 530px;
-			left: 0px;
-			top: 0px;
-			z-index: 10;
-		}
-		.bg_2{
-			position: absolute;
-			background: url(img/page1/swiper_1_2.jpg);
-			background-size: cover;
-			width: 100%;
-			height: 100%;
-			left: 0px;
-			top: 0px;
-			overflow: hidden;
-			z-index: 5;
-		}
-		.line{
-			position: absolute;
-			background: url(img/page1/line.png);
-			background-size: cover;
-			width: 100%;
-			height: 40px;
-			left: 0px;
-			top: 500px;
-			z-index: 89;
-		}
-		.cover{
-			position: absolute;
-			background: url(img/page1/cover.png);
-			background-size: cover;
-			width: 100%;
-			height: 25%;
-			left: 0px;
-			bottom: -200px;
-			z-index: 11;
-		}
-		.swiper_2{
-			background: url(img/page1/background.jpg) no-repeat top center;
-    		background-size: cover;
-		}
-		.swiper_2_1{
-			margin-top: 10%;
-		}
-		.swiper_2_2{
-			margin-top: 10%;
-		}
-		.swiper_2_3{
-			margin-top: 10%;
-		}
-				
-	</style>
 	<body>
 		<!-- Swiper -->
-	    <div class="swiper-container">
+	    <div class="swiper-contain">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide swiper_1">
-	            	<div class="bg_1"></div>
-	            	<div class="bg_2"></div>
-	            	<div class="line"></div>
-	            	<div class="cover"></div>
-	           	</div>
-	            <div class="swiper-slide swiper_2">
-	            	<img class="swiper_2_1" src="img/page1/swiper_2_1.png" width="100%">
-	            	<img class="swiper_2_2" src="img/page1/swiper_2_2.png" width="100%">
-	            	<img class="swiper_2_3" src="img/page1/swiper_2_3.png" width="100%">
+	            <div class="swiper-slide swiper_2 page" id="page_0">
+	            	<div class="con_wrap wrap_1">
+
+	            		<div class="swiper-container">
+	            			
+	            			<div class="swiper-wrapper">
+	            				<div class="swiper-slide">
+	            					
+				            		<div class="bg_1">
+					            		<img class="swiper1_bg1_box1 cloud-icon1" src="img/page1/cloud1.png">
+					            		<img class="swiper1_bg1_box2 cloud-icon2" src="img/page1/cloud2.png">
+					            		<img class="swiper1_bg1_box3 cloud-icon3" src="img/page1/cloud3.png">
+					            		<img class="swiper1_bg1_box4" src="img/page1/cloud3.png">
+					            	</div>
+					            	<div class="bg_2"></div>
+					            	<div class="line"></div>
+					            	<img class="cover"src="img/page1/cover.png">
+				            	
+	            				</div>
+	            				<div class="swiper-slide">
+				            		<img class="swiper_2_1" src="img/page1/swiper_2_1.png" width="100%">
+					            	<img class="swiper_2_2" src="img/page1/swiper_2_2.png" width="100%">
+					            	<img class="swiper_2_3" src="img/page1/swiper_2_3.png" width="100%">
+			            		</div>
+			            		<div class="swiper-slide">
+
+				            		<img class="swiper_3_1" src="img/page1/swiper_3_1.png" width="100%">
+					            	<img class="swiper_3_2" src="img/page1/swiper_3_2.png" width="100%">
+					            	<img class="swiper_3_3" src="img/page1/swiper_3_3.png" width="100%">
+					            	<img class="swiper_3_4" src="img/page1/swiper_3_4.png" width="100%">
+			            		</div>
+			            		<div class="swiper-slide">
+
+				            		<img class="swiper_2_1" src="img/page1/swiper_4_1.png" width="100%">
+					            	<img class="swiper_2_2" src="img/page1/swiper_4_2.png" width="100%">
+					            	<img class="swiper_2_3" src="img/page1/swiper_4_3.png" width="100%">
+			            		</div>
+	            			</div>
+	            		</div>
+	            		
+	            	</div>
+	            	
 	            	
 	           	</div>
-	            <div class="swiper-slide">
-	            	<img src="img/page1/background.jpg" width="100%">
-	            	<img class="swiper_3_1" src="img/page1/swiper_3_1.png" width="100%">
-	            	<img class="swiper_3_2" src="img/page1/swiper_3_2.png" width="100%">
-	            	<img class="swiper_3_3" src="img/page1/swiper_3_3.png" width="100%">
-	            	<img class="swiper_3_4" src="img/page1/swiper_3_4.png" width="100%">
+	           	<div class="swiper-slide swiper_3 page" id="page_1">
+	            	<div class="con_wrap wrap_3">
+	            		
+	            		
+	            	</div>
+	            	
+	            	
 	           	</div>
-	           	<div class="swiper-slide">
-	           		<img src="img/page1/background.jpg" width="100%">
-	            	<img class="swiper_4_1" src="img/page1/swiper_4_1.png" width="100%">
-	            	<img class="swiper_4_2" src="img/page1/swiper_4_2.png" width="100%">
-	            	<img class="swiper_4_3" src="img/page1/swiper_4_3.png" width="100%">
+	           <!--  <div class="swiper-slide page" id="page_2">
+	            	<div class="con_wrap wrap_3 swiper-container">
+	            		<div class="swiper-con">
+	            			<img src="img/page1/background.jpg" width="100%">
+			            	<img class="swiper_3_1" src="img/page1/swiper_3_1.png" width="100%">
+			            	<img class="swiper_3_2" src="img/page1/swiper_3_2.png" width="100%">
+			            	<img class="swiper_3_3" src="img/page1/swiper_3_3.png" width="100%">
+			            	<img class="swiper_3_4" src="img/page1/swiper_3_4.png" width="100%">
+	            		</div>
+	            		
+		            	
+	           		</div>
 	           	</div>
+	           	<div class="swiper-slide page" id="page_3">
+	            	<div class="con_wrap wrap_3">
+
+		           		<img src="img/page1/background.jpg" width="100%">
+		            	<img class="swiper_4_1" src="img/page1/swiper_4_1.png" width="100%">
+		            	<img class="swiper_4_2" src="img/page1/swiper_4_2.png" width="100%">
+		            	<img class="swiper_4_3" src="img/page1/swiper_4_3.png" width="100%">
+	           		</div>
+	           	</div> -->
 	        </div>
 	    </div>
 	</body>
 	<script>
-		var mySwiper;
-		mySwiper = new Swiper('.swiper-container', {
-			direction : 'horizontal',
-			onSlideChangeStart: function(swiper){
-				if( mySwiper.activeIndex == 0 ){
-					
-				}else if( mySwiper.activeIndex == 1 ){
-					
-				}else if( mySwiper.activeIndex == 2 ){
-					
-				}else if( mySwiper.activeIndex == 3 ){
-					
-				}
-		    }
-		});
+			
+		$('.cover').filter(function(){
+			coverHeight = $(this).height();
+			// console.log(coverHeight)
+			$(this).css({"bottom":"-"+coverHeight+'px'})
+			// $(this).css("bottom","-"+coverHeight)
+		})
+		var lineTop = $('.line').position().top+30
+		console.log(lineTop)
+		$('.bg_1').height(lineTop)
+
+
 		
+		var page_1_outing = function (e) {
+			var $line = $(".wrap_1 .line");
+			var $bg1 = $(".wrap_1 .bg_1");
+			$line.css({top:lineTop-30})
+			var $cover = $(".cover")
+			// var coverHeight = $cover.height();
+			$cover.css({"bottom":"-"+coverHeight+'px'})
+			$bg1.height(lineTop)
+			return true;
+		}
+		// //#page4
+		// var page_1_in = function (e) {
+		// 	var $val = e.find(".btn");
+		// 	var _src = $val.attr("src");
+		// 	$val.show().each(function () {
+		// 		this.offsetHeight;
+		// 	}).prop('src', _src);
+		// 	e.find(".hand1").show(function () {
+		// 		window.setTimeout(function () {
+		// 			e.find(".hand1").hide();
+		// 		}, 2000 * 3);
+		// 	});
+		// }
 		$(function(){
-			var positionY = 0, current = 500, _top = 0, maxHeight = 500;
+			var positionY = 0, current = lineTop-30, _top = 0, maxHeight = lineTop-30;
 			$(".line").bind("touchstart", function (e) {
 				positionY = e.originalEvent.changedTouches[0].clientY;
 				return false;
@@ -161,7 +150,7 @@
 				if(_top < 20){
 					_top = 20
 				}else if(_top > maxHeight){
-					_top = 500;
+					_top = lineTop-30;
 				}
 				$(this).css({"top":_top});
 				$(".bg_1").css({ "height": _top + 28 });
@@ -174,7 +163,7 @@
 		$(function(){
 			var current_page = 0;
 			var positionX = 0, positionY = 0;
-			$(".swiper_1").bind("touchstart", function (e) {
+			$(".con_wrap").bind("touchstart", function (e) {
 				positionX = e.originalEvent.changedTouches[0].clientX;
 				positionY = e.originalEvent.changedTouches[0].clientY;
 				return false;
@@ -182,24 +171,133 @@
 				return false;
 			}).bind("touchend", function (e) {
 				//console.log("touchend")
-				var endX = e.originalEvent.changedTouches[0].clientX;
-				var endY = e.originalEvent.changedTouches[0].clientY;
-				var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-				if (spanX > 300) {
-					return false;
-				}
-				if (spanX > spanY) { //划的X轴大于Y轴不做处理
-					return false;
-				}
-				if ( spanY > 50) {
-					if( $(".cover").css("bottom") != "0" ){
-						$(".cover").animate({ "bottom": "0px" }, 100);
-					}
-				}
-				return false;
-			});
-		});
+				// var endX = e.originalEvent.changedTouches[0].clientX;
+				// var endY = e.originalEvent.changedTouches[0].clientY;
+				// var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+				// if (spanX > 300) {
+				// 	return false;
+				// }
+				// if (spanX > spanY) { //划的X轴大于Y轴不做处理
+				// 	return false;
+				// }
+				// if ( spanY > 50) {
+				// 	if( $(".cover").css("bottom") != "0" ){
+				// 		$(".cover").animate({ "bottom": "0px" }, 100);
+				// 	}
+				// }
+				// return false;
+		var endX = e.originalEvent.changedTouches[0].clientX;
+		var endY = e.originalEvent.changedTouches[0].clientY;
+		var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+		if (spanX > 300) {
+			return false;
+		}
+		if (spanX > spanY) { //划的X轴大于Y轴不做处理
+			return false;
+		}
 		
+		var $page = $("#page_"+current_page);
+		var cover = $page.find(".cover");
+		// console.log(cover.css("bottom"))
+		if (endY - positionY > 50) {
+			
+
+			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+				cover.animate({ "bottom": "0px" }, 100);
+			
+				return false;
+			}
+			current_page = pager(current_page, current_page - 1);
+			return false;
+		}
+		if (endY - positionY < -50) {
+			if (cover.length === 1 && cover.css("bottom") === "0px") {
+				current_page = pager(current_page, current_page + 1);
+			
+
+				return false;
+			}
+			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+				cover.animate({ "bottom": "0px" }, 100);
+			
+
+				return false;
+			}
+			
+
+			current_page = pager(current_page, current_page + 1);
+			return false;
+		}
+			
+
+			return false;
+
+			});
+
+	var pager = function (from, to) {
+		// console.log("touchend ", from, to);
+		var page_length = $(".page").length;
+		// console.log(page_length)
+		var isdown = from < to;
+		if (from < 0 || from > page_length - 1) {
+			return from;
+		}
+		if (isdown && from === page_length - 1) {
+			$("#page_" + from + " .cover_center").show().css("-webkit-animation", "page_center .5s linear 0s both");
+			to = 0;
+		}
+		if (isdown === false && from === 0) {
+			return from;
+		}
+		var speed = 200, clientHeight = document.body.clientHeight;
+	
+		if (window["page_" + from + "_outing"]) {
+			var _run = window["page_" + from + "_outing"]($("#page_" + from));
+			if (!_run) {
+				return from;
+			}
+		}
+		$("#page_" + from + " .con_wrap").animate({ "top": isdown ? -1 * clientHeight : clientHeight }, speed, function () {
+			$("#page_" + from + " div").removeAttr("style"); //删除所有自定义的样式
+			var cover = $("#page_" + from).hide().find(".cover")
+			cover.css({ "bottom": "-" + cover.css("height") }).removeAttr("dir");
+		});
+
+		if (window["page_" + from + "_out"]) {
+			window["page_" + from + "_out"]($("#page_" + from));
+		}
+
+		$("#page_" + to + " .con_wrap").css({ "top": isdown ? clientHeight : -1 * clientHeight }).animate({ "top": 0 }, speed);
+		$("#page_" + to).show();
+		if (window["page_" + to + "_in"]) {
+			window["page_" + to + "_in"]($("#page_" + to));
+		}     
+		return to;
+	}
+	var init = function (num) {
+		current_page = num;
+		$("#load").hide();
+		if (window["page_" + num + "_in"]) {
+			window["page_" + num + "_in"]($("#page_" + num));
+		}
+		$("#page_" + num).show();
+	}
+	//init(10);
+
+		});
+		$(function(){
+			var mySwiper;
+			mySwiper = new Swiper('.swiper-container', {
+			
+				onSlideChangeStart: function(swiper){
+					if( mySwiper.activeIndex == 3 ){
+						$('.down').hide();
+					}else{
+						$('.down').show();
+					}
+			    }
+			});
+		})
 	</script>
 </html>
 
