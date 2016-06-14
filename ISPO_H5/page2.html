@@ -58,42 +58,27 @@
 	            				</div>
 	            				<div class="swiper-slide slider-1">
 	            					
-									<div class="content">
-										<img class="swiper_1_1" src="img/page2/swiper_1_1.png" width="100%">
-						            	<img class="swiper_1_2" src="img/page2/swiper_1_2.png" width="100%">
-						            	<img class="swiper_1_3" src="img/page2/swiper_1_3.png" width="100%">
-						            	
-									</div>					            	
+											            	
 					            
 				            	
 	            				</div>
-	            				<div class="swiper-slide slider-1">
-	            					
-				            		<div class="content">
-					            		<img class="swiper_2_1" src="img/page2/swiper_2_1.png" width="100%">
-						            	<img class="swiper_2_2" src="img/page2/swiper_2_2.png" width="100%">
-						            	<img class="swiper_2_3" src="img/page2/swiper_2_3.png" width="100%">
-						            	<img class="swiper_2_4" src="img/page2/swiper_2_4.png" width="100%">
-					            	</div>
-					            	
-					            	
-					            	
-				            	
-	            				</div>
-	            				<div class="swiper-slide slider-1">
-	            					
-				            		<div class="content">
-					            		<img class="swiper_3_1" src="img/page2/swiper_3_1.png" width="100%">
-						            	<img class="swiper_3_2" src="img/page2/swiper_3_2.png" width="100%">
-						            	<img class="swiper_3_3" src="img/page2/swiper_3_3.png" width="100%">
-						            	
-					            	</div>
-					            	
-					            	
-					            	
-				            	
-	            				</div>
 	            				<div class="swiper-slide slider-2">
+	            					
+				            		
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-3">
+	            					
+				            		
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-4">
 	            					
 				            		
 					            	
@@ -231,7 +216,8 @@
 
 						return false;
 					}
-					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+					
+					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height") && !bg_1isShow) {
 						cover.animate({ "bottom": "0px" }, 100);
 					
 

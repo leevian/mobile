@@ -50,43 +50,27 @@
 	            				</div>
 	            				<div class="swiper-slide slider-1">
 	            					
-									<div class="content">
-										<img class="swiper_1_1" src="img/page3/swiper_1_1.png" width="100%">
-						            	<img class="swiper_1_2" src="img/page3/swiper_1_2.png" width="100%">
-						            	<img class="swiper_1_3" src="img/page3/swiper_1_3.png" width="100%">
-						            	<img class="swiper_1_4" src="img/page3/swiper_1_4.png" width="100%">
-						            	
-									</div>					            	
+												            	
 					            
 				            	
 	            				</div>
-	            				<div class="swiper-slide slider-1">
-	            					
-				            		<div class="content">
-					            		<img class="swiper_2_1" src="img/page3/swiper_2_1.png" width="100%">
-						            	<img class="swiper_2_2" src="img/page3/swiper_2_2.png" width="100%">
-						            	<img class="swiper_2_3" src="img/page3/swiper_2_3.png" width="100%">
-						            	
-					            	</div>
-					            	
-					            	
-					            	
-				            	
-	            				</div>
-	            				<div class="swiper-slide slider-1">
-	            					
-				            		<div class="content">
-					            		<img class="swiper_3_1" src="img/page2/swiper_3_1.png" width="100%">
-						            	<img class="swiper_3_2" src="img/page2/swiper_3_2.png" width="100%">
-						            	<img class="swiper_3_3" src="img/page2/swiper_3_3.png" width="100%">
-						            	
-					            	</div>
-					            	
-					            	
-					            	
-				            	
-	            				</div>
 	            				<div class="swiper-slide slider-2">
+	            					
+				            	
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-3">
+	            					
+				            		
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-4">
 	            					
 				            		
 					            	
@@ -140,6 +124,7 @@
 		var isShow = 0;
 		$(function () {
 			var $btn = $(".click");
+		
 			$btn.bind("touchend", function () {
 				$(this).hide();
 				$('.all_show').hide();
@@ -300,7 +285,7 @@
 			mySwiper = new Swiper('.swiper-container', {
 			
 				onSlideChangeStart: function(swiper){
-					console.log(mySwiper.activeIndex)
+					// console.log(mySwiper.activeIndex)
 					if( mySwiper.activeIndex == 1 ){
 						$('.all_show').show();
 						$('.cover').css({"bottom":"-"+coverHeight+'px'})

@@ -82,6 +82,18 @@
 	left: 300px;
 	position: absolute;
 }
+.slide-1{
+	background: url(../img/page1/background_1.jpg);
+	background-size: cover;
+}
+.slide-2{
+	background: url(../img/page1/background_2.jpg);
+	background-size: cover;
+}
+.slide-3{
+	background: url(../img/page1/background_3.jpg);
+	background-size: cover;
+}	
 .cloud-icon1{
 	animation:cloud1 2s linear 0s  infinite normal forwards;
 	perspective:100px;

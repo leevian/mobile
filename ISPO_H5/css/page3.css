@@ -5,10 +5,20 @@
 }
 .slider-1{
 
-	background: url(../img/page3/background_1.jpg);
+	background: url(../img/page3/background1.jpg);
 	background-size: cover;
 }
 .slider-2{
+
+	background: url(../img/page3/background2.jpg);
+	background-size: cover;
+}
+.slider-3{
+
+	background: url(../img/page3/background3.jpg);
+	background-size: cover;
+}
+.slider-4{
 
 	background: url(../img/page3/background_2.jpg);
 	background-size: cover;

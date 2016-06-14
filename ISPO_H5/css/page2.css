@@ -31,10 +31,18 @@
 
 }
 .slider-1{
-	background: url(../img/page2/background_3.jpg);
+	background: url(../img/page2/background1.jpg);
 	background-size: cover;
 }
 .slider-2{
+	background: url(../img/page2/background2.jpg);
+	background-size: cover;
+}
+.slider-3{
+	background: url(../img/page2/background3.jpg);
+	background-size: cover;
+}
+.slider-4{
 	background: url(../img/page2/background_4.jpg);
 	background-size: cover;
 }
