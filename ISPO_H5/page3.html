@@ -18,37 +18,142 @@
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
 		<script type="text/javascript" src="js/swiper.min.js"></script>
 		<link rel="stylesheet" href="css/swiper.min.css">
-		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/page3.css">
 	</head>
 	<body>
 		<!-- Swiper -->
-	    <div class="swiper-container">
+	    <div class="swiper-contain">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide swiper_1">
-	            	<div class="content">
-		            	<div class="all_show">
-		            		<img class="woman" src="img/page3/woman.png" />
-			            	<img class="weijin" src="img/page3/weijin.png" />
-			            	<img class="yaling" src="img/page3/yaling.png" />
-			            	<img class="xiongzhao" src="img/page3/xiongzhao.png" />
-			            	<img class="chuqi" src="img/page3/chuqi.png" />
-		            	</div>
-		            	<img class="woman_dong" src="img/page3/1.gif" />
+	            <div class="swiper-slide swiper_0 page" id="page_0">
+	            	<div class="con_wrap wrap_1">
+
+	            		<div class="swiper-container">
+	            			
+	            			<div class="swiper-wrapper">
+	            				<div class="swiper-slide slider-0">
+	            					
+				            		<div class="content">
+						            	<div class="all_show">
+						            		<img class="woman" src="img/page3/woman.png" />
+							            	<img class="weijin" src="img/page3/weijin.png" />
+							            	<img class="yaling" src="img/page3/yaling.png" />
+							            	<img class="xiongzhao" src="img/page3/xiongzhao.png" />
+							            	<img class="chuqi" src="img/page3/chuqi.png" />
+						            	</div>
+						            	<img class="woman_dong" src="img/page3/1.gif" />
+					            	</div>
+					            	<img class="click" src="img/page3/click.gif" />
+					            	<img class="cover"src="img/page3/cover.png">
+					            	
+
+	            				</div>
+	            				<div class="swiper-slide slider-1">
+	            					
+									<div class="content">
+										<img class="swiper_1_1" src="img/page3/swiper_1_1.png" width="100%">
+						            	<img class="swiper_1_2" src="img/page3/swiper_1_2.png" width="100%">
+						            	<img class="swiper_1_3" src="img/page3/swiper_1_3.png" width="100%">
+						            	<img class="swiper_1_4" src="img/page3/swiper_1_4.png" width="100%">
+						            	
+									</div>					            	
+					            
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-1">
+	            					
+				            		<div class="content">
+					            		<img class="swiper_2_1" src="img/page3/swiper_2_1.png" width="100%">
+						            	<img class="swiper_2_2" src="img/page3/swiper_2_2.png" width="100%">
+						            	<img class="swiper_2_3" src="img/page3/swiper_2_3.png" width="100%">
+						            	
+					            	</div>
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-1">
+	            					
+				            		<div class="content">
+					            		<img class="swiper_3_1" src="img/page2/swiper_3_1.png" width="100%">
+						            	<img class="swiper_3_2" src="img/page2/swiper_3_2.png" width="100%">
+						            	<img class="swiper_3_3" src="img/page2/swiper_3_3.png" width="100%">
+						            	
+					            	</div>
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            				<div class="swiper-slide slider-2">
+	            					
+				            		
+					            	
+					            	
+					            	
+				            	
+	            				</div>
+	            			</div>
+	            		</div>
+	            		
 	            	</div>
-	            	<img class="click" src="img/page3/click.gif" />
-	            	<div class="cover"></div>
+	            	
+	            	
 	           	</div>
+	           <!--  <div class="swiper-slide page" id="page_2">
+	            	<div class="con_wrap wrap_3 swiper-container">
+	            		<div class="swiper-con">
+	            			<img src="img/page1/background.jpg" width="100%">
+			            	<img class="swiper_3_1" src="img/page1/swiper_3_1.png" width="100%">
+			            	<img class="swiper_3_2" src="img/page1/swiper_3_2.png" width="100%">
+			            	<img class="swiper_3_3" src="img/page1/swiper_3_3.png" width="100%">
+			            	<img class="swiper_3_4" src="img/page1/swiper_3_4.png" width="100%">
+	            		</div>
+	            		
+		            	
+	           		</div>
+	           	</div>
+	           	<div class="swiper-slide page" id="page_3">
+	            	<div class="con_wrap wrap_3">
+
+		           		<img src="img/page1/background.jpg" width="100%">
+		            	<img class="swiper_4_1" src="img/page1/swiper_4_1.png" width="100%">
+		            	<img class="swiper_4_2" src="img/page1/swiper_4_2.png" width="100%">
+		            	<img class="swiper_4_3" src="img/page1/swiper_4_3.png" width="100%">
+	           		</div>
+	           	</div> -->
 	        </div>
 	    </div>
 	</body>
-	<script>
-		
-		$('.click').click(function(){
-			$('.all_show').hide();
-			$('.click').hide();
-			$('.woman_dong').show();
+	<script type="text/javascript">
+
+		$('.cover').filter(function(){
+			coverHeight = $(this).height();
+			// console.log(coverHeight)
+			$(this).css({"bottom":"-"+coverHeight+'px'})
+			// $(this).css("bottom","-"+coverHeight)
 		})
+
+		
+		
+		var isShow = 0;
+		$(function () {
+			var $btn = $(".click");
+			$btn.bind("touchend", function () {
+				$(this).hide();
+				$('.all_show').hide();
+				isShow=1;
+				$('.click').hide();
+				$('.woman_dong').show();
+				
+				// $('.bg_1').fadeOut();
+				// return false;
+			});
+
+			
+		});
+
 		$(function(){
 			var current_page = 0;
 			var positionX = 0, positionY = 0;
@@ -59,6 +164,7 @@
 			}).bind("touchmove", function (e) {
 				return false;
 			}).bind("touchend", function (e) {
+				
 				//console.log("touchend")
 				// var endX = e.originalEvent.changedTouches[0].clientX;
 				// var endY = e.originalEvent.changedTouches[0].clientY;
@@ -75,55 +181,69 @@
 				// 	}
 				// }
 				// return false;
-		var endX = e.originalEvent.changedTouches[0].clientX;
-		var endY = e.originalEvent.changedTouches[0].clientY;
-		var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-		if (spanX > 300) {
-			return false;
-		}
-		if (spanX > spanY) { //划的X轴大于Y轴不做处理
-			return false;
-		}
-		
-		var $page = $("#page_"+current_page);
-		var cover = $page.find(".cover");
-		// console.log(cover.css("bottom"))
-		if (endY - positionY > 50) {
-			
+				var endX = e.originalEvent.changedTouches[0].clientX;
+				var endY = e.originalEvent.changedTouches[0].clientY;
+				var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+				
+				
+				if (spanX > 300) {
+				// console.log(cover.css('bottom'))
+					
+					return false;
+				}
+				if (spanX > spanY) { //划的X轴大于Y轴不做处理
+				// console.log(cover.css('bottom'))
+					
+					
+					return false;
+				}
+				
 
-			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
-				cover.animate({ "bottom": "0px" }, 100);
-			
-				return false;
-			}
-			current_page = pager(current_page, current_page - 1);
-			return false;
-		}
-		if (endY - positionY < -50) {
-			if (cover.length === 1 && cover.css("bottom") === "0px") {
-				current_page = pager(current_page, current_page + 1);
-			
+				// console.log(cover.css('bottom'))
+				var $page = $("#page_"+current_page);
+				var cover = $page.find(".cover");
+				if(!isShow){
+					return false;
+				}
+				if (endY - positionY > 50) {
+					
 
-				return false;
-			}
-			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
-				cover.animate({ "bottom": "0px" }, 100);
-			
+					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+						cover.animate({ "bottom": "0px" }, 100);
+					
+						return false;
+					}
+					current_page = pager(current_page, current_page - 1);
+					return false;
+				}
+				if (endY - positionY < -50) {
+					// console.log(1)
+					console.log(cover.css("bottom"))
 
-				return false;
-			}
-			
+					if (cover.length === 1 && cover.css("bottom") === "0px") {
+						current_page = pager(current_page, current_page + 1);
+					
 
-			current_page = pager(current_page, current_page + 1);
-			return false;
-		}
-			
+						return false;
+					}
+					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+						cover.animate({ "bottom": "0px" }, 100);
+					
 
-			return false;
+						return false;
+					}
+					
+
+					current_page = pager(current_page, current_page + 1);
+					return false;
+				}
+					
+
+					return false;
 
 			});
 
-	var pager = function (from, to) {
+		var pager = function (from, to) {
 		// console.log("touchend ", from, to);
 		var page_length = $(".page").length;
 		// console.log(page_length)
@@ -174,49 +294,95 @@
 	//init(10);
 
 		});
+
 		$(function(){
 			var mySwiper;
 			mySwiper = new Swiper('.swiper-container', {
 			
 				onSlideChangeStart: function(swiper){
-					if( mySwiper.activeIndex == 3 ){
-						$('.down').hide();
+					console.log(mySwiper.activeIndex)
+					if( mySwiper.activeIndex == 1 ){
+						$('.all_show').show();
+						$('.cover').css({"bottom":"-"+coverHeight+'px'})
+						isShow = 0;
+						$('.click').show()
+						$('.woman_dong').attr('src','img/page3/1.gif?'+(new Date)).hide();
 					}else{
 						$('.down').show();
 					}
 			    }
 			});
 		})
-		// $(function(){
-		// 	var current_page = 0;
-		// 	var positionX = 0, positionY = 0;
-		// 	$(".content").bind("touchstart", function (e) {
-		// 		positionX = e.originalEvent.changedTouches[0].clientX;
-		// 		positionY = e.originalEvent.changedTouches[0].clientY;
-		// 		return false;
-		// 	}).bind("touchmove", function (e) {
-		// 		return false;
-		// 	}).bind("touchend", function (e) {
-		// 		//console.log("touchend")
-		// 		var endX = e.originalEvent.changedTouches[0].clientX;
-		// 		var endY = e.originalEvent.changedTouches[0].clientY;
-		// 		var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-		// 		if (spanX > 300) {
-		// 			return false;
-		// 		}
-		// 		if (spanX > spanY) { //划的X轴大于Y轴不做处理
-		// 			return false;
-		// 		}
-		// 		if ( spanY > 50) {
-		// 			if( $(".cover").css("bottom") != "0" ){
-		// 				$(".cover").animate({ "bottom": "0px" }, 100);
-		// 			}
-		// 		}
-		// 		return false;
-		// 	});
+	</script>
+	 <script>
+	// 	var mySwiper;
+	// 	mySwiper = new Swiper('.swiper-container', {
+	// 		direction : 'horizontal',
+	// 		onSlideChangeStart: function(swiper){
+	// 			if( mySwiper.activeIndex == 0 ){
+					
+	// 			}else if( mySwiper.activeIndex == 1 ){
+					
+	// 			}else if( mySwiper.activeIndex == 2 ){
+					
+	// 			}else if( mySwiper.activeIndex == 3 ){
+					
+	// 			}
+	// 	    }
+	// 	});
+		// $(".slider-0").bind("touchstart", function (e) {
+		// 	positionX = e.originalEvent.changedTouches[0].clientX;
+		// 	positionY = e.originalEvent.changedTouches[0].clientY;
+		// 	return false;
+		// }).bind("touchmove", function (e) {
+		// 	return false;
+		// }).bind("touchend", function (e) {
+		// 	//console.log("touchend")
+		// 	var endX = e.originalEvent.changedTouches[0].clientX;
+		// 	var endY = e.originalEvent.changedTouches[0].clientY;
+		// 	var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+		// 	if (spanX > 50) {
+		// 		$('.huaban').hide();
+		// 		$('.slider').hide();
+		// 		$('.huaban_dong').show();
+		// 	}
+		// 	return false;
 		// });
 		
+	//init(10);
+
+	// 	$(function(){
+	// 		var current_page = 0;
+	// 		var positionX = 0, positionY = 0;
+	// 		$(".content").bind("touchstart", function (e) {
+	// 			positionX = e.originalEvent.changedTouches[0].clientX;
+	// 			positionY = e.originalEvent.changedTouches[0].clientY;
+	// 			return false;
+	// 		}).bind("touchmove", function (e) {
+	// 			return false;
+	// 		}).bind("touchend", function (e) {
+	// 			//console.log("touchend")
+	// 			var endX = e.originalEvent.changedTouches[0].clientX;
+	// 			var endY = e.originalEvent.changedTouches[0].clientY;
+	// 			var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+	// 			if (spanX > 300) {
+	// 				return false;
+	// 			}
+	// 			if (spanX > spanY) { //划的X轴大于Y轴不做处理
+	// 				return false;
+	// 			}
+	// 			if ( spanY > 50) {
+	// 				if( $(".cover").css("bottom") != "0" ){
+	// 					$(".cover").animate({ "bottom": "0px" }, 100);
+	// 				}
+	// 			}
+	// 			return false;
+	// 		});
+	// 	});
+		
 	</script>
+
+
 </html>
 
 

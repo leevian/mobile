@@ -195,55 +195,56 @@
 				// 	}
 				// }
 				// return false;
-		var endX = e.originalEvent.changedTouches[0].clientX;
-		var endY = e.originalEvent.changedTouches[0].clientY;
-		var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-		if (spanX > 300) {
-			return false;
-		}
-		if (spanX > spanY) { //划的X轴大于Y轴不做处理
-			return false;
-		}
-		
-		var $page = $("#page_"+current_page);
-		var cover = $page.find(".cover");
-		if(bg_1isShow){
-			// current_page = pager(current_page, current_page + 1);
-
-			return false
-		}
-		if (endY - positionY > 50) {
 			
+				var endX = e.originalEvent.changedTouches[0].clientX;
+				var endY = e.originalEvent.changedTouches[0].clientY;
+				var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+				if (spanX > 300) {
+					return false;
+				}
+				if (spanX > spanY) { //划的X轴大于Y轴不做处理
+					return false;
+				}
+				
+				var $page = $("#page_"+current_page);
+				var cover = $page.find(".cover");
+				if(bg_1isShow){
+					// current_page = pager(current_page, current_page + 1);
 
-			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
-				cover.animate({ "bottom": "0px" }, 100);
-			
-				return false;
-			}
-			current_page = pager(current_page, current_page - 1);
-			return false;
-		}
-		if (endY - positionY < -50) {
-			if (cover.length === 1 && cover.css("bottom") === "0px") {
-				current_page = pager(current_page, current_page + 1);
-			
+					return false
+				}
+				if (endY - positionY > 50) {
+					
 
-				return false;
-			}
-			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
-				cover.animate({ "bottom": "0px" }, 100);
-			
+					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+						cover.animate({ "bottom": "0px" }, 100);
+					
+						return false;
+					}
+					current_page = pager(current_page, current_page - 1);
+					return false;
+				}
+				if (endY - positionY < -50) {
+					if (cover.length === 1 && cover.css("bottom") === "0px") {
+						current_page = pager(current_page, current_page + 1);
+					
 
-				return false;
-			}
-			
+						return false;
+					}
+					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+						cover.animate({ "bottom": "0px" }, 100);
+					
 
-			current_page = pager(current_page, current_page + 1);
-			return false;
-		}
-			
+						return false;
+					}
+					
 
-			return false;
+					current_page = pager(current_page, current_page + 1);
+					return false;
+				}
+					
+
+					return false;
 
 			});
 
@@ -308,6 +309,8 @@
 						$('.bg_1').show();
 						$('.slider').show();
 						$('.huaban').show();
+						$('.cover').css({"bottom":"-"+coverHeight+'px'})
+
 						$('.huaban_dong').attr('src','img/page2/cut.gif?'+(new Date)).hide();
 					}else{
 						$('.down').show();

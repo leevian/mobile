@@ -1,5 +1,16 @@
-.swiper_1{
-	background: url(img/page3/background.png);
+.slider-0{
+	
+	background: url(../img/page3/background.png);
+	background-size: cover;
+}
+.slider-1{
+
+	background: url(../img/page3/background_1.jpg);
+	background-size: cover;
+}
+.slider-2{
+
+	background: url(../img/page3/background_2.jpg);
 	background-size: cover;
 }
 .woman{
@@ -46,13 +57,9 @@
 }
 .cover{
 	position: absolute;
-	background: url(img/page3/cover.png);
-	background-size: cover;
 	width: 100%;
-	height: 25%;
 	left: 0px;
-	bottom: -200px;
-	z-index: 11;
+	z-index: 22;
 }
 .woman_dong{
 	display: none;
@@ -61,4 +68,44 @@
 	left: 10%;
 	width: 80%;
 	z-index: 6;
+}
+.swiper_2_1{
+	position:absolute;
+	top: 3%;
+}
+.swiper_2_2{
+	position:absolute;
+	top: 30.4%; 
+}
+.swiper_2_3{
+	position:absolute;
+	top: 58%; 
+}
+.swiper_1_1{
+	position:absolute;
+	top: 3%;
+}
+.swiper_1_2{
+	position:absolute;
+	top: 25.4%; 
+}
+.swiper_1_3{
+	position:absolute;
+	top: 47%; 
+}
+.swiper_1_4{
+	position:absolute;
+	top: 68%; 
+}
+.swiper_3_1{
+	position:absolute;
+	top: 5%;
+}
+.swiper_3_2{
+	position:absolute;
+	top: 29.4%; 
+}
+.swiper_3_3{
+	position:absolute;
+	top: 60%; 
 }
