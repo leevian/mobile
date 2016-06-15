@@ -196,6 +196,7 @@
 	width: 100%;
 	
 	left: 0px;
-
+	bottom:-250px;
+	
 	z-index: 11;
 }	

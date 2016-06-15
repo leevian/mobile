@@ -38,53 +38,40 @@
 					     					<img class="shandian1" src="img/page2/shandian.png" />
 						            		<img class="shandian2" src="img/page2/shandian.png" />
 						            		<img class="yanjing" src="img/page2/yanjing.png" />
+						            		<img class="cube" src="img/page2/cube.png" />
+						            		<img class="cube2" src="img/page2/cube.png" />
+						            		<img class="cube3" src="img/page2/cube.png" />
 						            		<img class="huaban" src="img/page2/huaban.png" />
+					     					<img class="shandian3" src="img/page2/shandian.png" />
+					     					<img class="shandian4" src="img/page2/shandian.png" />
+					     					<img class="shandian5" src="img/page2/shandian.png" />
 							            	
 							            	<script>
-												document.write('<img class="huaban_dong" src="img/page2/cut.gif?'+(new Date)+'" >');
+												document.write('<img class="huaban_cut" src="img/page2/cut.gif?'+(new Date)+'" >');
 											</script>
+											
 					     				</div>
 					            		<div class="bg_2">
+					            			<script>
+												document.write('<img class="huaban_dong" src="img/page2/huaban_dong.gif?'+(new Date)+'" >');
+											</script>
 					            			<img class="cover"src="img/page2/cover.png">
 					            		</div>
 					            	</div>
 					            	
-					            	<img class="slider" src="img/page2/slider.gif?" />
-					            
-					            	
-					            	
-					     			
-				            	
+					            	<img class="slider" src="img/page2/slider.gif?" />				            	
 	            				</div>
 	            				<div class="swiper-slide slider-1">
-	            					
-											            	
-					            
-				            	
+			            	
 	            				</div>
 	            				<div class="swiper-slide slider-2">
-	            					
-				            		
-					            	
-					            	
-					            	
 				            	
 	            				</div>
-	            				<div class="swiper-slide slider-3">
-	            					
-				            		
-					            	
-					            	
-					            	
+	            				<div class="swiper-slide slider-3">   	
 				            	
 	            				</div>
 	            				<div class="swiper-slide slider-4">
-	            					
-				            		
-					            	
-					            	
-					            	
-				            	
+			            	
 	            				</div>
 	            			</div>
 	            		</div>
@@ -93,39 +80,24 @@
 	            	
 	            	
 	           	</div>
-	           <!--  <div class="swiper-slide page" id="page_2">
-	            	<div class="con_wrap wrap_3 swiper-container">
-	            		<div class="swiper-con">
-	            			<img src="img/page1/background.jpg" width="100%">
-			            	<img class="swiper_3_1" src="img/page1/swiper_3_1.png" width="100%">
-			            	<img class="swiper_3_2" src="img/page1/swiper_3_2.png" width="100%">
-			            	<img class="swiper_3_3" src="img/page1/swiper_3_3.png" width="100%">
-			            	<img class="swiper_3_4" src="img/page1/swiper_3_4.png" width="100%">
-	            		</div>
-	            		
-		            	
-	           		</div>
-	           	</div>
-	           	<div class="swiper-slide page" id="page_3">
-	            	<div class="con_wrap wrap_3">
-
-		           		<img src="img/page1/background.jpg" width="100%">
-		            	<img class="swiper_4_1" src="img/page1/swiper_4_1.png" width="100%">
-		            	<img class="swiper_4_2" src="img/page1/swiper_4_2.png" width="100%">
-		            	<img class="swiper_4_3" src="img/page1/swiper_4_3.png" width="100%">
-	           		</div>
-	           	</div> -->
+	          
 	        </div>
 	    </div>
 	</body>
 	<script type="text/javascript">
-
-		$('.cover').filter(function(){
-			coverHeight = $(this).height();
-			// console.log(coverHeight)
-			$(this).css({"bottom":"-"+coverHeight+'px'})
+		$(function(){
+			$('.cover').filter(function(){
+				coverHeight = $(this).height();
+				// console.log(coverHeight)
+				if(coverHeight!==0){
+					$(this).css({"bottom":"-"+coverHeight+'px'})
+				}
+				
 			// $(this).css("bottom","-"+coverHeight)
+			})
+
 		})
+		
 
 		var page_0_outing = function (e) {
 			$(".slider-0 .huaban").show();
@@ -135,18 +107,20 @@
 
 			return true;
 		}
-		var bg_1isShow = 1;
+
 		$(function () {
 			var $btn = $(".slider-0 .slider");
 			$btn.bind("touchend", function () {
 				$(this).hide();
 				$(".slider-0 .huaban").hide();
 				setTimeout(function(){
-				bg_1isShow = 0;
+				
 					$('.bg_1').fadeOut();
+					$(".slider-0 .huaban_dong").show();
 				},1000);
 
-				$(".slider-0 .huaban_dong").show();
+				
+				$(".slider-0 .huaban_cut").show();
 				// $('.bg_1').fadeOut();
 				// return false;
 			});
@@ -193,11 +167,7 @@
 				
 				var $page = $("#page_"+current_page);
 				var cover = $page.find(".cover");
-				if(bg_1isShow){
-					// current_page = pager(current_page, current_page + 1);
-
-					return false
-				}
+				
 				if (endY - positionY > 50) {
 					
 
@@ -206,18 +176,18 @@
 					
 						return false;
 					}
-					current_page = pager(current_page, current_page - 1);
+					// current_page = pager(current_page, current_page - 1);
 					return false;
 				}
 				if (endY - positionY < -50) {
 					if (cover.length === 1 && cover.css("bottom") === "0px") {
-						current_page = pager(current_page, current_page + 1);
+						// current_page = pager(current_page, current_page + 1);
 					
 
 						return false;
 					}
 					
-					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height") && !bg_1isShow) {
+					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
 						cover.animate({ "bottom": "0px" }, 100);
 					
 
@@ -225,7 +195,7 @@
 					}
 					
 
-					current_page = pager(current_page, current_page + 1);
+					// current_page = pager(current_page, current_page + 1);
 					return false;
 				}
 					
@@ -297,7 +267,8 @@
 						$('.huaban').show();
 						$('.cover').css({"bottom":"-"+coverHeight+'px'})
 
-						$('.huaban_dong').attr('src','img/page2/cut.gif?'+(new Date)).hide();
+						$('.huaban_cut').attr('src','img/page2/cut.gif?'+(new Date)).hide();
+						$('.huaban_dong').attr('src','img/page2/huaban_dong.gif?'+(new Date)).hide();
 					}else{
 						$('.down').show();
 					}
@@ -305,73 +276,7 @@
 			});
 		})
 	</script>
-	 <script>
-	// 	var mySwiper;
-	// 	mySwiper = new Swiper('.swiper-container', {
-	// 		direction : 'horizontal',
-	// 		onSlideChangeStart: function(swiper){
-	// 			if( mySwiper.activeIndex == 0 ){
-					
-	// 			}else if( mySwiper.activeIndex == 1 ){
-					
-	// 			}else if( mySwiper.activeIndex == 2 ){
-					
-	// 			}else if( mySwiper.activeIndex == 3 ){
-					
-	// 			}
-	// 	    }
-	// 	});
-		// $(".slider-0").bind("touchstart", function (e) {
-		// 	positionX = e.originalEvent.changedTouches[0].clientX;
-		// 	positionY = e.originalEvent.changedTouches[0].clientY;
-		// 	return false;
-		// }).bind("touchmove", function (e) {
-		// 	return false;
-		// }).bind("touchend", function (e) {
-		// 	//console.log("touchend")
-		// 	var endX = e.originalEvent.changedTouches[0].clientX;
-		// 	var endY = e.originalEvent.changedTouches[0].clientY;
-		// 	var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-		// 	if (spanX > 50) {
-		// 		$('.huaban').hide();
-		// 		$('.slider').hide();
-		// 		$('.huaban_dong').show();
-		// 	}
-		// 	return false;
-		// });
-		
-	//init(10);
-
-	// 	$(function(){
-	// 		var current_page = 0;
-	// 		var positionX = 0, positionY = 0;
-	// 		$(".content").bind("touchstart", function (e) {
-	// 			positionX = e.originalEvent.changedTouches[0].clientX;
-	// 			positionY = e.originalEvent.changedTouches[0].clientY;
-	// 			return false;
-	// 		}).bind("touchmove", function (e) {
-	// 			return false;
-	// 		}).bind("touchend", function (e) {
-	// 			//console.log("touchend")
-	// 			var endX = e.originalEvent.changedTouches[0].clientX;
-	// 			var endY = e.originalEvent.changedTouches[0].clientY;
-	// 			var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-	// 			if (spanX > 300) {
-	// 				return false;
-	// 			}
-	// 			if (spanX > spanY) { //划的X轴大于Y轴不做处理
-	// 				return false;
-	// 			}
-	// 			if ( spanY > 50) {
-	// 				if( $(".cover").css("bottom") != "0" ){
-	// 					$(".cover").animate({ "bottom": "0px" }, 100);
-	// 				}
-	// 			}
-	// 			return false;
-	// 		});
-	// 	});
-		
-	</script>
+	
 
 
 </html>

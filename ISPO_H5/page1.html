@@ -37,7 +37,7 @@
 					            		<img class="swiper1_bg1_box1 cloud-icon1" src="img/page1/cloud1.png">
 					            		<img class="swiper1_bg1_box2 cloud-icon2" src="img/page1/cloud2.png">
 					            		<img class="swiper1_bg1_box3 cloud-icon3" src="img/page1/cloud3.png">
-					            		<img class="swiper1_bg1_box4" src="img/page1/cloud3.png">
+					            		
 					            	</div>
 					            	<div class="bg_2"></div>
 					            	<div class="line"></div>
@@ -45,15 +45,12 @@
 				            	
 	            				</div>
 	            				<div class="swiper-slide slide-1">
-				            		
 			            		</div>
 			            		<div class="swiper-slide slide-2">
-
-				            		
 			            		</div>
-			            		<div class="swiper-slide slide-3">
-
-				            		
+			            		<div class="swiper-slide slide-3">            		
+			            		</div>
+			            		<div class="swiper-slide slide-4">	            		
 			            		</div>
 	            			</div>
 	            		</div>
@@ -62,48 +59,23 @@
 	            	
 	            	
 	           	</div>
-	           	<div class="swiper-slide swiper_3 page" id="page_1">
-	            	<div class="con_wrap wrap_3">
-	            		
-	            		
-	            	</div>
-	            	
-	            	
-	           	</div>
-	           <!--  <div class="swiper-slide page" id="page_2">
-	            	<div class="con_wrap wrap_3 swiper-container">
-	            		<div class="swiper-con">
-	            			<img src="img/page1/background.jpg" width="100%">
-			            	<img class="swiper_3_1" src="img/page1/swiper_3_1.png" width="100%">
-			            	<img class="swiper_3_2" src="img/page1/swiper_3_2.png" width="100%">
-			            	<img class="swiper_3_3" src="img/page1/swiper_3_3.png" width="100%">
-			            	<img class="swiper_3_4" src="img/page1/swiper_3_4.png" width="100%">
-	            		</div>
-	            		
-		            	
-	           		</div>
-	           	</div>
-	           	<div class="swiper-slide page" id="page_3">
-	            	<div class="con_wrap wrap_3">
-
-		           		<img src="img/page1/background.jpg" width="100%">
-		            	<img class="swiper_4_1" src="img/page1/swiper_4_1.png" width="100%">
-		            	<img class="swiper_4_2" src="img/page1/swiper_4_2.png" width="100%">
-		            	<img class="swiper_4_3" src="img/page1/swiper_4_3.png" width="100%">
-	           		</div>
-	           	</div> -->
 	        </div>
 	    </div>
 	</body>
 	<script>
-			
-		$('.cover').filter(function(){
-			coverHeight = $(this).height();
-			// console.log(coverHeight)
-			$(this).css({"bottom":"-"+coverHeight+'px'})
+		$(function(){
+			$('.cover').filter(function(){
+				coverHeight = $(this).height();
+				// console.log(coverHeight)
+				if(coverHeight!==0){
+					$(this).css({"bottom":"-"+coverHeight+'px'})
+				}
+				
 			// $(this).css("bottom","-"+coverHeight)
+			})
+
 		})
-		var lineTop = $('.line').position().top+30
+		lineTop = $('.line').position().top+30
 		// console.log(lineTop)
 		$('.bg_1').height(lineTop)
 
@@ -200,12 +172,12 @@
 			
 				return false;
 			}
-			current_page = pager(current_page, current_page - 1);
+			// current_page = pager(current_page, current_page - 1);
 			return false;
 		}
 		if (endY - positionY < -50) {
 			if (cover.length === 1 && cover.css("bottom") === "0px") {
-				current_page = pager(current_page, current_page + 1);
+				// current_page = pager(current_page, current_page + 1);
 			
 
 				return false;
@@ -218,7 +190,7 @@
 			}
 			
 
-			current_page = pager(current_page, current_page + 1);
+			// current_page = pager(current_page, current_page + 1);
 			return false;
 		}
 			
@@ -283,10 +255,17 @@
 			mySwiper = new Swiper('.swiper-container', {
 			
 				onSlideChangeStart: function(swiper){
-					if( mySwiper.activeIndex == 3 ){
-						$('.down').hide();
+					if( mySwiper.activeIndex == 1 ){
+						
+						$(".swiper-slide div.line").removeAttr('style')
+						var lineTop = $(".swiper-slide div.line").position().top+30;
+						$('.bg_1').height(lineTop)
+						var $cover = $(".cover")
+						// var coverHeight = $cover.height();
+						$cover.css({"bottom":"-"+coverHeight+'px'})
+						
 					}else{
-						$('.down').show();
+						
 					}
 			    }
 			});

@@ -25,36 +25,56 @@
 		<!-- Swiper -->
 	    <div class="swiper-container">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide">
-	            	<img src="img/index/swiper_1.jpg" width="100%">
-	            	<img class="swiper1_box1 cube-icon1" src="img/common/cube1.png">
-	            	<img class="swiper1_box2 cube-icon2" src="img/common/cube2.png">
-	            	<img class="swiper1_box4 cube-icon4"  src="img/common/cube4.png">
+
+	        	<div class="swiper-slide swiper_1 page" id="page_0">
+	            	<div class="con_wrap wrap_1">
+	            		<img src="img/index/swiper_1.jpg" width="100%">
+		            	<img class="swiper1_box1 cube-icon1" src="img/common/cube1.png">
+		            	<img class="swiper1_box2 cube-icon2" src="img/common/cube2.png">
+		            	<img class="swiper1_box4 cube-icon4"  src="img/common/cube4.png">
+	            		
+	            		
+	            	</div>
+	            	
+	            	
 	           	</div>
-	            <div class="swiper-slide">
-	            	<img src="img/index/swiper_1.jpg" width="100%">
-	            	<img class="swiper2_box1 cube-icon3" src="img/common/cube3.png">
-	            	<img class="swiper2_box2 cube-icon4" src="img/common/cube4.png">
-	            	<img class="swiper2_box3 cube-icon2" src="img/common/cube2.png">
-	            	<img class="swiper2_box4 cube-icon1" src="img/common/cube1.png">
+	          	<div class="swiper-slide swiper_2 page" id="page_1">
+	            	<div class="con_wrap wrap_2">
+	            		<img src="img/index/swiper_1.jpg" width="100%">
+		            	<img class="swiper2_box1 cube-icon3" src="img/common/cube3.png">
+		            	<img class="swiper2_box2 cube-icon4" src="img/common/cube4.png">
+		            	<img class="swiper2_box3 cube-icon2" src="img/common/cube2.png">
+		            	<img class="swiper2_box4 cube-icon1" src="img/common/cube1.png">
+	            	</div>
+	            	
+	            	
 	           	</div>
-	            <div class="swiper-slide">
-	            	<img src="img/index/swiper_1.jpg" width="100%">
-	            	<img class="swiper3_box2" src="img/index/box2.gif">
-	            	<img class="swiper3_box3" src="img/index/box3.gif">
-	            	<div class="btn1"></div>
-		        	<div class="btn2"></div>
-		        	<div class="btn3"></div>
-		        	<div class="btn4"></div>
-		        	<div class="btn5"></div>
+	            <div class="swiper-slide swiper_2 page" id="page_2">
+	            	<div class="con_wrap wrap_3">
+	            		<img src="img/index/swiper_1.jpg" width="100%">
+		            	<img class="swiper3_box2" src="img/index/box2.gif">
+		            	<img class="swiper3_box3" src="img/index/box3.gif">
+		            	<div class="btn1"></div>
+			        	<div class="btn2"></div>
+			        	<div class="btn3"></div>
+			        	<div class="btn4"></div>
+			        	<div class="btn5"></div>
+	            	</div>
+	            	
+	            	
 	           	</div>
-	           	<div class="swiper-slide">
-	            	<img src="img/index/swiper_4.jpg" width="100%">
-	            	<img class="swiper4_box1 cube-icon2" src="img/common/cube1.png">
-	            	<img class="swiper4_box2 cube-icon1" src="img/common/cube2.png">
-	            	<img class="swiper4_box3 cube-icon4" src="img/common/cube3.png">
-	            	<img class="swiper4_box4 cube-icon3" src="img/common/cube4.png">
+	          	<div class="swiper-slide swiper_2 page" id="page_3">
+	            	<div class="con_wrap wrap_4">
+	            		<img src="img/index/swiper_4.jpg" width="100%">
+		            	<img class="swiper4_box1 cube-icon2" src="img/common/cube1.png">
+		            	<img class="swiper4_box2 cube-icon1" src="img/common/cube2.png">
+		            	<img class="swiper4_box3 cube-icon4" src="img/common/cube3.png">
+		            	<img class="swiper4_box4 cube-icon3" src="img/common/cube4.png">
+	            	</div>
+	            	
+	            	
 	           	</div>
+	           
 	        </div>
 	        <div class="down">
 	        	<img src="img/index/down.png" width="100%" />
@@ -63,16 +83,154 @@
 	    </div>
 	</body>
 	<script>
-		var mySwiper;
-		mySwiper = new Swiper('.swiper-container', {
-			direction : 'vertical',
-			onSlideChangeStart: function(swiper){
-				if( mySwiper.activeIndex == 3 ){
-					$('.down').hide();
-				}else{
-					$('.down').show();
-				}
-		    }
+		// var mySwiper;
+		// mySwiper = new Swiper('.swiper-container', {
+		// 	direction : 'vertical',
+		// 	onSlideChangeStart: function(swiper){
+		// 		if( mySwiper.activeIndex == 3 ){
+		// 			$('.down').hide();
+		// 		}else{
+		// 			$('.down').show();
+		// 		}
+		//     }
+		// });
+		var page_1_outing = function (e) {
+			$('.down').hide();
+			return true;
+		}
+		var page_1_in = function (e) {
+			$('.down').show();
+			return true;
+		}
+		var page_0_in = function (e) {
+			$('.down').show();
+			return true;
+		}
+		$(function(){
+			var current_page = 0;
+			var positionX = 0, positionY = 0;
+			$(".con_wrap").bind("touchstart", function (e) {
+				positionX = e.originalEvent.changedTouches[0].clientX;
+				positionY = e.originalEvent.changedTouches[0].clientY;
+				return false;
+			}).bind("touchmove", function (e) {
+				return false;
+			}).bind("touchend", function (e) {
+				//console.log("touchend")
+				// var endX = e.originalEvent.changedTouches[0].clientX;
+				// var endY = e.originalEvent.changedTouches[0].clientY;
+				// var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+				// if (spanX > 300) {
+				// 	return false;
+				// }
+				// if (spanX > spanY) { //划的X轴大于Y轴不做处理
+				// 	return false;
+				// }
+				// if ( spanY > 50) {
+				// 	if( $(".cover").css("bottom") != "0" ){
+				// 		$(".cover").animate({ "bottom": "0px" }, 100);
+				// 	}
+				// }
+				// return false;
+		var endX = e.originalEvent.changedTouches[0].clientX;
+		var endY = e.originalEvent.changedTouches[0].clientY;
+		var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
+		if (spanX > 300) {
+			return false;
+		}
+		if (spanX > spanY) { //划的X轴大于Y轴不做处理
+			return false;
+		}
+		
+		var $page = $("#page_"+current_page);
+		var cover = $page.find(".cover");
+		// console.log(cover.css("bottom"))
+		if (endY - positionY > 50) {
+			
+
+			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+				cover.animate({ "bottom": "0px" }, 100);
+			
+				return false;
+			}
+			current_page = pager(current_page, current_page - 1);
+			return false;
+		}
+		if (endY - positionY < -50) {
+			if (cover.length === 1 && cover.css("bottom") === "0px") {
+				current_page = pager(current_page, current_page + 1);
+			
+
+				return false;
+			}
+			if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+				cover.animate({ "bottom": "0px" }, 100);
+			
+
+				return false;
+			}
+			
+
+			current_page = pager(current_page, current_page + 1);
+			return false;
+		}
+			
+
+			return false;
+
+			});
+
+	var pager = function (from, to) {
+		// console.log("touchend ", from, to);
+		var page_length = $(".page").length;
+		// console.log(page_length)
+
+		var isdown = from < to;
+		if (from < 0 || from > page_length - 1) {
+			return from;
+		}
+		if (isdown && from === page_length - 1) {
+			$("#page_" + from + " .cover_center").show().css("-webkit-animation", "page_center .5s linear 0s both");
+			to = 0;
+		}
+		if (isdown === false && from === 0) {
+			return from;
+		}
+		var speed = 200, clientHeight = document.body.clientHeight;
+	
+		if (window["page_" + from + "_outing"]) {
+			var _run = window["page_" + from + "_outing"]($("#page_" + from));
+			if (!_run) {
+				return from;
+			}
+		}
+		$("#page_" + from + " .con_wrap").animate({ "top": isdown ? -1 * clientHeight : clientHeight }, speed, function () {
+			$("#page_" + from + " div").removeAttr("style"); //删除所有自定义的样式
+			var cover = $("#page_" + from).hide().find(".cover")
+			cover.css({ "bottom": "-" + cover.css("height") }).removeAttr("dir");
+		});
+
+		if (window["page_" + from + "_out"]) {
+			window["page_" + from + "_out"]($("#page_" + from));
+		}
+
+		$("#page_" + to + " .con_wrap").css({ "top": isdown ? clientHeight : -1 * clientHeight }).animate({ "top": 0 }, speed);
+		$("#page_" + to).show();
+		if (window["page_" + to + "_in"]) {
+			window["page_" + to + "_in"]($("#page_" + to));
+		}     
+		return to;
+	}
+	var init = function (num) {
+		current_page = num;
+		$("#load").hide();
+		if (window["page_" + num + "_in"]) {
+			window["page_" + num + "_in"]($("#page_" + num));
+		}
+		$("#page_" + num).show();
+	}
+	//init(10);
+
 		});
 		
 		$('.btn1').click(function(){

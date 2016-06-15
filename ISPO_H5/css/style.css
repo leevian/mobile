@@ -27,10 +27,11 @@ img {display:block;}
 }
 .down{
 	position: absolute;
-	top: 93%;
+	top: 92%;
 	left: 47%;
 	width: 7%;
 	height: 5%;
+	z-index: 10;
 }
 .cube-icon1{
 	animation:cube1 2s ease 0s  infinite normal forwards;
@@ -57,51 +58,52 @@ img {display:block;}
 }
 @keyframes cube1
 {
-	0%   {transform:rotateZ(0deg) translate(10px,40px);}
-	50%  {transform:rotateZ(30deg) translate(-20px,0);}
-	100% {transform:rotateZ(0deg) translate(10px,40px);}
+	0%   {transform:translate(0,10px);}
+	50%  {transform:translate(0,0);}
+	100% {transform:translate(0,10px);}
 }
 @-webkit-keyframes cube1
 {
 
-	0%   {-webkit-transform:rotateZ(0deg) translate(10px,10px);}
-	50%  {-webkit-transform:rotateZ(30deg) translate(-5px,0);}
-	100% {-webkit-transform:rotateZ(0deg) translate(10px,10px);}
+	0%   {-webkit-transform:translate(0,10px);}
+	50%  {-webkit-transform:translate(0,0);}
+	100% {-webkit-transform:translate(0,10px);}
 }
 
 @keyframes cube2
 {
-	0%   {transform:rotateZ(0deg);}
-	50%  {transform:rotateZ(-25deg);}
-	100% {transform:rotateZ(0deg);}
+	0%   {transform:translate(0,-10px);}
+	50%  {transform:translate(0,0);}
+	100% {transform:translate(0,-10px);}
 }
 @-webkit-keyframes cube2
 {
-	0%   {-webkit-transform:rotateZ(0deg);}
-	50%  {-webkit-transform:rotateZ(-25deg);}
-	100% {-webkit-transform:rotateZ(0deg);}
+	0%   {-webkit-transform:translate(0,-10px);}
+	50%  {-webkit-transform:translate(0,0);}
+	100% {-webkit-transform:translate(0,-10px);}
 }
 @keyframes cube3
 {
-	0%   {transform:rotateZ(0deg);}
-	50%  {transform:rotateZ(-25deg);}
-	100% {transform:rotateZ(0deg);}
+	0%   {transform:translate(0,-10px);}
+	50%  {transform:translate(0,0);}
+	100% {transform:translate(0,-10px);}
 }
 @-webkit-keyframes cube3
 {
-	0%   {-webkit-transform:rotateZ(0deg);}
-	50%  {-webkit-transform:rotateZ(-25deg);}
-	100% {-webkit-transform:rotateZ(0deg);}
+	0%   {-webkit-transform:translate(0,-10px);}
+	50%  {-webkit-transform:translate(0,0);}
+	100% {-webkit-transform:translate(0,-10px);}
 }
 @keyframes cube4
 {
-	0%   {transform:rotateZ(0deg);}
-	50%  {transform:rotateZ(55deg);}
-	100% {transform:rotateZ(0deg);}
+	0%   {-webkit-transform:translate(0,-10px);}
+	50%  {-webkit-transform:translate(0,0);}
+	100% {-webkit-transform:translate(0,-10px);}
 }
 @-webkit-keyframes cube4
 {
-	0%   {-webkit-transform:rotateZ(0deg);}
-	50%  {-webkit-transform:rotateZ(55deg);}
-	100% {-webkit-transform:rotateZ(0deg);}
+	0%   {-webkit-transform:translate(0,-10px);}
+	50%  {-webkit-transform:translate(0,0);}
+	100% {-webkit-transform:translate(0,-10px);}
+}
 }

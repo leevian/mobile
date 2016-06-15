@@ -43,6 +43,21 @@
 	left: 60%;
 	width: 18%;
 	z-index: 6;
+	animation:weijin 2s linear 0s infinite normal forwards;
+	-webkit-animation:weijin 2s linear 0s infinite normal forwards;
+
+}
+@keyframes weijin
+{
+	0%   {transform:rotate(30deg);}
+	50% {transform:rotate(0);}
+	100% {transform:rotate(30deg);}
+}
+@-webkit-keyframes weijin /* Safari and Chrome */
+{
+	0%   {-webkit-transform:rotate(30deg);}
+	50% {-webkit-transform:rotate(0deg);}
+	100% {;-webkit-transform:rotate(30deg);}
 }
 .yaling{
 	position: absolute;
@@ -50,6 +65,20 @@
 	left: 8%;
 	width: 15%;
 	z-index: 6;
+	animation:yaling 2s linear 0s infinite normal forwards;
+	-webkit-animation:yaling 2s linear 0s infinite normal forwards;
+}
+@keyframes yaling
+{
+	0%   {transform:rotate(-20deg);}
+	50% {transform:rotate(0deg);}
+	100% {transform:rotate(-20deg);}
+}
+@-webkit-keyframes yaling /* Safari and Chrome */
+{
+	0%   {-webkit-transform:rotate(-20deg);}
+	50% {-webkit-transform:rotate(0);}
+	100% {;-webkit-transform:rotate(-20deg);}
 }
 .xiongzhao{
 	position: absolute;
@@ -57,6 +86,20 @@
 	left: 60%;
 	width: 25%;
 	z-index: 6;
+	animation:xiongzhao 2s linear 0s infinite normal forwards;
+	-webkit-animation:xiongzhao 2s linear 0s infinite normal forwards;
+}
+@keyframes xiongzhao
+{
+	0%   {transform:translateY(-20px)}
+	50% {transform:translateY(0)}
+	100% {transform:translateY(-20px)}
+}
+@-webkit-keyframes xiongzhao /* Safari and Chrome */
+{
+	0%   {-webkit-transform:translateY(-20px)}
+	50% {-webkit-transform:translateY(0)}
+	100% {;-webkit-transform:translateY(-20px)}
 }
 .chuqi{
 	position: absolute;
@@ -64,12 +107,26 @@
 	left: 10%;
 	width: 10%;
 	z-index: 6;
+	animation:chuqi 2s linear 0s infinite normal forwards;
+	-webkit-animation:chuqi 2s linear 0s infinite normal forwards;
+}
+@keyframes chuqi
+{
+	0%   {transform:translate(0,0);opacity:1;}
+	100% {transform:translate(10px,10px);opacity:0;}
+}
+@-webkit-keyframes chuqi /* Safari and Chrome */
+{
+	0%   {-webkit-transform:translate(0,0);opacity:1;}
+	100% {;-webkit-transform:translate(-20px,-20px);opacity:0;}
 }
 .cover{
 	position: absolute;
 	width: 100%;
 	left: 0px;
 	z-index: 22;
+	bottom:-250px;
+	
 }
 .woman_dong{
 	display: none;

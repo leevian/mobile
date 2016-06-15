@@ -63,20 +63,10 @@
 				            	
 	            				</div>
 	            				<div class="swiper-slide slider-3">
-	            					
-				            		
-					            	
-					            	
-					            	
 				            	
 	            				</div>
 	            				<div class="swiper-slide slider-4">
-	            					
-				            		
-					            	
-					            	
-					            	
-				            	
+		            	
 	            				</div>
 	            			</div>
 	            		</div>
@@ -112,23 +102,27 @@
 	</body>
 	<script type="text/javascript">
 
-		$('.cover').filter(function(){
-			coverHeight = $(this).height();
-			// console.log(coverHeight)
-			$(this).css({"bottom":"-"+coverHeight+'px'})
+		$(function(){
+			$('.cover').filter(function(){
+				coverHeight = $(this).height();
+				// console.log(coverHeight)
+				if(coverHeight!==0){
+					$(this).css({"bottom":"-"+coverHeight+'px'})
+				}
+				
 			// $(this).css("bottom","-"+coverHeight)
-		})
+			})
 
+		})
 		
 		
-		var isShow = 0;
 		$(function () {
 			var $btn = $(".click");
 		
 			$btn.bind("touchend", function () {
 				$(this).hide();
 				$('.all_show').hide();
-				isShow=1;
+				
 				$('.click').hide();
 				$('.woman_dong').show();
 				
@@ -187,9 +181,7 @@
 				// console.log(cover.css('bottom'))
 				var $page = $("#page_"+current_page);
 				var cover = $page.find(".cover");
-				if(!isShow){
-					return false;
-				}
+				
 				if (endY - positionY > 50) {
 					
 
@@ -198,7 +190,7 @@
 					
 						return false;
 					}
-					current_page = pager(current_page, current_page - 1);
+					// current_page = pager(current_page, current_page - 1);
 					return false;
 				}
 				if (endY - positionY < -50) {
@@ -206,7 +198,7 @@
 					console.log(cover.css("bottom"))
 
 					if (cover.length === 1 && cover.css("bottom") === "0px") {
-						current_page = pager(current_page, current_page + 1);
+						// current_page = pager(current_page, current_page + 1);
 					
 
 						return false;
@@ -219,7 +211,7 @@
 					}
 					
 
-					current_page = pager(current_page, current_page + 1);
+					// current_page = pager(current_page, current_page + 1);
 					return false;
 				}
 					
@@ -289,7 +281,7 @@
 					if( mySwiper.activeIndex == 1 ){
 						$('.all_show').show();
 						$('.cover').css({"bottom":"-"+coverHeight+'px'})
-						isShow = 0;
+						 
 						$('.click').show()
 						$('.woman_dong').attr('src','img/page3/1.gif?'+(new Date)).hide();
 					}else{
@@ -299,73 +291,7 @@
 			});
 		})
 	</script>
-	 <script>
-	// 	var mySwiper;
-	// 	mySwiper = new Swiper('.swiper-container', {
-	// 		direction : 'horizontal',
-	// 		onSlideChangeStart: function(swiper){
-	// 			if( mySwiper.activeIndex == 0 ){
-					
-	// 			}else if( mySwiper.activeIndex == 1 ){
-					
-	// 			}else if( mySwiper.activeIndex == 2 ){
-					
-	// 			}else if( mySwiper.activeIndex == 3 ){
-					
-	// 			}
-	// 	    }
-	// 	});
-		// $(".slider-0").bind("touchstart", function (e) {
-		// 	positionX = e.originalEvent.changedTouches[0].clientX;
-		// 	positionY = e.originalEvent.changedTouches[0].clientY;
-		// 	return false;
-		// }).bind("touchmove", function (e) {
-		// 	return false;
-		// }).bind("touchend", function (e) {
-		// 	//console.log("touchend")
-		// 	var endX = e.originalEvent.changedTouches[0].clientX;
-		// 	var endY = e.originalEvent.changedTouches[0].clientY;
-		// 	var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-		// 	if (spanX > 50) {
-		// 		$('.huaban').hide();
-		// 		$('.slider').hide();
-		// 		$('.huaban_dong').show();
-		// 	}
-		// 	return false;
-		// });
-		
-	//init(10);
-
-	// 	$(function(){
-	// 		var current_page = 0;
-	// 		var positionX = 0, positionY = 0;
-	// 		$(".content").bind("touchstart", function (e) {
-	// 			positionX = e.originalEvent.changedTouches[0].clientX;
-	// 			positionY = e.originalEvent.changedTouches[0].clientY;
-	// 			return false;
-	// 		}).bind("touchmove", function (e) {
-	// 			return false;
-	// 		}).bind("touchend", function (e) {
-	// 			//console.log("touchend")
-	// 			var endX = e.originalEvent.changedTouches[0].clientX;
-	// 			var endY = e.originalEvent.changedTouches[0].clientY;
-	// 			var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-	// 			if (spanX > 300) {
-	// 				return false;
-	// 			}
-	// 			if (spanX > spanY) { //划的X轴大于Y轴不做处理
-	// 				return false;
-	// 			}
-	// 			if ( spanY > 50) {
-	// 				if( $(".cover").css("bottom") != "0" ){
-	// 					$(".cover").animate({ "bottom": "0px" }, 100);
-	// 				}
-	// 			}
-	// 			return false;
-	// 		});
-	// 	});
-		
-	</script>
+	
 
 
 </html>
