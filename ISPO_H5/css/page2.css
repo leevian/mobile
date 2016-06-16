@@ -77,7 +77,7 @@
 .slider{
 	position: absolute;
 	top: 39%;
-	left: -10%;
+	left: 0%;
 	width: 100%;
 	z-index: 12;
 }

@@ -127,6 +127,8 @@
 		$(function(){
 			var mySwiper;
 			mySwiper = new Swiper('.swiper-container', {
+				resistanceRatio : 0,
+				
 				onTouchMove: function(swiper){
 					var $cover = $(".cover")
 					var coverLeft = $cover.css("left");	
@@ -144,15 +146,15 @@
 					}else{
 							mySwiper.unlockSwipeToNext();
 					}
+
 	
 			    },
 				onSlideChangeStart: function(swiper){
 					// console.log(mySwiper.activeIndex)
 					if( mySwiper.activeIndex == 1|| mySwiper.activeIndex == 0){
 						// console.log(coverHeight)
-						if(coverHeight==0){
-							coverHeight= 260
-						}
+						
+
 						$('.cover').css({left:-500})
 						
 						$('.bg_1').removeClass('move')
@@ -176,10 +178,10 @@
 
 		$(function(){
 			$('.cover').filter(function(){
-				coverHeight = $(this).height();
+				coverWidth = $(this).width();
 				// console.log(coverHeight)
-				if(coverHeight!=0){
-					$(this).css({"bottom":"-"+coverHeight+'px'})
+				if(coverWidth!=0){
+					$(this).css({"left":coverWidth+'px'})
 				}
 				
 			// $(this).css("bottom","-"+coverHeight)

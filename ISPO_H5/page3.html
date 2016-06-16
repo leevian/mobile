@@ -142,6 +142,7 @@
 		$(function(){
 			var mySwiper;
 			mySwiper = new Swiper('.swiper-container', {
+				resistanceRatio : 0,
 				onTouchMove: function(swiper){
 					var $cover = $(".cover")
 					var coverLeft = $cover.css("left");	
