@@ -31,6 +31,8 @@ img {display:block;}
 	left: 47%;
 	width: 7%;
 	height: 5%;
+	-webkit-animation:down 1s ease 0s infinite normal forwards;
+	animation:down 1s ease 0s  infinite normal forwards;
 	z-index: 10;
 }
 .cube-icon1{
@@ -55,6 +57,19 @@ img {display:block;}
 	animation:cube4 2.5s ease 0s  infinite normal forwards;
 	-webkit-animation:cube4 2.5s ease 0s infinite normal forwards;
 
+}
+@keyframes down
+{
+	0%   {transform:translateY(0);}
+	50%  {transform:translateY(10px);}
+	100% {transform:translateY(0);}
+}
+@-webkit-keyframes down
+{
+
+	0%   {-webkit-transform:translateY(0);}
+	50%  {-webkit-transform:translateY(10px);}
+	100% {-webkit-transform:translateY(0);}
 }
 @keyframes cube1
 {

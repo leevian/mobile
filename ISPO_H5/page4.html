@@ -60,6 +60,9 @@
 	            				<div class="swiper-slide slider-4">
             	
 	            				</div>
+	            				<div class="swiper-slide slider-5">
+            	
+	            				</div>
 	            			</div>
 	            		</div>
 	            	</div>
@@ -75,153 +78,7 @@
 		
 
 
-		$(function(){
-			var current_page = 0;
-			var positionX = 0, positionY = 0;
-			$(".con_wrap").bind("touchstart", function (e) {
-				positionX = e.originalEvent.changedTouches[0].clientX;
-				positionY = e.originalEvent.changedTouches[0].clientY;
-				return false;
-			}).bind("touchmove", function (e) {
-				return false;
-			}).bind("touchend", function (e) {
-				
-				//console.log("touchend")
-				// var endX = e.originalEvent.changedTouches[0].clientX;
-				// var endY = e.originalEvent.changedTouches[0].clientY;
-				// var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-				// if (spanX > 300) {
-				// 	return false;
-				// }
-				// if (spanX > spanY) { //划的X轴大于Y轴不做处理
-				// 	return false;
-				// }
-				// if ( spanY > 50) {
-				// 	if( $(".cover").css("bottom") != "0" ){
-				// 		$(".cover").animate({ "bottom": "0px" }, 100);
-				// 	}
-				// }
-				// return false;
-				var endX = e.originalEvent.changedTouches[0].clientX;
-				var endY = e.originalEvent.changedTouches[0].clientY;
-				var spanX = Math.abs(endX - positionX), spanY = Math.abs(endY - positionY);
-				
-				
-				if (spanX > 300) {
-				// console.log(cover.css('bottom'))
-					
-					return false;
-				}
-				if (spanX > spanY) { //划的X轴大于Y轴不做处理
-				// console.log(cover.css('bottom'))
-					
-					
-					return false;
-				}
-				
-
-				// console.log(cover.css('bottom'))
-				var $page = $("#page_"+current_page);
-				var cover = $page.find(".cover");
-			
-				if (endY - positionY > 50) {
-					
-
-					if (cover.length === 1 && cover.css("bottom") != "0px") {
-						// cover.animate({ "bottom": "0px" }, 100);
-					
-						return false;
-					}
-					if (cover.length === 1 && cover.css("bottom") === "0px") {
-				
-						cover.animate({ "bottom": "-" + cover.css("height") }, 100);
-
-						// current_page = pager(current_page, current_page + 1);
-					
-
-						return false;
-					}
-					// current_page = pager(current_page, current_page - 1);
-					return false;
-				}
-				if (endY - positionY < -50) {
-					// console.log(1)
-					// console.log(cover.css("bottom"))
-
-					if (cover.length === 1 && cover.css("bottom") === "0px") {
-						// current_page = pager(current_page, current_page + 1);
-					
-
-						return false;
-					}
-					if (cover.length === 1 && cover.css("bottom") != "0px") {
-						cover.animate({ "bottom": "0px" }, 100);
-					
-
-						return false;
-					}
-					
-
-					// current_page = pager(current_page, current_page + 1);
-					return false;
-				}
-					
-
-					return false;
-
-			});
-
-		var pager = function (from, to) {
-		// console.log("touchend ", from, to);
-		var page_length = $(".page").length;
-		// console.log(page_length)
-		var isdown = from < to;
-		if (from < 0 || from > page_length - 1) {
-			return from;
-		}
-		if (isdown && from === page_length - 1) {
-			$("#page_" + from + " .cover_center").show().css("-webkit-animation", "page_center .5s linear 0s both");
-			to = 0;
-		}
-		if (isdown === false && from === 0) {
-			return from;
-		}
-		var speed = 200, clientHeight = document.body.clientHeight;
-	
-		if (window["page_" + from + "_outing"]) {
-			var _run = window["page_" + from + "_outing"]($("#page_" + from));
-			if (!_run) {
-				return from;
-			}
-		}
-		$("#page_" + from + " .con_wrap").animate({ "top": isdown ? -1 * clientHeight : clientHeight }, speed, function () {
-			$("#page_" + from + " div").removeAttr("style"); //删除所有自定义的样式
-			var cover = $("#page_" + from).hide().find(".cover")
-			cover.css({ "bottom": "-" + cover.css("height") }).removeAttr("dir");
-		});
-
-		if (window["page_" + from + "_out"]) {
-			window["page_" + from + "_out"]($("#page_" + from));
-		}
-
-		$("#page_" + to + " .con_wrap").css({ "top": isdown ? clientHeight : -1 * clientHeight }).animate({ "top": 0 }, speed);
-		$("#page_" + to).show();
-		if (window["page_" + to + "_in"]) {
-			window["page_" + to + "_in"]($("#page_" + to));
-		}     
-		return to;
-	}
-	var init = function (num) {
-		current_page = num;
-		$("#load").hide();
-		if (window["page_" + num + "_in"]) {
-			window["page_" + num + "_in"]($("#page_" + num));
-		}
-		$("#page_" + num).show();
-	}
-	//init(10);
-
-		});
+		
 		$(function () {
 			// var $product1 = $(".product_1");
 			
@@ -237,31 +94,44 @@
 			 	
 			//  })
 			$('.product_1').bind('touchend',function(){
+				$('.click').hide();
 				$('.big_pic').attr('src',"img/page4/product_1_big.png");
 				$('.big_pic').attr('style','top: 30%;left: 23%;width: 50%;');
 			})
 			
 			$('.product_2').bind("touchend",function(){
+				$('.click').hide();
+
 				$('.big_pic').attr('src','img/page4/product_2_big.png');
 				$('.big_pic').attr('style','top: 35%;left: 23%;width: 50%;');
 			})
 			$('.product_3').bind("touchend",function(){
+				$('.click').hide();
+
 				$('.big_pic').attr('src','img/page4/product_3_big.png');
 				$('.big_pic').attr('style','top: 40%;left: 23%;width: 50%;');
 			})
 			$('.product_4').bind("touchend",function(){
+				$('.click').hide();
+
 				$('.big_pic').attr('src','img/page4/product_4_big.png');
 				$('.big_pic').attr('style','top: 40%;left: 13%;width: 70%;');
 			})
 			$('.product_5').bind("touchend",function(){
+				$('.click').hide();
+
 				$('.big_pic').attr('src','img/page4/product_5_big.png');
 				$('.big_pic').attr('style','top: 35%;left: 16%;width: 60%;');
 			})
 			$('.product_6').bind("touchend",function(){
+				$('.click').hide();
+
 				$('.big_pic').attr('src','img/page4/product_6_big.png');
 				$('.big_pic').attr('style','top: 35%;left: 25%;width: 45%;');
 			})
 			$('.product_7').bind("touchend",function(){
+				$('.click').hide();
+
 				$('.big_pic').attr('src','img/page4/product_7_big.png');
 				$('.big_pic').attr('style','top: 30%;left: 30%;width: 35%;');
 			})
@@ -271,29 +141,48 @@
 		$(function(){
 			var mySwiper;
 			mySwiper = new Swiper('.swiper-container', {
-			
+				onTouchMove: function(swiper){
+					var $cover = $(".cover")
+					var coverLeft = $cover.css("left");	
+
+					if(mySwiper.activeIndex == 0&& coverLeft!='0px'){
+				      		
+						$('.cover').css({left:500})
+
+						
+						
+						mySwiper.lockSwipeToNext();
+			      	
+			      		$(".cover").animate({ "left": "0px" }, 100);
+
+					}else{
+							mySwiper.unlockSwipeToNext();
+					}
+	
+			    },
 				onSlideChangeStart: function(swiper){
 					// console.log(mySwiper.activeIndex)
 					if( mySwiper.activeIndex == 1 ||mySwiper.activeIndex == 0){
 						
-						if(coverHeight==0){
-							coverHeight= 260
-						}
-						$('.cover').css({"bottom":"-"+coverHeight+'px'})
+				$('.click').show();
+						
+						$('.cover').css({left:-500})
+						
 						
 					}else{
 						$('.down').show();
 					}
-			    }
+			    },
+			    
 			});
 		})
 
 		$(function(){
 			$('.cover').filter(function(){
-				coverHeight = $(this).height();
-				console.log(coverHeight)
-				if(coverHeight!=0){
-					$(this).css({"bottom":"-"+coverHeight+'px'})
+				coverWidth = $(this).width();
+				// console.log(coverHeight)
+				if(coverWidth!=0){
+					$(this).css({"left":coverWidth+'px'})
 				}
 				
 			// $(this).css("bottom","-"+coverHeight)

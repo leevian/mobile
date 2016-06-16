@@ -123,6 +123,12 @@
 	z-index: 2;
 
 }
+.slider-5{
+	background: url(../img/page5/background_5.jpg);
+	background-size: cover;
+	z-index: 2;
+
+}
 .jiangban1{
 	position: absolute;
 	top: 30%;
@@ -160,11 +166,11 @@
 }
 .cover{
 	position: absolute;
-	bottom:-500px;
+	bottom:0;
 	
 	width: 100%;
 
-	left: 0px;
+	left: 500px;
 	z-index: 11;
 }	
 .cube1{

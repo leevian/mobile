@@ -46,6 +46,10 @@
 	background: url(../img/page2/background_4.jpg);
 	background-size: cover;
 }
+.slider-5{
+	background: url(../img/page2/background_5.jpg);
+	background-size: cover;
+}
 .huaban{
 	position: absolute;
 	top: 17%;
@@ -122,8 +126,8 @@
 	position: absolute;
 	width: 100%;
 	height: auto;
-	left: 0px;
-	bottom:-250px;
+	left: 500px;
+	bottom:0;
 	
 	z-index: 44;
 }

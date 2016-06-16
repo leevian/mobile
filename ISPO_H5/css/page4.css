@@ -30,6 +30,10 @@
 	background: url(../img/page4/background_4.jpg);
 	background-size: cover;
 }
+.slider-5{
+	background: url(../img/page4/background_5.jpg);
+	background-size: cover;
+}
 .product_1{
 	position: absolute;
 	top: 5%;
@@ -195,8 +199,8 @@
 	position: absolute;
 	width: 100%;
 	
-	left: 0px;
-	bottom:-255px;
+	left: 500px;
+	bottom:0;
 	
 	z-index: 11;
 }	

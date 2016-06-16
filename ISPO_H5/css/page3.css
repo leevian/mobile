@@ -23,6 +23,11 @@
 	background: url(../img/page3/background_2.jpg);
 	background-size: cover;
 }
+.slider-5{
+
+	background: url(../img/page3/background_5.jpg);
+	background-size: cover;
+}
 .woman{
 	position: absolute;
 	top: 25%;
@@ -123,9 +128,9 @@
 .cover{
 	position: absolute;
 	width: 100%;
-	left: 0px;
+	left: 500px;
 	z-index: 22;
-	bottom:-250px;
+	bottom:0;
 	
 }
 .woman_dong{
