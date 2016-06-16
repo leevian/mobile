@@ -106,7 +106,8 @@
 			$('.cover').filter(function(){
 				coverHeight = $(this).height();
 				// console.log(coverHeight)
-				if(coverHeight!==0){
+
+				if(coverHeight!=0){
 					$(this).css({"bottom":"-"+coverHeight+'px'})
 				}
 				
@@ -185,9 +186,18 @@
 				if (endY - positionY > 50) {
 					
 
-					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
-						cover.animate({ "bottom": "0px" }, 100);
+					if (cover.length === 1 && cover.css("bottom") != "0px") {
+						// cover.animate({ "bottom": "0px" }, 100);
 					
+						return false;
+					}
+					if (cover.length === 1 && cover.css("bottom") === "0px") {
+				
+						cover.animate({ "bottom": "-" + cover.css("height") }, 100);
+
+						// current_page = pager(current_page, current_page + 1);
+					
+
 						return false;
 					}
 					// current_page = pager(current_page, current_page - 1);
@@ -203,7 +213,7 @@
 
 						return false;
 					}
-					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+					if (cover.length === 1 && cover.css("bottom") != "0px") {
 						cover.animate({ "bottom": "0px" }, 100);
 					
 
@@ -278,11 +288,14 @@
 			
 				onSlideChangeStart: function(swiper){
 					// console.log(mySwiper.activeIndex)
-					if( mySwiper.activeIndex == 1 ){
+					if( mySwiper.activeIndex == 1 ||mySwiper.activeIndex == 0){
 						$('.all_show').show();
+						if(coverHeight==0){
+							coverHeight= 260
+						}
 						$('.cover').css({"bottom":"-"+coverHeight+'px'})
 						 
-						$('.click').show()
+						$('.click').attr('src','img/page3/click.gif?'+(new Date)).show()
 						$('.woman_dong').attr('src','img/page3/1.gif?'+(new Date)).hide();
 					}else{
 						$('.down').show();

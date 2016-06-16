@@ -8,6 +8,30 @@
 .bg_0{
 	z-index: 2;
 	width: 100%;
+	transform:translateZ(0);
+	-webkit-transform:translateZ(0);
+}
+.bg_0.fade{
+	animation:bg0 0.5s linear 0s 1 normal forwards;
+	-webkit-animation:bg0 0.5s linear 0s 1 normal forwards;
+}
+.bg_1{
+	
+	transform:translateZ(0);
+	-webkit-transform:translateZ(0);
+}
+.bg_2{
+	
+	transform:translateZ(0);
+	-webkit-transform:translateZ(0);
+}
+.bg_1.move{
+	animation:bg1 2s linear 0s infinite normal forwards;
+	-webkit-animation:bg1 2s linear 0s infinite normal forwards;
+}
+.bg_2.move-2{
+	animation:bg2 2s linear 0s infinite normal forwards;
+	-webkit-animation:bg2 2s linear 0s infinite normal forwards;
 }
 .content{
 	z-index: 3;
@@ -23,9 +47,38 @@
 	background: url(../img/page5/background.png);
 	background-size: cover;
 }*/
+.allshow.fade{
+	animation:bg0 0.1s linear 0s 1 normal forwards;
+	-webkit-animation:bg0 0.1s linear 0s 1 normal forwards;
+}
+.niao.show{
+	animation:huachuan 0.5s linear 0s 1 normal forwards;
+	-webkit-animation:huachuan 0.5s linear 0s 1 normal forwards;
+}
+@keyframes bg0
+{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+@-webkit-keyframes bg0
+{
+	0%{-webkit-opacity:1;}
+	100%{-webkit-opacity:0;}
+}
+@keyframes huachuan
+{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes huachuan
+{
+	0%{-webkit-opacity:0;}
+	100%{-webkit-opacity:1;}
+}
 @keyframes bg1
 {
 	0%{transform:translateX(0);}
+
 	100%{transform:translateX(-750px);}
 }
 @-webkit-keyframes bg1 
@@ -70,7 +123,7 @@
 	z-index: 2;
 
 }
-.jiangban{
+.jiangban1{
 	position: absolute;
 	top: 30%;
 	left: 20%;
@@ -84,14 +137,22 @@
 	z-index: 6;
 }
 .huanchuan{
-	display: none;
+	opacity: 0;
+	-webkit-opacity:0;
 	position: absolute;
-	top: 20%;
-	left: 5%;
-	width: 100%;
+	top:19%;
+	left: -8%;
+	width: 112%;
+	transform:translateZ(0);
+	-webkit-transform:translateZ(0);
+}
+.huanchuan.show{
+	animation:huachuan 0.5s linear 0s 1 normal forwards;
+	-webkit-animation:huachuan 0.5s linear 0s 1 normal forwards;
 }
 .niao{
-	display: none;
+	opacity: 0;
+	-webkit-opacity:0;
 	position: absolute;
 	top: 5%;
 	left: 5%;

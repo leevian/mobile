@@ -32,9 +32,9 @@
 }
 .click{
 	position: absolute;
-	top: -20%;
-	left: -25%;
-	width: 100%;
+	top: 5%;
+	left: 3%;
+	width: 38%;
 	z-index: 6;
 }
 .weijin{

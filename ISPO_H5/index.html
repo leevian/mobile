@@ -40,7 +40,7 @@
 	           	</div>
 	          	<div class="swiper-slide swiper_2 page" id="page_1">
 	            	<div class="con_wrap wrap_2">
-	            		<img src="img/index/swiper_1.jpg" width="100%">
+	            		<img src="img/index/background_01.jpg" width="100%">
 		            	<img class="swiper2_box1 cube-icon3" src="img/index/logo_cube1.png">
 		            	<img class="swiper2_box2 cube-icon4" src="img/index/logo_cube2.png">
 		            	<img class="swiper2_box3 cube-icon2" src="img/index/logo_cube3.png">
@@ -51,23 +51,25 @@
 	            	
 	            	
 	           	</div>
-	            <div class="swiper-slide swiper_2 page" id="page_2">
+	            <div class="swiper-slide swiper_3 page" id="page_2">
 	            	<div class="con_wrap wrap_3">
-	            		<img src="img/index/swiper_1.jpg" width="100%">
-		            	<img class="swiper3_box2" src="img/index/box2.gif">
-		            	<img class="swiper3_box3" src="img/index/box3.gif">
-		            	<div class="btn1"></div>
-			        	<div class="btn2"></div>
-			        	<div class="btn3"></div>
-			        	<div class="btn4"></div>
-			        	<div class="btn5"></div>
+	            		<img src="img/index/background_02.jpg" width="100%">
+	            		
+		            	<!-- <img class="swiper3_box2" src="img/index/box2.gif"> -->
+		            	<!-- <img class="swiper3_box3" src="img/index/box3.gif"> -->
+		            	<img class="btn1" src="img/index/btn_1.png"></>
+		            	<img class="btn2" src="img/index/btn_2.png"></>
+		            	<img class="btn3" src="img/index/btn_3.png"></>
+		            	<img class="btn4" src="img/index/btn_4.png"></>
+		            	<img class="btn5" src="img/index/btn_5.png"></>
+			        	
 	            	</div>
 	            	
 	            	
 	           	</div>
-	          	<div class="swiper-slide swiper_2 page" id="page_3">
+	          	<div class="swiper-slide swiper_4 page" id="page_3">
 	            	<div class="con_wrap wrap_4">
-	            		<img src="img/index/swiper_4.jpg" width="100%">
+	            		<img src="img/index/background_03.jpg" width="100%">
 		            	<img class="swiper4_box1 cube-icon2" src="img/common/cube1.png">
 		            	<img class="swiper4_box2 cube-icon1" src="img/common/cube2.png">
 		            	<img class="swiper4_box3 cube-icon4" src="img/common/cube3.png">
@@ -235,21 +237,22 @@
 
 		});
 		
-		$('.btn1').click(function(){
-			location.href= '/ISPO_H5/page1.html';
+		$('.btn1').bind('touchend',function(){
+			location.href= 'page1.html';
 		})
-		$('.btn2').click(function(){
-			location.href= '/ISPO_H5/page2.html';
+		$('.btn2').bind('touchend',function(){
+			location.href= 'page2.html';
 		})
-		$('.btn3').click(function(){
-			location.href= '/ISPO_H5/page3.html';
+		$('.btn3').bind('touchend',function(){
+			location.href= 'page3.html';
 		})
-		$('.btn4').click(function(){
-			location.href= '/ISPO_H5/page4.html';
+		$('.btn4').bind('touchend',function(){
+			location.href= 'page4.html';
 		})
-		$('.btn5').click(function(){
-			location.href= '/ISPO_H5/page5.html';
+		$('.btn5').bind('touchend',function(){
+			location.href= 'page5.html';
 		})
+		
 	</script>
 </html>
 

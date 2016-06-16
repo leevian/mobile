@@ -110,10 +110,8 @@
 }
 .cloud-icon2{
 	animation:cloud1 3.5s linear 0s  1 normal forwards,cloudend 1.5s linear 3.5s  infinite normal forwards;
-
 	perspective:100px;
 	transform-style:preserve-3d;
-
 	-webkit-animation:cloud1 3.5s linear 0s 1 normal forwards,cloudend 1.5s linear 3.5s infinite normal forwards;
 }
 .cloud-icon3{

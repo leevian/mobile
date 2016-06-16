@@ -63,13 +63,13 @@
 @keyframes product_2
 {
 	0%   {top: 10%;}
-	50%  {top: 12%;}
+	50%  {top: 7%;}
 	100% {top: 10%;}
 }
 @-webkit-keyframes product_2 /* Safari and Chrome */
 {
 	0%   {top: 10%;}
-	50%  {top: 12%;}
+	50%  {top: 7%;}
 	100% {top: 10%;}
 }
 .product_3{
@@ -84,13 +84,13 @@
 @keyframes product_3
 {
 	0%   {top: 30%;}
-	50%  {top: 32%;}
+	50%  {top: 28%;}
 	100% {top: 30%;}
 }
 @-webkit-keyframes product_3 /* Safari and Chrome */
 {
 	0%   {top: 30%;}
-	50%  {top: 32%;}
+	50%  {top: 28%;}
 	100% {top: 30%;}
 }
 .product_4{
@@ -147,13 +147,13 @@
 @keyframes product_6
 {
 	0%   {top: 80%;}
-	50%  {top: 82%;}
+	50%  {top: 77%;}
 	100% {top: 80%;}
 }
 @-webkit-keyframes product_6 /* Safari and Chrome */
 {
 	0%   {top: 80%;}
-	50%  {top: 82%;}
+	50%  {top: 77%;}
 	100% {top: 80%;}
 }
 .product_7{
@@ -196,7 +196,7 @@
 	width: 100%;
 	
 	left: 0px;
-	bottom:-250px;
+	bottom:-255px;
 	
 	z-index: 11;
 }	

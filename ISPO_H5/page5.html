@@ -40,18 +40,25 @@
 	            					
 	            			
 				            		<div class="content">
-					            		<img class="jiangban" src="img/page5/jiangban.png" />
+					            		
 						            	<img class="huanchuan" src="img/page5/huanchuan.gif" />
-						            	<img class="cube1 cube" src="img/common/cube1.png" />
-						            	<img class="cube2 cube " src="img/common/cube2.png" />
-						            	<img class="cube3 cube " src="img/common/cube3.png" />
-						            	<img class="cube4 cube " src="img/common/cube4.png" />
-						            	<img class="cube5 cube " src="img/common/cube1.png" />
-						            	<img class="cube6 cube" src="img/common/cube2.png" />
-						            	<img class="cube7 cube" src="img/common/cube3.png" />
 						            	<img class="niao" src="img/page5/niao.gif">
+						            	<div class="allshow">
+						            		<img class="jiangban1" src="img/page5/jiangban.png" />
+							            	<img class="cube1 cube" src="img/common/cube1.png" />
+							            	<img class="cube2 cube " src="img/common/cube2.png" />
+							            	<img class="cube3 cube " src="img/common/cube3.png" />
+							            	<img class="cube4 cube " src="img/common/cube4.png" />
+							            	<img class="cube5 cube " src="img/common/cube1.png" />
+							            	<img class="cube6 cube" src="img/common/cube2.png" />
+							            	<img class="cube7 cube" src="img/common/cube3.png" />
+							            	
+					            			<img class="click" src="img/page5/click.gif" />
+
+						            	</div>
+						            	
 					            	</div>
-					            	<img class="click" src="img/page5/click.gif" />
+					            	
 					            	
 					            	<img class="cover"src="img/page5/cover.png">
 					            	
@@ -95,17 +102,21 @@
 			
 			var bg_width = $('.bg').width();
 
-			$('.bg_2').css("left",bg_width)
+			// $('.bg_2').css("left",bg_width)
 			$('.click').bind("touchend",function(){
-				$('.jiangban').hide();
-				$('.click').hide();
-				$('.huanchuan').show();
-				$('.niao').show();
-				$('.cube').hide();
-				$('.bg_0').fadeOut();
-				$('.bg_1').attr('style','animation:bg1 4s linear 0s infinite normal forwards;-webkit-animation:bg1 2s linear 0s infinite normal forwards;');
-				$('.bg_2').attr('style','animation:bg2 4s linear 0s infinite normal forwards;-webkit-animation:bg2 2s linear 0s infinite normal forwards;');
 				
+				$('.allshow').addClass('fade');
+				
+				// $('.bg_0').attr('style','animation:bg0 0.5s linear 0s 1 normal forwards;-webkit-animation:bg0 0.5s linear 0s 1 normal forwards;');
+				// $('.bg_1').attr('style','animation:bg1 4s linear 0s infinite normal forwards;-webkit-animation:bg1 2s linear 0s infinite normal forwards;');
+				// $('.bg_2').attr('style','animation:bg2 4s linear 0s infinite normal forwards;-webkit-animation:bg2 2s linear 0s infinite normal forwards;');
+				$('.bg_2').removeAttr('style')
+				$('.bg_0').addClass('fade')
+				$('.bg_1').addClass('move')
+				$('.bg_2').addClass('move-2')
+
+				$('.huanchuan').addClass('show');;
+				// $('.niao').addClass('show');
 			})
 		})
 		$(function(){
@@ -160,9 +171,18 @@
 				if (endY - positionY > 50) {
 					
 
-					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
-						cover.animate({ "bottom": "0px" }, 100);
+					if (cover.length === 1 && cover.css("bottom") != "0px") {
+						// cover.animate({ "bottom": "0px" }, 100);
 					
+						return false;
+					}
+					if (cover.length === 1 && cover.css("bottom") === "0px") {
+				
+						cover.animate({ "bottom": "-" + cover.css("height") }, 100);
+
+						// current_page = pager(current_page, current_page + 1);
+					
+
 						return false;
 					}
 					// current_page = pager(current_page, current_page - 1);
@@ -170,7 +190,7 @@
 				}
 				if (endY - positionY < -50) {
 					// console.log(1)
-					console.log(cover.css("bottom"))
+					// console.log(cover.css("bottom"))
 
 					if (cover.length === 1 && cover.css("bottom") === "0px") {
 						// current_page = pager(current_page, current_page + 1);
@@ -178,7 +198,7 @@
 
 						return false;
 					}
-					if (cover.length === 1 && cover.css("bottom") === "-" + cover.css("height")) {
+					if (cover.length === 1 && cover.css("bottom") != "0px") {
 						cover.animate({ "bottom": "0px" }, 100);
 					
 
@@ -253,17 +273,23 @@
 			
 				onSlideChangeStart: function(swiper){
 					// console.log(mySwiper.activeIndex)
-					if( mySwiper.activeIndex == 1 ){
+					if( mySwiper.activeIndex == 1|| mySwiper.activeIndex == 0){
 						// console.log(coverHeight)
+						if(coverHeight==0){
+							coverHeight= 260
+						}
 						$('.cover').css({"bottom":"-"+coverHeight+'px'})
+						$('.bg_1').removeClass('move')
 						$('.bg_1').removeAttr('style')
 						$('.bg_2').removeAttr('style')
-						$('.jiangban').show();
-						$('.bg_0').show();
-						$('.click').show();
-						$('.cube').show();
+						$('.bg_2').removeClass('move-2')
+						
+						$('.bg_0').removeClass('fade');
 
-						$('.huanchuan').hide();
+						$('.click').attr('src','img/page5/click.gif?'+(new Date))
+						
+						$('.allshow').removeClass('fade')
+						$('.huanchuan').removeClass('show');
 						$('.niao').hide();
 					}else{
 						$('.down').show();
@@ -276,7 +302,7 @@
 			$('.cover').filter(function(){
 				coverHeight = $(this).height();
 				// console.log(coverHeight)
-				if(coverHeight!==0){
+				if(coverHeight!=0){
 					$(this).css({"bottom":"-"+coverHeight+'px'})
 				}
 				
