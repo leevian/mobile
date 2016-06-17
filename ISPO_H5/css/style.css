@@ -121,4 +121,23 @@ img {display:block;}
 	50%  {-webkit-transform:translate(0,0);}
 	100% {-webkit-transform:translate(0,-10px);}
 }
+.slider-6{
+	background: url(../img/common/background_06.png);
+	background-size: cover;
+}
+.slide-6{
+	background: url(../img/common/background_06.png);
+	background-size: cover;
+}
+.slider-click{
+	width: 34%;
+	top: 79.7%;
+	left: 38%;
+	position: absolute;
+}
+.slider-return{
+	width: 18%;
+	top: 7%;
+	left: 12%;
+	position: absolute;
 }

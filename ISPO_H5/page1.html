@@ -54,6 +54,16 @@
 			            		</div>
 			            		<div class="swiper-slide slide-5">	            		
 			            		</div>
+			            		<div class="swiper-slide slide-6">
+			            			<a href="index.html?go=1">
+			            				<img class="slider-return"src="img/common/return.png">
+			            			</a>	
+					            	<a href="http://regsh.ispo.com.cn/shmobile/reg/reg?s=sh16h5">
+					            		<img class="slider-click"src="img/common/click.png">
+					            	</a>
+					            	
+
+			            		</div>
 	            			</div>
 	            		</div>
 	            		
@@ -67,10 +77,10 @@
 	<script>
 		$(function(){
 			$('.cover').filter(function(){
-				coverWidth = $(this).width();
+				coverHeight = $(this).height();
 				// console.log(coverHeight)
-				if(coverWidth!=0){
-					$(this).css({"left":coverWidth+'px'})
+				if(coverHeight!=0){
+					$(this).css({"bottom":"-"+coverHeight+'px'})
 				}
 				
 			// $(this).css("bottom","-"+coverHeight)
@@ -113,21 +123,24 @@
 			var mySwiper;
 			mySwiper = new Swiper('.swiper-container', {
 				resistanceRatio : 0,
+				direction : 'vertical',
 				onTouchMove: function(swiper){
 					var $cover = $(".cover")
-					var coverLeft = $cover.css("left");	
+					var coverLeft = $cover.css("bottom");
+					// console.log(coverLeft)	
 					if(mySwiper.activeIndex == 0&& coverLeft!='0px'){
 				      		
-						$('.cover').css({left:500})
+						$('.cover').css({bottom:-500})
 
 						
 						
 						mySwiper.lockSwipeToNext();
 			      	
-			      		$(".cover").animate({ "left": "0px" }, 100);
+			      		$(".cover").animate({ "bottom": "0px" }, 100);
 
 					}else{
-							mySwiper.unlockSwipeToNext();
+
+						mySwiper.unlockSwipeToNext();
 					}
 	
 			    },
@@ -135,7 +148,7 @@
 			    	
 					if( mySwiper.activeIndex == 1 ||mySwiper.activeIndex == 0 ){
 						$(".swiper-slide div.line").removeAttr('style')
-						$('.cover').css({left:-500})
+						$('.cover').css({bottom:1000})
 						var lineTop = $(".swiper-slide div.line").position().top+30;
 						$('.bg_1').height(lineTop)
 					}else{
@@ -144,6 +157,8 @@
 
 			    }
 			});
+
+			
 		})
 	</script>
 </html>

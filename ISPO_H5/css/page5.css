@@ -166,11 +166,11 @@
 }
 .cover{
 	position: absolute;
-	bottom:0;
+	bottom:-500px;
 	
 	width: 100%;
 
-	left: 500px;
+	left: 0;
 	z-index: 11;
 }	
 .cube1{

@@ -68,17 +68,7 @@
 	            	
 	            	
 	           	</div>
-	          	<div class="swiper-slide swiper_4 page" id="page_3">
-	            	<div class="con_wrap wrap_4">
-	            		<img src="img/index/background_03.jpg" width="100%">
-		            	<img class="swiper4_box1 cube-icon2" src="img/common/cube1.png">
-		            	<img class="swiper4_box2 cube-icon1" src="img/common/cube2.png">
-		            	<img class="swiper4_box3 cube-icon4" src="img/common/cube3.png">
-		            	<img class="swiper4_box4 cube-icon3" src="img/common/cube4.png">
-	            	</div>
-	            	
-	            	
-	           	</div>
+	   
 	           
 	        </div>
 	        <div class="down">
@@ -217,6 +207,25 @@
 
 			    }
 			});
+
+			var local_url = document.location.href; 
+		    //获取要取得的get参数位置
+		    var par = "go"
+		    var get = local_url.indexOf(par +"=");
+		    if(get == -1){
+		        return false;   
+		    }   
+		    //截取字符串
+		    var get_par = local_url.slice(par.length + get + 1);    
+		    //判断截取后的字符串是否还有其他get参数
+		    var nextPar = get_par.indexOf("&");
+		    if(nextPar != -1){
+		        get_par = get_par.slice(0, nextPar);
+		    }
+		    if(get_par==1){
+		    	mySwiper.slideTo(2, 1000, false);
+		    	
+		    }
 		})
 		
 	</script>

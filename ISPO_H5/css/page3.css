@@ -115,6 +115,10 @@
 	animation:chuqi 2s linear 0s infinite normal forwards;
 	-webkit-animation:chuqi 2s linear 0s infinite normal forwards;
 }
+.chuqi.higher{
+	top: 35%;
+	left: 5%;
+}
 @keyframes chuqi
 {
 	0%   {transform:translate(0,0);opacity:1;}
@@ -128,9 +132,9 @@
 .cover{
 	position: absolute;
 	width: 100%;
-	left: 500px;
+	left: 0;
 	z-index: 22;
-	bottom:0;
+	bottom:-500px;
 	
 }
 .woman_dong{
