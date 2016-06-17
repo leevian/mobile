@@ -5,6 +5,7 @@ $(function () {
     var count = 0;
     var images = [
         'common/loading.jpg',
+        'common/cube_gif1.gif',
         'common/background_06.png',
         'index/swiper_1.jpg',
         'index/swiper_4.jpg',
