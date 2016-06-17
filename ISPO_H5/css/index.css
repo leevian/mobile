@@ -69,7 +69,12 @@
 	
 	
 }
-
+.finger{
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 64%;	
+}
 .swiper1_box1{
 	position: absolute;
 	top: 10%;
@@ -167,4 +172,12 @@
 	top: 80%;
 	left: 80%;
 	width: 18%;
+}
+.swiper-container{
+	opacity: 0;
+	-webkit-opacity:0;
+}
+.swiper-container.show{
+	opacity: 1;
+	-webkit-opacity:1;
 }

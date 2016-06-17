@@ -40,7 +40,7 @@
 					            		
 					            	</div>
 					            	<div class="bg_2"></div>
-					            	<div class="line"></div>
+					            	<img class="line" src="img/page1/line.png">
 					            	<img class="cover"src="img/page1/cover.png">
 				            	
 	            				</div>
@@ -50,11 +50,30 @@
 			            		</div>
 			            		<div class="swiper-slide slide-3">            		
 			            		</div>
-			            		<div class="swiper-slide slide-4">	            		
+			            		<div class="swiper-slide slide-4">	 
+			            			<img class="cube1 cube  cube6-1" src="img/common/cube1.png" />
+	            					
+            						<img class="cube5 cube " src="img/common/cube1.png" />
+					            	<img class="cube6 cube" src="img/common/cube2.png" />
+					            	<img class="cube7 cube" src="img/common/cube3.png" />           		
 			            		</div>
-			            		<div class="swiper-slide slide-5">	            		
+			            		<div class="swiper-slide slide-5">	   
+			            			<img class="cube1 cube cube5-1" src="img/common/cube1.png" />
+					            	<img class="cube2 cube " src="img/common/cube2.png" />
+					            
+					            	<img class="cube4 cube " src="img/common/cube4.png" />
+					            	<img class="cube5 cube " src="img/common/cube1.png" />
+					            	<img class="cube6 cube" src="img/common/cube2.png" />
+					            	<img class="cube7 cube" src="img/common/cube3.png" />         		
 			            		</div>
 			            		<div class="swiper-slide slide-6">
+			            			<img class="cube1 cube  cube6-1" src="img/common/cube1.png" />
+					            	<img class="cube2 cube " src="img/common/cube2.png" />
+					            
+					            	<img class="cube4 cube " src="img/common/cube4.png" />
+					            	<img class="cube5 cube " src="img/common/cube1.png" />
+					            	<img class="cube6 cube" src="img/common/cube2.png" />
+					            	<img class="cube7 cube" src="img/common/cube3.png" />
 			            			<a href="index.html?go=1">
 			            				<img class="slider-return"src="img/common/return.png">
 			            			</a>	
@@ -149,7 +168,7 @@
 					if( mySwiper.activeIndex == 1 ||mySwiper.activeIndex == 0 ){
 						$(".swiper-slide div.line").removeAttr('style')
 						$('.cover').css({bottom:1000})
-						var lineTop = $(".swiper-slide div.line").position().top+30;
+						var lineTop = $(".swiper-slide .line").position().top+30;
 						$('.bg_1').height(lineTop)
 					}else{
 						$('.down').show();

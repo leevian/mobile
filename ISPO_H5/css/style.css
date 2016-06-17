@@ -130,9 +130,11 @@ img {display:block;}
 	background-size: cover;
 }
 .slider-click{
-	width: 34%;
-	top: 79.7%;
-	left: 38%;
+	width: 140px;
+
+	top: 85%;
+	left: 50%;
+	margin-left: -70px;
 	position: absolute;
 }
 .slider-return{
@@ -140,4 +142,109 @@ img {display:block;}
 	top: 7%;
 	left: 12%;
 	position: absolute;
+}
+.cube1{
+	position: absolute;
+	top: 6%;
+	left: 23%;
+	width: 15%;
+	z-index: 11;
+	transform:rotate(10deg);
+	-webkit-transform:rotate(10deg);
+	animation:cube1 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube1 2s linear 0s infinite normal forwards;
+}
+.cube2{
+	position: absolute;
+	top: 24%;
+	z-index: 11;
+	left: 6%;
+	width: 5%;
+	transform:rotate(120deg);
+	-webkit-transform:rotate(120deg);
+	animation:cube2 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube2 2s linear 0s infinite normal forwards;
+}
+.cube3{
+	position: absolute;
+	z-index: 11;
+	top: 16%;
+	left: 53%;
+	width: 6%;
+	
+	animation:cube1 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube1 2s linear 0s infinite normal forwards;
+}
+.cube4{
+	position: absolute;
+	z-index: 11;
+	top: 30%;
+	left: 33%;
+	width: 6%;
+	
+	animation:cube4 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube4 2s linear 0s infinite normal forwards;
+}
+.cube5{
+	position: absolute;
+	z-index: 11;
+	top: 76%;
+	left: 45%;
+	width: 6%;
+	animation:cube4 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube4 2s linear 0s infinite normal forwards;
+}
+.cube6{
+	position: absolute;
+	z-index: 11;
+	top: 84%;
+	left: 30%;
+	width: 9%;
+	animation:cube2 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube2 2s linear 0s infinite normal forwards;
+}
+.cube7{
+	position: absolute;
+	z-index: 11;
+	top: 90%;
+	left: 67%;
+	width:5%;
+	animation:cube1 2s linear 0s infinite normal forwards;
+	-webkit-animation:cube1 2s linear 0s infinite normal forwards;
+}
+.cube6-1{
+	top: 2%;
+	left: 46%;
+}
+.cube5-1{
+	left: 79%;
+}
+#load{
+	background: url('../img/common/loading.jpg');
+	background-size: cover;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	z-index: 99;
+}
+.load-box{
+	text-align: center;
+}
+.load-box img{
+	text-align: center;
+	width: 20%;
+	position: absolute;
+	left: 50%;
+	width: 40px;
+	margin-left: -20px;
+	top: 40%;
+}
+.load-box .text{
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	top: 47%;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
 }

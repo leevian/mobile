@@ -16,13 +16,21 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/loading.js"></script>
 		<script type="text/javascript" src="js/swiper.min.js"></script>
+	
 		<link rel="stylesheet" href="css/swiper.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
 		<!-- Swiper -->
+		<div id="load">
+			<div class="load-box">
+				<img class="loading-cube cube2"src="img/index/cube.png">
+				<div class="text">loading <span id="number">0%</span></div>
+			</div>
+		</div>
 	    <div class="swiper-container">
 	        <div class="swiper-wrapper">
 
@@ -59,6 +67,7 @@
 		            	<img class="swiper3_box2 cube-icon2" src="img/index/logo_cube4.png">
 		            	<img class="swiper3_box3 cube-icon1" src="img/index/logo_cube5.png">
 		            	<img class="btn1" src="img/index/btn_1.png"></>
+		            	<img class="finger" src="img/index/click.gif"></>
 		            	<img class="btn2" src="img/index/btn_2.png"></>
 		            	<img class="btn3" src="img/index/btn_3.png"></>
 		            	<img class="btn4" src="img/index/btn_4.png"></>
@@ -89,18 +98,6 @@
 		// 		}
 		//     }
 		// });
-		var page_1_outing = function (e) {
-			$('.down').hide();
-			return true;
-		}
-		var page_1_in = function (e) {
-			$('.down').show();
-			return true;
-		}
-		var page_0_in = function (e) {
-			$('.down').show();
-			return true;
-		}
 	
 		function touchSatrtFunc(e) {  
 		    //evt.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
