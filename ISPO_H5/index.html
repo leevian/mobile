@@ -37,10 +37,10 @@
 	        	<div class="swiper-slide swiper_1 page" id="page_0">
 	            	<div class="con_wrap wrap_1">
 	            		<img src="img/index/swiper_1.jpg" width="100%">
-		            	<img class="swiper1_box1 cube-icon1" src="img/common/cube1.png">
-		            	<img class="swiper1_box2 cube-icon2" src="img/common/cube2.png">
-		            	<img class="swiper1_box4 cube-icon4"  src="img/common/cube4.png">
-	            		
+		            	<img class="swiper1_box1 cube-icon1" src="img/common/cube_gif1.gif">
+		            	<img class="swiper1_box2 cube-icon2" src="img/common/cube_gif2.gif">
+		            	<img class="swiper1_box4 cube-icon4"  src="img/common/cube_gif3.gif">
+	            		<img src="img/index/title.png" class="title">
 	            		
 	            	</div>
 	            	
@@ -51,10 +51,10 @@
 	            		<img src="img/index/background_01.jpg" width="100%">
 		            	<img class="swiper2_box1 cube-icon3" src="img/index/logo_cube1.png">
 		            	<img class="swiper2_box2 cube-icon4" src="img/index/logo_cube2.png">
-		            	<img class="swiper2_box3 cube-icon2" src="img/index/logo_cube3.png">
-		            	<img class="swiper2_box4 cube-icon1" src="img/common/cube1.png">
-		            	<img class="swiper2_box5 cube-icon1" src="img/common/cube2.png">
-		            	<img class="swiper2_box6 cube-icon1" src="img/common/cube3.png">
+		            	<img class="swiper2_box3 cube-icon2" src="img/common/cube_gif4.gif">
+		            	<img class="swiper2_box4 cube-icon1" src="img/common/cube_gif1.gif">
+		            	<img class="swiper2_box5 cube-icon1" src="img/common/cube_gif2.gif">
+		            	<img class="swiper2_box6 cube-icon1" src="img/common/cube_gif3.gif">
 	            	</div>
 	            	
 	            	
@@ -63,7 +63,7 @@
 	            	<div class="con_wrap wrap_3">
 	            		<img src="img/index/background_02.jpg" width="100%">
 	            		
-		            	<img class="swiper3_box1 cube-icon3" src="img/index/logo_cube1.png">
+		            	<img class="swiper3_box1 cube-icon3" src="img/common/cube_gif2.gif">
 		            	<img class="swiper3_box2 cube-icon2" src="img/index/logo_cube4.png">
 		            	<img class="swiper3_box3 cube-icon1" src="img/index/logo_cube5.png">
 		            	<img class="btn1" src="img/index/btn_1.png"></>
@@ -87,18 +87,6 @@
 	    </div>
 	</body>
 	<script>
-		// var mySwiper;
-		// mySwiper = new Swiper('.swiper-container', {
-		// 	direction : 'vertical',
-		// 	onSlideChangeStart: function(swiper){
-		// 		if( mySwiper.activeIndex == 3 ){
-		// 			$('.down').hide();
-		// 		}else{
-		// 			$('.down').show();
-		// 		}
-		//     }
-		// });
-	
 		function touchSatrtFunc(e) {  
 		    //evt.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
 		    var touch = e.touches[0]; //获取第一个触点  
@@ -108,7 +96,6 @@
 		    startX = x;  
 		    startY = y;  
 		}  
-
 		function isMove(e){
 			var touch = evt.touches[0]; //获取第一个触点  
 			var x = Number(touch.pageX); //页面触点X坐标  
@@ -123,75 +110,54 @@
 			positionX = e.originalEvent.changedTouches[0].clientX;
 			positionY = e.originalEvent.changedTouches[0].clientY;
 		}).bind('touchend',function(e){
-			
-
 			var endX = e.originalEvent.changedTouches[0].clientX;
 			var endY = e.originalEvent.changedTouches[0].clientY;
 			if (positionX - endX == 0 && positionY-endY==0) {  
        			location.href= 'page1.html';
-    		}  
-     
-			
+    		}  	
 		})
 		$('.btn2').bind("touchstart",function(e){
 			positionX = e.originalEvent.changedTouches[0].clientX;
 			positionY = e.originalEvent.changedTouches[0].clientY;
 		}).bind('touchend',function(e){
-			
-
 			var endX = e.originalEvent.changedTouches[0].clientX;
 			var endY = e.originalEvent.changedTouches[0].clientY;
 			if (positionX - endX == 0 && positionY-endY==0) {  
        			location.href= 'page2.html';
-    		}  
-     
-			
+    		}       			
 		})
 		$('.btn3').bind("touchstart",function(e){
 			positionX = e.originalEvent.changedTouches[0].clientX;
 			positionY = e.originalEvent.changedTouches[0].clientY;
 		}).bind('touchend',function(e){
-			
-
 			var endX = e.originalEvent.changedTouches[0].clientX;
 			var endY = e.originalEvent.changedTouches[0].clientY;
 			if (positionX - endX == 0 && positionY-endY==0) {  
        			location.href= 'page3.html';
-    		}  
-     
-			
+    		}  		
 		})
 		$('.btn4').bind("touchstart",function(e){
 			positionX = e.originalEvent.changedTouches[0].clientX;
 			positionY = e.originalEvent.changedTouches[0].clientY;
 		}).bind('touchend',function(e){
-			
-
 			var endX = e.originalEvent.changedTouches[0].clientX;
 			var endY = e.originalEvent.changedTouches[0].clientY;
 			if (positionX - endX == 0 && positionY-endY==0) {  
        			location.href= 'page4.html';
-    		}  
-     
-			
+    		}     			
 		})
 		$('.btn5').bind("touchstart",function(e){
 			positionX = e.originalEvent.changedTouches[0].clientX;
 			positionY = e.originalEvent.changedTouches[0].clientY;
 		}).bind('touchend',function(e){
-			
-
 			var endX = e.originalEvent.changedTouches[0].clientX;
 			var endY = e.originalEvent.changedTouches[0].clientY;
 			if (positionX - endX == 0 && positionY-endY==0) {  
        			location.href= 'page5.html';
-    		}  
-     
-			
+    		}  			
 		})
 		$(function(){
 			var mySwiper;
-
 			mySwiper = new Swiper('.swiper-container', {
 				direction : 'vertical',
 			    onSlideChangeStart:function(swiper, progress){
@@ -201,10 +167,17 @@
 					}else{
 						$('.down').hide();
 					}
+					if( mySwiper.activeIndex == 1){
+						$('.title').removeClass('show')
+
+					}
+					if( mySwiper.activeIndex == 0){
+						$('.title').addClass('show')
+
+					}
 
 			    }
 			});
-
 			var local_url = document.location.href; 
 		    //获取要取得的get参数位置
 		    var par = "go"
@@ -220,11 +193,9 @@
 		        get_par = get_par.slice(0, nextPar);
 		    }
 		    if(get_par==1){
-		    	mySwiper.slideTo(2, 1000, false);
-		    	
+		    	mySwiper.slideTo(2, 1000, false);		    	
 		    }
-		})
-		
+		})		
 	</script>
 </html>
 

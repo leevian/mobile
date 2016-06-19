@@ -29,4 +29,5 @@
 @-webkit-keyframes product_7 /* Safari and Chrome */{0%   {top: 80%;}50%  {top: 82%;}100% {top: 80%;}}
 .click{position: absolute;top: -20%;left: -25%;width: 100%;z-index: 2;}
 .big_pic{position: absolute;top: 40%;left: 13%;width: 70%;z-index: 11;}
-.cover{position: absolute;width: 100%;left: 0;bottom:-500px;z-index: 11;
+.cover{position: absolute;width: 100%;left: 0;bottom:-500px;z-index: 11;}
+.swiper4_bg_1_box1{top:83%;left: 14%;}
