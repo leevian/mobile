@@ -136,11 +136,11 @@
 				setTimeout(function(){
 				
 					$('.bg_1').fadeOut();
-					$(".slider-0 .huaban_dong").show();
+					$(".slider-0 .huaban_dong").addClass('show');
 				},1000);
 
 				
-				$(".slider-0 .huaban_cut").show();
+				$(".slider-0 .huaban_cut").addClass('show');
 				// $('.bg_1').fadeOut();
 				// return false;
 			});
@@ -183,8 +183,8 @@
 						$('.huaban').show();
 						$('.cover').css({bottom:1000})
 
-						$('.huaban_cut').attr('src','img/page2/cut.gif?'+(new Date)).hide();
-						$('.huaban_dong').attr('src','img/page2/huaban_dong.gif?'+(new Date)).hide();
+						$('.huaban_cut').attr('src','img/page2/cut.gif?'+(new Date)).removeClass('show');
+						$('.huaban_dong').attr('src','img/page2/huaban_dong.gif?'+(new Date)).removeClass('show');
 					}else{
 						$('.down').show();
 					}

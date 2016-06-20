@@ -1,6 +1,6 @@
 .bg_1{position: absolute;background: url(../img/page1/swiper_1_1.jpg);background-size: cover;width: 100%;left: 0px;overflow: hidden;top: 0px;z-index: 10;}
 .bg_2{position: absolute;background: url(../img/page1/swiper_1_2.jpg);background-size: cover;width: 100%;height: 100%;left: 0px;top: 0px;overflow: hidden;z-index: 5;}
-.line{position: absolute;background: url(../img/page1/line.png);background-size: cover;width: 100%;height: auto;left: 0px;top: 86%;z-index: 10;}
+.line{position: absolute;width: 100%;height: auto;left: 0px;top: 86%;z-index: 10;}
 .cover{position: absolute;background: url(../img/page1/cover.png);background-size: cover;width: 100%;height: auto;left: 0;bottom:-500px;z-index: 11;}
 .con_wrap{display: block;height: 100%;left: 0;position: absolute;top: 0;width: 100%;z-index: 2;}
 .swiper_2{background: url(../img/page1/background.jpg) no-repeat top center;background-size: cover;}
@@ -9,6 +9,7 @@
 .swiper_3_3{margin-top: 3%;}
 .swiper_3_4{margin-top: 3%;}
 .swiper1_bg1_box1{width: 12%;top: 73.688px;left: 50%;position: absolute;}
+.finger{width: 12%;top: 439.688px;left: 82%;transform:rotate(210deg);-webkit-transform:rotate(210deg);position: absolute;}
 .swiper1_bg1_box2{width: 7%;top: 98.250px;left: 70%;position: absolute;}
 .swiper1_bg1_box3{width: 5%;top: 69px;left: 100.2%;position: absolute;}
 .slide-1{background: url(../img/page1/background_1.jpg);background-size: cover;}

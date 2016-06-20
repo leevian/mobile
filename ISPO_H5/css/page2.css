@@ -6,8 +6,10 @@
 .slider-4{background: url(../img/page2/background_4.jpg);background-size: cover;}
 .slider-5{background: url(../img/page2/background_5.jpg);background-size: cover;}
 .huaban{position: absolute;top: 17%;left: 37%;width: 25%;display: block;z-index: 5;}
-.huaban_cut{display: none;position: absolute;top: 0%;left: 0%;width: 100%;z-index: 11;}
-.huaban_dong{display: none;position: absolute;top: -9%;left: 0%;width: 100%;z-index: 11;}
+.huaban_cut{opacity:0;-webkit-opacity:0;position: absolute;top: 0%;left: 0%;width: 100%;z-index: 11;}
+.huaban_dong{opacity:0;-webkit-opacity:0;position: absolute;top: -9%;left: 0%;width: 100%;z-index: 11;}
+.huaban_dong.show{opacity:1;-webkit-opacity:1;}
+.huaban_cut.show{opacity:1;-webkit-opacity:1;}
 .slider{position: absolute;top: 39%;left: 0%;width: 100%;z-index: 12;}
 .swiper_1_1{position:absolute;top: 3%;}
 .swiper_1_2{position:absolute;top: 30.4%; }

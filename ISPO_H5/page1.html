@@ -37,11 +37,12 @@
 					            		<img class="swiper1_bg1_box1 cloud-icon1" src="img/page1/cloud1.png">
 					            		<img class="swiper1_bg1_box2 cloud-icon2" src="img/page1/cloud2.png">
 					            		<img class="swiper1_bg1_box3 cloud-icon3" src="img/page1/cloud3.png">
+		            					<img class="finger" src="img/page1/click.gif"></>
 					            		
 					            	</div>
 					            	<div class="bg_2"></div>
-					            	<img class="line" src="img/page1/line.png">
-					            	<img class="cover"src="img/page1/cover.png">
+					            	<img class="line" src="img/page1/line.png"/>
+					            	<img class="cover"src="img/page1/cover.png"/>
 				            	
 	            				</div>
 	            				<div class="swiper-slide slide-1">
@@ -105,7 +106,7 @@
 			})
 
 		})
-		lineTop = $('.line').position().top+30
+		lineTop = $('.line').position().top+28
 		// console.log(lineTop)
 		$('.bg_1').height(lineTop)
 
@@ -115,7 +116,7 @@
 		
 		$(function(){
 
-			var positionY = 0, current = lineTop-30, _top = 0, maxHeight = lineTop-30;
+			var positionY = 0, current = lineTop-28, _top = 0, maxHeight = lineTop-28;
 			$(".line").bind("touchstart", function (e) {
 				positionY = e.originalEvent.changedTouches[0].clientY;
 				return false;
@@ -126,7 +127,7 @@
 				if(_top < 20){
 					_top = 20
 				}else if(_top > maxHeight){
-					_top = lineTop-30;
+					_top = lineTop-28;
 				}
 				$(this).css({"top":_top});
 				$(".bg_1").css({ "height": _top + 28 });

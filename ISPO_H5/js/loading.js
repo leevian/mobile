@@ -27,6 +27,7 @@ $(function () {
         'page2/background1.jpg',
         'page2/background2.jpg',
         'page2/background3.jpg',
+        'page2/cut.gif',
         'page2/huaban_dong.gif',
         'page3/background_1.jpg',
         'page3/1.gif',
