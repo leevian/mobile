@@ -64,7 +64,21 @@ $(function () {
         cache: true
     });
     var _length = images.length;
-    images.forEach(function (file) {
+    var local_url = document.location.href; 
+            //获取要取得的get参数位置
+    var par = "go"
+    var get = local_url.indexOf(par +"=");
+    
+    //截取字符串
+    var get_par = local_url.slice(par.length + get + 1);    
+    //判断截取后的字符串是否还有其他get参数
+    var nextPar = get_par.indexOf("&");
+    if(nextPar != -1){
+        get_par = get_par.slice(0, nextPar);
+    }
+    console.log(get_par)
+    if(get_par!=1){
+        images.forEach(function (file) {
         var _ = new Image();
         _.src = "./img/" + file;
         $(_).bind("load error", function () {
@@ -82,5 +96,14 @@ $(function () {
             }
 
         });
-    });
+    });             
+    }else{
+       $("#load").hide();
+        // $("#load ").html($(".textarea").val());
+        $.getScript("./js/index.js");
+        $(".swiper-container").addClass('show');
+        $('.title').addClass('show')
+    }
+
+    
 });

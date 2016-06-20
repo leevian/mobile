@@ -16,6 +16,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/swiper.min.js"></script>
 		<link rel="stylesheet" href="css/swiper.min.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -23,6 +24,8 @@
 	</head>
 	<body>
 		<!-- Swiper -->
+		<audio id="audio" autoplay src="img/music.mp3"loop></audio>
+		<p class="music-logo playing"></p>
 	    <div class="swiper-contain">
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide swiper_0 page" id="page_0">
@@ -157,7 +160,7 @@
 			mySwiper = new Swiper('.swiper-container', {
 				resistanceRatio : 0,
 				direction : 'vertical',
-				onTouchMove: function(swiper){
+				onSliderMove: function(swiper){
 					var $cover = $(".cover")
 					var coverLeft = $cover.css("bottom");	
 

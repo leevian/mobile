@@ -1,4 +1,4 @@
-function touchSatrtFunc(e) {  
+        function touchSatrtFunc(e) {  
             //evt.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
             var touch = e.touches[0]; //获取第一个触点  
             var x = Number(touch.pageX); //页面触点X坐标  
