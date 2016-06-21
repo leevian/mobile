@@ -9,7 +9,8 @@
 .swiper_3_3{margin-top: 3%;}
 .swiper_3_4{margin-top: 3%;}
 .swiper1_bg1_box1{width: 12%;top: 73.688px;left: 50%;position: absolute;}
-.finger{width: 12%;top: 439.688px;left: 82%;transform:rotate(210deg);-webkit-transform:rotate(210deg);position: absolute;}
+.finger_1{width: 4%;bottom: 28px;left: 72.5%;position: absolute;animation:finger1 1s linear 0s infinite normal forwards;-webkit-animation:finger1 1s linear 0s infinite normal forwards;}
+.finger_2{width: 4%;bottom: 14px;left: 77%;position: absolute;animation:finger2 1s linear 0s infinite normal forwards;-webkit-animation:finger2 1s linear 0s infinite normal forwards;}
 .swiper1_bg1_box2{width: 7%;top: 98.250px;left: 70%;position: absolute;}
 .swiper1_bg1_box3{width: 5%;top: 69px;left: 100.2%;position: absolute;}
 .slide-1{background: url(../img/page1/background_1.jpg);background-size: cover;}
@@ -24,4 +25,7 @@
 @-webkit-keyframes cloud1{0%{-webkit-transform:translate(0,0);}100% {-webkit-transform:translate(-170%,0);}}
 @keyframes cloudend{0%{transform:translate(-170%,0);}50%  {transform:translate(-184%,0);}100% {transform:translate(-170%,0);}}
 @-webkit-keyframes cloudend{0%{-webkit-transform:translate(-170%,0);}50%   {-webkit-transform:translate(-184%,0);}100%  {-webkit-transform:translate(-170%,0);}}
- 
+@keyframes finger1{0%{transform:translate(0,3px);}50%  {transform:translate(0px,0);}100% {transform:translate(0,3px);}}
+@-webkit-keyframes finger1{0%{-webkit-transform:translate(0,3px);}50%   {-webkit-transform:translate(0,0);}100%  {-webkit-transform:translate(0,3px);}}
+@keyframes finger2{0%{transform:translate(0,-3px);}50%  {transform:translate(0px,0);}100% {transform:translate(0,-3px);}}
+@-webkit-keyframes finger2{0%{-webkit-transform:translate(0,-3px);}50%   {-webkit-transform:translate(0,0);}100%  {-webkit-transform:translate(0,-3px);}}
