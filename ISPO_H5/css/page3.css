@@ -6,6 +6,7 @@
 .slider-5{background: url(../img/page3/background_5.jpg);background-size: cover;}
 .woman{position: absolute;top: 25%;left: 21%;width: 60%;z-index: 5;}
 .click{position: absolute;top: 7%;left: 3%;width: 31%;z-index: 6;}
+.click-me{position: absolute;top: 1%;left: 25%;width: 17%;z-index: 6;}
 .weijin{position: absolute;top: 10%;left: 60%;width: 18%;z-index: 6;animation:weijin 2s linear 0s infinite normal forwards;-webkit-animation:weijin 2s linear 0s infinite normal forwards;}
 @keyframes weijin{0%   {transform:rotate(30deg);}50% {transform:rotate(0);}100% {transform:rotate(30deg);}}
 @-webkit-keyframes weijin /* Safari and Chrome */{0%   {-webkit-transform:rotate(30deg);}50% {-webkit-transform:rotate(0deg);}100% {;-webkit-transform:rotate(30deg);}}
