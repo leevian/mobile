@@ -29,5 +29,5 @@
 .huanchuan{opacity: 0;-webkit-opacity:0;position: absolute;top:19%;left: -8%;width: 112%;transform:translateZ(0);-webkit-transform:translateZ(0);}
 .huanchuan.show{animation:huachuan 0.5s linear 0s 1 normal forwards;-webkit-animation:huachuan 0.5s linear 0s 1 normal forwards;}
 .niao{opacity: 0;-webkit-opacity:0;position: absolute;top: 5%;left: 5%;width: 40%;}
-.cover{position: absolute;bottom:-500px;width: 100%;left: 0;z-index: 11;
+.cover{position: absolute;bottom:-500px;width: 100%;left: 0;z-index: 11;}
 
