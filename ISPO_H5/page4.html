@@ -100,6 +100,9 @@
 	     
 	        </div>
 	    </div>
+	    <div class="down">
+        	<img src="img/index/down.png" width="100%" />
+        </div>
 	</body>
 	<script type="text/javascript">
 
@@ -203,13 +206,17 @@
 					// console.log(mySwiper.activeIndex)
 					if( mySwiper.activeIndex == 1 ||mySwiper.activeIndex == 0){
 						
-				$('.click').show();
+						$('.click').show();
 						
 						$('.cover').css({bottom:1000})
 						
 						
+					}
+					if( mySwiper.activeIndex == 0|| mySwiper.activeIndex == 6){
+						$('.down').hide();
 					}else{
 						$('.down').show();
+
 					}
 			    },
 			    

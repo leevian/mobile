@@ -117,6 +117,9 @@
 	     
 	        </div>
 	    </div>
+	    <div class="down">
+        	<img src="img/index/down.png" width="100%" />
+        </div>
 	</body>
 	<script type="text/javascript">
 
@@ -197,8 +200,12 @@
 						$('.allshow').removeClass('fade')
 						$('.huanchuan').removeClass('show');
 						$('.niao').hide();
+					}
+					if( mySwiper.activeIndex == 0|| mySwiper.activeIndex == 6){
+						$('.down').hide();
 					}else{
 						$('.down').show();
+
 					}
 			    }
 			});

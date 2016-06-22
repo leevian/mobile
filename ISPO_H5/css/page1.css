@@ -24,3 +24,4 @@
 @-webkit-keyframes cloud1{0%{-webkit-transform:translate(0,0);}100% {-webkit-transform:translate(-170%,0);}}
 @keyframes cloudend{0%{transform:translate(-170%,0);}50%  {transform:translate(-184%,0);}100% {transform:translate(-170%,0);}}
 @-webkit-keyframes cloudend{0%{-webkit-transform:translate(-170%,0);}50%   {-webkit-transform:translate(-184%,0);}100%  {-webkit-transform:translate(-170%,0);}}
+.down{display: none;}

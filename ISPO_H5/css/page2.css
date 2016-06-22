@@ -48,4 +48,5 @@
 @-webkit-keyframes shandian2 /* Safari and Chrome */{0%   {left: 88%;}50% {left: 91%;}100% {left: 88%;}}
 .yanjing{position: absolute;top: 11%;left: 69%;width: 13%;animation:yanjing 2s linear 0s infinite normal forwards;-webkit-animation:yanjing 2s linear 0s infinite normal forwards;}
 @keyframes yanjing{0%   {left: 72%;}50% {left: 69%;}100% {left: 72%;}}
-@-webkit-keyframes yanjing {0%   {left: 72%;}50% {left: 69%;}100% {left: 72%;}
+@-webkit-keyframes yanjing {0%   {left: 72%;}50% {left: 69%;}100% {left: 72%;}}
+.down{display: none;}

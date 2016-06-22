@@ -113,6 +113,9 @@
 	          
 	        </div>
 	    </div>
+	    <div class="down">
+        	<img src="img/index/down.png" width="100%" />
+        </div>
 	</body>
 	<script type="text/javascript">
 		$(function(){
@@ -188,8 +191,12 @@
 
 						$('.huaban_cut').attr('src','img/page2/cut.gif?'+(new Date)).removeClass('show');
 						$('.huaban_dong').attr('src','img/page2/huaban_dong.gif?'+(new Date)).removeClass('show');
+					}
+					if( mySwiper.activeIndex == 0|| mySwiper.activeIndex == 6){
+						$('.down').hide();
 					}else{
 						$('.down').show();
+
 					}
 			    }
 

@@ -118,6 +118,9 @@
 	           	</div> -->
 	        </div>
 	    </div>
+	    <div class="down">
+        	<img src="img/index/down.png" width="100%" />
+        </div>
 	</body>
 	<script type="text/javascript">
 
@@ -189,8 +192,12 @@
 						$('.chuqi').removeClass('higher')
 						$('.click').attr('src','img/page3/click.gif?'+(new Date)).show()
 						$('.woman_dong').attr('src','img/page3/1.gif?'+(new Date)).hide();
+					}
+					if( mySwiper.activeIndex == 0|| mySwiper.activeIndex == 6){
+						$('.down').hide();
 					}else{
 						$('.down').show();
+
 					}
 			    }
 			});
