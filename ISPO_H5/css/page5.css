@@ -18,7 +18,6 @@
 @keyframes bg2{0%{transform:translateX(749px);}100%{transform:translateX(0);}}
 @-webkit-keyframes bg2 {0%{-webkit-transform:translateX(749px)}100%{-webkit-transform:translateX(0);}}
 .slider-0{z-index: 1;}
-.down{display: none;}
 .slider-1{background: url(../img/page5/background_1.jpg);background-size: cover;z-index: 2;}
 .slider-2{background: url(../img/page5/background_2.jpg);z-index: 2;background-size: cover;}
 .slider-3{background: url(../img/page5/background_3.jpg);background-size: cover;z-index: 2;}
