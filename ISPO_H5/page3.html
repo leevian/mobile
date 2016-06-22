@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>ISPO H5</title>
+		<title>七月来上海，寻找你志同“色”合的小伙伴｜七月ISPO周</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
 		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
@@ -23,6 +23,9 @@
 		<link rel="stylesheet" href="css/page3.css">
 	</head>
 	<body>
+		<div style='margin:0 auto;display:none;'>
+			<img src='img/ispologo.jpg' />
+		</div>
 		<!-- Swiper -->
 		<audio id="audio" autoplay src="img/music.mp3"loop></audio>
 		<p class="music-logo playing"></p>
@@ -149,7 +152,7 @@
 				$('.chuqi').addClass('higher')
 				$('.click').hide();
 				$('.woman_dong').show();
-				
+				$('.click-me').hide();
 				// $('.bg_1').fadeOut();
 				// return false;
 			});
@@ -188,6 +191,8 @@
 					if( mySwiper.activeIndex == 1 ||mySwiper.activeIndex == 0){
 						// $('.all_show').show();
 						$('.woman').show();
+						$('.click-me').show();
+
 						$('.cover').css({bottom:1000})
 						$('.chuqi').removeClass('higher')
 						$('.click').attr('src','img/page3/click.gif?'+(new Date)).show()
