@@ -1,0 +1,123 @@
+/*css reset*/
+html,body,p{ padding: 0; margin: 0; font-family: "微软雅黑",Arial,"宋体",sans-serif;font-size: 12px;} 
+ol, ul {list-style: none; padding: 0; margin: 0;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }
+table {border-collapse: collapse; border-spacing: 0;}
+th,td { vertical-align: middle;}
+a{text-decoration:none; outline: none;hlbr:expression(this.onFocus=this.blur());}
+input, select {vertical-align: middle;}
+img, iframe {border: none; text-decoration:none;} 
+strong {font-weight: bold;}
+.top-info{
+    height: 125px;
+    background-color: #b3f4ff;
+    position: relative;
+    width: 100%;
+}
+.top-info .face-box{
+    position: absolute;
+    width: 280px;
+    left: 50%;
+    margin-left: -140px;
+    padding-top: 15px;
+    overflow: hidden;
+}
+.top-info .face-box .face-info{
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border:4px solid #fff;
+}
+.top-info .face-box .face-left{
+    float: left;
+}
+.top-info .face-box .face-right{
+    float: right;
+}
+.top-info .calendar-btn{
+    width: 50px;
+    margin-left: -25px;
+    left: 50%;
+    position: absolute;
+    top: 92px;
+}
+.content{
+    padding:0 5%;
+}
+.content .common-month{
+    font-size: 1.5em;
+    color: #bc6c6c;
+    font-weight: bold;
+    line-height: 2.4em;
+}
+.content .now-month{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    opacity: 0;
+    -webkit-opacity:0;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+.content .now-month.show{
+   animation:show 0.1s linear 0s 1 normal forwards;
+   -webkit-animation:show 0.1s linear 0s 1 normal forwards;
+
+}
+@keyframes show{0%{opacity:0;}100%{opacity:1;}}
+@-webkit-keyframes show{0%{-webkit-opacity:0;}100%{-webkit-opacity:1;}}
+.content ul li{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.content ul li div{
+    float: left;
+}
+.content ul li .data-left{
+    width: 30%;
+    color: #bc6c6c;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: #fff;
+    position: relative;
+}
+
+.content ul li .data-right{
+    width: 64%;
+    /*border: 1px solid #ffd4d8;*/
+    border-radius: 4px;
+    color:#de3232;
+    background-color: #ffd4d8;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding:7px;
+}
+.content ul li em{
+    background: url('../img/line.png') repeat-y center top;
+    height: 100%;
+    display: block;
+    width: 2px;
+    left: 15%;
+    position: absolute;
+}
+.content ul li .data-pic{
+    width: 100%;
+}
+#keycode-body{
+    background-color: #d2f9ff;
+    text-align: center;
+}
+.top-head{
+    color: #de3232;
+    text-align: center;
+    line-height: 40px;
+    padding-top: 40px;
+    font-size: 1.6em;
+}
+.keycode-img{
+    text-align: center;
+    padding-top: 30px;
+}
