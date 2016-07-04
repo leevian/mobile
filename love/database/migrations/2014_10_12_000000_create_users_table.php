@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration {
 			$table->string('unionid');
 			$table->string('remark');
 			$table->string('groupid');
+			$table->string('onlytwo')
 	
 		});
 	}

@@ -26,7 +26,7 @@
 	<body>
 		<div class="top-info" data-role="head">
 			<div class="face-box">
-				<a href=""><img class="face-info face-left"src="{{ asset('/img/face1.png') }}"></a>
+				<a href=""><img class="face-info face-left"src="{{ $userinfo['headimgurl']  }}"></a>
 				<a href=""><img class="face-info face-right"src="{{ asset('/img/face2.jpg') }}"></a>
 			</div>
 			
