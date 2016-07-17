@@ -6,15 +6,17 @@ var calendar = {
 
       // ajax call to print json
       $.ajax({
-  				url: 'data/events.json',
+  				url: '/dateInfo',
   				type: 'GET',
   			})
   			.done(function(data) {
-          var events = data.events;
+  			var json = eval("("+data+")");  
+          var events = json.events;
 
           // loop json & append to dom
           for (var i = 0; i < events.length; i++) {
-            $('.list').append('<div class="day-event" date-day="'+ events[i].day +'" date-month="' + events[i].month +'" date-year="'+ events[i].year +'" data-number="'+ i +'"><a href="#" class="close fontawesome-remove"></a><h2 class="title">'+ events[i].title +'</h2><p>'+ events[i].description +'</p><label class="check-btn"><input type="checkbox" class="save" id="save" name="" value=""/><span>Save to personal list!</span></label></div>');
+          	
+            $('.list').append('<div class="day-event" date-day="'+ events[i].day +'" date-month="' + events[i].month +'" date-year="'+ events[i].year +'" data-number="'+ i +'"></div>');
           }
 
           // start calendar
@@ -171,13 +173,14 @@ var calendar = {
 				}
 			}
 		};
-
+		
 		/**
 		 * Add class '.active' on calendar date
 		 */
 		$('tbody td').on('click', function(e) {
 			if ($(this).hasClass('event')) {
 				$('tbody.event-calendar td').removeClass('active');
+				// console.log(1)
 				$(this).addClass('active');
 			} else {
 				$('tbody.event-calendar td').removeClass('active');
@@ -208,10 +211,15 @@ var calendar = {
 		 */
 		function displayEvent() {
 			$('tbody.event-calendar td').on('click', function(e) {
-				$('.day-event').slideUp('fast');
-				var monthEvent = $(this).attr('date-month');
-				var dayEvent = $(this).text();
-				$('.day-event[date-month="' + monthEvent + '"][date-day="' + dayEvent + '"]').slideDown('fast');
+				if($(this).hasClass('event')){
+					var monthEvent = $(this).attr('date-month');
+					var yearEvent = $(this).attr('date-year');
+					var dayEvent = $(this).text();
+					var url = '/showInfo?day='+dayEvent+'&month='+monthEvent+'&year='+yearEvent;
+					location.href=url
+				}
+				
+				// $('.day-event[date-month="' + monthEvent + '"][date-day="' + dayEvent + '"]').slideDown('fast');
 			});
 		};
 

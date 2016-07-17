@@ -15,7 +15,14 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('/invite', 'WelcomeController@invite');
 Route::get('/addcp', 'WeixinController@addCp');
-
+// Route::get('/api/v1/index', 'WeixinController@valid');
+Route::resource('/api/v1/index', 'WeixinController@valid');
+Route::get('/dateInfo', 'WeixinController@dateInfo');
+Route::get('/test', 'WelcomeController@getAccessToken');
+Route::get('/showInfo', 'WelcomeController@showInfo');
+Route::resource('/response', 'WeixinController@responseMsg');
+Route::get('/api/v1/index','WeixinController@valid');
+Route::post('/api/v1/index',['middleware' => 'middlewareCORS','uses'=>'WeixinController@valid']);
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

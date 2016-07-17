@@ -3,7 +3,6 @@
 }
 
 body {
-    background: #f9f9f9;
     color: #0e171c;
     font: 300 100%/1.5em 'Lato', sans-serif;
     margin: 0;
@@ -71,11 +70,11 @@ table {
 .calendar td {
     border: 2px solid transparent;
     border-radius: 50%;
-    height: 72px;
-    line-height: 64px;
+    height: 47px;
+    line-height: 47px;
     text-align: center;
     display: inline-block;
-    width: 79px;
+    width: 47px;
     padding: 1px;
     float: left;
 }
@@ -93,14 +92,14 @@ table {
 .event:after {
     background: #c0392b;
     border-radius: 50%;
-    bottom: 8px;
+    bottom: 5px;
     display: block;
     content: '';
-    height: 8px;
+    height: 5px;
     left: 50%;
     margin: -4px 0 0 -4px;
     position: absolute;
-    width: 8px;
+    width: 5px;
 }
 
 .event.current-day:after {

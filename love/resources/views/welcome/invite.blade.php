@@ -17,11 +17,20 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		
 		<link rel="stylesheet" href="{{ asset('/css/common.css') }}">
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		
 	</head>
 	<body id="keycode-body">
-		<div class="top-head">让你的ta扫一下二维码加入吧！</div>
-		<img class="keycode-img"src="http://pan.baidu.com/share/qrcode?w=150&h=150&url=http://192.168.97.34:1024/addcp?u_id={{$id}}&onlytwo={{$onlytwo}}"/>
+		<div class="top-head">把此页分享给ta<br />让ta点击下面的链接吧！</div>
+
+		<div class="top-info" data-role="head">
+			<div class="face-box">
+				<a href=""><img class="face-info face-left"src="{{ $userinfo['headimgurl']  }}"></a>
+				<img class="connect-icon"src="{{ asset('/img/connect.png') }}">
+				<a href=""><img class="face-info face-right" src="{{ asset('/img/face2.jpg') }}"></a>
+			</div>
+			
+			</div>
 	</body>
 	
 </html>

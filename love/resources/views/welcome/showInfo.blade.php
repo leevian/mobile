@@ -29,14 +29,6 @@
 		
 	</head>
 	<body>
-		<div class="top-info" data-role="head">
-			<div class="face-box">
-				<a href=""><img class="face-info face-left"src="{{ $userinfo['headimgurl']  }}"></a>
-				<a href=""><img class="face-info face-right" src="{{ asset('/img/face2.jpg') }}"></a>
-			</div>
-			
-			<a href="javascript:void(0);" class="calender-btn-box"><img class="calendar-btn" src="{{ asset('/img/calender.png') }}"></a>
-		</div>
 		<div class="content" data-role="page" id="content" >
 			<p class="now-month common-month">7月29日</p>
 			@foreach ($detialinfo as $key=>$val)

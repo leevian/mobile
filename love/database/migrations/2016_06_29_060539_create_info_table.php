@@ -15,7 +15,7 @@ class CreateInfoTable extends Migration {
 		Schema::create('info', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('MsgType');
+			$table->string('MsgType');
 			$table->string('CreateTime');
 			$table->integer('u_id');
 			$table->integer('MsgId');

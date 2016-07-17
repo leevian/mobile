@@ -60,6 +60,7 @@ strong {font-weight: bold;}
     position: fixed;
     top: 0;
     z-index: 9;
+    line-height: 2.1em;
 }
 .content .now-month.show{
    animation:show 0.1s linear 0s 1 normal forwards;
@@ -94,9 +95,10 @@ strong {font-weight: bold;}
     font-size: 1.2em;
     line-height: 1.8em;
     padding:7px;
+    word-wrap: break-word;
 }
 .content ul li em{
-    background: url('../img/line.png') repeat-y center top;
+    background: url('../img/line.png') repeat-y center -3px;
     height: 100%;
     display: block;
     width: 2px;
@@ -120,4 +122,32 @@ strong {font-weight: bold;}
 .keycode-img{
     text-align: center;
     padding-top: 30px;
+}
+#pop-calender{
+    position: fixed;
+    padding-top: 65px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+#pop-calender .close-btn{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: block;
+    z-index: 11;
+    right: 7%;
+    top: 10px;
+}
+#pop-calender .close-btn img{
+    width: 15px;
+    height: 15px;
+}
+.connect-icon{
+    width: 104px;
+    padding-top: 6px;
 }
