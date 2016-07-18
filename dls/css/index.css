@@ -1,0 +1,630 @@
+.logo-box{
+	width: 70px;
+	padding-bottom: 13px;
+}
+.face-box{
+	width: 67px;
+	height: 67px;
+	margin-bottom: 14px;
+	border-radius: 67px;
+	border:3px solid #fff;
+}
+.face-box.male-face{
+	background: url('../img/face_m.jpg') no-repeat center center /cover;
+}
+.face-box.female-face{
+	background: url('../img/face_f.jpg') no-repeat center center /cover;
+}
+.sex-box{
+	width: 64px;
+	overflow: hidden;
+}
+.sex-box a.sex-btn{
+	display: block;
+	width: 25px;
+	border-radius: 5px;
+	height: 25px;
+	margin-bottom: 14px;
+}
+.sex-box a.sex-female{
+	float: right;
+	background: url(../img/sex_btn.png) no-repeat -14px -22px/135% #fff;
+}
+.sex-box a.sex-female.active{
+	background-position:-14px 2px;
+}
+.sex-box a.sex-male{
+	float: left;
+	background: url(../img/sex_btn.png) no-repeat 5px -22px/135% #fff;
+}
+.sex-box a.sex-male.active{
+	background-position:5px 2px;
+}
+.form-box{
+	width: 245px;
+}
+.form-box .input-box{
+	width: 100%;
+	background: #fff;
+	border-radius: 20px;
+	height: 27px;
+	padding:5px 0;
+	margin-bottom: 15px;
+}
+.form-box  label{
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 40px;
+	text-indent: 100px;
+	height: 30px;
+	background: url('../img/index_icon.png') no-repeat center center/800%;
+}
+.form-box label.label-name{
+	background-position: 13px 3px;
+}
+.form-box label.label-nickname{
+	background-position: -27px 1px;
+}
+.form-box label.label-mobile{
+	background-position: -62px 1px;
+}
+.form-box label.label-city{
+	background-position: -141px 4px;
+}
+.form-box label.label-job{
+	background-position: -182px 4px;
+}
+.form-box label.label-birthday{
+	background-position: -273px 4px;
+}
+.form-box .small-input{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.form-box .small-box{
+	background-color: #fff;
+	border-radius: 20px;
+	height: 27px;
+	width: 134px;
+	padding: 7px 0;
+	float: left;
+	margin-right: 4px;
+}
+.form-box input{
+	border: 0;
+	height: 20px;
+	font-size: 0.8em;
+	padding-left: 5px;
+	border-left: 1px solid #2954a4;
+	border-radius: 0;
+}
+.form-box .small-box input{
+	width: 76px;
+	border-radius: 0 10px 10px 0;
+}
+.form-box .small-input button{
+	display: block;
+	float: left;
+	border: 0;
+	height: 41px;
+	border-radius: 14px;
+	text-align: center;
+	background: #fff;
+	color:#d9d7d7;
+	width: 46px;
+	padding:0;
+}
+.form-box .small-input .code-btn{
+	margin-right: 4px;
+}
+.form-box .small-input .count-time{
+	padding-left: 21px;
+	width: 50px;
+	display: none;
+	background: url('../img/index_icon.png') no-repeat -103px 12px/650% #fff;
+}
+.form-box .select-box{
+	float: left;
+	width: 63px;
+}
+.form-box .select-box select{
+	width: 63px;
+	border: 0;
+	-webkit-appearance: none;
+	background: #fff;
+	height: 26px;
+	padding-left: 4px;
+	border-radius: 0;
+	color: #d9d7d7;
+	text-align: center;
+}
+.form-box .select-box select option{
+	color: #d9d7d7;
+}
+.form-box .select-box select.select-left{
+	border-left: 1px solid #2954a4;
+	border-radius: 0;
+	height: 26px;
+}
+.form-box .input-box em{
+	font-style: normal;
+	color: #d9d7d7;
+	float: left;
+	line-height: 27px;
+	display: block;
+	padding-right: 20px;
+	background: url('../img/index_icon.png') no-repeat -159px 6px/650% #fff;
+}
+.form-box .check-box{
+	overflow: hidden;
+}
+.form-box .check-box input{
+	width: 26px;
+	height: 22px;
+	background: #fff;
+	border-radius: 5px;
+	float: left;
+	padding: 0;
+	margin-right: 1px;
+}
+.form-box .check-box a{
+	display: block;
+	float: left;
+	width: 213px;
+	line-height: 26px;
+	text-align: center;
+	color: #d9d7d7;
+	text-decoration: none;
+	font-size: 0.7em;
+	background: #fff;
+	border-radius: 10px;
+}
+.form-box .submit-box{
+	padding-top: 17px;
+	text-align: center;
+}
+.form-box .submit-box button{
+	width: 135px;
+	border-radius: 10px;
+	height: 30px;
+	line-height: 30px;
+	color: #012269;
+	padding: 0;
+	font-size: 0.8em;
+	background: #88abda;
+	border: 0;
+
+}
+.agreement-pop h4{
+	color: #fff;
+	position: absolute;
+	top: 30%;
+	font-weight: normal;
+	font-size: 1.2em;
+	text-align: center;
+	width: 100%;
+
+}
+.agreement-pop p.agreement-p{
+	color: #fff;
+	font-size: 0.8em;
+	width: 250px;
+	left: 50%;
+	margin-left: -125px;
+	top: 37%;
+	position: absolute;
+	text-align: center;
+
+}
+.tips-pop p.tips-info{
+	color: #fff;
+	font-size: 1.4em;
+	width: 100%;
+	top: 40%;
+	line-height: 1.8em;
+	position: absolute;
+	text-align: center;
+}
+.success-pop h4{
+	color: #fff;
+	position: absolute;
+	top: 25%;
+	font-weight: normal;
+	font-size: 1.4em;
+	line-height: 1.8em;
+	text-align: center;
+	width: 100%;
+}
+.success-pop p{
+	color: #fff;
+	font-size: 1em;
+	width: 250px;
+	left: 45%;
+	margin-left: -125px;
+	top: 40%;
+	position: absolute;
+	text-align: center;
+}
+
+.top-info{
+	width: 327px;
+	padding:25px 0;
+	overflow: hidden;
+}
+
+.top-info .left-face{
+	float: left;
+	width: 97px;
+	height: 97px;
+	border-radius: 97px;
+	overflow: hidden;
+	background: #fff;
+}
+.top-info .left-face img{
+	border-radius: 97px;
+
+}
+.top-info .left-face{
+	padding: 5px;
+	margin-right: 25px;
+}
+.top-info .right-info{
+	float: left;
+}
+
+.top-info .right-info .name-span{
+	color: #fff;
+}
+.top-info .right-info .identified-icon{
+	display: none;
+}
+.top-info .right-info .identified-icon img{
+	width: 50px;
+	padding-left: 5px;
+	display: inline-block;
+}
+.top-info .right-info .btn-box{
+	position: relative;
+	width: 132px;
+	height: 40px;
+}
+.top-info .right-info a.upload-triangle{
+	display: block;
+	color: #bababa;
+	width: 100%;
+	top: 13px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	font-size: 0.8em;
+	position: absolute;
+}
+.top-info .right-info .btn-box em{
+	position: absolute;
+	width: 14px;
+	display: block;
+	top: 7px;
+	right: 14px;
+	height: 6px;
+	background: url('../img/triangle_icon.png') no-repeat center center /cover;
+}
+.top-info.identified .left-face{
+	background: url('../img/face_gold.png') no-repeat center center /cover;
+
+}
+.top-info.identified .identified-icon{
+	display: inline-block;
+}
+.top-info .right-info .level-box a.level-info{
+	display: block;
+	width: 195px;
+	position: relative;
+	height: 23px;
+}
+.top-info .right-info .level-box a.level-info span{
+	position: absolute;
+	color: #fff;
+	top: 4px;
+	font-size: 0.8em;
+	
+
+}
+.top-info .right-info .level-box a.level-info span i{
+	background: url('../img/level_bar.png') no-repeat bottom left /1000%;
+	width: 9px;
+	padding-right: 11px;
+	height: 13px;
+	display: block;
+	float: left;
+}
+.top-info .right-info .level-box a.level-info.level-2 span{
+	left: 10%;
+}
+.top-info .right-info .level-box a.level-info.level-2 span i{
+	background-position: -15px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-3 span{
+	left: 20%;
+}
+.top-info .right-info .level-box a.level-info.level-3 span i{
+	background-position: -34px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-4 span{
+	left: 26%;
+}
+.top-info .right-info .level-box a.level-info.level-4 span i{
+	background-position: -54px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-5 span{
+	left: 40%;
+}
+.top-info .right-info .level-box a.level-info.level-5 span i{
+	background-position: -74px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-6 span{
+	left: 50%;
+}
+.top-info .right-info .level-box a.level-info.level-6 span i{
+	background-position: -94px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-7 span{
+	left: 53%;
+}
+.top-info .right-info .level-box a.level-info.level-7 span i{
+	background-position: -114px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-8 span{
+	left: 65%;
+}
+.top-info .right-info .level-box a.level-info.level-8 span i{
+	background-position: -134px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-9 span{
+	left: 70%;
+}
+.top-info .right-info .level-box a.level-info.level-9 span i{
+	background-position: -154px bottom; 
+}
+.top-info .right-info .level-box a.level-info.level-10 span{
+	left: 75%;
+}
+.top-info .right-info .level-box a.level-info.level-10 span i{
+	background-position: -174px bottom; 
+}
+.top-info .right-info .level-box a.level-info em{
+	width: 88%;
+	display: block;
+	height: 10px;
+	position: absolute;
+	top: 17px;
+	background: url('../img/level_bar.png') no-repeat top left /cover;
+}
+.top-info .status-info{
+	overflow: hidden;
+	padding-top: 7px;
+}
+.top-info .status-info li{
+	float: left;
+	background: url('../img/center_icon1.png') no-repeat;
+	background-color: #1c3d7f;
+	border-radius: 10px;
+	margin-right: 4px;
+	background-size: 40%;
+	color: #fff;
+	line-height: 12px;
+	text-align: right;
+	font-size: 0.8em;
+	width: 40px;
+	padding:5px 4px 5px 6px;
+}
+.top-info .status-info li.like-icon{
+	background-position: 5px 7px;
+}
+.top-info .status-info li.saw-icon{
+	background-position: 3px -13px;
+}
+.top-info .status-info li.good-icon{
+	background-position: 4px -34px;
+}
+.decorate-box{
+	width: 300px;
+	border-radius: 10px;
+	background-color: #193a7d;
+}
+.decorate-box h5{
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+	padding-top: 15px;
+}
+.decorate-box .list-box{
+	overflow: hidden;
+	width: 266px;
+
+}
+.decorate-box li{
+	float: left;
+
+}
+.decorate-box .list-1 a{
+	width: 80px;
+	margin:0 4px;
+
+}
+.decorate-box .list-2{
+	padding-bottom: 10px;
+}
+.decorate-box .list-2 a{
+	width: 80px;
+	margin: 0 23px;
+
+}
+.decorate-box li a{
+	color: #fff;
+	background: url('../img/decorate_icon.png') no-repeat -12px 0;
+	text-align: center;
+	padding-top:76px;
+	height: 26px;
+	font-size: 0.9em;
+	overflow: hidden;
+	background-size: 315%;
+	display: block;
+}
+.decorate-box li a.list-01-01.active{
+	background-position: -158px -1px;
+}
+.decorate-box li a.list-01-02{
+	background-position: -12px -102px;
+}
+.decorate-box li a.list-01-02.active{
+	background-position: -160px -100px;
+}
+.decorate-box li a.list-01-03{
+	background-position: -12px -217px;
+}
+.decorate-box li a.list-01-03.active{
+	background-position: -162px -216px;
+}
+.decorate-box li a.list-02-01{
+	background-position: -12px -341px;
+}
+.decorate-box li a.list-02-01.active{
+	background-position: -162px -340px;
+}
+.decorate-box li a.list-02-02{
+	background-position: -12px -464px;
+}
+.decorate-box li a.list-02-02.active{
+	background-position: -162px -463px;
+}
+.interest-box{
+	padding:20px 0;
+	width: 100px;
+}
+.interest-box a{
+	width: 100%;
+	display: block;
+	font-size: 0.9em;
+	height: 20px;
+	line-height: 20px;
+	background: url('../img/center_icon.png') no-repeat right center /30%;
+}
+.interest-box em{
+	color: #fff;
+	font-style: normal;
+	border-bottom: 1px solid #fff;
+}
+.footer-btn{
+	position: absolute;
+	bottom:0;
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+}
+.footer-btn li{
+	float: left;
+	background-color: #305290;
+	height: 50px;
+	width: 25%;
+	text-align: center;
+}
+.footer-btn li a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 47px;
+	border-left: 2px solid #012269;
+	border-right: 2px solid #012269;
+}
+.footer-btn li a.activity-btn{
+	border-left: 0 none;
+	border-top: 3px solid #fd1503;
+}
+.footer-btn li a.friend-btn{
+	border-top: 3px solid #04d6d9;
+}
+.footer-btn li a.code-btn{
+	border-top: 3px solid #f1dd06;
+}
+.footer-btn li a.work-btn{
+	border-top: 3px solid #58f405;
+}
+.information-title{
+	color: #fff;
+	text-align: center;
+	font-size: 1.3em;
+	padding-top:26px;
+	padding-bottom: 21px;
+}
+.scroll-box .face-box{
+	border-radius: 115px;
+	width: 115px;
+	height: 115px;
+	text-align: center;
+	background: #fff;
+	border:0 none;
+	padding: 5px;
+	overflow: hidden;
+}
+.scroll-box .face-box img{
+	width: 100%;
+	display: inline-block;
+	border-radius: 97px;
+}
+.scroll-box .identified .face-box{
+	background: url('../img/face_gold.png') no-repeat center center /cover;
+}
+.scroll-box .sex-box{
+	width: 25px;
+	padding-top: 6px;
+}
+.scroll-box .sex-box a{
+	background-color: #a6bce4;
+	margin-bottom: 20px;
+}
+.scroll-box .name-box {
+	text-align: center;
+	padding-bottom: 10px;
+}
+.scroll-box .name-box em{
+	color: #fff;
+}
+.scroll-box .name-box .identified-icon{
+	display: none;
+}
+.scroll-box .name-box .identified-icon img{
+	width: 50px;
+	padding-left: 5px;
+	display: inline-block;
+}
+.scroll-box .identified .name-box .identified-icon{
+	display: inline-block;
+}
+.form-box .input-box.only-read{
+	background-color: #a6bce4;
+	color: #012269;
+}
+.form-box .input-box.only-read input{
+	background-color:  #a6bce4;
+	color: #012269;
+
+}
+.form-box .select-box.birthday-select {
+	width: 36px;
+}
+.form-box .select-box.birthday-select select{
+	width: 36px;
+}
+.form-box .select-box.birthday-select-short {
+	width: 26px;
+}
+.form-box .select-box.birthday-select-short select{
+	width: 26px;
+}

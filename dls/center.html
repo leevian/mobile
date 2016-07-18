@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人中心</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="element-box back-btn">
+				<a href=""><img src="img/back_btn.png"></a>
+			</div>
+			<!-- 认证过的话加一个class identified -->
+			<div class="top-info center-box identified">
+				<div class="left-face">
+					<a href="">
+						<img src="img/face_f.jpg">
+					</a>
+					
+				</div>
+				<div class="right-info">
+					<div class="right-top">
+						<span class="name-span">Marie Simpson</span>
+						<span class="identified-icon"><img src="img/identified_icon.png"></span>
+						<div class="btn-box">
+							<em></em>
+							<a class="upload-triangle"href="">上传设计师资格证明</a>
+						</div>
+						
+					</div>
+					<div class="level-box">
+						<a href="" class="level-info level-10">
+							<span><i></i>LV1</span>
+							<em></em>
+						</a>
+					</div>
+					<div class="status-info">
+						<ul>
+							<li class="like-icon">8812</li>
+							<li class="saw-icon">8812</li>
+							<li class="good-icon">8812</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="decorate-box center-box">
+				<h5>我的领袖勋章</h5>
+				<ul class="list-1 list-box center-box">
+					<li><a class="list-01-01" href="">认证达成</a></li>
+					<li><a class="list-01-02" href="">活动胜者</a></li>
+					<li><a class="list-01-03 active"href="">发展新人</a></li>
+				</ul>
+				<ul class="list-2 list-box center-box">
+					<li><a class="list-02-01 active" href="">公会调研</a></li>
+					<li><a class="list-02-02 active" href="">投稿达人</a></li>
+				</ul>
+			</div>
+			<div class="interest-box center-box">
+				<a href="javascript:void(0);">
+					<em>会员权益</em>
+				</a>
+			</div>
+			<div class="footer-btn">
+				<ul>
+					<li><a class="activity-btn"href="">最新活动</a></li>
+					<li><a class="friend-btn"href="">邀请好友</a></li>
+					<li><a class="code-btn"href="">我的积分</a></li>
+					<li><a class="work-btn"href="">公会作品</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	    <div class="pop-overlay agreement-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>会员权益</h4>
+			<p class="agreement-p">
+				xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxx<br/>
+				xxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxxxxxxxxxxxx<br/>
+			</p>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$('.interest-box a').bind('touchend',function(){
+				$('.agreement-pop').show();
+			})
+		})
+		
+		
+		
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>多乐士</title>
+		<title>资料完善</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
 		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
@@ -27,68 +27,101 @@
 			<div class="element-box back-btn">
 				<a href=""><img src="img/back_btn.png"></a>
 			</div>
-			<div class="logo-box center-box">
-				<img src="img/logo.png">
-			</div>
-			<div class="face-box center-box male-face">
-			</div>
-			<div class="sex-box center-box">
-				<a href="javascript:void(0);" class="active sex-btn sex-male"></a>
-				<a href="javascript:void(0);" class="sex-btn sex-female"></a>
-			</div>
-			<div class="form-box center-box">
-				<form>
-					<!-- 隐藏域是性别 	 -->
-					<input type="hidden" class="sex-value">
-					<div class="input-box">
-						<label for="name" class="label-name">name</label>
-						<input type="text" class="name-input input-element" placeholder="请输入用户名">								
+			<div class="scroll-box">
+				<div class="information-title center-box">
+					个人信息：
+				</div>
+				<!-- 认证过的话有identified这个class -->
+				<div class="identified">
+					<div class="face-box center-box ">
+						<img src="img/face_f.jpg">
+
 					</div>
-					<div class="input-box">
-						<label for="nickname" class="label-nickname">nickname</label>
-						<input type="text" class="nick-input input-element" placeholder="请输入昵称">
+					<div class="name-box">
+						<em>Marie Simpson</em>
+						<span class="identified-icon"><img src="img/identified_icon.png"></span>
+
 					</div>
-					<div class="small-input">
-						<div class="small-box">
+				</div>
+				<div class="sex-box center-box">
+					<a href="javascript:void(0);" class="active sex-btn sex-male"></a>
+				</div>
+				<div class="form-box center-box">
+					<form>
+						<!-- 隐藏域是性别 	 -->
+						<input type="hidden" class="sex-value">
+						<div class="input-box only-read">
+							<label for="name" class="label-name">name</label>
+							<input type="text" readonly class="name-input input-element" value="Marie Simpson">								
+						</div>
+						<div class="input-box">
+							<label for="nickname" class="label-nickname">nickname</label>
+							<input type="text" class="nick-input input-element" placeholder="请输入昵称">
+						</div>
+						<div class="input-box only-read">
 							<label for="mobile" class="label-mobile">mobile</label>
-							<input type="text" class="mobile-input input-element" placeholder="请输入手机号">	
+							<input type="text" readonly class="mobile-input input-element" value="1582183321">
 						</div>
-						<button type="button"class="code-btn">验证码</button>
-						<button class="count-time" disabled><span>60</span>秒</button>
-					
-					</div>
-					<div class="input-box">
-						<label for="city" class="label-city">city</label>
-						<div class="overflow-box select-box">
-							<select class="select-left">
-								<option >上海</option>
-								<option >上海</option>
-								<option >上海</option>
-								<option ></option>
-							</select>
+						<div class="input-box">
+							<label for="birthday" class="label-birthday">birthday</label>
+							<div class="overflow-box select-box birthday-select">
+								<select class="select-left">
+									<option >1993</option>
+									<option >2006</option>
+									<option >1992</option>
+									<option >1991</option>
+								</select>
+							</div>
+							
+							<em>年</em>
+							<div class="overflow-box select-box birthday-select-short">
+								<select>
+									<option >7</option>
+									<option >8</option>
+								</select>
+							</div>
+							<em>月</em>
+							<div class="overflow-box select-box birthday-select-short">
+								<select>
+									<option >29</option>
+									<option >30</option>
+								</select>
+							</div>
+							<em>日</em>
 						</div>
-						
-						<em>省</em>
-						<div class="overflow-box select-box">
-							<select>
-								<option >上海</option>
-								<option >上海</option>
-							</select>
+						<div class="input-box">
+							<label for="city" class="label-city">city</label>
+							<div class="overflow-box select-box">
+								<select class="select-left">
+									<option >上海</option>
+									<option >上海</option>
+									<option >上海</option>
+									<option ></option>
+								</select>
+							</div>
+							
+							<em>省</em>
+							<div class="overflow-box select-box">
+								<select>
+									<option >上海</option>
+									<option >上海</option>
+								</select>
+							</div>
+							<em>市</em>
 						</div>
-						<em>市</em>
-					</div>
-					<div class="input-box">
-						<label for="job" class="label-job">job</label>
-						<input type="text" class="job-input">
-					</div>
-					<div class="check-box">
-						<input type="checkbox" class="check-element">
-						<a href="javascript:void(0);" class="agreement-btn">我已阅读并同意接受《会员协议》</a>
-					</div>
-					<div class="submit-box">
-						<button type="button">注&nbsp;&nbsp;册</button>
-					</div>
-				</form>
+						<div class="input-box">
+							<label for="job" class="label-job">job</label>
+							<input type="text" class="job-input">
+						</div>
+						<div class="check-box">
+							<input type="checkbox" class="check-element">
+							<a href="javascript:void(0);" class="agreement-btn">我已阅读并同意接受《会员协议》</a>
+						</div>
+						<div class="submit-box">
+							<button type="button">注&nbsp;&nbsp;册</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="pop-overlay tips-pop">
@@ -128,22 +161,7 @@
 	</body>
 	<script>
 		$(function(){
-			//性别默认值
-			$('.sex-value').val(1)
-
-			$('.sex-btn').bind('touchend',function(e){
-				var index = $(this).index();
-				$('.sex-btn').removeClass('active')
-				$(this).addClass('active')
-				if(index==0){
-					$('.face-box').removeClass('female-face').addClass('male-face')
-					$('.sex-value').val(1)
-				}else{
-					$('.face-box').removeClass('male-face').addClass('female-face')
-					$('.sex-value').val(0)
-
-				}
-			})
+			
 
 			$('.code-btn').bind('touchend',function(e){
 				e.stopPropagation();
