@@ -1,11 +1,11 @@
 .logo-box{
-	width: 70px;
-	padding-bottom: 13px;
+	width: 16%;
+	padding-bottom: 2%;
 }
 .face-box{
 	width: 67px;
 	height: 67px;
-	margin-bottom: 14px;
+	margin-bottom: 2%;
 	border-radius: 67px;
 	border:3px solid #fff;
 }
@@ -24,7 +24,7 @@
 	width: 25px;
 	border-radius: 5px;
 	height: 25px;
-	margin-bottom: 14px;
+	margin-bottom: 13%;
 }
 .sex-box a.sex-female{
 	float: right;
@@ -41,15 +41,16 @@
 	background-position:5px 2px;
 }
 .form-box{
-	width: 245px;
+	width: 80%;
 }
 .form-box .input-box{
 	width: 100%;
 	background: #fff;
+	overflow: hidden;
 	border-radius: 20px;
-	height: 27px;
-	padding:5px 0;
-	margin-bottom: 15px;
+	height: 12%;
+	padding:1% 0;
+	margin-bottom: 4%;
 }
 .form-box  label{
 	overflow: hidden;
@@ -61,79 +62,102 @@
 	background: url('../img/index_icon.png') no-repeat center center/800%;
 }
 .form-box label.label-name{
-	background-position: 13px 3px;
+	background-position: 13px 5px;
 }
 .form-box label.label-nickname{
-	background-position: -27px 1px;
+	background-position: -23px 4px;
+	background-size: 730%;
+
 }
 .form-box label.label-mobile{
-	background-position: -62px 1px;
+	background-position: -57px 0px;
+	background-size: 750%;
 }
 .form-box label.label-city{
 	background-position: -141px 4px;
 }
 .form-box label.label-job{
-	background-position: -182px 4px;
+	background-position: -182px 2px;
 }
 .form-box label.label-birthday{
 	background-position: -273px 4px;
 }
+.form-box label.label-email{
+	background-position: 11px -31px;
+}
 .form-box .small-input{
-	overflow: hidden;
-	margin-bottom: 15px;
+	margin-bottom: 4%;
+	height: 13%;
 }
 .form-box .small-box{
 	background-color: #fff;
 	border-radius: 20px;
-	height: 27px;
-	width: 134px;
-	padding: 7px 0;
+	height: 87%;
+	width: 58%;
+	padding:1% 0;
 	float: left;
 	margin-right: 4px;
 }
 .form-box input{
 	border: 0;
-	height: 20px;
+	height: 80%;
+	width: 78%;
 	font-size: 0.8em;
 	padding-left: 5px;
 	border-left: 1px solid #2954a4;
 	border-radius: 0;
 }
 .form-box .small-box input{
-	width: 76px;
-	border-radius: 0 10px 10px 0;
+	width: 79px;
+}
+.form-box .small-input .button-div{
+	float: left;
+	border-radius: 14px;
+	overflow: hidden;
+	background: #fff;
+	color:#d9d7d7;
+	padding: 1% 0;
 }
 .form-box .small-input button{
-	display: block;
-	float: left;
 	border: 0;
-	height: 41px;
+	text-align: center;
+	background: #fff;
+	color:#d9d7d7;
+}
+.form-box .small-input .code-div{
+	float: left;
 	border-radius: 14px;
 	text-align: center;
 	background: #fff;
 	color:#d9d7d7;
-	width: 46px;
-	padding:0;
+	width: 17%;
+	padding: 1% 0;
+	height: 10%;
+	margin-right: 1%;
+	overflow: hidden;
 }
-.form-box .small-input .code-btn{
-	margin-right: 4px;
+.form-box .small-input .code-input{
+
+	border: 0;
 }
 .form-box .small-input .count-time{
-	padding-left: 21px;
-	width: 50px;
-	display: none;
-	background: url('../img/index_icon.png') no-repeat -103px 12px/650% #fff;
+	padding-left: 17px;
+	width: 57px;
+	font-size: 0.8em;
+	background: url('../img/index_icon.png') no-repeat -118px 3px/640% #fff;
 }
 .form-box .select-box{
 	float: left;
-	width: 63px;
+	width: 26%;
+	height: 100%;
 }
 .form-box .select-box select{
 	width: 63px;
 	border: 0;
 	-webkit-appearance: none;
 	background: #fff;
-	height: 26px;
+	height: 99%;
+	font-size: 0.8em;
 	padding-left: 4px;
 	border-radius: 0;
 	color: #d9d7d7;
@@ -145,33 +169,40 @@
 .form-box .select-box select.select-left{
 	border-left: 1px solid #2954a4;
 	border-radius: 0;
-	height: 26px;
+	height: 99%;
 }
-.form-box .input-box em{
+.form-box .input-box em, .form-box .small-input em{
 	font-style: normal;
 	color: #d9d7d7;
 	float: left;
 	line-height: 27px;
+	width: 16px;
+	font-size: 0.9em;
 	display: block;
+	padding-top: 1px;
 	padding-right: 20px;
 	background: url('../img/index_icon.png') no-repeat -159px 6px/650% #fff;
+}
+.form-box .small-input em{
+	color: #fff;
+	width: 0;
+	padding-right: 36px;
 }
 .form-box .check-box{
 	overflow: hidden;
 }
 .form-box .check-box input{
-	width: 26px;
+	width: 5%;
 	height: 22px;
 	background: #fff;
 	border-radius: 5px;
 	float: left;
 	padding: 0;
-	margin-right: 1px;
 }
 .form-box .check-box a{
 	display: block;
 	float: left;
-	width: 213px;
+	width: 92%;
 	line-height: 26px;
 	text-align: center;
 	color: #d9d7d7;
@@ -180,8 +211,11 @@
 	background: #fff;
 	border-radius: 10px;
 }
+.form-box .check-box a.active{
+	color: #111;
+}
 .form-box .submit-box{
-	padding-top: 17px;
+	padding-top: 5%;
 	text-align: center;
 }
 .form-box .submit-box button{
@@ -191,7 +225,7 @@
 	line-height: 30px;
 	color: #012269;
 	padding: 0;
-	font-size: 0.8em;
+	font-size: 1.2em;
 	background: #88abda;
 	border: 0;
 
@@ -213,11 +247,12 @@
 	left: 50%;
 	margin-left: -125px;
 	top: 37%;
+	line-height: 1.2em;
 	position: absolute;
 	text-align: center;
 
 }
-.tips-pop p.tips-info{
+.tips-pop p.tips-in{
 	color: #fff;
 	font-size: 1.4em;
 	width: 100%;
@@ -246,10 +281,51 @@
 	position: absolute;
 	text-align: center;
 }
+.success-pop-invited h4{
+	color: #fff;
+	position: absolute;
+	top: 20%;
+	font-weight: normal;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	text-align: center;
+	width: 100%;
 
+}
+.success-pop-invited p.success-p{
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	font-size: 0.5em;
+	position: absolute;
+	top: 30%;
+}
+.success-pop-invited p.p-bottom{
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	font-size: 0.5em;
+	line-height: 1.4em;
+	position: absolute;
+	top: 64%;
+}
+.success-pop-invited .img-box{
+	width: 130px;
+	left: 50%;
+	margin-left: -65px;
+	position: absolute;
+	top: 37%;
+}
+.success-pop-invited .img-box img{
+	width: 100%;
+
+}
+.success-pop-invited .btn-box{
+	top: 75%;
+}
 .top-info{
-	width: 327px;
-	padding:25px 0;
+	width: 100%;
+	padding:3% 0 4%;
 	overflow: hidden;
 }
 
@@ -267,7 +343,8 @@
 }
 .top-info .left-face{
 	padding: 5px;
-	margin-right: 25px;
+	margin-right: 9%;
+	margin-left: 11%;
 }
 .top-info .right-info{
 	float: left;
@@ -318,13 +395,14 @@
 .top-info.identified .identified-icon{
 	display: inline-block;
 }
-.top-info .right-info .level-box a.level-info{
+
+.level-box a.level-info{
 	display: block;
 	width: 195px;
 	position: relative;
 	height: 23px;
 }
-.top-info .right-info .level-box a.level-info span{
+.level-box a.level-info span{
 	position: absolute;
 	color: #fff;
 	top: 4px;
@@ -332,7 +410,7 @@
 	
 
 }
-.top-info .right-info .level-box a.level-info span i{
+.level-box a.level-info span i{
 	background: url('../img/level_bar.png') no-repeat bottom left /1000%;
 	width: 9px;
 	padding-right: 11px;
@@ -340,61 +418,61 @@
 	display: block;
 	float: left;
 }
-.top-info .right-info .level-box a.level-info.level-2 span{
+.level-box a.level-info.level-2 span{
 	left: 10%;
 }
-.top-info .right-info .level-box a.level-info.level-2 span i{
+.level-box a.level-info.level-2 span i{
 	background-position: -15px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-3 span{
+.level-box a.level-info.level-3 span{
 	left: 20%;
 }
-.top-info .right-info .level-box a.level-info.level-3 span i{
+.level-box a.level-info.level-3 span i{
 	background-position: -34px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-4 span{
+.level-box a.level-info.level-4 span{
 	left: 26%;
 }
-.top-info .right-info .level-box a.level-info.level-4 span i{
+.level-box a.level-info.level-4 span i{
 	background-position: -54px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-5 span{
+.level-box a.level-info.level-5 span{
 	left: 40%;
 }
-.top-info .right-info .level-box a.level-info.level-5 span i{
+.level-box a.level-info.level-5 span i{
 	background-position: -74px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-6 span{
+.level-box a.level-info.level-6 span{
 	left: 50%;
 }
-.top-info .right-info .level-box a.level-info.level-6 span i{
+.level-box a.level-info.level-6 span i{
 	background-position: -94px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-7 span{
+.level-box a.level-info.level-7 span{
 	left: 53%;
 }
-.top-info .right-info .level-box a.level-info.level-7 span i{
+.level-box a.level-info.level-7 span i{
 	background-position: -114px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-8 span{
+.level-box a.level-info.level-8 span{
 	left: 65%;
 }
-.top-info .right-info .level-box a.level-info.level-8 span i{
+.level-box a.level-info.level-8 span i{
 	background-position: -134px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-9 span{
+.level-box a.level-info.level-9 span{
 	left: 70%;
 }
-.top-info .right-info .level-box a.level-info.level-9 span i{
+.level-box a.level-info.level-9 span i{
 	background-position: -154px bottom; 
 }
-.top-info .right-info .level-box a.level-info.level-10 span{
+.level-box a.level-info.level-10 span{
 	left: 75%;
 }
-.top-info .right-info .level-box a.level-info.level-10 span i{
+.level-box a.level-info.level-10 span i{
 	background-position: -174px bottom; 
 }
-.top-info .right-info .level-box a.level-info em{
+.level-box a.level-info em{
 	width: 88%;
 	display: block;
 	height: 10px;
@@ -404,7 +482,7 @@
 }
 .top-info .status-info{
 	overflow: hidden;
-	padding-top: 7px;
+	padding-top: 5%;
 }
 .top-info .status-info li{
 	float: left;
@@ -430,7 +508,7 @@
 	background-position: 4px -34px;
 }
 .decorate-box{
-	width: 300px;
+	width: 92%;
 	border-radius: 10px;
 	background-color: #193a7d;
 }
@@ -440,12 +518,16 @@
 	font-weight: normal;
 	font-size: 1.2em;
 	line-height: 1.4em;
-	margin-bottom: 20px;
-	padding-top: 15px;
+	margin-bottom: 3%;
+	padding-top: 3%;
+}
+.decorate-box .list-box li{
+	margin: 0 0%;
+	padding-top: 0;
 }
 .decorate-box .list-box{
 	overflow: hidden;
-	width: 266px;
+	width: 100%;
 
 }
 .decorate-box li{
@@ -454,15 +536,12 @@
 }
 .decorate-box .list-1 a{
 	width: 80px;
-	margin:0 4px;
+	margin:0 2px;
 
-}
-.decorate-box .list-2{
-	padding-bottom: 10px;
 }
 .decorate-box .list-2 a{
 	width: 80px;
-	margin: 0 23px;
+	margin: 0 15px;
 
 }
 .decorate-box li a{
@@ -504,7 +583,7 @@
 	background-position: -162px -463px;
 }
 .interest-box{
-	padding:20px 0;
+	padding:3% 0;
 	width: 100px;
 }
 .interest-box a{
@@ -520,17 +599,34 @@
 	font-style: normal;
 	border-bottom: 1px solid #fff;
 }
+.standard-box{
+	padding:3% 0;
+	width: 160px;
+}
+.standard-box a{
+	width: 100%;
+	display: block;
+	font-size: 0.9em;
+	height: 20px;
+	line-height: 20px;
+	background: url('../img/center_icon.png') no-repeat right center /20%;
+}
+.standard-box em{
+	color: #fff;
+	font-style: normal;
+	border-bottom: 1px solid #fff;
+}
 .footer-btn{
 	position: absolute;
 	bottom:0;
 	overflow: hidden;
 	width: 100%;
-	height: 50px;
+	height: 8%;
 }
 .footer-btn li{
 	float: left;
 	background-color: #305290;
-	height: 50px;
+	height: 54px;
 	width: 25%;
 	text-align: center;
 }
@@ -559,52 +655,91 @@
 .information-title{
 	color: #fff;
 	text-align: center;
-	font-size: 1.3em;
-	padding-top:26px;
-	padding-bottom: 21px;
+	font-size: 1.1em;
+	padding-top:7%;
+	padding-bottom: 4%;
 }
-.scroll-box .face-box{
-	border-radius: 115px;
-	width: 115px;
-	height: 115px;
+.information-p{
+	color: #fff;
+	text-align: center;
+	font-size: 0.5em;
+	line-height: 1.8em;
+	padding-bottom: 4%;
+}
+.title-bg{
+	background: url('../img/line.png') no-repeat top center ;
+}
+.scroll-box {
+	height: 483px;
+	width: 90%;
+	overflow-x:hidden;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 4px;  
+    height: 4px;  
+    background-color: #011b54;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 5px;  
+    background-color: #011b54; 
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 5px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #6987bf;  
+} 
+.information-box .face-box{
+	border-radius: 90px;
+	width: 90px;
+	height: 90px;
 	text-align: center;
 	background: #fff;
 	border:0 none;
-	padding: 5px;
+	padding: 4px;
 	overflow: hidden;
 }
-.scroll-box .face-box img{
+.information-box .face-box img{
 	width: 100%;
 	display: inline-block;
 	border-radius: 97px;
 }
-.scroll-box .identified .face-box{
+.information-box .identified .face-box{
 	background: url('../img/face_gold.png') no-repeat center center /cover;
 }
-.scroll-box .sex-box{
+.information-box .sex-box{
 	width: 25px;
-	padding-top: 6px;
+	padding-top:3%;
+	padding-bottom: 1%
 }
-.scroll-box .sex-box a{
+.information-box .sex-box a{
 	background-color: #a6bce4;
-	margin-bottom: 20px;
+	margin-bottom: 22%;
 }
-.scroll-box .name-box {
+.information-box .name-box {
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 2%;
 }
-.scroll-box .name-box em{
+.information-box .name-box em{
 	color: #fff;
 }
-.scroll-box .name-box .identified-icon{
+.information-box .name-box .identified-icon{
 	display: none;
 }
-.scroll-box .name-box .identified-icon img{
+.information-box .name-box .identified-icon img{
 	width: 50px;
 	padding-left: 5px;
 	display: inline-block;
 }
-.scroll-box .identified .name-box .identified-icon{
+.information-box .identified .name-box .identified-icon{
 	display: inline-block;
 }
 .form-box .input-box.only-read{
@@ -617,14 +752,551 @@
 
 }
 .form-box .select-box.birthday-select {
-	width: 36px;
+	width: 17%;
 }
 .form-box .select-box.birthday-select select{
-	width: 36px;
+	width: 100%;
 }
 .form-box .select-box.birthday-select-short {
-	width: 26px;
+	width: 8%;
 }
 .form-box .select-box.birthday-select-short select{
-	width: 26px;
+	width: 100%;
+}
+.form-box p.input-tips{
+	color: #fff;
+	text-align: center;
+	font-size: 0.8em;
+}
+.uploaded-image{
+	width: 93%;
+	position: relative;
+	border-radius: 5px;
+	padding-bottom: 3%;
+	background-color: #193a7d;
+	margin-bottom: 3%;
+}
+.uploaded-image i{
+	position: absolute;
+	width: 20px;
+	height: 11px;
+	display: block;
+	left: 50%;
+	top: -11px;
+	background: url('../img/triangle_icon1.png') no-repeat center center /cover;
+}
+.uploaded-image p{
+	text-align: center;
+	color: #fff;
+	font-size: 0.75em;
+	padding: 2.4% 0;
+}
+.uploaded-image .ul-box{
+	height: 66px;
+	margin:0 auto;
+}
+.uploaded-image li{
+	float: left;
+	width: 17%;
+	position: relative;
+	height: 17%;
+	margin:0 2%;
+}
+.uploaded-image li a.close-btn{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: -10px;
+	display: block;
+	top: -10px;
+	background: url('../img/close_btn1.png') no-repeat center center /cover;
+}
+.uploaded-image li strong.ok-icon{
+	width: 30px;
+	height: 25px;
+	position: absolute;
+	left: -8px;
+	display: none;
+	bottom: -5px;
+	background: url('../img/ok_icon.png') no-repeat center center /cover;
+}
+.uploaded-image li img{
+	width: 100%;
+	height: 100%;
+}
+.uploaded-image li .upload-box{
+	position: relative;
+	border:3px dashed #fff;
+}
+.uploaded-image li em{
+	position: absolute;
+	color: #fff;
+	background: url('../img/plus.png') no-repeat center center /70%;
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 5em;
+}
+.uploaded-image li div{
+	height: 90%;
+	width: 90%;
+}
+
+.uploaded-image li input{
+	width: 100%;
+	overflow: hidden;
+	text-indent: 1000px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.tips-info{
+	width: 140px;
+	text-align: center;
+	color: #828ba8;
+	font-size: 0.8em;
+	display: none;
+}
+.tips-info p{
+	line-height: 1.5em;
+}
+.form-upload .submit-box{
+	padding-top: 70px;
+	text-align: center;
+}
+.form-upload .submit-box button{
+	width: 135px;
+	border-radius: 10px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	font-size: 0.8em;
+	border: 0;
+
+}
+.form-upload .status-box{
+	text-align: center;
+	display: none;
+}
+.form-upload .status-box img{
+	width: 57%;
+	display: inline-block;
+}
+.form-upload.status-0 .submit-box button{
+	background: #88abda;
+	color: #012269;
+}
+.form-upload.status-3 .submit-box button{
+	background: #88abda;
+	color: #012269;
+	width: 76px;
+}
+.form-upload.status-3 strong.ok-icon{
+	display: block;
+}
+.form-upload.status-3 .submit-box button.short-btn{
+	margin-right: 66px;
+}
+.form-upload.status-2 .submit-box button{
+	background: #88abda;
+	color: #012269;
+}
+.form-upload.status-1 .submit-box{
+	padding-top: 30px;
+}
+.form-upload.status-2 .submit-box{
+	padding-top: 14px;
+}
+.form-upload.status-3 .submit-box{
+	padding-top: 4px;
+}
+.form-upload.status-1 .submit-box button{
+	background: #a6a6a6;
+	color: #505050;
+}
+.form-upload.status-1 .status-1-info{
+	display: block;
+}
+.form-upload.status-2 .status-2-info{
+	display: block;
+}
+.form-upload.status-3 .status-3-info{
+	display: block;
+}
+.form-upload.status-2 .status-2-info img{
+	width: 40%;
+}
+.form-upload.status-0 .tips-info{
+	display: block;
+}
+.form-upload.status-1 a.close-btn{
+	display: none;
+}
+.form-upload.status-3 a.close-btn{
+	display: none;
+}
+.form-box  .receiver-btn {
+	padding-top: 9%;
+}
+.form-box  .receiver-btn button {
+	width: 74px;
+	margin: 0 20px;
+}
+.mission-body{
+	padding:7px 0;
+	width: 92%;
+	background-color: #193a7d;
+
+}
+.mission-box {
+	border-radius: 10px;
+	background-color: #193a7d;
+	width: 93%;
+	height: 344px;
+	overflow-x:hidden;
+}
+.mission-box li{
+	overflow: hidden;
+	padding-top: 1%;
+	padding-left: 3%;
+}
+.mission-box li .left-info{
+	float: left;
+	color: #fff;
+	width: 80px;
+	font-size: 0.5em;
+	text-align: center;
+	padding-top: 80px;
+	background: url('../img/decorate_icon.png') no-repeat -19px 2px ;
+	background-size: 350%;
+}
+.mission-box li .left-info.list-1.participated{
+	background-position: -183px 2px;
+}
+.mission-box li .left-info.list-2{
+	background-position: -19px -113px;
+}
+.mission-box li .left-info.list-2.participated{
+	background-position: -183px -113px;
+}
+.mission-box li .left-info.list-3{
+	background-position: -19px -239px;
+}
+.mission-box li .left-info.list-3.participated{
+	background-position: -187px -239px;
+}
+.mission-box li .left-info.list-4{
+	background-position: -19px -377px;
+}
+.mission-box li .left-info.list-4.participated{
+	background-position: -185px -377px;
+}
+.mission-box li .left-info.list-5{
+	background-position: -19px -515px;
+}
+.mission-box li .left-info.list-5.participated{
+	background-position: -185px -515px;
+}
+.mission-box li .right-info{
+	float: left;
+	width: 65%;
+}
+.mission-box li .bar-box{
+	padding-top: 27px;
+	padding-left: 10px;
+	color: #fff;
+}
+.mission-box li .bar-box em{
+	display: block;
+	position: relative;
+	width: 100%;
+	border-radius: 3px;
+	height: 11px;
+	background: url('../img/bar_line.png') no-repeat left center /100% 100%;
+}
+.mission-box li .bar-box em strong{
+	position: absolute;
+	height: 11px;
+	border-radius: 4px;
+
+}
+.mission-box li .bar-box em strong.green{
+	background: url('../img/green_bar.png') no-repeat left center;
+
+}
+.mission-box li .bar-box em strong.yellow{
+	background: url('../img/yellow_bar.png') no-repeat left center;
+
+}
+.mission-box li .bar-box em strong.red{
+	background: url('../img/red_bar.png') no-repeat left center;
+
+}
+.mission-box li .bar-box em i{
+	position: absolute;
+	z-index: 9;
+	font-size: 0.8em;
+	left: 45%;
+}
+.mission-box li .bar-box em span{
+	display: block;
+	width: 20px;
+	top: -2px;
+	height: 12px;
+	position: absolute;
+}
+.mission-box li .bar-box em span.green{
+	background: url('../img/green_brush.png') no-repeat center center /100% 100%;
+
+}
+.mission-box li .bar-box em span.yellow{
+	background: url('../img/yellow_brush.png') no-repeat center center /100% 100%;
+
+}
+.mission-box li .bar-box em span.red{
+	background: url('../img/red_brush.png') no-repeat center center /100% 100%;
+
+}
+.mission-box li .btn-box {
+	overflow: hidden;
+	padding-top: 8%;
+	padding-left: 16%;
+}
+.mission-box li .btn-box a{
+	display: block;
+	width: 38%;
+	margin: 0 5%;
+	line-height: 30px;
+	height: 30px;
+	font-size: 0.8em;
+	text-align: center;
+	color: #012269;
+	float: left;
+	background-color: #88abda;
+	border-radius: 20px;
+}
+.job-box .job-logo {
+	padding-top: 4%;
+	text-align: center;
+	font-size: 0.8em;
+	color: #fff;
+}
+.job-box .job-logo img{
+	margin: 0 auto;
+	width: 48%;
+	padding-left: 20px;
+}
+.job-box h4{
+	color: #fff;
+	text-align: center;
+	padding-top: 4%;
+	padding-bottom: 2%;
+}
+.job-box p{
+	color: #fff;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.job-box .btn-box{
+	padding-top: 7%;
+}
+.job-box .btn-box a{
+	display: block;
+	width: 170px;
+	height: 30px;
+	margin: 0 auto;
+	line-height: 30px;
+	text-align: center;
+	color: #012269;
+	background-color: #88abda;
+	border-radius: 20px;
+}
+.list-title{
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 3% 0 7%;
+}
+.list-body{
+	padding: 2%;
+	position: relative;
+	background-color: #193a7d;
+	border-radius: 5px;
+	width: 90%;
+}
+.list-body i{
+	position: absolute;
+	width: 20px;
+	height: 11px;
+	display: block;
+	left: 47%;
+	top: -11px;
+	background: url('../img/triangle_icon1.png') no-repeat center center /cover;
+
+}
+.list-body .list-box{
+	width: 96%;
+	overflow-x:hidden;
+}
+.list-box li{
+	padding-top: 20px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+.list-box li .left-box{
+	float: left;
+	color: #fff;
+	font-size: 0.8em;
+	width: 35%;
+}
+.list-box li .left-box p{
+	padding-left: 5px;
+
+}
+.list-box li .right-box{
+	float: left;
+	height: 20px;
+	width: 65%;
+	padding-top: 9%;
+}
+.list-box li .right-box.status-1 {
+	background: url('../img/status_icon1.png') no-repeat top left /100%;
+}
+.list-box li .right-box.status-2 {
+	background: url('../img/status_icon2.png') no-repeat top left /100%;
+}
+.list-p{
+	color: #fff;
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 4%;
+}
+.activity-box{
+	width: 85%;
+	padding-top: 2%;
+}
+.activity-box li{
+	padding-bottom: 10%;
+}
+.activity-box .activity-list{
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+}
+.activity-box .activity-list img{
+	width: 100%;
+}
+.activity-box .activity-list .activity-info{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 32px;
+	background: url('../img/opacity.png') repeat;
+}
+.activity-box .activity-list .activity-info p{
+	color: #012269;
+	font-size: 0.5em;
+	padding-left: 10px;
+	padding-top: 2px;
+	line-height: 1.4em;
+}
+.activity-box .activity-list .activity-left{
+	float: left;
+	width: 70%
+}
+.activity-box .activity-list .activity-right{
+	float: left;
+	width: 30%;
+	padding-top: 4px;
+}
+.activity-box .activity-list .activity-right a{
+	color: #012269;
+	background-color: #88abda;
+	display: block;
+	width: 66px;
+	line-height: 24px;
+	height: 24px;
+	float: right;
+	margin-right: 6%;
+	border-radius: 18px;
+	text-align: center;
+	font-size: 0.8em;
+}
+.information-top{
+	height: 41%;
+}
+.integration-box .level-box{
+	width: 176px;
+	margin: 0 auto;
+}
+.integration-detail{
+	background-color: #193b7d;
+	border-radius:10px;
+	height: 37%;
+	width: 71%;
+	padding: 10px;
+	position: relative;
+}
+.integration-detail .integration-list{
+	width: 96%;
+	overflow-x:hidden;
+	padding:2% 0;
+	height: 76%;
+}
+.integration-detail h3{
+	color: #fff;
+	text-align: center;
+	padding-bottom: 6%;
+	font-size: 1em;
+}
+.integration-detail li{
+	color: #fff;
+	margin: 0 auto;
+	width: 98%;
+	overflow: hidden;
+	line-height: 36px;
+	height: 36px;
+	font-size: 0.8em;
+	background: url('../img/line_1.png') no-repeat center bottom /cover;
+}
+.integration-detail li span.left{
+	float: left;
+	padding-left: 13%;
+
+}
+.integration-detail li span.right{
+	float: right;
+	padding-right: 13%;
+
+}
+.integration-detail i{
+	width: 20px;
+	display: block;
+	bottom: -8px;
+	left: 45%;
+	position: absolute;
+	height: 8px;
+	background: url('../img/triangle_icon2.png') no-repeat center center /cover;
+}
+.integration-box .btn-box{
+	padding-top: 5%;
+}
+.integration-box .btn-box a{
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #012269;
+	background-color: #88abda;
+	border-radius: 20px;
+}
+.information-position{
+	position:absolute;
+	top: 50%;
 }

@@ -17,17 +17,15 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
-	
-		<link rel="stylesheet" href="css/swiper.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
 		<div class="pager bg-1">
-			<div class="element-box back-btn">
+			<div class="element-box back-btn" style="padding-bottom:1%">
 				<a href=""><img src="img/back_btn.png"></a>
 			</div>
-			<div class="scroll-box">
+			<div class="scroll-box center-box information-box information-position">
 				<div class="information-title center-box">
 					个人信息：
 				</div>
@@ -49,76 +47,127 @@
 				<div class="form-box center-box">
 					<form>
 						<!-- 隐藏域是性别 	 -->
-						<input type="hidden" class="sex-value">
-						<div class="input-box only-read">
-							<label for="name" class="label-name">name</label>
-							<input type="text" readonly class="name-input input-element" value="Marie Simpson">								
-						</div>
-						<div class="input-box">
-							<label for="nickname" class="label-nickname">nickname</label>
-							<input type="text" class="nick-input input-element" placeholder="请输入昵称">
-						</div>
-						<div class="input-box only-read">
-							<label for="mobile" class="label-mobile">mobile</label>
-							<input type="text" readonly class="mobile-input input-element" value="1582183321">
-						</div>
-						<div class="input-box">
-							<label for="birthday" class="label-birthday">birthday</label>
-							<div class="overflow-box select-box birthday-select">
-								<select class="select-left">
-									<option >1993</option>
-									<option >2006</option>
-									<option >1992</option>
-									<option >1991</option>
-								</select>
+						<div class="bag-box">
+							<input type="hidden" class="sex-value">
+							<div class="input-box only-read" style="height:29px">
+								<label for="name" class="label-name">name</label>
+								<input type="text" readonly class="name-input input-element" value="Marie Simpson">								
 							</div>
-							
-							<em>年</em>
-							<div class="overflow-box select-box birthday-select-short">
-								<select>
-									<option >7</option>
-									<option >8</option>
-								</select>
+							<div class="input-box"  style="height:29px">
+								<label for="nickname" class="label-nickname">nickname</label>
+								<input type="text" class="nick-input input-element" placeholder="请输入昵称">
 							</div>
-							<em>月</em>
-							<div class="overflow-box select-box birthday-select-short">
-								<select>
-									<option >29</option>
-									<option >30</option>
-								</select>
+							<div class="input-box only-read"  style="height:29px">
+								<label for="mobile" class="label-mobile">mobile</label>
+								<input type="text" readonly class="mobile-input input-element" value="1582183321">
 							</div>
-							<em>日</em>
+							<div class="input-box"  style="height:29px">
+								<label for="birthday" class="label-birthday">birthday</label>
+								<div class="overflow-box select-box birthday-select">
+									<select class="select-left">
+										<option >1993</option>
+										<option >2006</option>
+										<option >1992</option>
+										<option >1991</option>
+									</select>
+								</div>
+								
+								<em>年</em>
+								<div class="overflow-box select-box birthday-select-short">
+									<select>
+										<option >7</option>
+										<option >8</option>
+									</select>
+								</div>
+								<em>月</em>
+								<div class="overflow-box select-box birthday-select-short">
+									<select>
+										<option >29</option>
+										<option >30</option>
+									</select>
+								</div>
+								<em>日</em>
+							</div>
+						
+							<div class="input-box"  style="height:29px">
+								<label for="email" class="label-email">mobile</label>
+								<input type="text" class="email-input input-element" placeholder="请输入E-mail">
+							</div>
 						</div>
-						<div class="input-box">
+						<div class="input-box"  style="height:29px">
 							<label for="city" class="label-city">city</label>
-							<div class="overflow-box select-box">
-								<select class="select-left">
-									<option >上海</option>
-									<option >上海</option>
-									<option >上海</option>
+							<div class="overflow-box select-box" style="width:23%">
+								<select class="select-left province-select">
 									<option ></option>
+									<option >上海</option>
+									<option >北京</option>
+								
 								</select>
 							</div>
 							
 							<em>省</em>
-							<div class="overflow-box select-box">
-								<select>
-									<option >上海</option>
-									<option >上海</option>
+							<div class="overflow-box select-box" style="width:23%">
+								<select class="city-select">
+									<option ></option>
+									
 								</select>
 							</div>
 							<em>市</em>
 						</div>
-						<div class="input-box">
-							<label for="job" class="label-job">job</label>
-							<input type="text" class="job-input">
+						<div class="small-input"  style="height:29px">
+							<div class="small-box" style="width:67%">
+								<label for="job" class="label-job">job</label>
+								<input type="text" placeholder="请输入工作单位" class="job-input" style="width:67%;">
+
+							</div>
+							<div class="overflow-box select-box small-box" style="width:29%;height:82%">
+								<select style="width:29px;float:left"class="select-left">
+									<option >年限</option>
+									<option >2006</option>
+									<option >1992</option>
+									<option >1991</option>
+								</select>
+								<em>年</em>
+							</div>
 						</div>
-						<div class="check-box">
-							<input type="checkbox" class="check-element">
-							<a href="javascript:void(0);" class="agreement-btn">我已阅读并同意接受《会员协议》</a>
+						<div class="information-title center-box">
+							礼品收货信息：
 						</div>
+						<div class="input-box"  style="height:29px">
+							<label for="receiver" class="label-name">name</label>
+							<input type="text" class="receiver-input input-element" placeholder="请输入收货人姓名">								
+						</div>
+						<div class="input-box"  style="height:29px">
+							<label for="mobile" class="label-mobile">mobile</label>
+							<input type="text" class="receiver-mobile input-element" placeholder="请输入收货人电话">
+						</div>
+						<div class="input-box"  style="height:29px">
+							<label for="city" class="label-city">city</label>
+							<div class="overflow-box select-box">
+								<select class="select-left province-select" style="width:23%">
+									<option ></option>
+									<option >北京</option>
+									<option >上海</option>
+									
+								</select>
+							</div>
+							
+							<em>省</em>
+							<div class="overflow-box select-box" style="width:23%">
+								<select class="city-select">
+									<option ></option>
+									
+								</select>
+							</div>
+							<em>市</em>
+						</div>
+						<div class="input-box"  style="height:29px">
+							<label for="city" class="label-city">city</label>
+							<input type="text" placeholder="请输入收货人地址">
+						</div>
+						<p class="input-tips">请正确填写收货地址以便能收到经典色卡。</p>
 						<div class="submit-box">
-							<button type="button">注&nbsp;&nbsp;册</button>
+							<button type="button">确认修改</button>
 						</div>
 					</form>
 				</div>
@@ -128,7 +177,7 @@
 			<div class="close-btn close-js">
 				<a href="javascript:void(0);"></a>
 			</div>
-			<p class="tips-info">请输入正确的手机号</p>
+			<p class="tips-in">请输入正确的手机号</p>
 			<div class="btn-box close-js">
 				<a href="javascript:void(0);">返&nbsp;&nbsp;&nbsp;回</a>
 			</div>
@@ -147,11 +196,9 @@
 			<div class="close-btn close-js">
 				<a href="javascript:void(0);"></a>
 			</div>
-			<h4>恭喜您，<br/>成功注册加入多乐士设计师工会！</h4>
+			<h4>恭喜您，<br/>修改成功</h4>
 			<p class="success-p">
-				*立即认证，您可获得价值188元的多乐士经典配色手册一本<br/>
-				*完成**任务，您可获得**勋章<br />
-				*参加**活动，上传作品，您可获得**积分
+				
 			</p>
 			<div class="btn-box close-js">
 				<a href="javascript:void(0);">前往我的公会</a>
@@ -161,46 +208,7 @@
 	</body>
 	<script>
 		$(function(){
-			
 
-			$('.code-btn').bind('touchend',function(e){
-				e.stopPropagation();
-				var mobile = $('.mobile-input').val();
-				if(!mobileVerify(mobile)){
-					$('.tips-pop').find('p').html('请输入正确的手机号')
-					$('.tips-pop').show();
-				}else{
-					
-					//手机号通过验证 发送验证码
-					if(sendVcode()){
-						//如果发送成功 验证码按钮不能按
-						var that = $(this);
-						$(that).attr('disabled',true);
-						$('.count-time').show();
-						var time = $('.count-time span').text();
-						var timer = setInterval(function(){
-							if(time==0){
-								$('.count-time').hide();
-								$('.count-time span').html(60)
-								$(that).attr('disabled',false)
-								clearInterval(timer);
-							}else{
-								$('.count-time span').html(--time)
-							}
-						},1000)
-					}
-
-				}
-			})
-			//发送验证码方法
-			function sendVcode(){
-				return true;
-			}
-
-			//验证码验证
-			function vcodeVerify(){
-				return true;
-			}
 
 			
 			function mobileVerify(value){
@@ -219,40 +227,10 @@
 
 
 			$('.form-box .submit-box button').bind('touchend',function(){
-				var inputs = $('input');
-				var mobile = $('.mobile-input').val();
-			
-				for (var i = 0; i <inputs.length; i++) {
+				
 
-					if(!$(inputs).eq(i).val()){
-						$('.tips-pop p').html('账户信息未完善，<br/>请返回页面继续补充信息再审核！')
-						$('.tips-pop').show();
-						return;
-					}else if($(inputs).eq(i).hasClass('mobile-input')){
-						if(!mobileVerify(mobile)){
-							$('.tips-pop').find('p').html('请输入正确的手机号')
-							$('.tips-pop').show();
-							return 
-						}
-					}
-				};
-				var selects = $('select');
-				for (var i = 0; i <selects.length; i++) {
-					if(!$(selects).eq(i).val()){
-						$('.tips-pop p').html('账户信息未完善，<br/>请返回页面继续补充信息再审核！')
-						$('.tips-pop').show();
-						return;
-					}
-				};
-				//验证码验证
-				if(!vcodeVerify()){
-					$('.tips-pop p').html('账户信息未完善，<br/>请返回页面继续补充信息再审核！')
-					$('.tips-pop').show();
-					return;
-				}
-
-				if(!$('input.check-element').is(':checked')){
-					$('.tips-pop p').html('账户信息未完善，<br/>请返回页面继续补充信息再审核！')
+				if(!$('input.nick-input').val()){
+					$('.tips-pop p').html('请填写昵称！')
 					$('.tips-pop').show();
 					return;
 
@@ -264,6 +242,39 @@
 				$('.success-pop').show();
 
 			})
+
+			//城市关联数组模拟
+			$('.province-select').bind('change',function(){
+				var array = new Array();
+				array = {
+					'北京':[
+						'东城',
+						'西城'
+					],
+					'上海':[
+						'闸北',
+						'杨浦'
+					]
+
+				};
+				var value = $(this).val();
+				
+				var city = array[value];
+				$(this).parents('.input-box').find('.city-select').html('<option></option>');
+				for (var i = 0; i < city.length; i++) {
+					
+					$(this).parents('.input-box').find('.city-select').append('<option>'+city[i]+'</option>')
+				};
+			})
+
+			
+			var Height = $('.bag-box').outerHeight()+$('.information-title').outerHeight()+$('.face-box').outerHeight()+$('.sex-box').outerHeight()+$('.name-box').outerHeight()+8;
+			$('.scroll-box').css('height',Height);
+			var windowHeight = $(window).height()
+			var margin = '-'+(Height/2+windowHeight/100*3)+'px';
+			$('.scroll-box').css('margin-top',margin)
+
+		
 
 		})
 		

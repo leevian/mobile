@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>勋章进度</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="element-box back-btn" style="padding-bottom:26px">
+				<a href=""><img src="img/back_btn.png"></a>
+			</div>
+			<div class="center-box information-box" style="height:85%">
+				
+				<h4 class="list-title" style="height:6%">
+					邀请名单
+				</h4>
+				<div class="list-body center-box" >
+					<i></i>
+					<div class="list-box center-box">
+						<ul>
+							<li>
+								<div class="left-box">
+									<p>您邀请了****</p>
+								</div>
+								<!-- status-1  未认证 -->
+								<!-- status-2  已认证 -->
+								<div class="right-box status-1">
+								</div>
+							</li>
+							<li>
+								<div class="left-box">
+									<p>您邀请了****</p>
+								</div>
+								
+								<div class="right-box status-2">
+								</div>
+							</li>
+							<li>
+								<div class="left-box">
+									<p>您邀请了****</p>
+								</div>
+								
+								<div class="right-box status-2">
+								</div>
+							</li>
+							<li>
+								<div class="left-box">
+									<p>您邀请了****</p>
+								</div>
+								
+								<div class="right-box status-2">
+								</div>
+							</li>
+							<li>
+								<div class="left-box">
+									<p>您邀请了****</p>
+								</div>
+								
+								<div class="right-box status-2">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="list-p">********************,<br/>
+*************************************</p>
+			</div>
+		</div>
+		
+		<div class="pop-overlay agreement-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>会员协议</h4>
+			<p class="agreement-p">
+				xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxx<br/>
+				xxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxxxxxxxxxxxx<br/>
+			</p>
+		</div>
+		<div class="pop-overlay success-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>恭喜您，<br/>修改成功</h4>
+			<p class="success-p">
+				
+			</p>
+			<div class="btn-box close-js">
+				<a href="javascript:void(0);">前往我的公会</a>
+			</div>
+		</div>
+	    
+	</body>
+	<script>
+		$(function(){
+			
+
+			
+			function mobileVerify(value){
+				var mobile=/^1[3|4|5|7|8]\d{9}$/;
+				if(mobile.test(value)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+
+			$('.agreement-btn').bind('touchend',function(){
+				$('.agreement-pop').show();
+			})
+
+
+			$('.form-box .submit-box button').bind('touchend',function(){
+				
+
+				if(!$('input.nick-input').val()){
+					$('.tips-pop p').html('请填写昵称！')
+					$('.tips-pop').show();
+					return;
+
+				}
+
+				//提交数据
+
+				//如果提交成功执行
+				$('.success-pop').show();
+
+			})
+
+			var liHeight = $('.list-box li').outerHeight();
+			liHeight = liHeight*4;
+			$('.list-box').css('height',liHeight)
+
+		})
+		
+		
+		
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

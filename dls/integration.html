@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>上传资质证明</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="element-box back-btn" style="padding-bottom:5%">
+				<a href=""><img src="img/back_btn.png"></a>
+			</div>
+			<div class="center-box information-box integration-box" style="height:80%">
+				<div class="information-top">
+					<div class="face-box center-box ">
+						<img src="img/face_f.jpg">
+
+					</div>
+					<div class="name-box" style="height:11%;">
+						<em>Marie Simpson</em>
+
+					</div>
+					<div class="level-box">
+						<a href="" class="level-info level-1">
+							<span style="font-size:0.5em;display:block;width:100px;"><i></i>LV1/200分</span>
+							<em></em>
+						</a>
+					</div>
+				</div>
+				<div class="integration-detail center-box">
+					<h3>积分明细</h3>
+					<div class="integration-list">
+						<ul>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+							<li>
+								<span class="left">1.完成注册</span>
+								<span class="right">获得**积分</span>
+							</li>
+						</ul>
+					</div>
+					<i></i>
+				</div>
+				<div class="standard-box center-box" style="width:130px;">
+					<a href="javascript:void(0);">
+						<em style="font-size:0.8em">了解积分规则说明</em>
+					</a>
+				</div>
+				<div class="btn-box">
+					<a href="javascript:void(0);">积分兑换</a>
+				</div>
+				
+				
+			</div>
+		</div>
+	    <div class="pop-overlay agreement-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>积分规则说明</h4>
+			<p class="agreement-p">
+				xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxx<br/>
+				xxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxxxxxxxxxxxx<br/>
+			</p>
+		</div>
+		<div class="pop-overlay tips-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<p class="tips-in" style="font-size:1em">积分兑礼开发中......</p>
+			
+		</div>
+	</body>
+	<script>
+		$(function(){
+			
+			$('.uploaded-image a.close-btn').bind('touchend',function(){
+				var str = '<div class="upload-box"><em></em><input class="update"type="file" multiple name="myfile[]"type="file"/></div>'
+				$(this).parents('li').html(str)
+			})
+
+			$('.standard-box a').bind('touchend',function(){
+				$('.agreement-pop').show();
+			})
+			
+			$('.btn-box').bind('touchend',function(){
+				
+				$('.tips-pop').show();
+				
+			})
+
+			var width = $('.ul-box').width();
+			
+			$('.ul-box li').filter(function(){
+				var w = width/4-width*0.045;
+				$(this).css('width',w);
+				$(this).css('height',w);
+			})
+			
+
+
+		})
+		
+		
+		
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

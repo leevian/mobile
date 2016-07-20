@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>勋章进度</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="element-box back-btn" style="padding-bottom:1%">
+				<a href=""><img src="img/back_btn.png"></a>
+			</div>
+			<div class="center-box information-box">
+				<!-- 认证过的话有identified这个class -->
+				<div class="">
+					<div class="face-box center-box "style="margin-bottom:3%">
+						<img src="img/face_f.jpg">
+
+					</div>
+					<div class="name-box" style="padding-bottom:7px;">
+						<em>Marie Simpson</em>
+						<span class="identified-icon"><img src="img/identified_icon.png"></span>
+
+					</div>
+				</div>
+				<div class="mission-body center-box" >
+					<div class="mission-box center-box">
+						<ul>
+							<li>
+								<!-- 点亮的话用participated -->
+								<div class="left-info list-1 participated">
+									认证达成
+								</div>
+								<div class="right-info">
+									<div class="bar-box">
+										<em>
+											<i>0/1</i>
+											<!-- 百分比控制进度 -->
+											<strong class="green" style="width:10%"></strong>
+											<span class="green"style="left:9%"></span>
+											
+										</em>
+									</div>
+									<div class="btn-box">
+										<a href="">任务说明</a>
+										<a href="verify.html">立即参与</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-info list-2 participated">
+									活动胜者
+								</div>
+								<div class="right-info">
+									<div class="bar-box">
+										<em>
+											<i>0/1</i>
+											<!-- 百分比控制进度 -->
+											<strong class="yellow" style="width:10%"></strong>
+											<span class="yellow"style="left:9%"></span>
+											
+										</em>
+									</div>
+									<div class="btn-box">
+										<a href="">任务说明</a>
+										<a href="">立即参与</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-info list-3 ">
+									发展新人
+								</div>
+								<div class="right-info">
+									<div class="bar-box">
+										<em>
+											<i>0/1</i>
+											<!-- 百分比控制进度 -->
+											<strong class="red" style="width:10%"></strong>
+											<span class="red"style="left:9%"></span>
+											
+										</em>
+									</div>
+									<div class="btn-box">
+										<a href="">任务说明</a>
+										<a href="invitation.html">立即参与</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-info list-4 ">
+									公会调研
+								</div>
+								<div class="right-info">
+									<div class="bar-box">
+										<em>
+											<i>0/1</i>
+											<!-- 百分比控制进度 -->
+											<strong class="red" style="width:10%"></strong>
+											<span class="red"style="left:9%"></span>
+											
+										</em>
+									</div>
+									<div class="btn-box">
+										<a href="">任务说明</a>
+										<a href="">立即参与</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-info list-5 participated">
+									投稿达人
+								</div>
+								<div class="right-info">
+									<div class="bar-box">
+										<em>
+											<i>0/1</i>
+											<!-- 百分比控制进度 -->
+											<strong class="red" style="width:10%"></strong>
+											<span class="red"style="left:9%"></span>
+											
+										</em>
+									</div>
+									<div class="btn-box">
+										<a href="">任务说明</a>
+										<a href="">立即参与</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pop-overlay tips-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<p class="tips-info">请输入正确的手机号</p>
+			<div class="btn-box close-js">
+				<a href="javascript:void(0);">返&nbsp;&nbsp;&nbsp;回</a>
+			</div>
+		</div>
+		<div class="pop-overlay agreement-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>会员协议</h4>
+			<p class="agreement-p">
+				xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxx<br/>
+				xxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxxxxxxxxxxxx<br/>
+			</p>
+		</div>
+		<div class="pop-overlay success-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>恭喜您，<br/>修改成功</h4>
+			<p class="success-p">
+				
+			</p>
+			<div class="btn-box close-js">
+				<a href="javascript:void(0);">前往我的公会</a>
+			</div>
+		</div>
+	    
+	</body>
+	<script>
+		$(function(){
+			
+
+			
+			function mobileVerify(value){
+				var mobile=/^1[3|4|5|7|8]\d{9}$/;
+				if(mobile.test(value)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+
+			$('.agreement-btn').bind('touchend',function(){
+				$('.agreement-pop').show();
+			})
+
+
+			$('.form-box .submit-box button').bind('touchend',function(){
+				
+
+				if(!$('input.nick-input').val()){
+					$('.tips-pop p').html('请填写昵称！')
+					$('.tips-pop').show();
+					return;
+
+				}
+
+				//提交数据
+
+				//如果提交成功执行
+				$('.success-pop').show();
+
+			})
+
+			var liHeight = $('.mission-box li').outerHeight();
+			liHeight = liHeight*3;
+			$('.mission-box').css('height',liHeight)
+
+		})
+		
+		
+		
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

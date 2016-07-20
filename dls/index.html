@@ -17,8 +17,6 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
-	
-		<link rel="stylesheet" href="css/swiper.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
@@ -36,8 +34,8 @@
 				<a href="javascript:void(0);" class="active sex-btn sex-male"></a>
 				<a href="javascript:void(0);" class="sex-btn sex-female"></a>
 			</div>
-			<div class="form-box center-box">
-				<form>
+			<div class="form-box center-box" style="height:62%">
+				<form style="height:65%">
 					<!-- 隐藏域是性别 	 -->
 					<input type="hidden" class="sex-value">
 					<div class="input-box">
@@ -53,33 +51,38 @@
 							<label for="mobile" class="label-mobile">mobile</label>
 							<input type="text" class="mobile-input input-element" placeholder="请输入手机号">	
 						</div>
-						<button type="button"class="code-btn">验证码</button>
-						<button class="count-time" disabled><span>60</span>秒</button>
+						<div class="code-div">
+							<input type="text" placeholder="验证码"  style="min-height:22px"class="code-input">
+						</div>
+						<div class="button-div">
+							<button class="count-time code-btn"><strong>发送</strong></button>
+						</div>
+						
 					
 					</div>
 					<div class="input-box">
 						<label for="city" class="label-city">city</label>
 						<div class="overflow-box select-box">
-							<select class="select-left">
-								<option >上海</option>
-								<option >上海</option>
-								<option >上海</option>
+							<select class="select-left province-select">
 								<option ></option>
+								<option >北京</option>
+								<option >上海</option>
+								
 							</select>
 						</div>
 						
 						<em>省</em>
 						<div class="overflow-box select-box">
-							<select>
-								<option >上海</option>
-								<option >上海</option>
+							<select class="city-select">
+								<option ></option>
+								
 							</select>
 						</div>
 						<em>市</em>
 					</div>
 					<div class="input-box">
 						<label for="job" class="label-job">job</label>
-						<input type="text" class="job-input">
+						<input type="text" placeholder="请输入工作单位"class="job-input">
 					</div>
 					<div class="check-box">
 						<input type="checkbox" class="check-element">
@@ -95,7 +98,7 @@
 			<div class="close-btn close-js">
 				<a href="javascript:void(0);"></a>
 			</div>
-			<p class="tips-info">请输入正确的手机号</p>
+			<p class="tips-in">请输入正确的手机号</p>
 			<div class="btn-box close-js">
 				<a href="javascript:void(0);">返&nbsp;&nbsp;&nbsp;回</a>
 			</div>
@@ -120,14 +123,37 @@
 				*完成**任务，您可获得**勋章<br />
 				*参加**活动，上传作品，您可获得**积分
 			</p>
-			<div class="btn-box close-js">
-				<a href="javascript:void(0);">前往我的公会</a>
+			<div class="btn-box">
+				<a href="center.html">前往我的公会</a>
 			</div>
 		</div>
-	    
+	    <div class="pop-overlay success-pop-invited" >
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>恭喜!<br/>成功注册加入多乐士设计师工会！</h4>
+			<p class="success-p">
+				您可长按二维码关注“多乐士”，了解更多会员信息
+			</p>
+			<div class="img-box">
+				<img src="img/keycode.jpg">
+			</div>
+			<p class="p-bottom">
+				您的好友Marie Simpson成功邀请您，
+<br/>您也可以邀请您的朋友一起加入！
+			</p>
+			<div class="btn-box close-js" >
+				<a href="javascript:void(0);">返回</a>
+			</div>
+		</div>
 	</body>
 	<script>
 		$(function(){
+			var height = $('.small-box').height()
+
+			$('.small-input .code-div').css('height',height)
+			$('.small-input button').css('height',height)
+			
 			//性别默认值
 			$('.sex-value').val(1)
 
@@ -144,35 +170,49 @@
 
 				}
 			})
-
-			$('.code-btn').bind('touchend',function(e){
-				e.stopPropagation();
-				var mobile = $('.mobile-input').val();
-				if(!mobileVerify(mobile)){
-					$('.tips-pop').find('p').html('请输入正确的手机号')
-					$('.tips-pop').show();
+			$('.check-element').bind('change',function(){
+				if($(this).is(':checked')){
+					$('.agreement-btn').addClass('active')
 				}else{
-					
-					//手机号通过验证 发送验证码
-					if(sendVcode()){
-						//如果发送成功 验证码按钮不能按
-						var that = $(this);
-						$(that).attr('disabled',true);
-						$('.count-time').show();
-						var time = $('.count-time span').text();
-						var timer = setInterval(function(){
-							if(time==0){
-								$('.count-time').hide();
-								$('.count-time span').html(60)
-								$(that).attr('disabled',false)
-								clearInterval(timer);
-							}else{
-								$('.count-time span').html(--time)
-							}
-						},1000)
-					}
+					$('.agreement-btn').removeClass('active')
 
 				}
+			})
+			$('.code-btn').bind('touchend',function(e){
+				e.stopPropagation();
+				if($(this).attr('disabled')!='disabled'){
+
+					var that = $(this);
+					var mobile = $('.mobile-input').val();
+					if(!mobileVerify(mobile)){
+						$('.tips-pop').find('p').html('请输入正确的手机号')
+						$('.tips-pop').show();
+					}else{
+						
+						//手机号通过验证 发送验证码
+						if(sendVcode()){
+							//如果发送成功 验证码按钮不能按
+							
+							$(that).attr('disabled',true);
+							
+							var time = 60;
+							var timer = setInterval(function(){
+								if(time==0){
+									
+									$('.count-time').html('<strong>发送</strong>')
+									$(that).attr('disabled',false)
+									clearInterval(timer);
+								}else{
+
+									$('.count-time').html('<span>'+(--time)+'秒</span>')
+									
+								}
+							},1000)
+						}
+
+					}
+				}
+				
 			})
 			//发送验证码方法
 			function sendVcode(){
@@ -244,7 +284,35 @@
 
 				//如果提交成功执行
 				$('.success-pop').show();
+				//如果是被邀请的成功
+				// $('.success-pop-invited').show();
 
+			})
+
+
+
+			//城市关联数组模拟
+			$('.province-select').bind('change',function(){
+				var array = new Array();
+				array = {
+					'北京':[
+						'东城',
+						'西城'
+					],
+					'上海':[
+						'闸北',
+						'杨浦'
+					]
+
+				};
+				var value = $(this).val();
+				
+				var city = array[value];
+				$('.city-select').html('<option></option>');
+				for (var i = 0; i < city.length; i++) {
+					
+					$('.city-select').append('<option>'+city[i]+'</option>')
+				};
 			})
 
 		})

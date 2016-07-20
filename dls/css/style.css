@@ -1,18 +1,19 @@
-html, body{position: relative;width:100%;height: 100%;padding:0;margin:0;background: #012269;}
+html, body{font-size:1em;position: relative;width:100%;height: 100%;padding:0;margin:0;background: #012269;}
 img {display:block;width: 100%;padding:0;margin: 0;}
 a{text-decoration: none;}
 ul,li{margin: 0;padding: 0;border:0 none;}
 li{list-style-type:none;}
-h1,h2,h3,h4,h5,h6{padding: 0;margin: 0;}
-em,strong{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;padding: 0;margin: 0;}
+i,em,strong{font-style: normal;}
+p{padding: 0;margin: 0;}
 .pager {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
 .bg-1{
-	background:url('../img/bg_1.jpg') no-repeat 0 0;
+	background:url('../img/bg_1.jpg') no-repeat center bottom;
 	background-size: cover;
 }
 .back-btn{
-	width: 143px;
-	padding: 10px;
+	width: 41%;
+	padding: 2%;
 }
 .center-box{
 	margin: 0 auto;

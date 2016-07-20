@@ -17,8 +17,6 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
-	
-		<link rel="stylesheet" href="css/swiper.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
@@ -28,49 +26,53 @@
 				<a href=""><img src="img/back_btn.png"></a>
 			</div>
 			<!-- 认证过的话加一个class identified -->
-			<div class="top-info center-box identified">
-				<div class="left-face">
-					<a href="">
-						<img src="img/face_f.jpg">
-					</a>
-					
+			<div class="top-info center-box identified" style="height:22%">
+				<div class="left-box" style="width:40%;float:left">
+					<div class="left-face">
+						<a href="information.html">
+							<img src="img/face_f.jpg">
+						</a>
+						
+					</div>
 				</div>
-				<div class="right-info">
-					<div class="right-top">
-						<span class="name-span">Marie Simpson</span>
-						<span class="identified-icon"><img src="img/identified_icon.png"></span>
-						<div class="btn-box">
-							<em></em>
-							<a class="upload-triangle"href="">上传设计师资格证明</a>
+				<div class="right-box" style="width:60%;float:left">
+					<div class="right-info">
+						<div class="right-top">
+							<span class="name-span">Marie Simpson</span>
+							<span class="identified-icon"><img src="img/identified_icon.png"></span>
+							<div class="btn-box">
+								<em></em>
+								<a class="upload-triangle"href="verify.html">上传设计师资格证明</a>
+							</div>
+							
+						</div>
+						<div class="level-box">
+							<a href="" class="level-info level-10">
+								<span><i></i>LV1</span>
+								<em></em>
+							</a>
+						</div>
+						<div class="status-info">
+							<ul>
+								<li class="like-icon">8812</li>
+								<li class="saw-icon">8812</li>
+								<li class="good-icon">8812</li>
+							</ul>
 						</div>
 						
 					</div>
-					<div class="level-box">
-						<a href="" class="level-info level-10">
-							<span><i></i>LV1</span>
-							<em></em>
-						</a>
-					</div>
-					<div class="status-info">
-						<ul>
-							<li class="like-icon">8812</li>
-							<li class="saw-icon">8812</li>
-							<li class="good-icon">8812</li>
-						</ul>
-					</div>
-					
-				</div>
+				</div> 
 			</div>
 			<div class="decorate-box center-box">
 				<h5>我的领袖勋章</h5>
 				<ul class="list-1 list-box center-box">
-					<li><a class="list-01-01" href="">认证达成</a></li>
-					<li><a class="list-01-02" href="">活动胜者</a></li>
-					<li><a class="list-01-03 active"href="">发展新人</a></li>
+					<li><a class="list-01-01" href="job_1.html">认证达成</a></li>
+					<li><a class="list-01-02" href="job_2.html">活动胜者</a></li>
+					<li><a class="list-01-03 active"href="job_3.html">发展新人</a></li>
 				</ul>
 				<ul class="list-2 list-box center-box">
-					<li><a class="list-02-01 active" href="">公会调研</a></li>
-					<li><a class="list-02-02 active" href="">投稿达人</a></li>
+					<li><a class="list-02-01 active" href="job_4.html">公会调研</a></li>
+					<li><a class="list-02-02 active" href="job_5.html">投稿达人</a></li>
 				</ul>
 			</div>
 			<div class="interest-box center-box">
@@ -104,6 +106,20 @@
 			$('.interest-box a').bind('touchend',function(){
 				$('.agreement-pop').show();
 			})
+			$('ul.list-box').filter(function(){
+				var lis = $(this).find('li');
+				var w=0;
+				
+				for(var i=0;i<lis.length;i++){
+					
+					w = w+($(lis[i]).width())+10;
+					
+					
+				}
+				$(this).css('width',w)
+				
+			})
+			
 		})
 		
 		

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>上传资质证明-收货</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="element-box back-btn" style="padding-bottom:2%">
+				<a href=""><img src="img/back_btn.png"></a>
+			</div>
+			<div class="center-box information-box" style="height:80%">
+				<div class="information-title center-box">
+					恭喜您，成功完成资质认证！
+				</div>
+				<p class="information-p">
+					您只需要填写正确收货信息即可获得价值188元的经典色卡一本，<br/>
+					如选择再想想则***********************。
+				</p>
+				<div class="information-title center-box title-bg">
+					礼品收货信息：
+				</div>
+				<div style="height:50%" class="form-box center-box">
+					<form style="height:100%">
+				
+						<div class="input-box">
+							<label for="receiver" class="label-name">name</label>
+							<input type="text" class="receiver-input input-element" placeholder="请输入收货人姓名">								
+						</div>
+						<div class="input-box">
+							<label for="mobile" class="label-mobile">mobile</label>
+							<input type="text" class="receiver-mobile input-element" placeholder="请输入收货人电话">
+						</div>
+						<div class="input-box">
+							<label for="city" class="label-city">city</label>
+							<div class="overflow-box select-box">
+								<select class="select-left province-select">
+									<option ></option>
+									<option >上海</option>
+									<option >北京</option>
+								</select>
+							</div>
+							
+							<em>省</em>
+							<div class="overflow-box select-box">
+								<select class="city-select">
+									<option ></option>
+								
+								</select>
+							</div>
+							<em>市</em>
+						</div>
+						<div class="input-box">
+							<label for="city" class="label-city">city</label>
+							<input type="text" placeholder="请输入收货人地址">
+						</div>
+						<p class="input-tips">请正确填写收货地址以便能收到经典色卡。</p>
+						<div class="submit-box receiver-btn" style="">
+							<button class="sure"type="button">确认</button>
+							<button type="button">再想想</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="pop-overlay tips-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<p class="tips-info">请输入正确的手机号</p>
+			<div class="btn-box close-js">
+				<a href="javascript:void(0);">返&nbsp;&nbsp;&nbsp;回</a>
+			</div>
+		</div>
+		<div class="pop-overlay agreement-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>会员协议</h4>
+			<p class="agreement-p">
+				xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxx<br/>
+				xxxxxxxxxxxxxxxxx<br/>xxxxxxxxxxxxxxxxxxxxxxxx<br/>
+			</p>
+		</div>
+		<div class="pop-overlay success-pop">
+			<div class="close-btn close-js">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<h4>恭喜您，<br/>修改成功</h4>
+			<p class="success-p">
+				
+			</p>
+			<div class="btn-box close-js">
+				<a href="javascript:void(0);">前往我的公会</a>
+			</div>
+		</div>
+	    
+	</body>
+	<script>
+		$(function(){
+			
+			function mobileVerify(value){
+				var mobile=/^1[3|4|5|7|8]\d{9}$/;
+				if(mobile.test(value)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+
+
+
+			$('.form-box .submit-box .sure').bind('touchend',function(){
+			
+				// 提交表单
+				$('.success-pop').show()
+
+			})
+
+
+			//城市关联数组模拟
+			$('.province-select').bind('change',function(){
+				var array = new Array();
+				array = {
+					'北京':[
+						'东城',
+						'西城'
+					],
+					'上海':[
+						'闸北',
+						'杨浦'
+					]
+
+				};
+				var value = $(this).val();
+				
+				var city = array[value];
+				$('.city-select').html('<option></option>');
+				for (var i = 0; i < city.length; i++) {
+					
+					$('.city-select').append('<option>'+city[i]+'</option>')
+				};
+			})
+
+		})
+		
+		
+		
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

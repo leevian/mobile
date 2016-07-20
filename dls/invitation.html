@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>邀请好友</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <!-- 禁止浏览器从本地缓存中调阅页面。-->
+    <meta http-equiv="pragram" content="no-cache">
+    <!--网页不保存在缓存中，每次访问都刷新页面。-->
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <!--同上面意思差不多，必须重新加载页面-->
+    <meta http-equiv="expires" content="0">
+    <!-- Mobile Devices Support @begin -->
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .conter-titel {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            color: #fff;
+            line-height: 40px;
+            margin-top: 5%;
+        }
+
+        .conter-triangle {
+            /*采用透明加背景*/
+            /*width: 0;
+            height: 0;
+            margin: auto;
+            padding: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            background: url(img/triangle_icon1.png)no-repeat center;*/
+            width: 27px;
+            height: 13px;
+            margin: auto;
+            background: url(img/triangle_icon1.png)no-repeat center;
+        }
+
+        .conter-square {
+            width: 95%;
+            height: 90%;
+            padding: 0 2.5%;
+            border-radius: 5px;
+            overflow: hidden;
+            background: url(img/bg_invita_read.png)no-repeat;
+            background-size: 100% 100%;
+        }
+
+            .conter-square form {
+                font-size: 12px;
+                text-align: left;
+                padding: 10px 10px;
+            }
+
+                .conter-square form div {
+                    line-height: 25px;
+                }
+
+        .form-box .invitation-btn button {
+            width: 97px;
+            margin: 0 15px;
+        }
+
+        .invite-pop {
+            width: 90%;
+            height: 50%;
+            margin: 20% 5%;
+            color: #fff;
+        }
+
+            .invite-pop ul {
+                width: 100%;
+                padding: 25% 0;
+            }
+
+                .invite-pop ul li .icon-box {
+                    width: 25%;
+                    margin: 10px 0;
+                    float: left;
+                }
+
+        .icon-box .icon-img {
+            width: 100%;
+            height: 70px;
+            text-align: center;
+        }
+
+        .icon-box .img-1-1 {
+            background: url(img/send-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-1-2 {
+            background: url(img/friends-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-1-3 {
+            background: url(img/collection-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-1-4 {
+            background: url(img/browser-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-2-1 {
+            background: url(img/accounts-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-2-2 {
+            background: url(img/link-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-2-3 {
+            background: url(img/font-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .img-2-4 {
+            background: url(img/refresh-icon.png)no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .icon-box .icon-txt {
+            width: 100%;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="pager bg-1">
+        <div class="element-box back-btn" style="padding-bottom: 2%s">
+            <a href="">
+                <img src="img/back_btn.png"></a>
+        </div>
+        <div class="center-box">
+            <div class="conter-titel">
+                <div style="font-size: 0.8em">
+                    邀请好友加入多乐士设计师公会，
+                    <br />
+                    完成资质认证，您可获得500积分。
+                </div>
+                <div style="font-size: 1em;">
+                    邀请好友规则
+                </div>
+            </div>
+        </div>
+
+        <div class="center-box" style="max-width: 90%; height: 30%; text-align: center; color: #fff;">
+            <div class="conter-triangle"></div>
+            <div class="conter-square">
+                <div class="scroll-box" style="width: 100%; height: 100%; position: relative; top: 10px;">
+                    <form>
+                        <div>
+                            1.成功邀请好友，您可获得500积分
+                        </div>
+                        <div>
+                            2.被邀请好友加入公会完成注册，同时完成资质认证可以获得价值188元经典色卡(如下图)。
+                        </div>
+                        <div>
+                            3.完成以上，您--邀请好友任务完成。
+                        </div>
+                        <div>
+                            4.完成以上，您的好友--资质任职任务完成
+                        </div>
+                        <div>
+                            5.活动截止时间：
+                        </div>
+                        <div>
+                            6.每人最多可以邀请**为好友。
+                        </div>
+                        <div>
+                            1.成功邀请好友，您可获得500积分
+                        </div>
+                        <div>
+                            2.被邀请好友加入公会完成注册，同时完成资质认证可以获得价值188元经典色卡(如下图)。
+                        </div>
+                        <div>
+                            3.完成以上，您--邀请好友任务完成。
+                        </div>
+                        <div>
+                            4.完成以上，您的好友--资质任职任务完成
+                        </div>
+                        <div>
+                            5.活动截止时间：
+                        </div>
+                        <div>
+                            6.每人最多可以邀请**为好友。
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div style="width: 100%; height: 17%;">
+                <div style="width: 30%; height: auto; float: right; position: relative; top: -50px; right: -10px;">
+                    <img src="img/invita-box.png" />
+                </div>
+            </div>
+            <div class="center-box form-box" style="width: 90%; margin: 0 5%; text-align: center;">
+                <div class="submit-box invitation-btn" style="width:256px;overflow:hidden;padding-top:0;margin:0 auto;">
+                    <button class="list" style="float:left;"type="button">邀请名单</button>
+                    <button class="sure"style="float:left" type="button">马上邀请</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pop-overlay tips-pop">
+        <div class="close-btn close-js">
+            <a href="javascript:void(0);"></a>
+        </div>
+        <div class="invite-pop">
+            <ul>
+                <li>
+                    <div class="icon-box">
+                        <div class="icon-img img-1-1">
+                        </div>
+                        <div class="icon-txt">发送给朋友</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-1-2">
+                        </div>
+                        <div class="icon-txt">分享到朋友圈</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-1-3">
+                        </div>
+                        <div class="icon-txt">收藏</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-1-4">
+                        </div>
+                        <div class="icon-txt">在浏览器打开</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-2-1">
+                        </div>
+                        <div class="icon-txt">查看公众号</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-2-2">
+                        </div>
+                        <div class="icon-txt">复制链接</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-2-3">
+                        </div>
+                        <div class="icon-txt">调整字体</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box" style="">
+                        <div class="icon-img img-2-4">
+                        </div>
+                        <div class="icon-txt">刷新</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-box close-js">
+            <a href="javascript:void(0);">取&nbsp;&nbsp;&nbsp;消</a>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function () {
+        function mobileVerify(value) {
+            var mobile = /^1[3|4|5|7|8]\d{9}$/;
+            if (mobile.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $('.agreement-btn').bind('touchend', function () {
+            $('.agreement-pop').show();
+        })
+
+
+        $('.form-box .submit-box>button.sure').bind('touchend', function () {
+
+
+            $('.tips-pop').show();
+               
+
+         
+
+
+        })
+        $('.form-box .submit-box>button.list').bind('touchend', function () {
+
+
+            location.href="list.html"
+               
+
+         
+
+
+        })
+
+    })
+
+
+
+
+</script>
+</html>
