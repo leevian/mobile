@@ -43,7 +43,7 @@
 				<!-- status-1     状态是：审核中 -->
 				<!-- status-2     状态是：认证失败 -->
 				<!-- status-3     状态是：认证成功 -->
-				<form class="form-upload  status-3">
+				<form class="form-upload  status-0">
 					
 					<div class="uploaded-image center-box">
 						<i></i>
@@ -51,9 +51,11 @@
 	                    <div class="ul-box">
 		                    <ul>
 		                        <li>
-			                  		<a href="javascript:void(0);" class="close-btn"></a>
-			                  		<strong class="ok-icon"></strong>
-			                    	<img src="img/verigy_1.jpg">   
+			                  		<div class="upload-box">
+		                            	
+		                                <input class="update"type="file"  multiple name="myfile[]"type="file"/>
+		                                <em></em>
+		                            </div>
 		                        </li>
 		                        <li>
 		                            <div class="upload-box">
@@ -133,7 +135,6 @@
 			$('.uploaded-image a.close-btn').bind('touchend',function(){
 				var str = '<div class="upload-box"><em></em><input class="update"type="file" multiple name="myfile[]"type="file"/></div>'
 				$(this).parents('li').html(str)
-				return false;
 			})
 
 			$('.standard-box a').bind('touchend',function(){

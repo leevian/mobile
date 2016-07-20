@@ -141,10 +141,11 @@
 	border: 0;
 }
 .form-box .small-input .count-time{
-	padding-left: 17px;
+	padding-left: 15px;
 	width: 57px;
 	font-size: 0.8em;
-	background: url('../img/index_icon.png') no-repeat -118px 3px/640% #fff;
+	padding-right: 0;
+	background: url('../img/index_icon.png') no-repeat -108px 5px/600% #fff;
 }
 .form-box .select-box{
 	float: left;
@@ -225,7 +226,7 @@
 	line-height: 30px;
 	color: #012269;
 	padding: 0;
-	font-size: 1.2em;
+	font-size: 0.8em;
 	background: #88abda;
 	border: 0;
 
@@ -242,7 +243,7 @@
 }
 .agreement-pop p.agreement-p{
 	color: #fff;
-	font-size: 0.8em;
+	font-size: 1em;
 	width: 250px;
 	left: 50%;
 	margin-left: -125px;
@@ -625,9 +626,9 @@
 }
 .footer-btn li{
 	float: left;
-	background-color: #305290;
 	height: 54px;
-	width: 25%;
+	width: 24%;
+	padding:0 0.5%;
 	text-align: center;
 }
 .footer-btn li a{
@@ -635,9 +636,8 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	background-color: #305290;
 	line-height: 47px;
-	border-left: 2px solid #012269;
-	border-right: 2px solid #012269;
 }
 .footer-btn li a.activity-btn{
 	border-left: 0 none;
@@ -752,13 +752,13 @@
 
 }
 .form-box .select-box.birthday-select {
-	width: 17%;
+	width: 16%;
 }
 .form-box .select-box.birthday-select select{
 	width: 100%;
 }
 .form-box .select-box.birthday-select-short {
-	width: 8%;
+	width: 9%;
 }
 .form-box .select-box.birthday-select-short select{
 	width: 100%;
@@ -863,7 +863,7 @@
 	line-height: 1.5em;
 }
 .form-upload .submit-box{
-	padding-top: 70px;
+	padding-top: 10%;
 	text-align: center;
 }
 .form-upload .submit-box button{
@@ -1299,4 +1299,11 @@
 .information-position{
 	position:absolute;
 	top: 50%;
+}
+.form-box .small-input em.em-icon{
+	width:28px;
+	height:26px;
+	background-size:798%;
+	background-position: -158px 7px; 
+	padding-right:0;
 }
