@@ -878,7 +878,20 @@
 }
 .form-upload .status-box{
 	text-align: center;
+	color: #fff;
 	display: none;
+}
+.form-upload .status-box h3{
+	font-size: 1em;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	background: url('../img/line_2.png') no-repeat top center /70%;
+}
+.form-upload .status-box p{
+	font-size: 0.5em;
+	padding-bottom: 1%;
+	background: url('../img/line_2.png') no-repeat bottom center /70%;
+
 }
 .form-upload .status-box img{
 	width: 57%;
@@ -907,10 +920,10 @@
 	padding-top: 30px;
 }
 .form-upload.status-2 .submit-box{
-	padding-top: 14px;
+	padding-top: 30px;
 }
 .form-upload.status-3 .submit-box{
-	padding-top: 4px;
+	padding-top: 30px;
 }
 .form-upload.status-1 .submit-box button{
 	background: #a6a6a6;
@@ -1174,6 +1187,7 @@
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 4%;
+	word-wrap: break-word;
 }
 .activity-box{
 	width: 85%;
