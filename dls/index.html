@@ -34,7 +34,8 @@
 				<a href="javascript:void(0);" class="active sex-btn sex-male"></a>
 				<a href="javascript:void(0);" class="sex-btn sex-female"></a>
 			</div>
-			<div class="form-box center-box" style="height:62%">
+			<!-- height:62% -->
+			<div class="form-box center-box" style="height:298px;">
 				<form style="height:65%">
 					<!-- 隐藏域是性别 	 -->
 					<input type="hidden" class="sex-value">
@@ -49,10 +50,10 @@
 					<div class="small-input">
 						<div class="small-box">
 							<label for="mobile" class="label-mobile">mobile</label>
-							<input type="text" class="mobile-input input-element" placeholder="请输入手机号">	
+							<input type="tel" class="mobile-input number-input input-element" placeholder="请输入手机号">	
 						</div>
 						<div class="code-div">
-							<input type="text" placeholder="验证码"  style="min-height:22px"class="code-input">
+							<input type="tel" placeholder="验证码"  style="padding-left:11px;height:82%;"class="code-input number-input">
 						</div>
 						<div class="button-div">
 							<button class="count-time code-btn"><strong>发送</strong></button>
@@ -69,16 +70,18 @@
 								<option >上海</option>
 								
 							</select>
+							<em>省</em>
 						</div>
 						
-						<em>省</em>
+						
 						<div class="overflow-box select-box">
 							<select class="city-select">
 								<option ></option>
 								
 							</select>
+							<em>市</em>
 						</div>
-						<em>市</em>
+						
 					</div>
 					<div class="input-box">
 						<label for="job" class="label-job">job</label>
@@ -243,9 +246,9 @@
 			$('.form-box .submit-box button').bind('touchend',function(){
 				var inputs = $('input');
 				var mobile = $('.mobile-input').val();
-			
+				
 				for (var i = 0; i <inputs.length; i++) {
-
+					
 					if(!$(inputs).eq(i).val()){
 						$('.tips-pop p').html('账户信息未完善，<br/>请返回页面继续补充信息再审核！')
 						$('.tips-pop').show();
@@ -281,7 +284,7 @@
 				}
 
 				//提交数据
-
+				alert(1)
 				//如果提交成功执行
 				$('.success-pop').show();
 				//如果是被邀请的成功
@@ -314,6 +317,22 @@
 					$('.city-select').append('<option>'+city[i]+'</option>')
 				};
 			})
+
+
+			var inputWidth = $('.input-box').outerWidth()-57;
+			var smallWidth = inputWidth*0.7;
+			var codeWidth = inputWidth*0.27;
+			$('.small-box').css('width',smallWidth)
+			$('.code-div').css('width',codeWidth)
+
+			$('.select-box em').filter(function(){
+
+				var height = $('select').height()-3
+				var height = height+'px'
+				$(this).css('line-height',height);
+			})
+
+			
 
 		})
 		

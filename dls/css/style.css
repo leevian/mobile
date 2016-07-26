@@ -6,13 +6,16 @@ li{list-style-type:none;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;padding: 0;margin: 0;}
 i,em,strong{font-style: normal;}
 p{padding: 0;margin: 0;}
+::-webkit-input-placeholder {
+    color:#a9a9a9;
+}
 .pager {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
 .bg-1{
-	background:url('../img/bg_1.jpg') no-repeat center bottom;
+	background:url('../img/bg_1.jpg') no-repeat center top;
 	background-size: cover;
 }
 .bg-2{
-	background:url('../img/bg_2.jpg') no-repeat center bottom;
+	background:url('../img/bg_2.jpg') no-repeat center top;
 	background-size: cover;
 }
 .back-btn{

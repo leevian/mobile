@@ -48,55 +48,62 @@
 	background: #fff;
 	overflow: hidden;
 	border-radius: 20px;
-	height: 12%;
-	padding:1% 0;
+	height: 10%;
+	padding:2% 0;
 	margin-bottom: 4%;
 }
 .form-box  label{
 	overflow: hidden;
 	display: block;
 	float: left;
-	width: 40px;
+	width: 32px;
+	margin-right: 8px;
 	text-indent: 100px;
-	height: 30px;
-	background: url('../img/index_icon.png') no-repeat center center/800%;
+	height: 100%;
 }
 .form-box label.label-name{
-	background-position: 13px 5px;
+	background: url('../img/person_icon.png') no-repeat center right/60%;
 }
 .form-box label.label-nickname{
-	background-position: -23px 4px;
-	background-size: 730%;
+	background: url('../img/nick_icon.png') no-repeat center right/65%;
+	
 
 }
 .form-box label.label-mobile{
-	background-position: -57px 0px;
-	background-size: 750%;
+	background: url('../img/mobile_icon.png') no-repeat center right/66%;
+	
 }
 .form-box label.label-city{
-	background-position: -141px 4px;
+	background: url('../img/address_icon.png') no-repeat center right/72%;
+	
 }
 .form-box label.label-job{
-	background-position: -182px 2px;
+	background: url('../img/job_icon.png') no-repeat center right/60%;
+	
 }
 .form-box label.label-birthday{
-	background-position: -273px 4px;
+	background: url('../img/birthday_icon.png') no-repeat center right/60%;
+	
 }
 .form-box label.label-email{
-	background-position: 11px -31px;
+	background: url('../img/email_icon.png') no-repeat center right/60%;
+	
 }
 .form-box .small-input{
-	margin-bottom: 4%;
+	margin-bottom: 6%;
 	height: 13%;
 }
 .form-box .small-box{
 	background-color: #fff;
 	border-radius: 20px;
-	height: 87%;
+	height: 79%;
 	width: 58%;
-	padding:1% 0;
+	padding:2% 0;
 	float: left;
-	margin-right: 4px;
+	margin-right: 1%;
+}
+.form-box .small-box input{
+	height: 82%;
 }
 .form-box input{
 	border: 0;
@@ -112,11 +119,11 @@
 }
 .form-box .small-input .button-div{
 	float: left;
-	border-radius: 14px;
+	border-radius: 20px;
 	overflow: hidden;
 	background: #fff;
 	color:#d9d7d7;
-	padding: 1% 0;
+	padding: 2% 0;
 }
 .form-box .small-input button{
 	border: 0;
@@ -126,12 +133,12 @@
 }
 .form-box .small-input .code-div{
 	float: left;
-	border-radius: 14px;
+	border-radius: 20px;
 	text-align: center;
 	background: #fff;
 	color:#d9d7d7;
 	width: 17%;
-	padding: 1% 0;
+	padding: 2% 0;
 	height: 10%;
 	margin-right: 1%;
 	overflow: hidden;
@@ -142,30 +149,38 @@
 }
 .form-box .small-input .count-time{
 	padding-left: 15px;
-	width: 57px;
+	width: 54px;
+	color:#a9a9a9;
 	font-size: 0.8em;
 	padding-right: 0;
-	background: url('../img/index_icon.png') no-repeat -108px 5px/600% #fff;
+	background: url('../img/send_icon.png') no-repeat 5px center/29% #fff;
 }
 .form-box .select-box{
 	float: left;
-	width: 26%;
+	width: 40%;
+	position: relative;
 	height: 100%;
 }
 .form-box .select-box select{
-	width: 63px;
+	width: 100%;
 	border: 0;
 	-webkit-appearance: none;
 	background: #fff;
 	height: 99%;
 	font-size: 0.8em;
-	padding-left: 4px;
+	position: absolute;
+	padding-left: 24%;
+	z-index: 999;
 	border-radius: 0;
-	color: #d9d7d7;
+	color: #000;
 	text-align: center;
+	background-color:transparent;
 }
 .form-box .select-box select option{
-	color: #d9d7d7;
+	color: #000;
+	text-align: center;
+	-webkit-appearance: none;
+
 }
 .form-box .select-box select.select-left{
 	border-left: 1px solid #2954a4;
@@ -174,15 +189,19 @@
 }
 .form-box .input-box em, .form-box .small-input em{
 	font-style: normal;
-	color: #d9d7d7;
+	color: #a9a9a9;
 	float: left;
-	line-height: 27px;
+	line-height: 25px;
+	position: absolute;
+	padding-top: 2px;
 	width: 16px;
-	font-size: 0.9em;
+	right: 0;
+	top: 0;
+	font-size: 0.8em;
 	display: block;
-	padding-top: 1px;
+	vertical-align: middle;
 	padding-right: 20px;
-	background: url('../img/index_icon.png') no-repeat -159px 6px/650% #fff;
+	background: url('../img/triangle_icon2.png') no-repeat 16px 8px/37% #fff;
 }
 .form-box .small-input em{
 	color: #fff;
@@ -193,22 +212,28 @@
 	overflow: hidden;
 }
 .form-box .check-box input{
-	width: 5%;
+	width: 8%;
 	height: 22px;
 	background: #fff;
 	border-radius: 5px;
 	float: left;
 	padding: 0;
+	margin-right: 2%;
+	-webkit-appearance: none;
+}
+.form-box .check-box input:checked{
+	background: url('../img/yes.png') no-repeat 3px 6px/80%;
+	background-color: #fff;
 }
 .form-box .check-box a{
 	display: block;
 	float: left;
-	width: 92%;
+	width: 88%;
 	line-height: 26px;
 	text-align: center;
 	color: #d9d7d7;
 	text-decoration: none;
-	font-size: 0.7em;
+	font-size: 0.8em;
 	background: #fff;
 	border-radius: 10px;
 }
@@ -493,20 +518,28 @@
 	margin-right: 4px;
 	background-size: 40%;
 	color: #fff;
-	line-height: 12px;
-	text-align: right;
+	height: 1.1em;
+	line-height: 1.1em;
+	text-align: center;
 	font-size: 0.8em;
 	width: 40px;
-	padding:5px 4px 5px 6px;
+	padding:5px 0px 5px 14px;
+}
+.top-info .status-info li span{
+	line-height: 1.1em;
+
 }
 .top-info .status-info li.like-icon{
 	background-position: 5px 7px;
 }
 .top-info .status-info li.saw-icon{
-	background-position: 3px -13px;
+	background-position: 4px -14px;
 }
 .top-info .status-info li.good-icon{
-	background-position: 4px -34px;
+	background-position: 5px -36px;
+}
+.top-info .status-info li span{
+	text-align: center;
 }
 .decorate-box{
 	width: 92%;
@@ -627,8 +660,8 @@
 .footer-btn li{
 	float: left;
 	height: 54px;
-	width: 24%;
-	padding:0 0.5%;
+	width: 24.6%;
+	padding:0 0.2%;
 	text-align: center;
 }
 .footer-btn li a{
@@ -673,6 +706,8 @@
 	height: 483px;
 	width: 90%;
 	overflow-x:hidden;
+	overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
 }
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
 ::-webkit-scrollbar  
@@ -752,13 +787,13 @@
 
 }
 .form-box .select-box.birthday-select {
-	width: 16%;
+	width: 32%;
 }
 .form-box .select-box.birthday-select select{
 	width: 100%;
 }
 .form-box .select-box.birthday-select-short {
-	width: 9%;
+	width: 24%;
 }
 .form-box .select-box.birthday-select-short select{
 	width: 100%;
@@ -951,7 +986,7 @@
 	display: none;
 }
 .form-box  .receiver-btn {
-	padding-top: 9%;
+	padding-top: 16%;
 }
 .form-box  .receiver-btn button {
 	width: 74px;
@@ -969,6 +1004,9 @@
 	width: 93%;
 	height: 344px;
 	overflow-x:hidden;
+	overflow-scrolling: touch;
+
+	-webkit-overflow-scrolling: touch;
 }
 .mission-box li{
 	overflow: hidden;
@@ -1153,6 +1191,9 @@
 .list-body .list-box{
 	width: 96%;
 	overflow-x:hidden;
+	overflow-scrolling: touch;
+
+	-webkit-overflow-scrolling: touch;
 }
 .list-box li{
 	padding-top: 20px;
@@ -1260,6 +1301,9 @@
 	overflow-x:hidden;
 	padding:2% 0;
 	height: 76%;
+	overflow-scrolling: touch;
+
+	-webkit-overflow-scrolling: touch;
 }
 .integration-detail h3{
 	color: #fff;
@@ -1307,17 +1351,24 @@
 	line-height: 30px;
 	text-align: center;
 	color: #012269;
+	font-size: 0.8em;
 	background-color: #88abda;
 	border-radius: 20px;
 }
 .information-position{
 	position:absolute;
 	top: 50%;
+	left: 50%;
 }
 .form-box .small-input em.em-icon{
 	width:28px;
-	height:26px;
-	background-size:798%;
-	background-position: -158px 7px; 
+	top: 15%;
+	right: 15%;
+	height:17px;
+	background-size:48%;
+	background-position: 9px 12px; 
 	padding-right:0;
 }
+.information-position .form-box em{
+	background-position: 16px 13px; 
+} 

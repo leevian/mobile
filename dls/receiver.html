@@ -36,7 +36,7 @@
 				<div class="information-title center-box title-bg">
 					礼品收货信息：
 				</div>
-				<div style="height:50%" class="form-box center-box">
+				<div style="height:192px" class="form-box center-box">
 					<form style="height:100%">
 				
 						<div class="input-box">
@@ -55,16 +55,18 @@
 									<option >上海</option>
 									<option >北京</option>
 								</select>
+								<em>省</em>
 							</div>
 							
-							<em>省</em>
+							
 							<div class="overflow-box select-box">
 								<select class="city-select">
 									<option ></option>
 								
 								</select>
+								<em>市</em>
 							</div>
-							<em>市</em>
+							
 						</div>
 						<div class="input-box">
 							<label for="city" class="label-city">city</label>
@@ -157,6 +159,13 @@
 					
 					$('.city-select').append('<option>'+city[i]+'</option>')
 				};
+			})
+
+			$('.select-box em').filter(function(){
+
+				var height = $('select').height()-3
+				var height = height+'px'
+				$(this).css('line-height',height);
 			})
 
 		})
