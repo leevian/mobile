@@ -1085,6 +1085,14 @@
 	background: url('../img/red_bar.png') no-repeat left center;
 
 }
+.mission-box li .bar-box em strong.blue{
+	background: url('../img/blue_bar.png') no-repeat left center;
+
+}
+.mission-box li .bar-box em strong.purple{
+	background: url('../img/purple_bar.png') no-repeat left center;
+
+}
 .mission-box li .bar-box em i{
 	position: absolute;
 	z-index: 9;
@@ -1108,6 +1116,14 @@
 }
 .mission-box li .bar-box em span.red{
 	background: url('../img/red_brush.png') no-repeat center center /100% 100%;
+
+}
+.mission-box li .bar-box em span.blue{
+	background: url('../img/blue_brush.png') no-repeat center center /100% 100%;
+
+}
+.mission-box li .bar-box em span.purple{
+	background: url('../img/purple_brush.png') no-repeat center center /100% 100%;
 
 }
 .mission-box li .btn-box {
