@@ -82,13 +82,22 @@
 			})
 
 			$('.form-upload a.close-btn').bind('touchend',function(){
-				var str = '<div class="upload-box"><input class="update"type="file"  multiple name="myfile[]"type="file"/><em></em></div>'
+				
+				
+				var index = $(this).parents('li').index();
+				if(index=='0'){
+					var str = '<div class="upload-box"><input class="update"type="file"  multiple name="myfile[]"type="file"/><em></em><span>封面</span></div>'
+				}else{
+					var str = '<div class="upload-box"><input class="update"type="file"  multiple name="myfile[]"type="file"/><em></em></div>'
+				}
 				$(this).parents('li').html(str)
 				return false;
 			})
 
-			$('.pop-overlay').bind('touchend',function(){
+			$('.pop-overlay').bind('touchend',function(event){
+				 event.stopPropagation();
 				$(this).hide();
+				return false;
 			})
 
 		})
