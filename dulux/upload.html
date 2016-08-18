@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>多乐士</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pop-overlay">
+			<div class="img-box">
+				<img src="img/overlay_icon.png">
+			</div>
+		</div>
+		<div class="pager bg-1">
+			<h2>上传设计方案</h2>
+			<div class="form-upload">
+				<form>
+				<ul>
+					 <li>
+                      
+                    	<div class="top-tip">
+                    		<span>封面</span>
+                    		<a href="javascript:void(0);" class="close-btn"></a>
+                    	</div>
+                        <img src="img/img_2.jpg">
+                            
+                       
+                    </li>
+                    <li>
+                        <div class="top-tip">
+                    		
+                    		<a href="javascript:void(0);" class="close-btn"></a>
+                    	</div>
+                        <img src="img/img_2.jpg">
+                    </li>
+                    <li>
+                        <div class="upload-box">
+                            <input class="update"type="file"  multiple name="myfile[]"type="file"/>
+                            <em></em>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="upload-box">
+                            <input class="update"type="file"  multiple name="myfile[]"type="file"/>
+                            <em></em>
+                        </div>
+                    </li>
+				</ul>
+				<div class="foot-input">
+					<input type="text" placeholder="点击输入设计理念">
+				</div>
+				</form>
+			</div>
+			
+			<div class="btn-box">
+				<a href="" class="btn-blue">上传</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			var formWidth = $('.form-upload').width()
+			var liWidth = formWidth/2-4
+			$('.form-upload li').filter(function(){
+				$(this).css('width',liWidth)
+				$(this).css('height',liWidth)
+			})
+
+			$('.form-upload a.close-btn').bind('touchend',function(){
+				var str = '<div class="upload-box"><input class="update"type="file"  multiple name="myfile[]"type="file"/><em></em></div>'
+				$(this).parents('li').html(str)
+				return false;
+			})
+
+			$('.pop-overlay').bind('touchend',function(){
+				$(this).hide();
+			})
+
+		})
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

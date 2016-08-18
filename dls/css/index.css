@@ -273,6 +273,8 @@
 	left: 50%;
 	margin-left: -125px;
 	top: 37%;
+	height: 194px;
+	overflow-y:auto;
 	line-height: 1.2em;
 	position: absolute;
 	text-align: center;
@@ -1163,12 +1165,14 @@
 }
 .job-box p{
 	color: #fff;
+	height: 158px;
+	overflow-x:auto;
 	width: 90%;
 	margin: 0 auto;
 	text-align: center;
 }
 .job-box .btn-box{
-	padding-top: 7%;
+	padding-top: 13%;
 }
 .job-box .btn-box a{
 	display: block;
@@ -1388,3 +1392,38 @@
 .information-position .form-box em{
 	background-position: 16px 13px; 
 } 
+.conter-triangle {
+	/*采用透明加背景*/
+	/*width: 0;
+	height: 0;
+	margin: auto;
+	padding: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	background: url(img/triangle_icon1.png)no-repeat center;*/
+	width: 27px;
+	height: 13px;
+	margin: auto;
+	background: url(../img/triangle_icon1.png)no-repeat center;
+}
+
+.conter-square {
+	width: 95%;
+	height: 181px;
+	padding: 0 2.5%;
+	border-radius: 5px;
+	overflow: hidden;
+	background: url(../img/bg_invita_read.png)no-repeat;
+	background-size: 100% 100%;
+}
+
+.conter-square form {
+	font-size: 12px;
+	text-align: left;
+	padding: 10px 10px;
+}
+
+.conter-square form div {
+    line-height: 25px;
+}

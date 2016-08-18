@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>多乐士</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="element-box back-btn" style="padding-bottom:6%;">
+				<a href=""><img src="img/back_btn.png"></a>
+			</div>
+			<div class="scroll-box vote-box">
+				<ul>
+					<li>
+						<div class="img-box">
+							<a class="show-work" href="javascript:void(0);">
+								<img src="img/work_1.jpg">
+							</a>
+						</div>
+						<div class="user-box clearfix">
+							<div class="user-left">
+								<a href="">
+									<img src="img/face_1.png">
+									<span>Marie Simpson</span>
+								</a>
+							</div>
+							<div class="user-right">
+								<em><img src="img/finger_icon.png"></em>
+								<a href="">投票</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box">
+							<a class="show-work" href="javascript:void(0);">
+								<img src="img/work_1.jpg">
+							</a>
+						</div>
+						<div class="user-box clearfix">
+							<div class="user-left">
+								<a href="">
+									<img src="img/face_1.png">
+									<span>Marie Simpson</span>
+								</a>
+							</div>
+							<div class="user-right">
+							
+								<a href="">投票</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box">
+							<a class="show-work" href="javascript:void(0);">
+								<img src="img/work_1.jpg">
+							</a>
+						</div>
+						<div class="user-box clearfix">
+							<div class="user-left">
+								<a href="">
+									<img src="img/face_1.png">
+									<span>Marie Simpson</span>
+								</a>
+							</div>
+							<div class="user-right">
+								
+								<a href="">投票</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box">
+							<a class="show-work" href="javascript:void(0);">
+								<img src="img/work_1.jpg">
+							</a>
+						</div>
+						<div class="user-box clearfix">
+							<div class="user-left">
+								<a href="">
+									<img src="img/face_1.png">
+									<span>Marie Simpson</span>
+								</a>
+							</div>
+							<div class="user-right">
+								
+								<a href="">投票</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box">
+							<a class="show-work" href="javascript:void(0);">
+								<img src="img/work_1.jpg">
+							</a>
+						</div>
+						<div class="user-box clearfix">
+							<div class="user-left">
+								<a href="">
+									<img src="img/face_1.png">
+									<span>Marie Simpson</span>
+								</a>
+							</div>
+							<div class="user-right">
+							
+								<a href="">投票</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="pop-overlay work-pop">
+			<div class="close-btn">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<div class="swiper-box">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      
+				    </div>
+				    
+				</div>
+				<div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			</div>
+			<div class="controller-btn">
+				<a class="plus" href="javascript:void(0);">+</a>
+				<a class="minus"href="javascript:void(0);">-</a>
+			</div>
+			<div class="text-bottom">
+				<p>用最少的投入,来最大化的美化和利用现有空间;一切随心,有心去感悟空间。</p>
+				<p>生活是创意的来源,创意源于文化,创意源于自己。 </p>
+				<p>将设计融于人性,将家居带入悠闲自在的情境。</p>
+				<p>设计是一种追求完美的生活态度,设计是一种追求品味的生活概念。</p>
+				<p>让灵感自由释放,创造一个心灵渴望的空间。</p>
+				<p>人为的设计生活方式,努力去创造一种更好的生活状态。</p>
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+	      
+			$(function(){
+				var imgWidth;
+				var imgHeight;
+				var mySwiper = new Swiper ('.swiper-container', {
+				    loop: true,
+				    onTouchStart:function(swiper,event){
+				    	var endY = event.changedTouches[0].clientY;
+						var endX = event.changedTouches[0].clientX;
+						var imgClientTop = $('.swiper-slide-active img').offset().top;
+						var imgClientLeft = $('.swiper-slide-active img').offset().left;
+						
+
+						// console.log($('.swiper-slide-active').offset().left)
+						// console.log($('.swiper-slide-active img').offset().left)
+						imgWidth = endX-imgClientLeft
+						imgHeight = endY-imgClientTop
+					
+
+				    },
+				    onTouchMove: function(swiper,event){
+						mySwiper.lockSwipeToNext();
+						mySwiper.lockSwipeToPrev();
+						// event.stopPropagation();
+						var endY = event.changedTouches[0].clientY;
+						var endX = event.changedTouches[0].clientX;
+						// console.log(endY)
+
+						var clientTop = $('.swiper-container').offset().top;
+						var clientLeft = $('.swiper-container').offset().left;
+						
+						// var imgClientTop = $('.swiper-slide-active img').offset().top;
+						// var imgClientLeft = $('.swiper-slide-active img').offset().left;
+						// console.log(clientLeft)
+						// console.log(endX)
+						
+						var positionX = (endX-clientLeft-imgWidth)+'px';
+						var positionY = (endY-clientTop-imgHeight)+'px';
+						// console.log(positionX)
+						
+						$('.swiper-slide-active img').css('left',positionX)
+						$('.swiper-slide-active img').css('top',positionY)
+				
+			    	}
+				    
+				    
+				  
+				  })
+
+				
+				$('.swiper-button-prev').click(function(){
+					
+					mySwiper.unlockSwipeToPrev();
+					mySwiper.slidePrev();
+				})
+				$('.swiper-button-next').click(function(){
+					mySwiper.unlockSwipeToNext();
+
+					mySwiper.slideNext();
+				})          
+
+
+				$('.show-work').bind("touchstart",function(e){
+					positionX = e.originalEvent.changedTouches[0].clientX;
+					positionY = e.originalEvent.changedTouches[0].clientY;
+				}).bind('touchend',function(e){
+
+					var endX = e.originalEvent.changedTouches[0].clientX;
+					var endY = e.originalEvent.changedTouches[0].clientY;
+					if (positionX - endX == 0 && positionY-endY==0) {  
+		       			//获取显示图片的路径
+						//模拟获取的图片路进数组
+						$('.work-pop').css('z-index',3)
+						$('.swiper-container .swiper-wrapper').html('')
+
+
+						var imgSrc = ['img/work_1.jpg','img/work_1.jpg','img/work_1.jpg']
+						
+						
+						var str = ''
+						for(var i=0;i<imgSrc.length;i++){
+							str ='<div class="swiper-slide"><div class="slide-box"><img src="'+imgSrc[i]+'"></div></div>'
+							addImg(str)
+
+
+						}
+						
+						
+					
+		    		}
+		    		var  imgH = $('.swiper-slide img').height()+'px'
+					
+					$('.slide-box').css('height',imgH)       			
+				})
+				
+
+				function addImg(str){
+
+					mySwiper.appendSlide(str)
+					
+				}
+
+				var bottomWidth = $('.text-bottom').width();
+				var bottomLeft = "-"+bottomWidth/2+'px'
+				$('.text-bottom').css('margin-left',bottomLeft)
+
+				
+
+				$('.plus').bind('touchend',function(){
+					var swiperHeight = $('.swiper-container').height()+'px'
+					var width = ($('.swiper-slide-active img').width()+20)+'px'
+					
+					// console.log($('.swiper-slide-active img').css('left'))
+					var widthLeft = ($('.swiper-slide-active img').position().left-10)+'px'
+					var widthTop = ($('.swiper-slide-active img').position().top-10)+'px'
+					$('.swiper-slide-active img').css('width',width)
+					$('.swiper-slide-active img').css('top',widthTop)
+					$('.swiper-slide-active img').css('left',widthLeft)
+					
+					$('.swiper-container').css('height',swiperHeight)
+				})
+
+
+				$('.minus').bind('touchend',function(){
+					var swiperHeight = $('.swiper-container').height()+'px'
+					var width = ($('.swiper-slide-active img').width()-20)+'px'
+					var widthLeft = ($('.swiper-slide-active img').position().left+10)+'px'
+					var widthTop = ($('.swiper-slide-active img').position().top+10)+'px'
+					
+					$('.swiper-slide-active img').css('width',width)
+					$('.swiper-slide-active img').css('top',widthTop)
+					$('.swiper-slide-active img').css('left',widthLeft)
+					
+					$('.swiper-container').css('height',swiperHeight)
+				})
+
+
+			})
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

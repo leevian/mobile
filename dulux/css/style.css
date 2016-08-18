@@ -1,0 +1,90 @@
+html, body{font-size:1em;position: relative;width:100%;height: 100%;padding:0;margin:0;background: #012269;}
+img {display:block;width: 100%;padding:0;margin: 0;}
+a{text-decoration: none;}
+ul,li{margin: 0;padding: 0;border:0 none;}
+li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;padding: 0;margin: 0;}
+i,em,strong{font-style: normal;}
+p{padding: 0;margin: 0;}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 4px;  
+    height: 4px;  
+    background-color: #011b54;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 5px;  
+    background-color: #011b54; 
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+	width: 10px;
+    border-radius: 5px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #6987bf;  
+} 
+.pager {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 2;}
+.bg-1{
+	background:url('../img/bg_1.jpg') no-repeat center top;
+	background-size: cover;
+}
+.bg-2{
+	background:url('../img/bg_2.jpg') no-repeat center top;
+	background-size: cover;
+}
+.back-btn{
+	width: 35%;
+	padding: 2%;
+}
+.center-box{
+	margin: 0 auto;
+}
+.overflow-box{
+	overflow: hidden;
+}
+.hidden{display: none;}
+.pop-overlay{
+	position: fixed;
+	background: url('../img/overlay.png') repeat;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.pop-overlay .close-btn{
+	position: relative;
+	width: 100%;
+	height: 34px;
+}
+.pop-overlay .close-btn a{
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url('../img/close_btn.png') no-repeat center center /cover;
+	right: 20px;
+	top: 10px;
+	position: absolute;
+}
+.pop-overlay .btn-box{
+	width: 136px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-left: -68px;
+}
+.pop-overlay .btn-box a{
+	background: #88abda;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 20px;
+	color: #012269;
+	text-align: center;
+
+}
