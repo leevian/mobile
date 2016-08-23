@@ -170,7 +170,7 @@
 	font-size: 0.8em;
 	position: absolute;
 	padding-left: 24%;
-	z-index: 999;
+	z-index: 1;
 	border-radius: 0;
 	color: #000;
 	text-align: center;
@@ -274,7 +274,7 @@
 	margin-left: -125px;
 	top: 37%;
 	height: 194px;
-	overflow-y:auto;
+	overflow-x:auto;
 	line-height: 1.2em;
 	position: absolute;
 	text-align: center;
