@@ -28,6 +28,10 @@
 	font-size: 0.8em;
 	line-height: 30px;
 	height: 30px;
+	position: absolute;
+	margin-left: -75px;
+	left: 50%;
+	bottom: 10%;
 	text-align: center;
 	border-radius: 20px;
 }
@@ -228,14 +232,20 @@
 	height: 40px;
 	line-height: 40px;
 	border-radius: 20px;
+	
 }
+
 .vote-box .user-box .user-right em{
 	display: block;
 	width: 30px;
-	right: -23px;
-	top: -8px;
+	right: -12px;
+	top: -29px;
+	animation:move1 2s ease-out 0s  infinite normal forwards;
+	-webkit-animation:move1 2s ease-out 0s infinite normal forwards;
 	position: absolute;
 }
+@keyframes move1{0%{right:-12px;top:-29px;}70%{right:51px;top:-81px;}100%{right:51px;top:-81px;}}
+@-webkit-keyframes move1{0%{right:-12px;top:-29px;}70%{right:51px;top:-81px;}100%{right:51px;top:-81px;}}
 .result-box{
 	width: 95%;
 	margin: 0 auto;
@@ -348,61 +358,32 @@
 	top: 17px;
 	margin: 0 auto;
 }
-.work-pop{
-	z-index:0;
-}
-.work-pop .swiper-slide {
-	overflow: hidden;
-}
-.work-pop .swiper-slide img{
-	position: absolute;
-	left: 0;
+.pop-box{
+	z-index: -1;
 	top: 0;
 }
-.swiper-box .swiper-button-prev{
-	background-image: url('../img/prev_btn.png');
-	height: 27px;
-	left: -23px;
-	top: 53%;
-
-	background-size: cover;
+.pop-box .swiper-slide {
+	overflow: hidden;
 }
-.swiper-box .swiper-button-next{
-	background-image: url('../img/next_btn.png');
-	height: 27px;
-	right: -23px;
-	top: 53%;
-	background-size: cover;
-}
-.work-pop .controller-btn{
-	width: 120px;
-	left: 50%;
-	margin-left: -60px;
+.pop-box .swiper-box img{
 	position: relative;
-	top: 32px;
-	height: 40px;
+	top:50%;
 }
-.work-pop .controller-btn a{
-	display: block;
-	width: 26px;
-	height: 26px;
-	border-radius: 26px;
-	float: left;
-	background-color: #04246b;
+.work-pop {
+	overflow-x:hidden;
+	height: 99%;
+	overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
+}
+.work-pop h2{
 	color: #fff;
 	text-align: center;
-	font-size: 1.4em;
-	line-height: 26px;
-}
-.work-pop .controller-btn a.plus{
-	float: left;
-}
-.work-pop .controller-btn a.minus{
-	float: right;
+	padding-top: 5%;
+	font-size: 1.2em;
 }
 .work-pop .text-bottom{
 	position: relative;
-	top: 35px;
+	padding-top: 7%;
 	width: 88%;
 	left: 50%;
 	text-align: center;	
@@ -415,6 +396,11 @@
 }
 .slide-box{
 	position: relative;
+}
+.work-img{
+	padding-top: 4%;
+	width: 80%;
+	margin: 0 auto;
 }
 
 
