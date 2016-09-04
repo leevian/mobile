@@ -371,7 +371,7 @@
 }
 .work-pop {
 	overflow-x:hidden;
-	height: 99%;
+	height: 100%;
 	overflow-scrolling: touch;
 	-webkit-overflow-scrolling: touch;
 }
@@ -402,7 +402,21 @@
 	width: 80%;
 	margin: 0 auto;
 }
-
+.my-gallery {
+  width: 100%;
+  float: left;
+}
+.my-gallery img {
+  width: 100%;
+  height: auto;
+}
+.my-gallery figure{
+	margin: 0;
+	margin-bottom: 5%;
+}
+.my-gallery figcaption {
+  display: none;
+}
 
 
 
