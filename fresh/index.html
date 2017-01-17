@@ -46,6 +46,10 @@
 					</form>
 				</div>
 			</div>
+			<div style="width:80%;margin:0 auto;overflow:hidden;height:1.6em;position:relative">
+			<!-- 滚动字幕 -->
+				<p class="go-p" style="position:absolute;font-size:0.8em;white-space: nowrap;">温馨提示：“至尊装”需提前2天预约提货！</p>
+				</div>
 			<div class="bottom-box line-box">
 				<p>
 					尊敬的顾客朋友<br/>
@@ -92,7 +96,76 @@
 				// },false);
 
 			})
+			//滚动字幕
+			ScrollText($('p.go-p'),32,400,'温馨提示：“至尊装”需提前2天预约提货！','left',1,10);
 		})
+		//滚动方法
+		var ScrollTime;
+		function ScrollAutoPlay(contID,scrolldir,showwidth,textwidth,steper){
+		    var PosInit,currPos;
+		    with($('#'+contID)){
+		        currPos = parseInt(css('margin-left'));
+		        if(scrolldir=='left'){
+		            if(currPos<0 && Math.abs(currPos)>textwidth){
+		                css('margin-left',showwidth);
+		            }
+		            else{
+		                css('margin-left',currPos-steper);
+		            }
+		        }
+		        else{
+		            if(currPos>showwidth){
+		                css('margin-left',(0-textwidth));
+		            }
+		            else{
+		                css('margin-left',currPos-steper);
+		            }
+		        }
+		    }
+		}
+		function ScrollText(AppendToObj,ShowHeight,ShowWidth,ShowText,ScrollDirection,Steper,Interval){
+		    var TextWidth,PosInit,PosSteper;
+		    with(AppendToObj){
+		        html('');
+		        css('overflow','hidden');
+		        css('height',ShowHeight+'px');
+		        css('line-height',ShowHeight+'px');
+		        css('width',ShowWidth);
+		    }
+		    if (ScrollDirection=='left'){
+		        PosInit = ShowWidth;
+		        PosSteper = Steper;
+		    }
+		    else{
+		        PosSteper = 0 - Steper;
+		    }
+		    if(Steper<1 || Steper>ShowWidth){Steper = 1}//每次移动间距超出限制(单位:px)
+		    if(Interval<1){Interval = 10}//每次移动的时间间隔（单位：毫秒）
+		    var Container = $('<div></div>');
+		    var ContainerID = 'ContainerTemp';
+		    var i = 0;
+		    while($('#'+ContainerID).length>0){
+		        ContainerID = ContainerID + '_' + i;
+		        i++;
+		    }
+		    with(Container){
+		      attr('id',ContainerID);
+		      css('float','left');
+		      css('cursor','default');
+		      appendTo(AppendToObj);
+		      html(ShowText);
+		      TextWidth = width();
+		      if(isNaN(PosInit)){PosInit = 0 - TextWidth;}
+		      css('margin-left',PosInit);
+		      mouseover(function(){
+		          clearInterval(ScrollTime);
+		      });
+		      mouseout(function(){
+		          ScrollTime = setInterval("ScrollAutoPlay('"+ContainerID+"','"+ScrollDirection+"',"+ShowWidth+','+TextWidth+","+PosSteper+")",Interval);
+		      });
+		    }
+		    ScrollTime = setInterval("ScrollAutoPlay('"+ContainerID+"','"+ScrollDirection+"',"+ShowWidth+','+TextWidth+","+PosSteper+")",Interval);
+		}
 	</script>
 </html>
 
