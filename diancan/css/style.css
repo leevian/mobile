@@ -1,0 +1,243 @@
+html, body{font-size:1em;position: relative;width:100%;height: 100%;padding:0;margin:0;}
+img {display:block;width: 100%;padding:0;margin: 0;}
+a{text-decoration: none;}
+ul,li{margin: 0;padding: 0;border:0 none;}
+li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;padding: 0;margin: 0;}
+i,em,strong{font-style: normal;}
+p{padding: 0;margin: 0;}
+::-webkit-input-placeholder {
+    color:#a9a9a9;
+}
+/*.pager {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}*/
+.header{
+	height: 17%;
+
+	/*background: url('../img/header_bg.jpg') repeat-x 100%;*/
+	background-color: #eb5b41;
+	overflow: hidden;
+}
+.header .header-box{
+	padding-top:10px;
+}
+.header .logo{
+	float: left;
+	padding:3%;
+	width: 20%;
+}
+.header .logo img{
+	width: 100%;
+	border-radius: 6px;
+
+}
+.header .info-box{
+	float: right;
+	padding:2%;
+	width: 70%;
+	color: #fff;
+	font-size: 0.8em;
+	word-wrap : break-word;
+	overflow:hidden; 
+}
+.header .info-box h4{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.body{
+	height: 83%;
+	overflow: hidden;
+	font-size: 0.8em;
+	color: #666;
+}
+.body iframe{
+	border:0 none;
+	width: 100%;
+}
+.body-left{
+	float: left;
+	width: 25%;
+	height:100%;
+    overflow-y: auto;  
+    white-space: wrap;  
+	text-align: left;
+	overflow: hidden;
+	background-color: #f8f8f8;
+}
+.body-left-ul li{
+	padding:15px 11px;
+	line-height: 1.3em;
+	font-size:0.9em;
+	word-wrap : break-word;
+	color: #666;
+}
+.body-left-ul li p{
+	height: 2.6em;
+	overflow: hidden;
+}
+.body-left-ul li.active{
+
+	background:url('../img/line.png') repeat-y left;
+	background-color: #fff;
+}
+.body-right{
+	float: left;
+	width: 72%;
+	overflow-y :auto;
+
+}
+.body-right-ul{
+	padding:10px 0;
+}
+.body-right-ul .list-info{
+	padding-bottom:40px;
+}
+.body-right-ul .list-list-info{
+	overflow: hidden;
+	padding-top: 15px;
+	padding-bottom:9px;
+	border-bottom:1px solid #ddd;
+}
+.body-right-ul .list-title p{
+	background: #ddd;
+	margin-left: 10px;
+	border-radius: 5px;
+	padding:6px 9px;
+	font-weight: bold;
+	color: #666;
+}
+.body-right-ul .list-title p span{
+	font-weight: normal;
+	color: #999;
+	font-size: 0.8em;
+}
+.body-right-ul ol{
+	margin-left: 10px;
+	padding:0;
+}
+.body-right-ul .left-box{
+	float: left;
+	width: 27%;
+}
+.body-right-ul .left-box img{
+	width: 100%;
+	/*height: 80px;*/
+}
+.body-right-ul .right-box{
+	float: left;
+	width: 68%;
+	padding-left: 10px;
+	color: #333;
+}
+.body-right-ul .right-box h5{
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 2em;
+
+}
+.body-right-ul .right-box .title-p{
+	font-size:0.7em;
+	color: #999;
+	word-wrap : break-word;
+	width: 100%;
+}
+.body-right-ul .right-box .title-p-info{
+	color: #666;
+	font-size:0.8em;
+	line-height: 2em;
+
+}
+.body-right-ul .num-box{
+	overflow: hidden;
+}
+.body-right-ul .num-box .num-left{
+	color: #df3336;
+	float: left;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.body-right-ul .num-box .num-left span{
+	font-size: 0.7em;
+	font-weight: normal;
+
+}
+.body-right-ul .num-box .num-right{
+	float: right;
+}
+.body-right-ul .num-box .num-right .btn-box{
+	float: left;
+}
+.body-right-ul .num-box .num-right .btn{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	background: url('../img/add.png') no-repeat center center /100%;
+
+	color: #fff;
+}
+.body-right-ul .num-box .num-right .btn-minus{
+	color: #eb5b41;
+	background: url('../img/minus.png') no-repeat center center /100%;
+
+}
+.body-right-ul .num-box .num-right input{
+	width: 18px;
+	height: 15px;
+	text-align: center;
+	font-size: 1em;
+	float: left;
+	line-height: 10px;
+	border:0 none;
+}
+.back-btn{
+	width: 35%;
+	padding: 2%;
+}
+.center-box{
+	margin: 0 auto;
+}
+.overflow-box{
+	overflow: hidden;
+}
+.hidden{display: none;}
+.pop-overlay{
+	position: fixed;
+	background: url('../img/overlay.png') repeat;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: none;
+}
+.pop-overlay .close-btn{
+	position: relative;
+	width: 100%;
+}
+.pop-overlay .close-btn a{
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url('../img/close_btn.png') no-repeat center center /cover;
+	right: 20px;
+	top: 40px;
+	position: absolute;
+}
+.pop-overlay .btn-box{
+	width: 136px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-left: -68px;
+}
+.pop-overlay .btn-box a{
+	background: #eb5b41;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 20px;
+	color: #012269;
+	text-align: center;
+
+}

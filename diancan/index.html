@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>点餐</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-1">
+			<div class="header">
+				<div class="header-box">
+					<div class="logo"><img src="img/logo.png"></div>
+					<div class="info-box">
+						<h4>避风塘（浦建路店）</h4>
+						<p>30分钟</p>
+						<p>公告：本店承诺点餐后30分钟内上餐，本店承诺点餐后30分钟内上餐，本店承诺点餐后30分钟内上餐</p>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-left">
+					<iframe id="left" name="left" src="left.html"></iframe>
+					
+				</div>
+				<div class="body-right">
+					<iframe id="right" src="right.html"></iframe>
+
+				</div>
+			</div>
+			<div class="footer">
+				
+			</div>
+
+		</div>
+		
+	</body>
+	<script>
+		$(function(){
+			var header_height = $('.header').height();
+			var screen_height = document.documentElement.clientHeight;
+			
+			var body_height = screen_height-header_height-5
+			$('iframe').css('height',body_height+'px');
+			
+			// alert($("iframe").contents().find("body"));
+			
+		})
+		// var iframe = document.getElementById('left');
+		// iframe.onload = function ()//要设置这个子页面加载onload事件
+		// {
+		//     var iframeWindow = iframe.contentWindow;//获取iframe里的window对象
+		//     var $c = iframeWindow.$;//获取iframe中的jquery对象
+		// 	alert($c('body'))//获取iframe中body元素，其他的话自己用$c('#aaa')去获取吧
+		// }
+		var leftIframe = document.getElementById('left');
+		var rightIframe = document.getElementById('right');
+		// leftIframe.onload = function ()//要设置这个子页面加载onload事件
+		// {
+		//    $(leftIframe.contentWindow.document.body).find('li').on('click',function(){
+		//    		var liIndex = $(this).index();
+
+		//    		alert(liIndex)
+		//    		rightIframe.onload = function (){
+		//    			alert(1)
+		//    			$(rightIframe.contentWindow.document.body).find('li.list-info').on('click',function(){
+		//    					var rightLiIndex = $(this).index();
+
+		//    						alert(rightLiIndex)
+		//    				})
+		//    		}
+		   		
+		//    })
+		// }
+		function rightToIndex(index){
+
+	   		// leftIframe.onload = function (){
+	   			// alert($(rightIframe.contentWindow.document.body).find('li.list-info').eq(index).offset().top)
+	   		var top = $(rightIframe.contentWindow.document.body).find('li.list-info').eq(index).offset().top
+	   		// }
+	   		console.log(top)
+	   		 // $(rightIframe.contentWindow.document.body).scrollTop(top); 
+	   		$(rightIframe.contentWindow.document.body).animate({scrollTop: top-10}, 1000);
+		}
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
