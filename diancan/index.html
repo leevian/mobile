@@ -43,59 +43,89 @@
 				</div>
 			</div>
 			<div class="footer">
-				
+				<div class="left-btn">
+					<div class="img-box"><span class="hide">0</span></div>
+					<div class="price-box">
+						<p>￥<span>0.00</span></p>
+					</div>
+					
+				</div>
+				<div class="right-btn">
+					<a href="javascript:void(0);">去结算</a>
+				</div>
 			</div>
 
 		</div>
 		
 	</body>
 	<script>
-		$(function(){
-			var header_height = $('.header').height();
-			var screen_height = document.documentElement.clientHeight;
-			
-			var body_height = screen_height-header_height-5
-			$('iframe').css('height',body_height+'px');
-			
-			// alert($("iframe").contents().find("body"));
-			
-		})
-		// var iframe = document.getElementById('left');
-		// iframe.onload = function ()//要设置这个子页面加载onload事件
-		// {
-		//     var iframeWindow = iframe.contentWindow;//获取iframe里的window对象
-		//     var $c = iframeWindow.$;//获取iframe中的jquery对象
-		// 	alert($c('body'))//获取iframe中body元素，其他的话自己用$c('#aaa')去获取吧
-		// }
+		
 		var leftIframe = document.getElementById('left');
 		var rightIframe = document.getElementById('right');
-		// leftIframe.onload = function ()//要设置这个子页面加载onload事件
-		// {
-		//    $(leftIframe.contentWindow.document.body).find('li').on('click',function(){
-		//    		var liIndex = $(this).index();
-
-		//    		alert(liIndex)
-		//    		rightIframe.onload = function (){
-		//    			alert(1)
-		//    			$(rightIframe.contentWindow.document.body).find('li.list-info').on('click',function(){
-		//    					var rightLiIndex = $(this).index();
-
-		//    						alert(rightLiIndex)
-		//    				})
-		//    		}
-		   		
-		//    })
-		// }
+		
 		function rightToIndex(index){
-
-	   		// leftIframe.onload = function (){
-	   			// alert($(rightIframe.contentWindow.document.body).find('li.list-info').eq(index).offset().top)
-	   		var top = $(rightIframe.contentWindow.document.body).find('li.list-info').eq(index).offset().top
-	   		// }
-	   		console.log(top)
-	   		 // $(rightIframe.contentWindow.document.body).scrollTop(top); 
-	   		$(rightIframe.contentWindow.document.body).animate({scrollTop: top-10}, 1000);
+	   		var rightTop = $(rightIframe.contentWindow.document.body).find('li.list-info').eq(index).offset().top;
+	   		$(rightIframe.contentWindow.document.body).animate({scrollTop: rightTop-10}, 1000);
 		}
+
+		function leftAdd(index){
+			var leftLiNum = parseInt($(leftIframe.contentWindow.document.body).find('li.list-info').eq(index).find('span').html())+1;
+			$(leftIframe.contentWindow.document.body).find('li.list-info').eq(index).find('span').show().html(leftLiNum)
+
+		}
+
+		function leftMinus(index){
+			var leftLiNum = parseInt($(leftIframe.contentWindow.document.body).find('li.list-info').eq(index).find('span').html())-1;
+			if(leftLiNum<=0){
+				leftLiNum = 0;
+				$(leftIframe.contentWindow.document.body).find('li.list-info').eq(index).find('span').hide()
+			}
+			$(leftIframe.contentWindow.document.body).find('li.list-info').eq(index).find('span').html(leftLiNum)
+
+		}
+
+
+		
+
+		var header_height = $('.header').height();
+		var screen_height = document.documentElement.clientHeight;
+		
+		var body_height = screen_height-header_height-5
+		$('iframe').css('height',body_height+'px');
+		
+		
+		var rightIframeTop = [];
+
+		
+		var j=0;
+		$(rightIframe).load(function(){
+			$(rightIframe.contentWindow).scroll(function() {
+			  	var rightTop = $(rightIframe.contentWindow).scrollTop();
+	   		
+	   			var liLength = $(rightIframe.contentWindow.document.body).find('li.list-info').length;
+	   			if(rightIframeTop.length!=liLength){
+	   				$(rightIframe.contentWindow.document.body).find('li.list-info').each(function(){
+	   				// alert()
+	   					rightIframeTop.push($(this).offset().top-12)
+	   				})
+	   			}
+	   			// j = 0;
+	   			for (var i = rightIframeTop.length - 1; i >= 0; i--) {
+	   				if(rightTop>rightIframeTop[i]&&rightTop<=rightIframeTop[i+1]){
+	   					j=i;
+	   				}
+	   			}
+	   			$(leftIframe.contentWindow.document.body).find('li.list-info').removeClass('active')
+	   			$(leftIframe.contentWindow.document.body).find('li.list-info').eq(j).addClass('active')
+
+
+			});
+
+		})
+		
+
+
+
 	</script>
 </html>
 

@@ -10,12 +10,12 @@
 	</head>
 	<body>
 		<ul class="body-left-ul">
-			<li class="list-info active"><p>港式风味点心港式风味点心</p></li>
-			<li class="list-info">港式风味点心</li>
-			<li class="list-info">港式风味点心</li>
-			<li class="list-info">港式风味点心</li>
-			<li class="list-info">港式风味点心</li>
-			<li class="list-info">港式风味点心</li>
+			<li class="list-info active"><p>港式风味点心港式风味点心 <span class="hide">0</span></p></li>
+			<li class="list-info">港式风味点心 <span class="hide">0</span></li>
+			<li class="list-info">港式风味点心 <span class="hide">0</span></li>
+			<li class="list-info">港式风味点心 <span class="hide">0</span></li>
+			<li class="list-info">港式风味点心 <span class="hide">0</span></li>
+			<li class="list-info">港式风味点心 <span class="hide">0</span></li>
 
 		</ul>
 	</body>
@@ -26,8 +26,8 @@
 		$('.body-left-ul li').on('click',function(){
 			var liIndex = $(this).index();
 			parent.rightToIndex(liIndex);
-			$('.body-left-ul li').removeClass('active');
-			$(this).addClass('active')
+			// $('.body-left-ul li').removeClass('active');
+			// $(this).addClass('active')
 		})
 	})
 </script>

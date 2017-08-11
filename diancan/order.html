@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>点餐</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-2">
+			<div class="back-title" style="margin-bottom:20px;">
+				<p><a href="">确认订单</a></p>
+			</div>
+			<div class="order-list">
+				<ul>
+					<li>
+						<div class="order-left">
+							<p>支付方式</p>
+						</div>
+						<div class="order-right">
+							<p>线上支付</p>
+						</div>
+
+					</li>
+				</ul>
+				
+			</div>
+			<div class="order-list">
+				<div class="order-title">
+					<p>已选菜色：</p>
+				</div>
+				<ul class="list-info">
+					<li>
+						<div class="order-left">
+							<p>瑶柱叉烧饭炒饭（例汤） <span>1份</span></p>
+						</div>
+						<div class="order-right">
+							<p>￥29</p>
+						</div>
+					</li>
+					<li>
+						<div class="order-left">
+							<p>瑶柱叉烧饭炒饭（例汤） <span>1份</span></p>
+						</div>
+						<div class="order-right">
+							<p>￥29</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="order-footer">
+				
+			</div>
+		</div>
+		
+	</body>
+	
+</html>
+
+
+<script>
+	$(function(){
+
+		$('.num-right a').on('click',function(){
+
+			var price = $(this).parents('.line-3').find('em').html();
+			if($(this).hasClass('add-a')){
+				var num = parseInt($(this).parents('.num-right').find('input').val())+1;
+				$(this).parents('.num-right').find('.btn-box').removeClass('hide')
+				$(this).parents('.num-right').find('input').val(num)
+				cartAdd(price);
+			}else{
+				var num = parseInt($(this).parents('.num-right').find('input').val())-1;
+				if(num<=0){
+					num=0;
+					$(this).parents('.num-right').find('.btn-box').addClass('hide')
+
+				}
+
+				$(this).parents('.num-right').find('input').val(num)
+
+				cartMinus(price);
+
+			}
+			
+		})
+	})
+	
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+

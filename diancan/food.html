@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>点餐</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pager bg-2">
+			<div class="back-title">
+				<p><a href="">瑶柱叉烧饭（例汤）</a></p>
+			</div>
+			<div class="food-box">
+				<div class="img-box">
+					<img src="img/food_pic1.png">
+				</div>
+				<div class="food-info">
+					<p class="line-1">瑶柱叉烧炒饭（例汤）</p>
+					<p class="line-2">月售433</p>
+					<div class="line-3">
+						<p></p><span>￥</span><em>29</em></p>
+						<div class="num-right">
+							<span class="hide btn-box">
+								<span class="btn btn-minus"><a class="minus-a" href="javascript:void(0);"></a></span>
+								<input type="text" value="0" readonly="readonly" name="num">
+								
+							</span>
+							<span class="btn btn-add"><a class="add-a" href="javascript:void(0);"></a></span>
+						</div>
+					</div>
+				</div>
+				<div class="detail-info">
+					<p>香浓可口</p>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="left-btn">
+					<div class="img-box"><span class="hide">0</span></div>
+					<div class="price-box">
+						<p>￥<span>0.00</span></p>
+					</div>
+					
+				</div>
+				<div class="right-btn">
+					<a href="javascript:void(0);">选好了</a>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	
+</html>
+
+
+<script>
+	$(function(){
+
+		$('.num-right a').on('click',function(){
+
+			var price = $(this).parents('.line-3').find('em').html();
+			if($(this).hasClass('add-a')){
+				var num = parseInt($(this).parents('.num-right').find('input').val())+1;
+				$(this).parents('.num-right').find('.btn-box').removeClass('hide')
+				$(this).parents('.num-right').find('input').val(num)
+				cartAdd(price);
+			}else{
+				var num = parseInt($(this).parents('.num-right').find('input').val())-1;
+				if(num<=0){
+					num=0;
+					$(this).parents('.num-right').find('.btn-box').addClass('hide')
+
+				}
+
+				$(this).parents('.num-right').find('input').val(num)
+
+				cartMinus(price);
+
+			}
+			
+		})
+	})
+	
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
