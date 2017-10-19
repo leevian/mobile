@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<title>香水网络课程</title>
+<link href="css/page1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-git.js"></script>
+
+
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <link href="css/video-js.css" rel="stylesheet" type="text/css">
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="js/video.js"></script>
+
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+    videojs.options.flash.swf = "ot/video-js.swf";
+  </script>
+
+<script>
+function hideFunction(){
+    $("#videox").hide();
+}
+</script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+  $(".btna").click(function(){
+  $("p").hide();
+  });
+  $(".spbtn1").click(function(){
+  $(".spbt1").show();
+  });
+    $(".spbtn2").click(function(){
+  $(".spbt2").show();
+  });
+    $(".spbtn3").click(function(){
+  $(".spbt3").show();
+  $("#videox").show();
+  });
+});
+
+</script>
+
+</head>
+  <style>
+  	img{border:0px;}
+  </style>
+
+  
+  
+  
+<body onload="hideFunction()">
+
+<div class="full" id="full2">
+
+<img src="img/btnbg.png" width="1016" height="168" alt="" class="btnbg"></img>
+
+<img src="img/btn1.png" width="65" height="129" alt="" class="btn1"></img>
+<img src="img/btn2.png" width="131" height="122" alt="" class="btn2"></img>
+<img src="img/btn3.png" width="86" height="68" alt="" class="btn3"></img>
+<img src="img/btn4.png" width="99" height="131" alt="" class="btn4"></img>
+<img src="img/btn5.png" width="213" height="90" alt="" class="btn5"></img>
+<img src="img/btn6.png" width="122" height="145" alt="" class="btn6"></img>
+
+<img src="img/bennar.png" width="1200" height="163" alt="" class="bennar"></img>
+<a href="../index.html"><img src="img/btnr.png" width="76" height="94" alt="" class="btnr"></img></a>
+
+<img src="img/spbg.png" width="1056" height="514" alt="" class="spbg"></img>
+
+<img src="img/spjhbg.png" width="767" height="430" alt="" class="spjhbg"></img>
+
+<img src="img/spbt1.png" width="340" height="349" alt="" class="spbt1" style="display:none"></img>
+<img src="img/spbt2.png" width="364" height="338" alt="" class="spbt2" style="display:none"></img>
+<img src="img/spbt3.png" width="344" height="360" alt="" class="spbt3" style="display:none"></img>
+<img src="img/spbtn1.png" width="122" height="88" alt="" class="spbtn1"></img>
+<img src="img/spbtn2.png" width="122" height="88" alt="" class="spbtn2"></img>
+<img src="img/spbtn3.png" width="122" height="88" alt="" class="spbtn3"></img>
+
+
+<div id="videox" style="width:767px;padding-top: 188px;padding-left: 222px";>
+  <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="767" height="430"
+      poster="img/spjhbgd.png" 
+      data-setup="{}">
+    <source src="video/s2.mp4" type='video/mp4'/>
+    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+    <track kind="captions" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+    <track kind="subtitles" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+  </video>
+</div>
+<div style="text-align:center;clear:both">
+</div>
+			 
+</div>
+
+
+</body>
+</html>

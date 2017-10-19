@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<title>香水网络课程</title>
+<link href="css/page1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-git.js"></script>
+
+
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <link href="css/video-js.css" rel="stylesheet" type="text/css">
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="js/video.js"></script>
+
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+    videojs.options.flash.swf = "ot/video-js.swf";
+  </script>
+
+<script>
+function hideFunction(){
+    $("#videox").hide();
+	
+}
+</script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+    $(".btn6").click(function(){
+  $(".bt6").show();
+  $(".spbg").show("slow");
+  $("#videox").show("slow");
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".btn").click(function(){
+  $(".dilao").toggle();
+  $(".ceng").toggle();
+  $(".btn1").toggle();
+  $(".btn2").toggle();
+  $(".btn3").toggle();
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+
+
+  
+
+
+});
+// function drag(ev)
+//     {
+//     //    console.log(ev)
+//     // var id = ev.target.id;
+//     // var distination = $('#'+id).attr('distination')
+
+//     // var dis_array = eval("("+distination+")");
+
+
+//     // console.log()
+//     // ev.dataTransfer.setData("Text",ev.target.id);
+// }
+
+// function dragover(ev){
+//   console.log(ev)
+//   // var id = ev.target.id;
+//   //   var distination = $('#'+id).attr('distination')
+
+//   //   var dis_array = eval("("+distination+")");
+//   //   console.log(dis_array)
+// }
+
+
+
+</script>
+
+
+</head>
+  <style>
+  	img{border:0px;}
+    .hide{opacity: 0}
+    .show{opacity: 1}
+  </style>
+
+  
+  
+  
+<body onload="hideFunction()">
+
+<div class="full" id="full">
+<img src="img/bt1.png"   width="1140" height="557" alt="" class="bt1 dist hide "id="dist_5"  ></img>
+<img src="img/bt4.png"   width="308" height="404" alt="" class="bt4 dist hide " id="dist_0" ></img>
+<img src="img/bt2.png" width="382" height="363" alt="" class="bt2 dist hide " id="dist_1"z-index="9999" ></img>
+<img src="img/bt3.png" width="87" height="28" alt="" class="bt3 dist hide " id="dist_3" z-index="9999" ></img>
+<img src="img/bt5.png" width="208" height="88" alt="" class="bt5 dist hide " id="dist_2" z-index="9999"></img>
+<img src="img/bt6.png" width="254" height="337" alt="" class="bt6 dist hide " id="dist_4" z-index="9999"></img>
+
+
+<img src="img/btnbg.png" width="1016" height="168" alt="" class="btnbg"></img>
+
+<img src="img/btn1.png"  draggable="true"  width="65" height="129" alt="" class="btn1 drop_ele" id="5"></img>
+<img src="img/btn2.png" width="131" height="122" alt="" class="btn2 drop_ele"  id="1" ></img>
+<img src="img/btn3.png" width="86" height="68" alt="" class="btn3 drop_ele"  id="3" ></img>
+<img src="img/btn4.png" width="99" height="131" alt="" class="btn4 drop_ele" id="0"></img>
+<img src="img/btn5.png" width="213" height="90" alt="" class="btn5 drop_ele " id="2"></img>
+<img src="img/btn6.png" width="122" height="145" alt="" class="btn6 drop_ele" id="4"></img>
+
+
+<img src="img/bennar.png" width="1200" height="163" alt="" class="bennar"></img>
+<a href="../index.html"><img src="img/btnr.png" width="76" height="94" alt="" class="btnr"></img></a>
+
+<img src="img/spbg.png" width="1056" height="514" alt="" class="spbg" style="display:none"></img>
+
+<div id="videox" style="width:767px;padding-top: 188px;padding-left: 222px";>
+  <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="767" height="430"
+      poster="img/spbgf.png" 
+      data-setup="{}">
+    <source src="video/s1.mp4" type='video/mp4'/>
+    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+    <track kind="captions" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+    <track kind="subtitles" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+  </video>
+  
+  <script>
+var audio = document.getElementById("video1"); 
+audio.loop = false;
+audio.addEventListener('ended', function () {  
+    document.location = "page1_2.html";
+}, false);
+</script> 
+  
+</div>
+<div style="text-align:center;clear:both">
+</div>
+			 
+</div>
+
+<script type="text/javascript">
+  
+
+
+var drop_ele = $('.drop_ele')
+var dist = $('.dist')
+
+
+
+for (var i = dist.length - 1; i >= 0; i--) {
+  
+
+  dist[i].ondragover = function(ev) {
+  /*拖拽元素在目标元素头上移动的时候*/
+    ev.preventDefault();
+    return true;
+  };
+
+   dist[i].ondragenter = function(ev) {
+   
+    return true;
+  };
+   dist[i].ondrop = function(ev) {
+   /*拖拽元素进入目标元素头上，同时鼠标松开的时候*/
+    console.log(eleDragEle)
+    console.log(ev.target.id)
+    
+    if((eleDragEle==1||eleDragEle==0||eleDragEle==3)&&(ev.target.id=='dist_3'||ev.target.id=='dist_2'||ev.target.id=='dist_1')){
+      $('#dist_'+eleDragEle).removeClass('hide')
+    }else if("dist_"+eleDragEle==ev.target.id){
+      $('#dist_'+eleDragEle).removeClass('hide')
+    }
+    
+    
+    
+    return false;
+  };
+
+
+
+};
+
+for (var i=0; i<drop_ele.length; i+=1) {
+
+  drop_ele[i].onselectstart = function() {
+    return false;
+  };
+  drop_ele[i].ondragstart = function(ev) {
+   /*拖拽开始*/
+    //拖拽效果
+    ev.dataTransfer.effectAllowed = "move";
+    ev.dataTransfer.setData("text", ev.target.innerHTML);
+    ev.dataTransfer.setDragImage(ev.target, 0, 0);
+    eleDragEle = ev.target.id;
+ 
+    return true;
+  };
+  drop_ele[i].ondragend = function(ev) {
+  /*拖拽结束*/
+    ev.dataTransfer.clearData("text");
+    eleDragEle = null;
+    return false
+  };
+}
+
+</script>
+</body>
+</html>
