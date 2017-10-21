@@ -10,44 +10,48 @@
 	width:1200px;
 	height:768px;
 	margin:0 auto;	
-	background-image:url('../img/bgd2.png');
+	background-image:url('../img/bg2.png');
 	background-size:cover;
 }
-.btn{
+.btx{
 	position: absolute;
-	margin-top: 564px;
-	margin-left:294px;
+	margin-top: 164px;
+	margin-left:9px;
 }
-
+.btt{
+	position: absolute;
+	margin-top: 236px;
+    margin-left: 1111px;
+}
 .btn1{
 	position: absolute;
-	margin-top: 605px;
-	margin-left:158px;
+	margin-top: 608px;
+	margin-left: 137px;
 }
 .btn2{
 	position: absolute;
-	margin-top: 612px;
-	margin-left: 273px;
+	margin-top: 618px;
+	margin-left: 221px;
 }
 .btn3{
 	position: absolute;
-	margin-top: 666px;
-	margin-left: 454px;
+	margin-top: 650px;
+	margin-left: 352px;
 }
 .btn4{
 	position: absolute;
 	margin-top: 612px;
-	margin-left: 588px;
+	margin-left: 469px;
 }
 .btn5{
 	position: absolute;
-	margin-top: 644px;
-	margin-left: 711px;
+	margin-top: 638px;
+	margin-left: 930px;
 }
 .btn6{
 	position: absolute;
-	margin-top: 589px;
-	margin-left: 954px;
+	margin-top: 584px;
+	margin-left: 694px;
 }
 .bt4{
 	position: absolute;
@@ -71,18 +75,53 @@
 }
 .bt6{
 	position: absolute;
-	margin-top: 26px;
-	margin-left: 718px;
+	margin-top: 0px;
+	margin-left: 627px;
 }
 .bt1{
 	position: absolute;
 	margin-top: 211px;
-	margin-left: 40px;
+	margin-left: 141px;
+}
+.btd{
+	position: absolute;
+    margin-top: 309px;
+    margin-left: 679px;
+}
+.bty4{
+	position: absolute;
+	margin-top: 363px;
+	margin-left: 429px;
+}
+.bty2{
+	position: absolute;
+	margin-top: 358px;
+	margin-left: 392px;
+}
+.bty3{
+	position: absolute;
+	margin-top: 494px;
+	margin-left: 540px;
+}
+.bty5{
+	position: absolute;
+	margin-top: 420px;
+	margin-left: 479px;
+}
+.bty6{
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 629px;
+}
+.bty1{
+	position: absolute;
+	margin-top: 211px;
+	margin-left: 138px;
 }
 .btnbg{
 	position: absolute;
-	margin-top: 588px;
-	margin-left: 99px;
+    margin-top: 634px;
+    margin-left: 100px;
 }
 .bennar{
 	position: absolute;
@@ -91,13 +130,23 @@
 }
 .btnr{
 	position: absolute;
-	margin-top: 5px;
-	margin-left: 243px;
+	margin-top: 533px;
+	margin-left: 24px;
 }
 .spbg{
 	position: absolute;
-	margin-top: 163px;
-	margin-left: 75px;
+	margin-top: 139px;
+	margin-left: 24px;
+}
+.btan{
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+.btnv{
+	position: absolute;
+	margin-top: 384px;
+	margin-left: 938px;
 }
 #video{
 	width: 625px;
@@ -107,36 +156,42 @@
 }
 .spjhbg{
 	position: absolute;
-	margin-top: 188px;
-	margin-left: 223px;
+	margin-top: 160px;
+	margin-left: 158px;
 }
+
 .spbt1{
 	position: absolute;
-	margin-top: 248px;
-	margin-left: 305px;
+	margin-top: 228px;
+	margin-left: 249px;
 }
 .spbt2{
 	position: absolute;
-	margin-top: 252px;
-	margin-left: 346px;
+	margin-top: 233px;
+	margin-left: 295px;
 }
 .spbt3{
 	position: absolute;
-	margin-top: 196px;
-	margin-left: 347px;
+	margin-top: 170px;
+	margin-left: 297px;
 }
 .spbtn1{
 	position: absolute;
-	margin-top: 220px;
-	margin-left: 783px;
+	margin-top: 196px;
+	margin-left: 787px;
 }
 .spbtn2{
 	position: absolute;
-	margin-top: 342px;
-	margin-left: 783px;
+	margin-top: 332px;
+	margin-left: 787px;
 }
 .spbtn3{
 	position: absolute;
-	margin-top: 478px;
-	margin-left: 783px;
+	margin-top: 485px;
+	margin-left: 787px;
+}
+.spbtn{
+
+	margin-top: 353px;
+	float: left;
 }

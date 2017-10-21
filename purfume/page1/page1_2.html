@@ -40,7 +40,14 @@ $(document).ready(function(){
     $(".spbtn3").click(function(){
   $(".spbt3").show();
   $("#videox").show();
+    });
+	$(".spbtn").click(function(){
+  $(".btan").hide();
+  $(".spbg").hide("slow");
+  $("#videox").hide("slow");
+  $(".spbtn").hide();
   });
+  
 });
 
 </script>
@@ -55,48 +62,136 @@ $(document).ready(function(){
   
 <body onload="hideFunction()">
 
-<div class="full" id="full2">
-
-<img src="img/btnbg.png" width="1016" height="168" alt="" class="btnbg"></img>
-
-<img src="img/btn1.png" width="65" height="129" alt="" class="btn1"></img>
-<img src="img/btn2.png" width="131" height="122" alt="" class="btn2"></img>
-<img src="img/btn3.png" width="86" height="68" alt="" class="btn3"></img>
-<img src="img/btn4.png" width="99" height="131" alt="" class="btn4"></img>
-<img src="img/btn5.png" width="213" height="90" alt="" class="btn5"></img>
-<img src="img/btn6.png" width="122" height="145" alt="" class="btn6"></img>
-
-<img src="img/bennar.png" width="1200" height="163" alt="" class="bennar"></img>
-<a href="../index.html"><img src="img/btnr.png" width="76" height="94" alt="" class="btnr"></img></a>
-
-<img src="img/spbg.png" width="1056" height="514" alt="" class="spbg"></img>
-
-<img src="img/spjhbg.png" width="767" height="430" alt="" class="spjhbg"></img>
-
-<img src="img/spbt1.png" width="340" height="349" alt="" class="spbt1" style="display:none"></img>
-<img src="img/spbt2.png" width="364" height="338" alt="" class="spbt2" style="display:none"></img>
-<img src="img/spbt3.png" width="344" height="360" alt="" class="spbt3" style="display:none"></img>
-<img src="img/spbtn1.png" width="122" height="88" alt="" class="spbtn1"></img>
-<img src="img/spbtn2.png" width="122" height="88" alt="" class="spbtn2"></img>
-<img src="img/spbtn3.png" width="122" height="88" alt="" class="spbtn3"></img>
+<div class="full" id="full2" style="position:relative">
 
 
-<div id="videox" style="width:767px;padding-top: 188px;padding-left: 222px";>
-  <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="767" height="430"
+<a href="../index.html"><img src="img/btnr.png" width="63" height="75" alt="" class="btnr"></img></a>
+
+<img src="img/btan.png" width="1200" height="768" alt=""  class="btan" ></img>
+
+<img src="img/spbg.png" width="1134" height="552" alt="" class="spbg"></img>
+
+<img src="img/spjhbg.png" width="861" height="482" alt="" class="spjhbg"></img>
+
+<img src="img/spbt1.png" width="382" height="392" alt="" class="spbt1 dist hide" id="dist_1"></img>
+<img src="img/spbt2.png" width="409" height="379" alt="" class="spbt2 dist hide" id="dist_2"></img>
+<img src="img/spbt3.png" width="386" height="403" alt="" class="spbt3 dist hide" id="dist_3"></img>
+<!-- 结果灯 style="display:none" -->
+<img src="img/spbtn1.png" width="137" height="97" alt="" class="spbtn1 drop_ele" id="1"></img>
+<img src="img/spbtn2.png" width="137" height="99" alt="" class="spbtn2 drop_ele" id="2"></img>
+<img src="img/spbtn3.png" width="137" height="99" alt="" class="spbtn3 drop_ele" id="3"></img>
+<!-- 抓取灯 -->
+
+<div id="videox" style="width:861px;padding-top: 160px;padding-left: 158px;position:absolute; ">
+  <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="861" height="482"
       poster="img/spjhbgd.png" 
       data-setup="{}">
     <source src="video/s2.mp4" type='video/mp4'/>
     <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
     <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
-    <track kind="captions" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
-    <track kind="subtitles" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+    <track kind="captions" src="ot/demo.captions.vtt" srclang="en" label="English"></track>
+	<!-- Tracks need an ending tag thanks to IE9 -->
+    <track kind="subtitles" src="ot/demo.captions.vtt" srclang="en" label="English"></track>
+	<!-- Tracks need an ending tag thanks to IE9 -->
   </video>
-</div>
-<div style="text-align:center;clear:both">
-</div>
-			 
+ <script>
+var audio = document.getElementById("video1"); 
+audio.loop = false;
+audio.addEventListener('ended', function () {  
+    $(".btan").hide();
+	$(".spjhbg").hide();
+	$(".spbt1").hide();
+	$(".spbt2").hide();
+	$(".spbt3").hide();
+	$(".spbtn1").hide();
+	$(".spbtn2").hide();
+	$(".spbtn3").hide();
+  $(".spbg").hide("slow");
+  $("#videox").hide("slow");
+	;}, false);
+</script> 
 </div>
 
+  <img src="img/spbtn.png" width="99" height="99" alt="" class="spbtn" style="position:absolute;right:73px;"></img>
+<!-- 视频返回按钮   style="display:none"-->		
+<div style="text-align:center;clear:both"></div>
+
+	 
+</div>
+<script type="text/javascript">  
+			var drop_ele = $('.drop_ele')
+			var dist = $('.dist')
+			var ying = $('.bt')
+			var numsp = 0
+			for (var i=0; i<drop_ele.length; i+=1) {
+				drop_ele[i].onselectstart = function() {
+					return false;
+				};
+				drop_ele[i].ondragstart = function(ev) {
+					/*拖拽开始*/
+					//拖拽效果
+					
+					console.log(ev.target.id);
+					console.log(i);
+					
+					ev.dataTransfer.effectAllowed = "move";
+					ev.dataTransfer.setData("text", ev.target.innerHTML);
+					ev.dataTransfer.setDragImage(ev.target, 25, 50);
+					eleDragEle = ev.target.id;
+					$('#y_'+eleDragEle).removeClass('hide');/*影子显示*/
+					$(".btd").hide();/*对话框消失*/
+					return true;
+				};
+				drop_ele[i].ondragend = function(ev) {
+					/*拖拽结束*/
+					ev.dataTransfer.clearData("text");
+					eleDragEle = null;
+					return false
+				};
+			}
+			for (var i = dist.length - 1; i >= 0; i--) {
+				dist[i].ondragover = function(ev) {
+					/*拖拽元素在目标元素头上移动的时候*/
+					ev.preventDefault();
+					return true;
+				};
+				dist[i].ondragenter = function(ev) {
+					return true;
+				};
+				dist[i].ondrop = function(ev) {
+					/*拖拽元素进入目标元素头上，同时鼠标松开的时候
+					console.log(eleDragEle)
+					console.log(ev.target.id)
+					*/
+					if((eleDragEle==2||eleDragEle==3||eleDragEle==4||eleDragEle==5)&&(ev.target.id=='dist_2'||ev.target.id=='dist_3'||ev.target.id=='dist_4'||ev.target.id=='dist_5')){
+						  $('#dist_'+eleDragEle).removeClass('hide');
+						  numsp = numsp+1 ;
+						  
+						  console.log(eleDragEle);
+						  console.log(i);
+						  console.log(numsp);
+						  
+						  $('#y_'+eleDragEle).addClass('hide');/*配对完成后 影子消失*/
+					}
+					else 
+						if("dist_"+eleDragEle==ev.target.id){
+							$('#dist_'+eleDragEle).removeClass('hide');
+							numsp = numsp+1 ;
+							
+							console.log(eleDragEle);
+							console.log(i);
+							console.log(numsp);
+							
+							$('#y_'+eleDragEle).addClass('hide');/*配对完成后 影子消失*/
+					}   
+					if(numsp + 1 > 6 ){
+						$(".btx").show();
+						$(".btt").show();/*图标放置完成 出勋章和道具*/
+					};
+					return false;
+				};
+			};
+		</script>
 
 </body>
 </html>

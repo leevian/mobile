@@ -1,70 +1,43 @@
 ﻿<!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-<title>香水网络课程</title>
-<link href="css/page1.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery-git.js"></script>
-
-
-  <!-- Chang URLs to wherever Video.js files will be hosted -->
-  <link href="css/video-js.css" rel="stylesheet" type="text/css">
-  <!-- video.js must be in the <head> for older IEs to work. -->
-  <script src="js/video.js"></script>
-
-  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
-  <script>
-    videojs.options.flash.swf = "ot/video-js.swf";
-  </script>
-
-<script>
-function hideFunction(){
-    $("#videox").hide();
-	
-}
-</script>
-
-<script type="text/javascript">
-
-
-$(document).ready(function(){
-
-    $(".btn6").click(function(){
-  $(".bt6").show();
-  $(".spbg").show("slow");
-  $("#videox").show("slow");
-  });
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){
-  $(".btn").click(function(){
-  $(".dilao").toggle();
-  $(".ceng").toggle();
-  $(".btn1").toggle();
-  $(".btn2").toggle();
-  $(".btn3").toggle();
-  });
-});
-</script>
-
-
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").fadeIn();
-    $("#div2").fadeIn("slow");
-    $("#div3").fadeIn(3000);
-  });
-
-
-  
-
-
-});
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<title>香水网络课程</title>
+		<link href="css/page1.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery-git.js"></script>
+		<link href="css/video-js.css" rel="stylesheet" type="text/css">
+		<script src="js/video.js"></script>
+		<script> videojs.options.flash.swf = "ot/video-js.swf";</script>
+		<script>
+			function hideFunction(){
+				$("#videox").hide();}
+				  /*防止视频跑出来*/
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $(".btn1").click(function(){
+				// 	$(".btd").hide();					
+				// 	$(".bt").removeClass('hide');/*临时开关*/
+				// });
+			
+				// $(".btn6").click(function(){
+				// 	$(".btx").show();
+				// 	$(".btt").show();/*临时开关*/
+				// });
+			
+				$(document).on('click','.show_movie',function(){
+			
+					$(".btan").show();
+					$(".spbg").show("slow");
+					$("#videox").show("slow");
+				});
+			});
+			   /*点击女孩 出视频 屏幕变暗*/
+		</script>
+		<!-- 点击类事件-->
+		
+		<script>
 // function drag(ev)
 //     {
 //     //    console.log(ev)
@@ -86,138 +59,161 @@ $(document).ready(function(){
 //   //   var dis_array = eval("("+distination+")");
 //   //   console.log(dis_array)
 // }
-
-
-
 </script>
+		
+	</head>
+	<style>
+		img{border:0px;}
+		.hide{opacity: 0}
+		.show{opacity: 1}
+	</style>
+	<body onload="hideFunction()">
+		<!-- 加载藏视频-->
+		<div class="full" id="full">
+			<!-- 背景-->
+			<img src="img/btx.png" width="51" height="51" alt="" class="btx" style="display:none"></img>
+			<!-- 勋章  6次拖动正确后出现  style="display:none"-->
+			<img src="img/btt.png" width="74" height="85" alt="" class="btt" style="display:none"></img>
+			<!-- 奖励  6次拖动正确后出现  style="display:none"-->
+			<img src="img/bty4.png" width="308" height="404" alt="" style="z-index:4" class="bty4 bt hide y_4 dist" id="dist_4"></img>
+			<img src="img/bty2.png" width="382" height="363" alt=""style="z-index:4" class="bty2 bt hide y_2 dist" id="dist_2"></img>
+			<img src="img/bty3.png" width="87" height="28" alt="" style="z-index:4"class="bty3 bt hide y_3 dist" id="dist_3"></img>
+			<img src="img/bty5.png" width="208" height="88" alt="" style="z-index:4"class="bty5 bt hide y_5 dist" id="dist_5"></img>
+			<img src="img/bty6.png" width="250" height="278" alt=""style="z-index:4" class="bty6 bt hide y_6 dist" id="dist_6"></img>
+			<img src="img/bty1.png" width="900" height="557" alt=""style="z-index:3" class="bty1 bt hide y_1 dist" id="dist_1"></img>
+			<!-- 图标的影子  拖动图标时出现 拖动正确后消失 style="display:none"-->
+			<img src="img/btd.png" width="251" height="175" alt="" class="btd"></img>
+			<!-- 对话框-->
+			<img src="img/bt4.png" width="308" height="404" alt="" class="bt4  hide" ></img>
+			<img src="img/bt2.png" width="382" height="363" alt=""style="z-index:2" class="bt2  hide" ></img>
+			<img src="img/bt3.png" width="87" height="28" alt="" style="z-index:2"class="bt3  hide" ></img>
+			<img src="img/bt5.png" width="208" height="88" alt="" style="z-index:2"class="bt5  hide" ></img>
+			<img src="img/bt6.png" width="254" height="301" alt="" style="z-index:0"class="bt6  hide" ></img>
+			<img src="img/bt1.png" width="898" height="557" style="z-index:1"alt="" class="bt1  hide"></img>
+			<!-- 大图标 拖动正确后出现  style="display:none"-->
+			<img src="img/btnv.png" width="151" height="384" alt="" class="btnv" style="z-index:3"></img>
+			<!-- 女孩按钮-->
+			<img src="img/btnbg.png" width="1004" height="123" style="z-index:5" alt="" class="btnbg"></img>
+			<!-- 图标托盘-->
+			<img src="img/btn1.png" width="50" height="101" alt="" style="z-index:6" class="btn1 drop_ele" id="1"></img>
+			<img src="img/btn2.png" width="101" height="94" alt="" style="z-index:6"  class="btn2 drop_ele" id="2"></img>
+			<img src="img/btn3.png" width="81" height="64" alt="" style="z-index:6"  class="btn3 drop_ele" id="3"></img>
+			<img src="img/btn4.png" width="80" height="105" alt="" style="z-index:6" class="btn4 drop_ele" id="4"></img>
+			<img src="img/btn5.png" width="150" height="76" alt="" style="z-index:6" class="btn5 drop_ele" id="5"></img>
+			<img src="img/btn6.png" width="109" height="130" alt="" style="z-index:6" class="btn6 drop_ele" id="6"></img>
+			<!-- 图标  被拖动目标 draggable="true" -->
+			<a href="../index.html">
+				<img src="img/btnr.png" width="63" height="75" alt="" class="btnr"></img>
+			</a>
+			<!-- 返回按钮-->
+			
+			<img src="img/spbg.png" width="1134" height="552" alt="" class="spbg" style="display:none;z-index:80;position:absolute"></img>
+			<!-- 视频背景 手机  style="display:none"-->
+			<div id="videox"  style="width: 861px; padding-top: 159px; padding-left: 160px;z-index:99;position:absolute";>
+				<video id="video1" class="video-js vjs-default-skin" controls preload="none" width="861" height="482"
+				  poster="img/spbgf.png" 
+				  data-setup="{}">
+				<source src="video/s1.mp4" type='video/mp4'/>
+				<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+				<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+				<track kind="captions" src="ot/demo.captions.vtt" srclang="en" label="English"></track>
+				<!-- Tracks need an ending tag thanks to IE9 -->
+				<track kind="subtitles" src="ot/demo.captions.vtt" srclang="en" label="English"></track>
+				<!-- Tracks need an ending tag thanks to IE9 -->
+				</video>
+				<script>
+				var audio = document.getElementById("video1"); 
+				audio.loop = false;
+				audio.addEventListener('ended', function () {  
+					document.location = "page1_2.html";
+				}, false);
+				</script>  
+				<!-- 视频放完自动跳转-->
+			</div>
+			<img src="img/btan.png" width="1200" height="768" alt=""  class="btan"  style="display:none;z-index:88"></img>
+			<!-- 背景特效层 视频出现后屏幕变暗  style="display:none"-->
+			<!-- 视频 860X480-->
+			<img src="img/spbtn.png" width="99" height="99" alt="" class="spbtn" style="display:none"></img>
+			<!-- 视频返回按钮   style="display:none"-->
+			<div style="text-align:center;clear:both"></div>		 
+		</div>
+		<script type="text/javascript">  
+			var drop_ele = $('.drop_ele')
+			var dist = $('.dist')
+			var ying = $('.bt')
+			var numsp = 0
+			for (var i=0; i<drop_ele.length; i+=1) {
+				drop_ele[i].onselectstart = function() {
+					return false;
+				};
+				drop_ele[i].ondragstart = function(ev) {
+					/*拖拽开始*/
+					//拖拽效果
+					
+					
+					
+					ev.dataTransfer.effectAllowed = "move";
+					ev.dataTransfer.setData("text", ev.target.innerHTML);
+					ev.dataTransfer.setDragImage(ev.target, 25, 50);
+					eleDragEle = ev.target.id;
+					$('.y_'+eleDragEle).removeClass('hide');/*影子显示*/
+					$(".btd").hide();/*对话框消失*/
+					return true;
+				};
+				drop_ele[i].ondragend = function(ev) {
+					/*拖拽结束*/
+					ev.dataTransfer.clearData("text");
+					eleDragEle = null;
+					return false
+				};
+			}
+			for (var i = dist.length - 1; i >= 0; i--) {
+				dist[i].ondragover = function(ev) {
+					/*拖拽元素在目标元素头上移动的时候*/
+					ev.preventDefault();
+					return true;
+				};
+				dist[i].ondragenter = function(ev) {
+					return true;
+				};
+				dist[i].ondrop = function(ev) {
+					//拖拽元素进入目标元素头上，同时鼠标松开的时候
+					console.log(eleDragEle)
+					console.log(ev.target.id)
+					
+					if((eleDragEle==2||eleDragEle==3||eleDragEle==4||eleDragEle==5)&&(ev.target.id=='dist_2'||ev.target.id=='dist_3'||ev.target.id=='dist_4'||ev.target.id=='dist_5')){
+							if($('.bt'+eleDragEle).hasClass('hide')){
+								numsp = numsp+1 ;
+							}
+						  $('.bt'+eleDragEle).removeClass('hide');
 
+						  
+						  
 
-</head>
-  <style>
-  	img{border:0px;}
-    .hide{opacity: 0}
-    .show{opacity: 1}
-  </style>
-
-  
-  
-  
-<body onload="hideFunction()">
-
-<div class="full" id="full">
-<img src="img/bt1.png"   width="1140" height="557" alt="" class="bt1 dist hide "id="dist_5"  ></img>
-<img src="img/bt4.png"   width="308" height="404" alt="" class="bt4 dist hide " id="dist_0" ></img>
-<img src="img/bt2.png" width="382" height="363" alt="" class="bt2 dist hide " id="dist_1"z-index="9999" ></img>
-<img src="img/bt3.png" width="87" height="28" alt="" class="bt3 dist hide " id="dist_3" z-index="9999" ></img>
-<img src="img/bt5.png" width="208" height="88" alt="" class="bt5 dist hide " id="dist_2" z-index="9999"></img>
-<img src="img/bt6.png" width="254" height="337" alt="" class="bt6 dist hide " id="dist_4" z-index="9999"></img>
-
-
-<img src="img/btnbg.png" width="1016" height="168" alt="" class="btnbg"></img>
-
-<img src="img/btn1.png"  draggable="true"  width="65" height="129" alt="" class="btn1 drop_ele" id="5"></img>
-<img src="img/btn2.png" width="131" height="122" alt="" class="btn2 drop_ele"  id="1" ></img>
-<img src="img/btn3.png" width="86" height="68" alt="" class="btn3 drop_ele"  id="3" ></img>
-<img src="img/btn4.png" width="99" height="131" alt="" class="btn4 drop_ele" id="0"></img>
-<img src="img/btn5.png" width="213" height="90" alt="" class="btn5 drop_ele " id="2"></img>
-<img src="img/btn6.png" width="122" height="145" alt="" class="btn6 drop_ele" id="4"></img>
-
-
-<img src="img/bennar.png" width="1200" height="163" alt="" class="bennar"></img>
-<a href="../index.html"><img src="img/btnr.png" width="76" height="94" alt="" class="btnr"></img></a>
-
-<img src="img/spbg.png" width="1056" height="514" alt="" class="spbg" style="display:none"></img>
-
-<div id="videox" style="width:767px;padding-top: 188px;padding-left: 222px";>
-  <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="767" height="430"
-      poster="img/spbgf.png" 
-      data-setup="{}">
-    <source src="video/s1.mp4" type='video/mp4'/>
-    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
-    <track kind="captions" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
-    <track kind="subtitles" src="ot/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
-  </video>
-  
-  <script>
-var audio = document.getElementById("video1"); 
-audio.loop = false;
-audio.addEventListener('ended', function () {  
-    document.location = "page1_2.html";
-}, false);
-</script> 
-  
-</div>
-<div style="text-align:center;clear:both">
-</div>
-			 
-</div>
-
-<script type="text/javascript">
-  
-
-
-var drop_ele = $('.drop_ele')
-var dist = $('.dist')
-
-
-
-for (var i = dist.length - 1; i >= 0; i--) {
-  
-
-  dist[i].ondragover = function(ev) {
-  /*拖拽元素在目标元素头上移动的时候*/
-    ev.preventDefault();
-    return true;
-  };
-
-   dist[i].ondragenter = function(ev) {
-   
-    return true;
-  };
-   dist[i].ondrop = function(ev) {
-   /*拖拽元素进入目标元素头上，同时鼠标松开的时候*/
-    console.log(eleDragEle)
-    console.log(ev.target.id)
-    
-    if((eleDragEle==1||eleDragEle==0||eleDragEle==3)&&(ev.target.id=='dist_3'||ev.target.id=='dist_2'||ev.target.id=='dist_1')){
-      $('#dist_'+eleDragEle).removeClass('hide')
-    }else if("dist_"+eleDragEle==ev.target.id){
-      $('#dist_'+eleDragEle).removeClass('hide')
-    }
-    
-    
-    
-    return false;
-  };
-
-
-
-};
-
-for (var i=0; i<drop_ele.length; i+=1) {
-
-  drop_ele[i].onselectstart = function() {
-    return false;
-  };
-  drop_ele[i].ondragstart = function(ev) {
-   /*拖拽开始*/
-    //拖拽效果
-    ev.dataTransfer.effectAllowed = "move";
-    ev.dataTransfer.setData("text", ev.target.innerHTML);
-    ev.dataTransfer.setDragImage(ev.target, 0, 0);
-    eleDragEle = ev.target.id;
- 
-    return true;
-  };
-  drop_ele[i].ondragend = function(ev) {
-  /*拖拽结束*/
-    ev.dataTransfer.clearData("text");
-    eleDragEle = null;
-    return false
-  };
-}
-
-</script>
-</body>
+						
+					}
+					else {
+						if("dist_"+eleDragEle==ev.target.id){
+							if($('.bt'+eleDragEle).hasClass('hide')){
+								numsp = numsp+1 ;
+							}
+							$('.bt'+eleDragEle).removeClass('hide');
+						 
+		
+							
+						} 
+						
+					}
+					$('.y_'+eleDragEle).addClass('hide');/*配对完成后 影子消失*/
+					console.log(numsp)
+					if(numsp + 1 > 6 ){
+						$('.btnv').addClass('show_movie')
+						$(".btx").show();
+						$(".btt").show();/*图标放置完成 出勋章和道具*/
+					};
+					return false;
+				};
+			};
+		</script>
+	</body>
 </html>
