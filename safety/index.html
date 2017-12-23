@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>七月来上海，寻找你志同“色”合的小伙伴｜七月ISPO周</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+		<!-- 禁止浏览器从本地缓存中调阅页面。--> 
+		<meta http-equiv="pragram" content="no-cache"> 
+		<!--网页不保存在缓存中，每次访问都刷新页面。--> 
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+		<!--同上面意思差不多，必须重新加载页面--> 
+		<meta http-equiv="expires" content="0"> 
+		<!-- Mobile Devices Support @begin -->
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/loading.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+	
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div style='margin:0 auto;display:none;'>
+			<img src='img/ispologo.jpg' />
+		</div>
+
+		<!-- Swiper -->
+		<div id="load">
+			<div class="load-box">
+				<img class="loading-cube cube2"src="img/index/loading.png">
+				<div class="text">loading <span id="number">0%</span></div>
+			</div>
+		</div>
+		
+		<audio id="audio" autoplay src="img/music.mp3"loop></audio>
+		<p class="music-logo playing"></p>
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+
+	        	<div class="swiper-slide swiper_1 page" id="page_0">
+	            	
+	            	<div class="con_wrap wrap_1">
+	            		<img src="img/index/swiper_1.jpg" width="100%">
+		            	<img class="swiper1_box1 cube-icon1" src="img/common/cube_gif5.gif">
+		            	<img class="swiper1_box2 cube-icon2" src="img/common/cube_gif2.gif">
+		            	<img class="swiper1_box4 cube-icon4"  src="img/common/cube_gif6.gif">
+	            		<img src="img/index/title.png" class="title">
+	            		
+	            	</div>
+	            	
+	            	
+	           	</div>
+	          	<div class="swiper-slide swiper_2 page" id="page_1">
+	            	<div class="con_wrap wrap_2">
+	            		<img src="img/index/background_01.jpg" width="100%">
+		            	<img class="swiper2_box1 cube-icon3" src="img/index/logo_cube1.png">
+		            	<img class="swiper2_box2 cube-icon4" src="img/index/logo_cube2.png">
+		            	<img class="swiper2_box3 cube-icon2" src="img/common/cube_gif4.gif">
+		            	<img class="swiper2_box4 cube-icon1" src="img/common/cube_gif1.gif">
+		            	<img class="swiper2_box5 cube-icon1" src="img/common/cube_gif2.gif">
+		            	<img class="swiper2_box6 cube-icon1" src="img/common/cube_gif3.gif">
+	            	</div>
+	            	
+	            	
+	           	</div>
+	            <div class="swiper-slide swiper_3 page" id="page_2">
+	            	<div class="con_wrap wrap_3">
+	            		<img src="img/index/background_02.jpg" width="100%">
+	            		
+		            	<img class="swiper3_box1" src="img/index/logo_cube1.png">
+		            	<img class="swiper3_box2 cube-icon2" src="img/index/logo_cube4.png">
+		            	<img class="swiper3_box3 cube-icon1" src="img/index/logo_cube5.png">
+		            	<img class="btn1" src="img/index/btn_1.png"></>
+		            	<img class="finger" src="img/index/click.gif"></>
+		            	<img class="btn2" src="img/index/btn_2.png"></>
+		            	<img class="btn3" src="img/index/btn_3.png"></>
+		            	<img class="btn4" src="img/index/btn_4.png"></>
+		            	<img class="btn5" src="img/index/btn_5.png"></>
+			        	
+	            	</div>
+	            	
+	            	
+	           	</div>
+	   
+	           
+	        </div>
+	        <div class="down">
+	        	<img src="img/index/down.png" width="100%" />
+	        </div>
+	        <!--<img class="cube1" src="img/index/cube.png">-->
+	    </div>
+	</body>
+	<script>
+		function touchSatrtFunc(e) {  
+		    //evt.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
+		    var touch = e.touches[0]; //获取第一个触点  
+		    var x = Number(touch.pageX); //页面触点X坐标  
+		    var y = Number(touch.pageY); //页面触点Y坐标  
+		    //记录触点初始位置  
+		    startX = x;  
+		    startY = y;  
+		}  
+		function isMove(e){
+			var touch = evt.touches[0]; //获取第一个触点  
+			var x = Number(touch.pageX); //页面触点X坐标  
+			var y = Number(touch.pageY); 
+			if(x - startX == 0 && y-startY==0){
+				return true
+			}
+		}
+		var positionX;
+		var positionY
+		$('.btn1').bind("touchstart",function(e){
+			positionX = e.originalEvent.changedTouches[0].clientX;
+			positionY = e.originalEvent.changedTouches[0].clientY;
+		}).bind('touchend',function(e){
+			var endX = e.originalEvent.changedTouches[0].clientX;
+			var endY = e.originalEvent.changedTouches[0].clientY;
+			if (positionX - endX == 0 && positionY-endY==0) {  
+       			location.href= 'page1.html';
+    		}  	
+		})
+		$('.btn2').bind("touchstart",function(e){
+			positionX = e.originalEvent.changedTouches[0].clientX;
+			positionY = e.originalEvent.changedTouches[0].clientY;
+		}).bind('touchend',function(e){
+			var endX = e.originalEvent.changedTouches[0].clientX;
+			var endY = e.originalEvent.changedTouches[0].clientY;
+			if (positionX - endX == 0 && positionY-endY==0) {  
+       			location.href= 'page2.html';
+    		}       			
+		})
+		$('.btn3').bind("touchstart",function(e){
+			positionX = e.originalEvent.changedTouches[0].clientX;
+			positionY = e.originalEvent.changedTouches[0].clientY;
+		}).bind('touchend',function(e){
+			var endX = e.originalEvent.changedTouches[0].clientX;
+			var endY = e.originalEvent.changedTouches[0].clientY;
+			if (positionX - endX == 0 && positionY-endY==0) {  
+       			location.href= 'page3.html';
+    		}  		
+		})
+		$('.btn4').bind("touchstart",function(e){
+			positionX = e.originalEvent.changedTouches[0].clientX;
+			positionY = e.originalEvent.changedTouches[0].clientY;
+		}).bind('touchend',function(e){
+			var endX = e.originalEvent.changedTouches[0].clientX;
+			var endY = e.originalEvent.changedTouches[0].clientY;
+			if (positionX - endX == 0 && positionY-endY==0) {  
+       			location.href= 'page4.html';
+    		}     			
+		})
+		$('.btn5').bind("touchstart",function(e){
+			positionX = e.originalEvent.changedTouches[0].clientX;
+			positionY = e.originalEvent.changedTouches[0].clientY;
+		}).bind('touchend',function(e){
+			var endX = e.originalEvent.changedTouches[0].clientX;
+			var endY = e.originalEvent.changedTouches[0].clientY;
+			if (positionX - endX == 0 && positionY-endY==0) {  
+       			location.href= 'page5.html';
+    		}  			
+		})
+		$(function(){
+			var mySwiper;
+			mySwiper = new Swiper('.swiper-container', {
+				direction : 'vertical',
+			    onSlideChangeStart:function(swiper, progress){
+			    	
+					if( mySwiper.activeIndex == 0 ||mySwiper.activeIndex == 1 ){
+						$('.down').show();
+					}else{
+						$('.down').hide();
+					}
+					if( mySwiper.activeIndex == 1){
+						$('.title').removeClass('show')
+
+					}
+					if( mySwiper.activeIndex == 0){
+						$('.title').addClass('show')
+
+					}
+
+			    }
+			});
+			var local_url = document.location.href; 
+		    //获取要取得的get参数位置
+		    var par = "go"
+		    var get = local_url.indexOf(par +"=");
+		    if(get == -1){
+		        return false;   
+		    }   
+		    //截取字符串
+		    var get_par = local_url.slice(par.length + get + 1);    
+		    //判断截取后的字符串是否还有其他get参数
+		    var nextPar = get_par.indexOf("&");
+		    if(nextPar != -1){
+		        get_par = get_par.slice(0, nextPar);
+		    }
+		    if(get_par==1){
+		    	mySwiper.slideTo(2, 1000, false);		    	
+		    }
+		})		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
