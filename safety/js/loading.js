@@ -104,7 +104,9 @@ $(function () {
                 // $.getScript("./js/index.js");
                 // $(".swiper-container").addClass('show');
                 $(".start").removeClass('hide').addClass('show');
-                console.log(1)
+                // go_page();
+                
+
                 // $('.title').addClass('show')
 
                 return;

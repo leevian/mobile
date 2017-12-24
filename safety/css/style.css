@@ -60,6 +60,12 @@ body {
 }
 .btn-box img{
 	width: 100%;
+  position: absolute;
+}
+.thumb-box{
+  position: absolute;
+  right: 126px;
+  bottom: 52px;
 }
 .count-down {
 	position: absolute;

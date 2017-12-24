@@ -36,7 +36,9 @@
         <div >
          
          
-          
+          <!-- <canvas id="Mycanvas" style="width:100%;height:100%;">  
+              
+          </canvas>   -->
           <video webkit-playsinline="true" x-webkit-airplay="true" playsinline id="mvideo" class="video1"    >  
               <source src="./img/s1.mp4" type="video/mp4"></source>  
           </video> 
@@ -78,7 +80,9 @@
         </div>
       <div data-role="page" id="pagefour">
         <div>
-          
+          <!-- <canvas id="Mycanvas2 ">  
+              
+          </canvas>   -->
           <video    id="mvideo2" class="video2" webkit-playsinline="true" x-webkit-airplay="true" playsinline >  
               <source src="./img/s2.mp4" type="video/mp4"></source>  
           </video>
@@ -259,27 +263,72 @@ document.addEventListener('plusready', function() {
     }
 });
 $('.start').on('touchstart',function(){
-  $.mobile.changePage('#page20','fade');
+        $.mobile.changePage('#page20','fade');
   
   $('.video1').trigger('play');
 
  
 })
-$(function(){  
+
+!(function(doc){  
+             
+    var Mycanvas=doc.getElementById("Mycanvas");
+    var Mycanvas3=doc.getElementById("Mycanvas2");
+    var cont=Mycanvas.getContext("2d");
+    var cont3=Mycanvas2.getContext("2d");
+    Myvideo=doc.getElementById("mvideo");  
+    Myvideo3=doc.getElementById("mvideo2");  
+    cw=window.innerWidth;   
+    ch=window.innerHeight;  
+    Mycanvas.width=cw;  
+    Mycanvas3.width=cw;  
+    Mycanvas.height=ch;  
+    Mycanvas3.height=ch;  
+     
+   // Myvideo.addEventListener("play",function(){  
+   //      var cont2=cerateCanvas(cw,ch).getContext("2d");  
+   //      draw(this,cont,cont2,cw,ch);  
+   //  },false) 
+   // Myvideo3.addEventListener("play",function(){  
+   //      var cont4=cerateCanvas(cw,ch).getContext("2d");  
+   //      draw(this,cont3,cont4,cw,ch);  
+   //  },false) 
+    function cerateCanvas(w,h){  
+        var cr=doc.createElement("canvas");  
+            cr.width=w;  
+            cr.height=h;  
+        return cr;  
+    }  
+    function draw(v,c,c2,w,h){  
+
+        if(v.paused||v.ended){  
+            cancelAnimationFrame(stop);  
+            return false;  
+        }  
+        c2.drawImage(v,0,0,w,h);  
+
+        var idata=c2.getImageData(0, 0, w, h),  
+            data=idata.data;  
+        for (var i = 0; i < data.length; i+=4) {  
+            var r=data[i],  
+                g=data[i+1],  
+                b=data[i+2];  
+                brightness=(3*r+4*g+b)>>>3;  
+            data[i]=brightness;  
+            data[i+1]=brightness;  
+            data[i+2]=brightness;  
+        };  
+        idata.data=data;  
+        // c.rotate(90);
+        c.putImageData(idata,0,0);  
+        var stop=requestAnimationFrame(function(){  
+            draw(v,c,c2,w,h);  
+        });  
+    }  
+
     
 
-   
-        window.addEventListener("popstate", function(e) {  
-              
-             if(window.location.hash!=''){
-                window.location.hash='';
-             }
-                       
-              
-                  
-        }, false);  
-   
 
-      
-});   
+
+})(document)  
 </script>
