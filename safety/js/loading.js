@@ -4,6 +4,18 @@
 $(function () {
     var count = 0;
     var images = [
+        '0.png',
+        '1.png',
+        '2.png',
+        '3.png',
+        '4.png',
+        '5.png',
+        '6.png',
+        '7.png',
+        '8.png',
+        '9.png',
+        's1.mp4',
+        's2.mp4',
         'common/loading.jpg',
         'common/background_06.png',
         'index/swiper_1.jpg',
@@ -87,22 +99,23 @@ $(function () {
             // console.log(percent)
             $("#number").text( percent + '%');
             if (count === _length) {
-                $("#load").hide();
+                // $("#load").hide();
                 // $("#load ").html($(".textarea").val());
-                $.getScript("./js/index.js");
-                $(".swiper-container").addClass('show');
-                $('.title').addClass('show')
+                // $.getScript("./js/index.js");
+                // $(".swiper-container").addClass('show');
+                $(".start").removeClass('hide').addClass('show');
+                console.log(1)
+                // $('.title').addClass('show')
+
                 return;
             }
 
         });
     });             
     }else{
-       $("#load").hide();
+       // $("#load").hide();
         // $("#load ").html($(".textarea").val());
-        $.getScript("./js/index.js");
-        $(".swiper-container").addClass('show');
-        $('.title').addClass('show')
+
     }
 
     

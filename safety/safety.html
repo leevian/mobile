@@ -16,19 +16,30 @@
     <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <script type="text/javascript" src="js/jquery-2.2.0.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery.mobile.js"></script> -->
-    <!-- <script type="text/javascript" src="js/loading.js"></script> -->
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/jquery.mobile.css"> -->
-
   <title>空中联盟</title>
   <style>
     
   </style>
 </head>
 <body>
-  <div class="main">
-      <div class="main_second">
+
+    <div data-role="page" id="pageone" date-dom-cache="true">
+      <div class="load-box load">
+        <div class="text">loading <span id="number">0%</span> <a class="start hide" href="#page20" rel="extrenal" data-ajax="false" date-transition="fade">准备完毕</a></div>
+      </div>
+    </div>
+    <div data-role="page" id="page20" class="" >
+      <div>
+        <video src="./img/s1.mp4" class="video1" ></video> 
+      </div>
+        
+    </div>
+
+    <div data-role="page" id="pagethree" class="main_third" >
           <div class="btn-box">
             <img class="btn" src="./img/btn.png">
           </div>
@@ -55,14 +66,19 @@
             </ul>
           </div>
       </div>
+    <div data-role="page" id="pagefour">
+      <div>
+        <video src="./img/s2.mp4" class="video2" ></video> 
+      </div>
     </div>
-  </div>
+    <div data-role="page" id="pagefive" style="background-color:#000;"><p class="die">你死了</p></div>
 </body>
 </html>
 <script type="text/javascript">
 document.querySelector('body').addEventListener('touchstart', function (ev) {
     event.preventDefault();
 });
+
 var time_array = {
     '0':'./img/0.png',
     '1':'./img/1.png',
@@ -76,6 +92,7 @@ var time_array = {
     '9':'./img/9.png',
 
   };
+  var timer ;
 function count_down(){
   var count_0 = $('.count_0').find('img').attr('now');
   var count_1 = $('.count_1').find('img').attr('now');
@@ -89,7 +106,7 @@ function count_down(){
   minute=Math.floor(minutes),
   second=Math.floor(seconds);//时间默认值  
   intDiff = minute*60; 
-  var timer = window.setInterval(function(){
+  timer = window.setInterval(function(){
 
       if(intDiff > 0){
           minute = Math.floor(intDiff / 60) ;
@@ -101,9 +118,11 @@ function count_down(){
 
       count = {}
       if (minute <= 9) {
+        count[1] = minute;
         minute = '0' + minute;
         count[0] = '0'
-        count[1] = minute;
+        
+      
 
 
       }else{
@@ -129,6 +148,7 @@ function count_down(){
         minute = '00';
         second = '00'
         clearInterval(timer)
+        $.mobile.changePage('#pagefive','fade');
       }
       for (var i = 0; i<4 ; i++) {
         
@@ -144,6 +164,26 @@ function count_down(){
     $('.count_'+index).find('img').attr('src',img);
   }
 
-count_down();
 
+
+$('.start').on('touchstart',function(){
+  console.log(1)
+  $('.video1').trigger('play');
+})
+
+$('.btn').on('touchstart',function(){
+        
+
+  clearInterval(timer)
+  $.mobile.changePage('#pagefour','fade');
+  $('.video2').trigger('play');
+
+
+
+})
+$('.video1').on('ended',function(){
+  
+  $.mobile.changePage('#pagethree','fade');
+  count_down();
+})
 </script>
